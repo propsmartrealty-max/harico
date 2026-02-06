@@ -1,0 +1,125 @@
+:root {
+  /* =========================================
+     Color Palette - Premium & Trustworthy
+     ========================================= */
+
+  /* Primary Brand Colors */
+  --color-navy: #0A192F;
+  /* Deepest Navy for backgrounds/footers */
+  --color-navy-light: #172A45;
+  /* Lighter Navy for cards/sections */
+  --color-gold: #D4AF37;
+  /* Classic Gold */
+  --color-gold-hover: #C5A028;
+  /* Darker Gold for hover states */
+  --color-gold-light: #F3E5AB;
+  /* Very light gold for backgrounds/accents */
+
+  /* Accents & Functional Colors */
+  --color-accent-red: #C62828;
+  /* Subtle Red for urgent CTAs or errors */
+  --color-success: #2E7D32;
+  /* Green for success states */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* Background Tones */
+  --color-primary-bg: #FFFFFF;
+  /* Main background */
+  --color-secondary-bg: #F8F9FA;
+  /* Light Gray/Off-white for section distinction */
+  --color-tertiary-bg: #EFEFEF;
+  /* Slightly darker gray */
+
+  /* Text Colors */
+  --color-text-main: #0A192F;
+  /* Dark Navy for primary text */
+  --color-text-secondary: #546E7A;
+  /* Blue-Grey for secondary text */
+  --color-text-light: #8892B0;
+  /* Light Blue-Grey for subtle text */
+  --color-text-inverse: #FFFFFF;
+  /* White text on dark backgrounds */
+
+  /* Borders */
+  --color-border: #E0E0E0;
+  --color-border-light: #F0F0F0;
+
+  /* =========================================
+      Typography
+      ========================================= */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Font Sizes (Scale) */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+  --font-size-4xl: 2.5rem;
+  --font-size-5xl: 3rem;
+
+  /* =========================================
+      Spacing & Layout
+      ========================================= */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
+  --spacing-3xl: 4rem;
+  /* 64px */
+  --spacing-section: 100px;
+  /* Large section spacing */
+
+  --header-height: 80px;
+  --container-width: 1280px;
+  /* Slightly wider container */
+  --container-padding: 20px;
+
+  /* =========================================
+      UI Elements
+      ========================================= */
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  /* Modern, softer cards */
+  --radius-full: 9999px;
+
+  /* Shadows (Soft & Modern) */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-out;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s ease;
+
+  /* Z-Indices */
+  --z-header: 1000;
+  --z-modal: 2000;
+  --z-overlay: 1900;
+  --z-tooltip: 1500;
+}
