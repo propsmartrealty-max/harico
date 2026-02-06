@@ -16,6 +16,11 @@ export interface Project {
     masterLayout?: string;
     floorPlans?: { title: string; image: string }[];
     reraId?: string;
+    seo?: {
+        title: string;
+        description: string;
+        keywords: string;
+    };
 }
 
 export const projectsData: Record<string, Project> = {
@@ -56,7 +61,12 @@ export const projectsData: Record<string, Project> = {
             { type: '3 BHK Luxury', carpet: '1048 sq.ft', price: '₹ 98 Lacs*' },
             { type: '3 BHK Grande', carpet: '1114 sq.ft', price: '₹ 1.12 Cr*' },
             { type: '3 BHK Royale', carpet: '1148 sq.ft', price: '₹ 1.18 Cr*' }
-        ]
+        ],
+        seo: {
+            title: 'Harico Edge Punawale | Premium 2 & 3 BHK Flats near Wakad',
+            description: 'Harico Edge (Sentosa Edge) in Punawale offers ultra-premium 2 & 3 BHK homes with 50+ amenities. Near Mumbai-Pune Highway & Phoenix Mall. RERA: PM1260002501839.',
+            keywords: 'Harico Edge, Sentosa Edge, 2 BHK Punawale, 3 BHK Punawale, Flats near Wakad, New Construction Punawale, Harico Estates'
+        }
     },
     '2': {
         id: '2',
@@ -128,7 +138,12 @@ export const projectsData: Record<string, Project> = {
             { title: '3 BHK Smart', image: '/assets/harico-divaam-3bhk-smart-v3.png' },
             { title: '3 BHK Comfort', image: '/assets/harico-divaam-3bhk-comfort.png' },
             { title: '3 BHK Grand', image: '/assets/harico-divaam-3bhk-grand-v3.png' }
-        ]
+        ],
+        seo: {
+            title: 'Harico Divaam Kiwale | Luxury 2 & 3 BHK Flats | Sentosa Legacy',
+            description: 'Harico Divaam offers divine 2 & 3 BHK homes in Kiwale, Pune using Sentosa Group\'s 39-year legacy. 100+ Amenities, Sky Lounge, EV Charging. Near Mumbai-Pune Expressway.',
+            keywords: 'Harico Divaam, Sentosa Kiwale, 2 BHK Kiwale, 3 BHK Kiwale, Luxury Flats Pune, Flats near Expressway, Sentosa Divine'
+        }
     },
     '3': {
         id: '3',
@@ -153,6 +168,11 @@ export const projectsData: Record<string, Project> = {
             { title: 'Bhiku Vallabh Kale School', time: '02 Min' }
         ],
         configurations: [],
-        reraId: 'P52100050231'
+        reraId: 'P52100050231',
+        seo: {
+            title: 'Harico Pride Punawale | New Launch 2 & 3 BHK | Sentosa Pride',
+            description: 'Harico Pride (Sentosa Pride) in Punawale offers spacious 2 & 3 BHK homes with premium amenities. Near Bhiku Vallabh Kale School. RERA: P52100050231.',
+            keywords: 'Harico Pride, Sentosa Pride, 2 BHK Punawale, 3 BHK Punawale, New Launch Pune, Premium Apartments Punawale'
+        }
     }
 };

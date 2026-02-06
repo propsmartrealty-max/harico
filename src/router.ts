@@ -1,3 +1,6 @@
+import { MetaManager } from './utils/MetaManager';
+import { projectsData } from './data/projects';
+
 type RouteHandler = (params?: URLSearchParams, slug?: string) => void;
 
 interface Route {
@@ -32,6 +35,49 @@ class Router {
         if (matchedRoute) {
             const params = new URLSearchParams(query);
             matchedRoute.handler(params, slug);
+
+            // --- SEO Logic ---
+            if (pathSegments[0] === 'project' && slug) {
+                // Find project by slug
+                const project = Object.values(projectsData).find(p => p.slug === slug);
+                if (project && project.seo) {
+                    MetaManager.setTitle(project.seo.title);
+                    MetaManager.setDescription(project.seo.description);
+                    MetaManager.setKeywords(project.seo.keywords);
+                    MetaManager.setImage(project.image);
+                    MetaManager.setUrl(window.location.href);
+
+                    // Schema Injection
+                    MetaManager.setSchema({
+                        "@context": "https://schema.org",
+                        "@type": "ApartmentComplex",
+                        "name": project.title,
+                        "description": project.seo.description,
+                        "url": window.location.href,
+                        "image": project.image.startsWith('http') ? project.image : window.location.origin + project.image,
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": project.location.split(',')[0].trim(),
+                            "addressRegion": "Maharashtra",
+                            "addressCountry": "IN"
+                        },
+                        "amenityFeature": project.amenities.map(a => ({
+                            "@type": "LocationFeatureSpecification",
+                            "name": typeof a === 'string' ? a : a.items.join(', ')
+                        }))
+                    });
+                } else if (project) {
+                    // Fallback if SEO object missing but project exists
+                    MetaManager.setTitle(`${project.title} | Harico Estates`);
+                    MetaManager.setDescription(project.description.slice(0, 160));
+                    MetaManager.setImage(project.image);
+                    MetaManager.setUrl(window.location.href);
+                }
+            } else {
+                // Reset to Home/Default
+                MetaManager.reset();
+            }
+            // -----------------
 
             // Allow DOM to update then try to scroll
             setTimeout(() => {

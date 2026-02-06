@@ -2,26 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://haricoestates.in/</loc>
-    <lastmod>2024-01-28</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://haricoestates.in/#/project/premium-2-3-bhk-flats-in-punawale-harico-edge</loc>
-    <lastmod>2024-01-28</lastmod>
+    <loc>https://haricoestates.in/#projects</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://haricoestates.in/#/project/commercial-office-spaces-wakad-harico-heights</loc>
-    <lastmod>2024-01-28</lastmod>
+    <loc>https://haricoestates.in/#/project/harico-edge</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://haricoestates.in/#/project/luxury-apartments-hinjewadi-harico-plaza</loc>
-    <lastmod>2024-02-06</lastmod>
+    <loc>https://haricoestates.in/#/project/2-3-bhk-flats-in-kiwale-harico-divaam</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://haricoestates.in/#/project/premium-2-3-bhk-punawale-harico-pride</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://haricoestates.in/#about</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://haricoestates.in/#contact</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
