@@ -28,8 +28,8 @@ export function createProjectCard(project: Project): HTMLElement {
         <span class="status-badge ${project.status.toLowerCase()}">${project.status}</span>
       </div>
       <div class="card-overlay">
-        <button class="btn-overlay btn-explore">Explore</button>
-        <button class="btn-overlay btn-enquire" onclick="event.stopPropagation(); (window as any).showEnquireModal('${project.title}');">Enquire</button>
+        <button class="btn-overlay btn-explore" onclick="event.stopPropagation(); window.location.hash = '#project/${project.slug || project.id}'">Explore</button>
+        <button class="btn-overlay btn-enquire" onclick="event.stopPropagation(); window.showEnquireModal('${project.title}');">Enquire</button>
       </div>
     </div>
     
