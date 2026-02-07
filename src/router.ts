@@ -13,13 +13,16 @@ class Router {
 
     constructor() {
         // Handle Legacy Hash URLs (Redirect to clean URLs)
-        if (window.location.hash) {
-            let hash = window.location.hash.substring(1); // Remove '#'
-            if (hash) {
-                if (!hash.startsWith('/')) {
-                    hash = '/' + hash;
+        const hash = window.location.hash;
+        if (hash) {
+            console.log('[Router] Hash detected:', hash);
+            let cleanHash = hash.substring(1); // Remove '#'
+            if (cleanHash) {
+                if (!cleanHash.startsWith('/')) {
+                    cleanHash = '/' + cleanHash;
                 }
-                window.history.replaceState({}, '', hash); // Update URL without reload
+                console.log('[Router] Cleaning hash to:', cleanHash);
+                window.history.replaceState({}, '', cleanHash); // Update URL without reload
             }
         }
 

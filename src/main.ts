@@ -35,8 +35,24 @@ router.add('/', () => {
 });
 
 // Handle /project/:slug or /project?id=:id
+// Handle /project/:slug or /project?id=:id
+const legacySlugs: Record<string, string> = {
+    '2-3-bhk-flats-in-kiwale-harico-divaam': 'harico-divaam',
+    'harico-edge-punawale': 'harico-edge',
+    'harico-pride-punawale': 'harico-pride'
+};
+
 router.add('/project', (params, slug) => {
     mainAppContainer.innerHTML = '';
+
+    // Check for legacy slug first
+    if (slug && legacySlugs[slug]) {
+        console.log(`[Router] Redirecting legacy slug: ${slug} -> ${legacySlugs[slug]}`);
+        const newSlug = legacySlugs[slug];
+        // Redirect to new clean URL
+        router.navigate(`/project/${newSlug}`);
+        return;
+    }
 
     let project = null;
 
@@ -57,6 +73,7 @@ router.add('/project', (params, slug) => {
 
         mainAppContainer.appendChild(createProjectDetails(project));
     } else {
+        console.warn('[Router] Project not found for slug:', slug);
         router.navigate('/'); // Fallback
     }
 });
