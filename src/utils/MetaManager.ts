@@ -68,9 +68,9 @@ export class MetaManager {
     }
 
     static reset() {
-        this.setTitle('Harico Estates | Premium 2 & 3 BHK Flats in Punawale | By Sentosa Venture');
-        this.setDescription('Discover Harico Estates by Sentosa Venture. Offering premium 2 & 3 BHK flats in Punawale and luxury commercial spaces. Explore the most luxury projects in Punawale today.');
-        this.setKeywords('Harico Edge, Sentosa Edge Punawale, 2 BHK with 2 Balconies Punawale, 3 BHK with Walk-in Wardrobe, RERA PM1260002501839, Premium Properties in Punawale, Luxury Projects in Punawale, Real Estate Pune, 2.5 Acre Project Punawale');
+        this.setTitle('Harico Estates | Premium 2 & 3 BHK Flats in Punawale & Kiwale');
+        this.setDescription('Discover luxury 2 & 3 BHK homes in Punawale & Kiwale by Harico Estates (Sentosa Group). Experience premium living with world-class amenities near Wakad & Hinjewadi.');
+        this.setKeywords('Punawale Real Estate, Kiwale Flats, 2 BHK near Wakad, 3 BHK Punawale, Harico Estates, Sentosa Developers Pune, New Projects Punawale');
         this.setImage('/harico_logo.png');
         this.setUrl(window.location.origin);
 
