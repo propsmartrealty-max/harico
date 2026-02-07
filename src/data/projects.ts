@@ -70,7 +70,7 @@ export const projectsData: Record<string, Project> = {
     },
     '2': {
         id: '2',
-        slug: '2-3-bhk-flats-in-kiwale-harico-divaam',
+        slug: 'harico-divaam',
         title: 'HARICO DIVAAM',
         location: 'Kiwale, Pune',
         status: 'Upcoming',
@@ -147,7 +147,7 @@ export const projectsData: Record<string, Project> = {
     },
     '3': {
         id: '3',
-        slug: 'premium-2-3-bhk-punawale-harico-pride',
+        slug: 'harico-pride',
         title: 'HARICO PRIDE',
         location: 'Punawale, Pune',
         status: 'Ongoing',

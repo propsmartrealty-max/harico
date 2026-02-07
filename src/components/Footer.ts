@@ -29,19 +29,19 @@ export function createFooter(): HTMLElement {
         <div class="footer-col">
           <h4 class="footer-heading">Navigate</h4>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#amenities">Amenities</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/amenities">Amenities</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-heading">Projects</h4>
           <ul class="footer-links">
-            <li><a href="#project/premium-2-3-bhk-flats-in-punawale-harico-edge">HARICO EDGE</a></li>
-            <li><a href="#project/commercial-office-spaces-wakad-harico-heights">Harico Heights</a></li>
-            <li><a href="#project/premium-2-3-bhk-punawale-harico-pride">HARICO PRIDE</a></li>
+            <li><a href="/project/harico-edge">HARICO EDGE</a></li>
+            <li><a href="/project/harico-divaam">Harico Divaam</a></li>
+            <li><a href="/project/harico-pride">HARICO PRIDE</a></li>
           </ul>
         </div>
 

@@ -14,7 +14,7 @@ export function createHero(): HTMLElement {
         Discover spacious 2 & 3 BHK homes designed for your lifestyle.
       </p>
       <div class="hero-actions fade-in-up delay-2">
-        <a href="#projects" class="btn btn-primary hero-btn">View Projects</a>
+        <a href="/projects" class="btn btn-primary hero-btn">View Projects</a>
         <button class="btn btn-glass hero-enquire-btn">Enquire Now</button>
       </div>
     </div>

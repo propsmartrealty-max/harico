@@ -12,32 +12,62 @@ class Router {
     private routes: Route[] = [];
 
     constructor() {
-        window.addEventListener('hashchange', this.handleHashChange.bind(this));
-        window.addEventListener('load', this.handleHashChange.bind(this));
+        // Handle Legacy Hash URLs (Redirect to clean URLs)
+        if (window.location.hash) {
+            let hash = window.location.hash.substring(1); // Remove '#'
+            if (hash) {
+                if (!hash.startsWith('/')) {
+                    hash = '/' + hash;
+                }
+                window.history.replaceState({}, '', hash); // Update URL without reload
+            }
+        }
+
+        window.addEventListener('popstate', this.handleLocationChange.bind(this));
+        window.addEventListener('load', this.handleLocationChange.bind(this));
+
+        // global click listener for internal links
+        document.addEventListener('click', (e) => {
+            const link = (e.target as HTMLElement).closest('a');
+            if (link && link.href.startsWith(window.location.origin) && !link.hasAttribute('download') && link.target !== '_blank') {
+                e.preventDefault();
+                const path = link.getAttribute('href');
+                if (path) this.navigate(path);
+            }
+        });
     }
 
     public add(path: string, handler: RouteHandler) {
         this.routes.push({ path, handler });
     }
 
-    private handleHashChange() {
-        const hash = window.location.hash.slice(1); // Remove '#'
-        const [fullPath, query] = hash.split('?');
+    private handleLocationChange() {
+        const path = window.location.pathname;
+        const search = window.location.search;
 
-        // Handle routes like /project/slug-name
-        const pathSegments = fullPath.split('/').filter(Boolean); // ['project', 'slug-name']
-        const rootPath = '/' + (pathSegments[0] || '');
-        const slug = pathSegments[1];
+        const pathSegments = path.split('/').filter(Boolean); // ['project', 'slug-name'] or ['projects']
+        const rootSegment = pathSegments[0];
+
+        // Determine root route path
+        // IF /project/slug -> rootPath = '/project'
+        // IF /projects -> rootPath = '/' (fallback to home but scroll to section)
+        let rootPath = '/';
+        let slug = undefined;
+
+        if (rootSegment === 'project') {
+            rootPath = '/project';
+            slug = pathSegments[1];
+        }
 
         // Match route
-        const matchedRoute = this.routes.find(r => r.path === rootPath) || this.routes.find(r => r.path === '/');
+        const matchedRoute = this.routes.find(r => r.path === rootPath);
 
         if (matchedRoute) {
-            const params = new URLSearchParams(query);
+            const params = new URLSearchParams(search);
             matchedRoute.handler(params, slug);
 
             // --- SEO Logic ---
-            if (pathSegments[0] === 'project' && slug) {
+            if (rootPath === '/project' && slug) {
                 // Find project by slug
                 const project = Object.values(projectsData).find(p => p.slug === slug);
                 if (project && project.seo) {
@@ -67,7 +97,7 @@ class Router {
                         }))
                     });
                 } else if (project) {
-                    // Fallback if SEO object missing but project exists
+                    // Fallback
                     MetaManager.setTitle(`${project.title} | Harico Estates`);
                     MetaManager.setDescription(project.description.slice(0, 160));
                     MetaManager.setImage(project.image);
@@ -79,36 +109,33 @@ class Router {
             }
             // -----------------
 
-            // Allow DOM to update then try to scroll
+            // Handle Scrolling for Home Sections
             setTimeout(() => {
-                const sectionId = pathSegments[0]; // e.g. 'projects' or 'amenities'
-
-                if (slug) {
-                    // If detailed page, just scroll top usually, or preserve if needed
-                    window.scrollTo(0, 0);
-                } else if (sectionId && sectionId !== 'project') {
-                    // If homepage section anchor (e.g. #amenities)
-                    const section = document.getElementById(sectionId);
-                    if (section) {
-                        const offset = 80;
-                        const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
-                        window.scrollTo({ top: top, behavior: 'smooth' });
+                if (rootPath === '/') {
+                    // Check if pathSegment corresponds to a section ID (e.g. /amenities)
+                    const sectionId = rootSegment;
+                    if (sectionId) {
+                        const section = document.getElementById(sectionId);
+                        if (section) {
+                            const offset = 80;
+                            const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
+                            window.scrollTo({ top: top, behavior: 'smooth' });
+                            return;
+                        }
                     }
+                    // Default scroll top
+                    window.scrollTo(0, 0);
                 } else {
-                    // Default home
+                    // Details page
                     window.scrollTo(0, 0);
                 }
             }, 50);
         }
     }
 
-    public navigate(path: string, query?: Record<string, string>) {
-        let hash = path.startsWith('/') ? path.slice(1) : path;
-        if (query) {
-            const params = new URLSearchParams(query);
-            hash += `?${params.toString()}`;
-        }
-        window.location.hash = hash;
+    public navigate(path: string) {
+        window.history.pushState({}, '', path);
+        this.handleLocationChange();
     }
 }
 

@@ -1,6 +1,7 @@
 import { createProjectCard, type Project, projectCardStyles } from './ProjectCard';
 import { projectsData } from '../data/projects';
 
+
 const projects: Project[] = Object.values(projectsData);
 
 export function createProjectsGrid(): HTMLElement {

@@ -14,12 +14,12 @@ export function createProjectDetails(project: any): HTMLElement {
     <div class="pd-hero-overlay"></div>
     <div class="container pd-hero-content">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="#home">Home</a> &gt; <a href="#projects">Projects</a> &gt; <span class="current">${project.title}</span>
+        <a href="/">Home</a> &gt; <a href="/projects">Projects</a> &gt; <span class="current">${project.title}</span>
       </nav>
       <h1 class="pd-title">${project.title}</h1>
       <p class="pd-subtitle">${project.tagline || 'The Edge Of Timeless Modern Sophistication'}</p>
       <div class="mt-lg fade-in-up">
-         <a href="#projects" class="btn btn-secondary" style="border-color:white; color:white;">Back to Projects</a>
+         <a href="/projects" class="btn btn-secondary" style="border-color:white; color:white;">Back to Projects</a>
       </div>
     </div>
   `;

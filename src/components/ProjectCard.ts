@@ -1,3 +1,5 @@
+import { router } from '../router';
+
 export interface Project {
   id: string;
   slug?: string;
@@ -12,13 +14,17 @@ export interface Project {
 export function createProjectCard(project: Project): HTMLElement {
   const card = document.createElement('article');
   card.className = 'project-card';
+
+  // Card click handler (fallback if not clicking specific interactive elements)
   card.onclick = (e) => {
-    // Navigate via slug if available, else fallback to ID
     // Check if click originated from a button preventing default
     if ((e.target as HTMLElement).tagName.toLowerCase() === 'button') return;
 
+    // Also ignore if clicking the "explore" button which has its own listener,
+    // though e.stopPropagation() there should handle it.
+
     const identifier = project.slug || project.id;
-    window.location.hash = `#project/${identifier}`;
+    router.navigate(`/project/${identifier}`);
   };
 
   card.innerHTML = `
@@ -28,7 +34,7 @@ export function createProjectCard(project: Project): HTMLElement {
         <span class="status-badge ${project.status.toLowerCase()}">${project.status}</span>
       </div>
       <div class="card-overlay">
-        <button class="btn-overlay btn-explore" onclick="event.stopPropagation(); window.location.hash = '#project/${project.slug || project.id}'">Explore</button>
+        <button class="btn-overlay btn-explore" id="explore-${project.id}">Explore</button>
         <button class="btn-overlay btn-enquire" onclick="event.stopPropagation(); window.showEnquireModal('${project.title}');">Enquire</button>
       </div>
     </div>
@@ -62,7 +68,7 @@ export function createProjectCard(project: Project): HTMLElement {
       </div>
 
       <div class="card-actions">
-        <div class="btn-text">
+        <button class="btn-text">
           View Details 
           <span class="arrow-icon">
             <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,10 +76,30 @@ export function createProjectCard(project: Project): HTMLElement {
                 <path d="M17 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
-        </div>
+        </button>
       </div>
     </div>
   `;
+
+  // Attach listener to explore button after innerHTML is set
+  const exploreBtn = card.querySelector(`#explore-${project.id}`);
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const identifier = project.slug || project.id;
+      router.navigate(`/project/${identifier}`);
+    });
+  }
+
+  // Attach listener to View Details text button
+  const textBtn = card.querySelector('.btn-text');
+  if (textBtn) {
+    textBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const identifier = project.slug || project.id;
+      router.navigate(`/project/${identifier}`);
+    });
+  }
 
   return card;
 }
@@ -84,12 +110,12 @@ export const projectCardStyles = `
     border-radius: var(--radius-lg);
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1); /* Softer, deeper shadow */
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   .project-card:hover {
@@ -101,7 +127,7 @@ export const projectCardStyles = `
   .card-image-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3; /* Standard balanced ratio */
+    aspect-ratio: 4/3;
     overflow: hidden;
   }
 
@@ -119,8 +145,8 @@ export const projectCardStyles = `
   .card-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 25, 47, 0.4); /* Navy tint */
-    opacity: 0; 
+    background: rgba(10, 25, 47, 0.4);
+    opacity: 0;
     transition: opacity 0.4s ease;
     display: flex;
     align-items: center;
@@ -132,31 +158,32 @@ export const projectCardStyles = `
   }
   
   .btn-overlay {
-      background: var(--color-white);
-      color: var(--color-navy);
-      padding: 10px 24px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-size: 0.8rem;
-      transform: translateY(20px);
-      opacity: 0;
-      transition: all 0.4s 0.1s ease;
-      border: none;
+    background: var(--color-white);
+    color: var(--color-navy);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.4s 0.1s ease;
+    border: none;
+    cursor: pointer;
   }
   
   .project-card:hover .btn-overlay {
-      transform: translateY(0);
-      opacity: 1;
+    transform: translateY(0);
+    opacity: 1;
   }
   
   .btn-overlay.btn-explore { transition-delay: 0.1s; }
-  .btn-overlay.btn-enquire { 
-      transition-delay: 0.2s; 
-      margin-left: 10px;
-      background: var(--color-gold);
-      color: var(--color-white);
+  .btn-overlay.btn-enquire {
+    transition-delay: 0.2s;
+    margin-left: 10px;
+    background: var(--color-gold);
+    color: var(--color-white);
   }
 
   .card-badges {
@@ -168,14 +195,14 @@ export const projectCardStyles = `
 
   .status-badge {
     padding: 6px 12px;
-    border-radius: 4px; /* Square edges for modern tech look or soft round */
+    border-radius: 4px;
     font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     background: rgba(255, 255, 255, 0.95);
     color: var(--color-navy);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
   }
   
@@ -227,13 +254,13 @@ export const projectCardStyles = `
   }
   
   .detail-icon {
-      margin-top: 2px;
-      font-size: 1.1rem;
+    margin-top: 2px;
+    font-size: 1.1rem;
   }
   
   .detail-text {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   .detail-label {
@@ -271,6 +298,8 @@ export const projectCardStyles = `
     align-items: center;
     justify-content: space-between;
     transition: color var(--transition-normal);
+    cursor: pointer;
+    font-family: var(--font-heading);
   }
 
   .project-card:hover .btn-text {
@@ -278,13 +307,13 @@ export const projectCardStyles = `
   }
   
   .arrow-icon {
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
   }
   
   .project-card:hover .arrow-icon {
-      transform: translateX(8px);
-      color: var(--color-navy);
+    transform: translateX(8px);
+    color: var(--color-navy);
   }
 `;
