@@ -71,6 +71,18 @@ export function createFooter(): HTMLElement {
            <a href="#">Terms of Use</a>
         </div>
       </div>
+
+      <!-- Popular Searches (SEO Hidden Gem) -->
+      <div class="popular-searches">
+        <h5 class="seo-heading">Popular Searches</h5>
+        <p class="seo-text">
+            2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | Flats near Hinjewadi IT Park | 
+            Sentosa Harico Projects | New Launch in Punawale | Flats near Bhumkar Chowk | 
+            Apartments near Mumbai-Pune Expressway | Harico Edge Price | Harico Divaam Brochure | 
+            Real Estate Investment Pune | Ready Possession Flats in Punawale | 
+            <span lang="mr">पुनावळे मध्ये 2 BHK फ्लॅट</span> | <span lang="mr">किवाळे रियल इस्टेट</span>
+        </p>
+      </div>
     </div>
   `;
 
@@ -251,6 +263,31 @@ export function createFooter(): HTMLElement {
         gap: 15px;
         text-align: center;
       }
+    }
+
+    /* Popular Searches SEO Block */
+    .popular-searches {
+        margin-top: 30px;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 20px;
+        text-align: center;
+        opacity: 0.6;
+    }
+    
+    .seo-heading {
+        font-size: 0.8rem;
+        color: var(--color-gold);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    .seo-text {
+        font-size: 0.75rem;
+        color: var(--color-text-light);
+        line-height: 1.8;
+        max-width: 900px;
+        margin: 0 auto;
     }
   `;
   footer.appendChild(style);

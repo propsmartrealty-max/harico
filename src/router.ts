@@ -80,7 +80,7 @@ class Router {
                     MetaManager.setImage(project.image);
                     MetaManager.setUrl(window.location.href);
 
-                    // Schema Injection
+                    // Schema Injection - Advanced Real Estate Schema
                     MetaManager.setSchema({
                         "@context": "https://schema.org",
                         "@type": "ApartmentComplex",
@@ -92,12 +92,36 @@ class Router {
                             "@type": "PostalAddress",
                             "addressLocality": project.location.split(',')[0].trim(),
                             "addressRegion": "Maharashtra",
-                            "addressCountry": "IN"
+                            "addressCountry": "IN",
+                            "postalCode": "411033" // Default for Punawale/Kiwale area
                         },
+                        "geo": {
+                            "@type": "GeoCoordinates",
+                            "latitude": "18.6366", // Approx center for Punawale/Kiwale
+                            "longitude": "73.7483"
+                        },
+                        "priceRange": project.price,
                         "amenityFeature": project.amenities.map(a => ({
                             "@type": "LocationFeatureSpecification",
-                            "name": typeof a === 'string' ? a : a.items.join(', ')
-                        }))
+                            "name": typeof a === 'string' ? a : a.items.join(', '),
+                            "value": "True"
+                        })),
+                        "potentialAction": {
+                            "@type": "ReserveAction",
+                            "target": {
+                                "@type": "EntryPoint",
+                                "urlTemplate": `${window.location.href}#enquire`,
+                                "inLanguage": "en-US",
+                                "actionPlatform": [
+                                    "http://schema.org/DesktopWebPlatform",
+                                    "http://schema.org/MobileWebPlatform"
+                                ]
+                            },
+                            "result": {
+                                "@type": "Reservation",
+                                "name": "Book Site Visit"
+                            }
+                        }
                     });
                 } else if (project) {
                     // Fallback

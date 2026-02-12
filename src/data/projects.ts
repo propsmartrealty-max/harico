@@ -23,6 +23,8 @@ export interface Project {
     };
 }
 
+import { generateKeywords } from './seo_strategy';
+
 export const projectsData: Record<string, Project> = {
     '1': {
         id: '1',
@@ -63,9 +65,9 @@ export const projectsData: Record<string, Project> = {
             { type: '3 BHK Royale', carpet: '1148 sq.ft', price: '₹ 1.18 Cr*' }
         ],
         seo: {
-            title: 'Harico Edge Punawale | Luxury 2 & 3 BHK Flats near Wakad | By Sentosa',
-            description: 'Harico Edge: Premium 2 & 3 BHK flats in Punawale, Pune. 2.5 acres, 50+ amenities, spacious balconies. 2 mins from Mumbai-Pune Highway. Enquire Now!',
-            keywords: 'Harico Edge, 2 BHK Punawale, 3 BHK Punawale, Flats near Wakad, Sentosa Edge, Luxury Apartments Punawale'
+            title: 'Harico Edge 2 & 3 BHK Flats in Punawale | Near Wakad & Highway | Sentosa Group',
+            description: 'Harico Edge by Sentosa: Premium 2 & 3 BHK flats in Punawale starting ₹74 Lacs*. Just 2 mins from Mumbai-Pune Highway. RERA Registered. Enquire for Floor Plans.',
+            keywords: generateKeywords('edge')
         }
     },
     '2': {
@@ -140,9 +142,9 @@ export const projectsData: Record<string, Project> = {
             { title: '3 BHK Grand', image: '/assets/harico-divaam-3bhk-grand-v3.png' }
         ],
         seo: {
-            title: 'Harico Divaam Kiwale | 2 & 3 BHK Homes near Expressway | Sentosa Legacy',
-            description: 'Harico Divaam (Divine): Tallest towers in Kiwale offering 2 & 3 BHK homes with sky lounge & 100+ amenities. Located next to Mumbai-Pune Expressway.',
-            keywords: 'Harico Divaam, Flats in Kiwale, 2 BHK Kiwale, 3 BHK Kiwale, Flats near Mukai Chowk, Sentosa Divine, Luxury Homes Kiwale'
+            title: 'Harico Divaam 2 & 3 BHK in Kiwale | Tallest Towers near Ravet Expressway',
+            description: 'Harico Divaam (Divine): The tallest towers in Kiwale/Ravet. Luxury 2 & 3 BHK homes from ₹64.5 Lacs*. Next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities.',
+            keywords: generateKeywords('divaam')
         }
     },
     '3': {
@@ -170,9 +172,9 @@ export const projectsData: Record<string, Project> = {
         configurations: [],
         reraId: 'P52100050231',
         seo: {
-            title: 'Harico Pride Punawale | Spacious 2 & 3 BHK Apartments | New Launch',
-            description: 'Harico Pride: New launch in Punawale offering spacious 2 & 3 BHK homes. Premium gated community near Bhiku Vallabh Kale School.',
-            keywords: 'Harico Pride, New Projects Punawale, Spacious 2 BHK Punawale, Harico Sentosa Pride, Pre-launch offers'
+            title: 'Harico Pride Punawale | New Launch Spacious 2 & 3 BHK | Pre-Launch Offers',
+            description: 'Harico Pride: New Launch in Punawale offering spacious 2 & 3 BHK homes. Located near Bhiku Vallabh Kale School. Avail Pre-Launch Price Benefits & Early Bird Offers.',
+            keywords: generateKeywords('pride')
         }
     }
 };

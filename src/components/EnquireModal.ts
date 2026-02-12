@@ -76,13 +76,19 @@ export function createEnquireModal(): HTMLElement {
 
     // Construct WhatsApp URL
     const phoneNumber = '917744009295';
-    let message = `Hello, I am interested in`;
+    let message = `*New Enquiry from Harico Estates Website* 🏡\n\n`;
 
     if (currentProjectName) {
-      message += ` *${currentProjectName}*`;
+      message += `*Project:* ${currentProjectName}\n`;
     }
 
-    message += `.\n\nRequirement: *${requirementInput.value}*\nInterest: ${interestInput.value}\nName: ${nameInput.value}\nPhone: ${phoneInput.value}`;
+    message += `*Name:* ${nameInput.value}\n`;
+    message += `*Phone:* ${phoneInput.value}\n`;
+    message += `*Configuration:* ${requirementInput.value}\n`;
+    message += `*Inquiry Type:* ${interestInput.value === 'details' ? 'Requesting Details' : interestInput.value === 'visit' ? 'Site Visit' : 'Call Back'}\n`;
+
+    message += `\n--------------------------------\n`;
+    message += `_Please revert at your earliest convenience._`;
 
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
