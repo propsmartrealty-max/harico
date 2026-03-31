@@ -137,7 +137,7 @@ export const projectsData: Record<string, Project> = {
         possession: '2028',
         masterLayout: '/assets/harico-divaam-master-layout.png',
         reraNumber: 'PR1260002502389',
-        reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=PR1260002502389',
+        reraQRCodeUrl: '/assets/harico-divaam-rera-qr.png',
         floorPlans: [
             { title: '2 BHK Smart', image: '/assets/harico-divaam-2bhk-smart.png' },
             { title: '2 BHK Comfort', image: '/assets/harico-divaam-2bhk-comfort-v3.png' },
