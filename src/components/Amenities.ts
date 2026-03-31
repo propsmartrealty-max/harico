@@ -1,5 +1,6 @@
 export function createAmenities(): HTMLElement {
   const container = document.createElement('div');
+  container.id = 'amenities';
   container.className = 'amenities-section section';
 
   // SVG Icons (Classy Line Art Style)

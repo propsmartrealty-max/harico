@@ -1,6 +1,6 @@
 export function createHero(): HTMLElement {
   const section = document.createElement('section');
-  section.id = 'hero';
+  section.id = 'home';
   section.className = 'hero-section';
 
   section.innerHTML = `
