@@ -9,6 +9,8 @@ export interface Project {
   image: string;
   type: string;
   price?: string;
+  reraNumber?: string;
+  reraQRCodeUrl?: string;
 }
 
 export function createProjectCard(project: Project): HTMLElement {
@@ -66,6 +68,13 @@ export function createProjectCard(project: Project): HTMLElement {
          </div>
          ` : ''}
       </div>
+
+      ${project.reraNumber ? `
+      <div class="card-rera-badge" title="RERA: ${project.reraNumber}">
+          <span class="rera-txt">MahaRERA: ${project.reraNumber}</span>
+          ${project.reraQRCodeUrl ? `<img src="${project.reraQRCodeUrl}" alt="MahaRERA QR" class="rera-qr">` : ''}
+      </div>
+      ` : ''}
 
       <div class="card-actions">
         <button class="btn-text">
@@ -316,4 +325,37 @@ export const projectCardStyles = `
     transform: translateX(8px);
     color: var(--color-navy);
   }
+
+  .card-rera-badge {
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--color-navy);
+    font-weight: 600;
+  }
+
+  .rera-qr {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-rera-badge:hover .rera-qr {
+    transform: scale(3) translateX(-10px) translateY(-10px);
+    z-index: 10;
+    position: relative;
+    background: white;
+    padding: 2px;
+    border: 1px solid var(--color-gold);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
 `;
+

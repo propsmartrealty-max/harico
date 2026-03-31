@@ -12,7 +12,16 @@ export function createProjectDetails(project: any): HTMLElement {
   hero.style.backgroundImage = `url('${project.image}')`;
   hero.innerHTML = `
     <div class="pd-hero-overlay"></div>
-    <div class="container pd-hero-content">
+    <div class="container pd-hero-content" style="position: relative;">
+      ${project.reraNumber ? `
+      <div class="hero-rera-badge">
+        <div class="hero-rera-info">
+          <span class="hero-rera-title">MahaRERA Verified</span>
+          <span class="hero-rera-id"><i class="fa-solid fa-shield-halved" style="color: #25D366; margin-right:4px;"></i>${project.reraNumber}</span>
+        </div>
+        ${project.reraQRCodeUrl ? `<img src="${project.reraQRCodeUrl}" alt="MahaRERA QR Code" class="hero-rera-qr">` : ''}
+      </div>
+      ` : ''}
       <nav class="breadcrumbs" aria-label="Breadcrumb">
         <a href="/">Home</a> &gt; <a href="/projects">Projects</a> &gt; <span class="current">${project.title}</span>
       </nav>
@@ -41,7 +50,17 @@ export function createProjectDetails(project: any): HTMLElement {
   aboutSection.innerHTML = `
     <h2 class="section-heading">About Project</h2>
     <p class="text-body">${project.description}</p>
-    ${project.reraId ? `<p class="mt-md text-sm" style="color: var(--color-text-secondary); font-weight: 500;">RERA Registration: <span style="color: var(--color-navy);">${project.reraId}</span></p>` : ''}
+    ${project.reraNumber ? `
+      <div class="mt-lg" style="background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.2); padding: 15px; border-radius: 8px; display: inline-flex; align-items: center; gap: 15px;">
+        ${project.reraQRCodeUrl ? `<img src="${project.reraQRCodeUrl}" alt="MahaRERA QR Code" style="width: 60px; height: 60px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border: 2px solid white;">` : ''}
+        <div>
+           <p style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-gold); font-weight: 700; margin-bottom: 5px;">MahaRERA Registered</p>
+           <p style="font-weight: 600; color: var(--color-navy); display: flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-check-circle" style="color: var(--color-success); font-size: 1.1rem;"></i> ${project.reraNumber}
+           </p>
+        </div>
+      </div>
+    ` : ''}
   `;
 
   // Configuration Table
@@ -403,6 +422,71 @@ export function createProjectDetails(project: any): HTMLElement {
       .pd-hero { height: 50vh; }
       .pd-location .grid-cols-2 { grid-template-columns: 1fr; }
     }
+
+    /* Hero RERA Badge Styles */
+    .hero-rera-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 8px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-left: 4px solid var(--color-gold);
+      transform: translateY(20px);
+      animation: floatUpData 0.8s ease forwards;
+      z-index: 10;
+    }
+    
+    @keyframes floatUpData {
+        to { transform: translateY(0); }
+    }
+
+    .hero-rera-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+    }
+
+    .hero-rera-title {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--color-text-secondary);
+      font-weight: 700;
+    }
+
+    .hero-rera-id {
+      font-size: 0.95rem;
+      color: var(--color-navy);
+      font-weight: 800;
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-rera-qr {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid var(--color-border-light);
+      padding: 2px;
+      background: white;
+    }
+
+    @media (max-width: 900px) {
+      .hero-rera-badge {
+         position: static;
+         margin: 0 auto 20px auto;
+         width: fit-content;
+      }
+    }
   `;
   container.appendChild(pageStyle);
 
@@ -413,3 +497,4 @@ export function createProjectDetails(project: any): HTMLElement {
 
   return container;
 }
+

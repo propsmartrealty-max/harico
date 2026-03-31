@@ -212,7 +212,7 @@ export function createHero(): HTMLElement {
     if (enquireBtn) {
       enquireBtn.addEventListener('click', () => {
         if ((window as any).showEnquireModal) {
-          (window as any).showEnquireModal();
+          (window as any).showEnquireModal('General Enquiry (Home Page)');
         }
       });
     }

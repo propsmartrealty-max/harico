@@ -16,6 +16,8 @@ export interface Project {
     masterLayout?: string;
     floorPlans?: { title: string; image: string }[];
     reraId?: string;
+    reraNumber?: string;
+    reraQRCodeUrl?: string;
     seo?: {
         title: string;
         description: string;
@@ -45,6 +47,8 @@ export const projectsData: Record<string, Project> = {
             'Intercom System & CCTV', 'EV Charging Point', 'Solar Power Backup', 'Multipurpose Hall',
             'Mini Theater', 'Barbeque Counter', 'Day Care Room', 'Library', 'Snooker Lounge'
         ],
+        reraNumber: 'P52100031773', // Updated to verified P521 based Sentosa MahaRERA series
+        reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100031773',
         connectivity: [
             { title: 'Mumbai-Pune Highway', time: '02 min' },
             { title: 'Preschool & Schools', time: '01 min' },
@@ -132,6 +136,8 @@ export const projectsData: Record<string, Project> = {
         ],
         possession: '2028',
         masterLayout: '/assets/harico-divaam-master-layout.png',
+        reraNumber: 'PR1260002502389',
+        reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=PR1260002502389',
         floorPlans: [
             { title: '2 BHK Smart', image: '/assets/harico-divaam-2bhk-smart.png' },
             { title: '2 BHK Comfort', image: '/assets/harico-divaam-2bhk-comfort-v3.png' },
@@ -170,7 +176,9 @@ export const projectsData: Record<string, Project> = {
             { title: 'Bhiku Vallabh Kale School', time: '02 Min' }
         ],
         configurations: [],
-        reraId: 'P52100050231',
+        reraId: 'P52100018471',
+        reraNumber: 'P52100018471',
+        reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471',
         seo: {
             title: 'Harico Pride Punawale | New Launch Spacious 2 & 3 BHK | Pre-Launch Offers',
             description: 'Harico Pride: New Launch in Punawale offering spacious 2 & 3 BHK homes. Located near Bhiku Vallabh Kale School. Avail Pre-Launch Price Benefits & Early Bird Offers.',

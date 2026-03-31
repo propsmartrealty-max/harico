@@ -1,10 +1,19 @@
-// Master SEO Strategy - Deep Market Data Implementation
+// Master SEO Strategy - Deep Market Data & 1000+ Keyword Implementation
 
 // Base Clusters for Combinatorics
 const locations = [
     'Punawale', 'Kiwale', 'Ravet', 'Wakad Annexe', 'PCMC', 'Pune West',
     'Near Mumbai-Pune Expressway', 'Near Bhumkar Chowk', 'Near Mukai Chowk',
     'Near Hinjewadi IT Park', 'Near Sentosa Resort', 'Pradhikaran'
+];
+
+const developers = [
+    'Sentosa Developers', 'Sentosa Group', 'Harico Estates', 'Harico Group', 
+    'Sentos', 'Sentosa Ventures', 'Sentosa Real Estate', 'Harico Developers'
+];
+
+const projectQueries = [
+    'Projects', 'Upcoming Projects', 'New Launch', 'Properties', 'Flats', 'Apartments', 'Real Estate'
 ];
 
 const propertyTypes = [
@@ -16,7 +25,7 @@ const propertyTypes = [
 const attributes = [
     'with Balcony', 'with Terrace', 'with Servant Room', 'Vastu Compliant',
     'Garden Facing', 'High Rise', 'Gated Community', 'Ready Possession',
-    'Under Construction', 'New Launch', 'Pre-Launch'
+    'Under Construction', 'New Launch', 'Pre-Launch', 'Premium Look'
 ];
 
 const intents = [
@@ -49,17 +58,17 @@ const marathiIntents = ['किंमत', 'विक्रीसाठी', '�
 // Specific Project Clusters
 const haricoEdgeUnique = [
     'Flats near Wakad Highway', 'Punawale Bhumkar Chowk Projects', 'Harico Edge Launch Price',
-    'Sentosa Group Punawale', 'Properties near Decathlon Wakad'
+    'Sentosa Group Punawale', 'Properties near Decathlon Wakad', 'Sentosa Developers Edge'
 ];
 
 const haricoDivaamUnique = [
     'Tallest Towers in Kiwale', 'Flats near Mukai Chowk', 'Harico Divaam Brochure',
-    'Luxury Homes near Expressway', 'Sentosa Divine Kiwale'
+    'Luxury Homes near Expressway', 'Sentosa Divine Kiwale', 'Harico Estates Divaam'
 ];
 
 const haricoPrideUnique = [
     'New Launch in Punawale 2025', 'Harico Pride Pre-launch', 'Spacious 2 BHK Punawale',
-    'Flats near Bhiku Vallabh School'
+    'Flats near Bhiku Vallabh School', 'Harico projects punawale', 'sentos punawale projects'
 ];
 
 // Helper to generate combinations
@@ -73,19 +82,26 @@ const combine = (arr1: string[], arr2: string[]) => {
     return result;
 };
 
-// Generate Massive Lists
+// Generate Massive Lists (1000+ Permutations Synthesized)
+const builderLocations = combine(developers, locations); // e.g. "Sentosa Developers Punawale"
+const builderProjects = combine(builderLocations, projectQueries); // e.g. "Sentosa Developers Punawale Projects"
 const mainKeywords = combine(propertyTypes, locations); // e.g., "2 BHK Punawale"
 const intentKeywords = combine(mainKeywords, intents); // e.g., "2 BHK Punawale Price"
-const attributeKeywords = combine(attributes.slice(0, 5), locations.slice(0, 5)); // Semantically relevant subset
+const builderIntentKeywords = combine(builderProjects, intents.slice(0, 5)); // e.g., "Sentosa Developers Punawale Projects Price"
+
+const attributeKeywords = combine(attributes.slice(0, 5), locations.slice(0, 5));
 const investmentKeywords = combine(locations.slice(0, 5), investmentTerms);
 const marathiKeywords = [...combine(marathiLocations, marathiTypes), ...combine(marathiLocations, marathiIntents)];
 
 // Master Export
 export const masterSeoStrategy = {
-    // 1. Core permutations (High Volume) - Randomly sample to avoid 10MB file
-    core: [...mainKeywords, ...intentKeywords].slice(0, 150),
+    // 1. Core permutations (High Volume)
+    core: [...mainKeywords, ...intentKeywords],
 
-    // 2. Niche / Long Tail (High Intent)
+    // 2. High Value Builder Keywords (Massive Authority Injection)
+    builder: [...builderLocations, ...builderProjects, ...builderIntentKeywords],
+
+    // 3. Niche / Long Tail (High Intent)
     longTail: [
         ...attributeKeywords,
         ...investmentKeywords,
@@ -93,33 +109,44 @@ export const masterSeoStrategy = {
         ...competitors
     ],
 
-    // 3. Regional
+    // 4. Regional
     regional: marathiKeywords,
 
-    // 4. Project Specific
+    // 5. Project Specific
     edge: [...haricoEdgeUnique, ...combine(['2 BHK', '3 BHK'], ['Punawale', 'Wakad'])],
     divaam: [...haricoDivaamUnique, ...combine(['2 BHK', '3 BHK'], ['Kiwale', 'Ravet'])],
     pride: [...haricoPrideUnique, 'New Projects Punawale']
 };
 
-export const generateKeywords = (type: 'edge' | 'divaam' | 'pride' | 'global') => {
-    let base = [];
+export const generateKeywords = (type: 'edge' | 'divaam' | 'pride' | 'global', maxLimit: number = 300) => {
+    let base: string[] = [];
+
+    // Prioritize critical entity keywords
+    const entityKeywords = [
+        'Sentosa developers', 'Harico Estates Punawale', 'harico projects punawale', 'sentos punawale'
+    ];
 
     if (type === 'global') {
-        base = [...masterSeoStrategy.core.slice(0, 20), ...masterSeoStrategy.regional.slice(0, 10)];
+        base = [
+            ...entityKeywords,
+            ...masterSeoStrategy.builder.slice(0, 50),
+            ...masterSeoStrategy.core.slice(0, 50), 
+            ...masterSeoStrategy.regional.slice(0, 20)
+        ];
     } else {
         // Project specific mix
         const projectSpecific = masterSeoStrategy[type];
-        const relevantCore = masterSeoStrategy.core.filter(k =>
-            type === 'edge' ? k.includes('Punawale') :
-                type === 'divaam' ? k.includes('Kiwale') : k.includes('Punawale')
-        ).slice(0, 15);
+        
+        // Find relevant geo keywords in builder list
+        const locationFilter = type === 'edge' || type === 'pride' ? 'Punawale' : 'Kiwale';
+        const relevantBuilder = masterSeoStrategy.builder.filter(k => k.includes(locationFilter)).slice(0, 50);
+        const relevantCore = masterSeoStrategy.core.filter(k => k.includes(locationFilter)).slice(0, 50);
+        const relevantLongTail = masterSeoStrategy.longTail.slice(0, 30);
 
-        const relevantLongTail = masterSeoStrategy.longTail.slice(0, 10); // Rotate these if needed
-
-        base = [...projectSpecific, ...relevantCore, ...relevantLongTail];
+        base = [...entityKeywords, ...projectSpecific, ...relevantBuilder, ...relevantCore, ...relevantLongTail];
     }
 
-    // Dedupe and join
-    return Array.from(new Set(base)).join(', ');
+    // Dedupe and join, enforcing max limit to prevent payload bloat while satisfying 1000+ injection across the site
+    return Array.from(new Set(base)).slice(0, maxLimit).join(', ');
 };
+

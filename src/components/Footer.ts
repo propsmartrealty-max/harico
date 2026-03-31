@@ -65,11 +65,35 @@ export function createFooter(): HTMLElement {
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2024 Harico Estates. All rights reserved.</p>
+        <p>&copy; 2025 Harico Estates. All rights reserved.</p>
         <div class="legal-links">
-           <a href="#">Privacy Policy</a>
-           <a href="#">Terms of Use</a>
+           <a href="/privacy">Privacy Policy</a>
+           <a href="/terms">Terms of Use</a>
         </div>
+      </div>
+
+      <!-- MahaRERA Disclaimer -->
+      <div class="footer-rera" style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
+         <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 12px;">
+             <!-- Verified QRs targeting MahaRERA API via wrapper -->
+             <div style="text-align: center;">
+                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100031773" alt="Edge QR" title="Harico Edge QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Edge</div>
+             </div>
+             <div style="text-align: center;">
+                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=PR1260002502389" alt="Divaam QR" title="Harico Divaam QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Divaam</div>
+             </div>
+             <div style="text-align: center;">
+                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471" alt="Pride QR" title="Harico Pride QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Pride</div>
+             </div>
+         </div>
+         <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); max-width: 900px; margin: 0 auto; line-height: 1.6;">
+            <strong>MahaRERA Registration Numbers:</strong> Harico Edge: P52100031773 | Harico Divaam: PR1260002502389 | Harico Pride: P52100018471. 
+            Detailed project information is available on the MahaRERA website (<a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold); text-decoration: none;">maharera.mahaonline.gov.in</a>) under registered projects. 
+            Harico Estates is a premium real estate venture by Sentosa Developers. The information provided on this website is for informational purposes only.
+         </p>
       </div>
 
       <!-- Popular Searches (SEO Hidden Gem) -->

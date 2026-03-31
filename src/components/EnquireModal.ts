@@ -236,7 +236,8 @@ export function createEnquireModal(): HTMLElement {
 
   (window as any).showEnquireModal = (projectName?: string) => {
     modal.classList.remove('hidden');
-    currentProjectName = projectName || '';
+    currentProjectName = projectName || 'General Enquiry';
+
     if (currentProjectName) {
       projectContextEl.textContent = `Project: ${currentProjectName}`;
       projectContextEl.style.display = 'block';

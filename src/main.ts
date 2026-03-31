@@ -11,7 +11,9 @@ import { createProjectDetails } from './components/ProjectDetails';
 import { createBuilderLegacy } from './components/BuilderLegacy';
 import { router } from './router';
 import { projectsData } from './data/projects';
-
+import { initSEO } from './utils/schemaGenerator';
+import { generateKeywords } from './data/seo_strategy';
+import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const header = createHeader();
 const footer = createFooter();
@@ -27,7 +29,13 @@ app.appendChild(enquireModal); // Mount modal
 // Route Handlers
 router.add('/', () => {
     mainAppContainer.innerHTML = ''; // Clear current view
-    document.title = 'Harico Estates | Premium Real Estate in Punawale'; // Reset title
+    document.title = 'Harico Estates | Premium Real Estate in Punawale by Sentosa'; // Reset title
+    
+    // Inject global schema and dense keywords
+    initSEO();
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) metaKeywords.setAttribute('content', generateKeywords('global', 300));
+
     mainAppContainer.appendChild(createHero());
     mainAppContainer.appendChild(createBuilderLegacy());
     mainAppContainer.appendChild(createProjectsGrid());
@@ -41,6 +49,20 @@ const legacySlugs: Record<string, string> = {
     'harico-edge-punawale': 'harico-edge',
     'harico-pride-punawale': 'harico-pride'
 };
+
+router.add('/privacy', () => {
+    mainAppContainer.innerHTML = '';
+    initSEO();
+    mainAppContainer.appendChild(createPrivacyPolicy());
+    window.scrollTo(0, 0);
+});
+
+router.add('/terms', () => {
+    mainAppContainer.innerHTML = '';
+    initSEO();
+    mainAppContainer.appendChild(createTermsOfUse());
+    window.scrollTo(0, 0);
+});
 
 router.add('/project', (params, slug) => {
     mainAppContainer.innerHTML = '';
