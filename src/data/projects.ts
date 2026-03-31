@@ -39,7 +39,7 @@ export const projectsData: Record<string, Project> = {
         possession: '2029',
         image: '/assets/harico-edge-hero.png',
         tagline: 'A Glimpse Into Excellence | The Edge Of Timeless Modern Sophistication',
-        description: 'Harico Edge (formerly Sentosa Edge) offers a peaceful and modern lifestyle in one of Pune’s most convenient and growing neighbourhoods, Punawale. Spread across a 2.5-acre land parcel, the project features well-designed 2 and 3 BHK Ultra-Premium homes that are spacious, bright, and thoughtfully planned. With soothing green views, practical layouts, 2 balconies in 2 BHKs, and a walk-in wardrobe in 3 BHKs, every home is designed for comfortable, easy family living. The community brings together 50+ lifestyle amenities for relaxation, fitness, and leisure. RERA ID: PM1260002501839.',
+        description: 'Harico Edge (formerly Sentosa Edge) offers a peaceful and modern lifestyle in one of Pune’s most convenient and growing neighbourhoods, Punawale. Spread across a 2.5-acre land parcel, the project features well-designed 2 and 3 BHK Ultra-Premium homes that are spacious, bright, and thoughtfully planned. With soothing green views, practical layouts, 2 balconies in 2 BHKs, and a walk-in wardrobe in 3 BHKs, every home is designed for comfortable, easy family living. The community brings together 50+ lifestyle amenities for relaxation, fitness, and leisure. MahaRERA ID: P52100031773.',
         amenities: [
             'Swimming Pool', 'Kids Play Area', 'Party Lawn', 'Temple & Flag Hoisting',
             'Gazebo', 'Sun Bathing Area', 'Pool Deck Area', 'Rooftop Amenities',
