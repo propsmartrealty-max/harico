@@ -32,6 +32,13 @@ export const generateOrganizationSchema = () => {
         "telephone": "+91-7744009295",
         "email": "contact@haricoestates.in",
         "priceRange": "₹71.00 Lacs - ₹1.50 Cr",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "148",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Harico Estates, Near Bhumkar Chowk, Mumbai-Pune Expressway",
@@ -45,6 +52,14 @@ export const generateOrganizationSchema = () => {
             "latitude": "18.6366",
             "longitude": "73.7483"
         },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "09:30",
+                "closes": "19:30"
+            }
+        ],
         "parentOrganization": {
             "@type": "Organization",
             "name": "Sentosa Developers & Hospitality Group",
@@ -136,6 +151,13 @@ export const generateProjectSchema = (project: Project) => {
         "description": project.description,
         "url": `https://haricoestates.in/project/${project.slug}`,
         "telephone": "+91-7744009295",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "84",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": `${project.title}, ${project.location}`,
@@ -177,6 +199,56 @@ export const generateProjectSchema = (project: Project) => {
                 "name": "Harico Estates by Sentosa Developers"
             }
         }))
+    };
+};
+
+export const generateFaqSchema = () => {
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://haricoestates.in/#faq",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the starting price for 2 BHK flats at Harico Edge Punawale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Harico Edge in Punawale offers ultra-premium 2 BHK residences starting from ₹74 Lacs* and spacious 3 BHK residences starting from ₹89 Lacs* with dual balconies and 50+ amenities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the price and elevation of Harico Divaam in Kiwale Ravet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Harico Divaam is the tallest residential landmark in the Kiwale-Ravet corridor, featuring 5 iconic 24-storey towers across 5 acres. 2 & 3 BHK luxury residences start from ₹71.00 Lacs* onwards directly opposite Sentosa Water Park."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are Harico Estates projects registered with MahaRERA?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, 100% of Harico Estates projects are sanctioned and registered under MahaRERA: Harico Edge (P52100031773), Harico Divaam (PR1260002502389), and Harico Pride (P52100018471)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the connectivity of Harico projects to Hinjewadi IT Park and Expressway?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Harico projects enjoy unmatched connectivity: 2 minutes to the Mumbai-Pune Expressway & Mukai Chowk, 10 minutes to Phoenix Mall of the Millennium (Wakad), and 15-18 minutes to Hinjewadi Rajiv Gandhi Infotech Park Phase 1, 2 & 3."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is the developer behind Harico Estates?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Harico Estates is backed by the prestigious 39-year legacy (since 1987) of Sentosa Developers, creators of Sentosa Water Park & Resorts and over 20+ delivered landmark projects across Pune."
+                }
+            }
+        ]
     };
 };
 
@@ -257,6 +329,7 @@ export const initSEO = (project?: Project) => {
     injectSchema(generateOrganizationSchema(), 'org-schema');
     injectSchema(generateWebSiteSchema(), 'website-schema');
     injectSchema(generateBreadcrumbSchema(project), 'breadcrumb-schema');
+    injectSchema(generateFaqSchema(), 'faq-schema');
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');
