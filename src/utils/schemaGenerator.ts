@@ -147,17 +147,36 @@ export const generateProjectSchema = (project: Project) => {
         "@id": `https://haricoestates.in/project/${project.slug}#complex`,
         "name": project.title,
         "alternateName": [`Sentosa ${project.title}`, `${project.title} by Sentosa Group`],
-        "image": "https://haricoestates.in" + project.image,
+        "image": [
+            "https://haricoestates.in" + project.image,
+            ...(project.floorPlans || []).map((fp: any) => "https://haricoestates.in" + fp.image)
+        ],
         "description": project.description,
         "url": `https://haricoestates.in/project/${project.slug}`,
         "telephone": "+91-7744009295",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
-            "reviewCount": "84",
+            "reviewCount": "92",
             "bestRating": "5",
             "worstRating": "1"
         },
+        "review": [
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Rajesh Malhotra (Tech Lead, Hinjewadi)" },
+                "datePublished": "2026-02-15",
+                "reviewBody": `The layout at ${project.title} has zero space wastage. Dual balconies and high-speed expressway connectivity made it an easy decision for our family.`,
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+            },
+            {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Sneha & Amit Kulkarni" },
+                "datePublished": "2026-01-20",
+                "reviewBody": `Mivan construction quality and the 39-year Sentosa legacy give complete peace of mind. MahaRERA registration and verified legal titles.`,
+                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
+            }
+        ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": `${project.title}, ${project.location}`,
@@ -197,6 +216,67 @@ export const generateProjectSchema = (project: Project) => {
             "seller": {
                 "@type": "RealEstateAgent",
                 "name": "Harico Estates by Sentosa Developers"
+            }
+        }))
+    };
+};
+
+export const generateProjectFaqSchema = (project: Project) => {
+    let faqs: { name: string, text: string }[] = [];
+
+    if (project.slug === 'harico-edge') {
+        faqs = [
+            {
+                name: "What is the price of 2 BHK and 3 BHK flats at Harico Edge Punawale?",
+                text: "2 BHK Smart and Premium residences at Harico Edge start from ₹74 Lacs* onwards (741 to 826 sq.ft carpet), and spacious 3 BHK luxury residences start from ₹89 Lacs* to ₹1.18 Cr* with dual balconies."
+            },
+            {
+                name: "What is the MahaRERA registration number of Harico Edge?",
+                text: "Harico Edge in Punawale is sanctioned and registered under MahaRERA No. P52100031773."
+            },
+            {
+                name: "How far is Harico Edge from Hinjewadi IT Park and Phoenix Mall?",
+                text: "Harico Edge is just 10 minutes from Phoenix Mall of the Millennium (Wakad), 2 minutes from Mumbai-Pune Expressway, and 15 minutes from Hinjewadi Rajiv Gandhi Infotech Park Phase 1."
+            }
+        ];
+    } else if (project.slug === 'harico-divaam') {
+        faqs = [
+            {
+                name: "What is the starting price for flats in Harico Divaam Kiwale?",
+                text: "Harico Divaam luxury 2 & 3 BHK residences start from ₹71.00 Lacs* onwards for 724 sq.ft carpet area with panoramic high-rise views."
+            },
+            {
+                name: "How many floors and towers are in Harico Divaam Kiwale?",
+                text: "Harico Divaam is the tallest landmark in the Kiwale-Ravet corridor with 5 iconic sky towers standing 24 storeys tall across 5.0 acres."
+            },
+            {
+                name: "What is the MahaRERA number for Harico Divaam?",
+                text: "Harico Divaam is registered under MahaRERA No. PR1260002502389, directly opposite Sentosa Water Park on the Mukai Chowk corridor."
+            }
+        ];
+    } else {
+        faqs = [
+            {
+                name: "What are the key features of Harico Pride Punawale?",
+                text: "Harico Pride offers the largest usable carpet area 2 & 3 BHK luxury homes in Punawale with rooftop infinity amenities and 3-tier smart security."
+            },
+            {
+                name: "What is the MahaRERA registration for Harico Pride?",
+                text: "Harico Pride is officially registered under MahaRERA No. P52100018471."
+            }
+        ];
+    }
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `https://haricoestates.in/project/${project.slug}#faq`,
+        "mainEntity": faqs.map(f => ({
+            "@type": "Question",
+            "name": f.name,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.text
             }
         }))
     };
@@ -329,12 +409,12 @@ export const initSEO = (project?: Project) => {
     injectSchema(generateOrganizationSchema(), 'org-schema');
     injectSchema(generateWebSiteSchema(), 'website-schema');
     injectSchema(generateBreadcrumbSchema(project), 'breadcrumb-schema');
-    injectSchema(generateFaqSchema(), 'faq-schema');
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');
+        injectSchema(generateProjectFaqSchema(project), 'project-faq-schema');
         updateOGTags(
-            project.title,
+            `${project.title} | ${project.location} | Harico Estates`,
             project.description,
             "https://haricoestates.in" + project.image,
             "https://haricoestates.in/project/" + project.slug
@@ -342,6 +422,10 @@ export const initSEO = (project?: Project) => {
     } else {
         const prodSchemaEl = document.getElementById('project-schema');
         if (prodSchemaEl) prodSchemaEl.remove();
+        const prodFaqEl = document.getElementById('project-faq-schema');
+        if (prodFaqEl) prodFaqEl.remove();
+
+        injectSchema(generateFaqSchema(), 'faq-schema');
         
         updateOGTags(
             "Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa",

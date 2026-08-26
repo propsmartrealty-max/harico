@@ -367,6 +367,68 @@ export function createProjectDetails(project: any): HTMLElement {
   // 9. Enquire Modal
   const modal = createEnquireModal();
 
+  // 9. MahaRERA Regulatory & Sanctioned Layouts Guarantee Box
+  const reraTrustSection = document.createElement('div');
+  reraTrustSection.className = 'section container';
+  reraTrustSection.innerHTML = `
+    <div class="p-xl rounded-lg bg-white border" style="box-shadow: 0 10px 30px rgba(0,0,0,0.04); border-left: 5px solid var(--color-gold);">
+      <div class="flex justify-between items-center flex-wrap gap-md">
+        <div>
+          <span class="text-xs uppercase font-bold text-gold tracking-widest block mb-xs"><i class="fa-solid fa-shield-halved mr-1"></i> Government Approved & Sanctioned</span>
+          <h3 class="text-2xl font-bold text-navy m-0">MahaRERA Registration & Legal Title Clearance</h3>
+          <p class="text-sm text-muted mt-xs m-0">Project Registration Number: <strong class="text-navy font-bold">${project.reraNumber || project.reraId || 'Approved'}</strong></p>
+        </div>
+        <div class="flex items-center gap-md">
+          ${project.reraQRCodeUrl ? `
+            <img src="${project.reraQRCodeUrl}" alt="MahaRERA QR" style="width: 70px; height: 70px; border: 2px solid var(--color-gold); border-radius: 8px; padding: 3px; background: white;">
+          ` : ''}
+          <a href="https://maharera.mahaonline.gov.in" target="_blank" class="btn btn-secondary btn-sm">
+            <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i> Verify on MahaRERA Portal
+          </a>
+        </div>
+      </div>
+      <p class="text-xs text-muted mt-md pt-sm border-top m-0">
+        *All sanctions, building commencement certificates (CC), architectural blueprints, and environmental clearances are 100% verified and accessible on the official Maharashtra Real Estate Regulatory Authority portal.
+      </p>
+    </div>
+  `;
+
+  // 10. Investor Rental Yield & Micro-Market Growth Analysis
+  const investorSection = document.createElement('div');
+  investorSection.className = 'section bg-light';
+  investorSection.innerHTML = `
+    <div class="container">
+      <div class="section-header text-center mb-xl">
+        <span class="eyebrow">Capital Appreciation & Rental Yield</span>
+        <h2 class="section-title">Institutional Real Estate Investment Thesis</h2>
+        <div class="title-separator mx-auto"></div>
+        <p class="section-subtitle mx-auto text-muted max-w-700">
+          Positioned directly in West Pune's highest capital appreciation corridor with sustained rental demand from 350,000+ tech professionals.
+        </p>
+      </div>
+
+      <div class="grid grid-3 gap-md">
+        <div class="p-lg rounded-lg bg-white border">
+          <span class="text-gold text-2xl font-bold block mb-xs">4.5% — 5.2%</span>
+          <h4 class="text-navy font-bold text-base mb-xs">Projected Annual Rental Yield</h4>
+          <p class="text-xs text-muted m-0">Driven by rapid hiring across Hinjewadi IT Park Phase 1-3, Talegaon auto corridor, and PCMC industrial hub.</p>
+        </div>
+
+        <div class="p-lg rounded-lg bg-white border">
+          <span class="text-gold text-2xl font-bold block mb-xs">12% — 15%</span>
+          <h4 class="text-navy font-bold text-base mb-xs">3-Year Capital Appreciation</h4>
+          <p class="text-xs text-muted m-0">Fuelled by upcoming Pune Metro Line 3 extension, Ring Road expansion, and Mukai Chowk arterial grade-separators.</p>
+        </div>
+
+        <div class="p-lg rounded-lg bg-white border">
+          <span class="text-gold text-2xl font-bold block mb-xs">100%</span>
+          <h4 class="text-navy font-bold text-base mb-xs">Mivan Monolithic Concrete</h4>
+          <p class="text-xs text-muted m-0">High-grade structural earthquake-resistant shear walls ensuring superior thermal comfort, acoustic insulation, and durability.</p>
+        </div>
+      </div>
+    </div>
+  `;
+
   // Final Assembly
   container.appendChild(hero);
   container.appendChild(quickInfo);
@@ -399,6 +461,12 @@ export function createProjectDetails(project: any): HTMLElement {
 
   // Connectivity
   sectionsWrapper.appendChild(connectivitySection);
+
+  // MahaRERA Trust Guarantee
+  sectionsWrapper.appendChild(reraTrustSection);
+
+  // Investor Growth Analysis
+  sectionsWrapper.appendChild(investorSection);
 
   container.appendChild(sectionsWrapper);
   container.appendChild(modal);
