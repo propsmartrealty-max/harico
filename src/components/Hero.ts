@@ -104,22 +104,22 @@ export function createHero(): HTMLElement {
       <!-- Refined Trust Metric Capsules -->
       <div class="hero-trust-metrics-bar fade-in-up delay-3 mt-xl">
         <div class="metric-capsule">
-          <span class="metric-val">39+</span>
+          <span class="metric-val" data-counter-target="39" data-counter-suffix="+">39+</span>
           <span class="metric-txt">Years of Legacy</span>
         </div>
         <div class="metric-divider-line"></div>
         <div class="metric-capsule">
-          <span class="metric-val">20+</span>
+          <span class="metric-val" data-counter-target="20" data-counter-suffix="+">20+</span>
           <span class="metric-txt">Landmarks Delivered</span>
         </div>
         <div class="metric-divider-line"></div>
         <div class="metric-capsule">
-          <span class="metric-val">5,000+</span>
+          <span class="metric-val" data-counter-target="5000" data-counter-suffix="+">5,000+</span>
           <span class="metric-txt">Delighted Families</span>
         </div>
         <div class="metric-divider-line"></div>
         <div class="metric-capsule">
-          <span class="metric-val">100+</span>
+          <span class="metric-val" data-counter-target="100" data-counter-suffix="+">100+</span>
           <span class="metric-txt">Curated Amenities</span>
         </div>
       </div>

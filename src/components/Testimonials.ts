@@ -72,15 +72,15 @@ export function createTestimonials(): HTMLElement {
       <!-- Trust Bar -->
       <div class="trust-metrics-strip mt-xl p-md rounded-md flex justify-center flex-wrap gap-xl text-center">
         <div class="metric-box">
-          <span class="text-2xl font-bold text-gold block">39+</span>
+          <span class="text-2xl font-bold text-gold block" data-counter-target="39" data-counter-suffix="+">39+</span>
           <span class="text-xs uppercase font-semibold text-navy">Years of Legacy</span>
         </div>
         <div class="metric-box">
-          <span class="text-2xl font-bold text-gold block">20+</span>
+          <span class="text-2xl font-bold text-gold block" data-counter-target="20" data-counter-suffix="+">20+</span>
           <span class="text-xs uppercase font-semibold text-navy">Landmarks Delivered</span>
         </div>
         <div class="metric-box">
-          <span class="text-2xl font-bold text-gold block">5,000+</span>
+          <span class="text-2xl font-bold text-gold block" data-counter-target="5000" data-counter-suffix="+">5,000+</span>
           <span class="text-xs uppercase font-semibold text-navy">Happy Families</span>
         </div>
         <div class="metric-box">

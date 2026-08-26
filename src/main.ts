@@ -20,6 +20,7 @@ import { projectsData } from './data/projects';
 import { initSEO } from './utils/schemaGenerator';
 import { generateKeywords } from './data/seo_strategy';
 import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
+import { animationEngine } from './utils/animationEngine';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const header = createHeader();
@@ -54,6 +55,11 @@ router.add('/', () => {
     mainAppContainer.appendChild(createEmiCalculator());
     mainAppContainer.appendChild(createTestimonials());
     mainAppContainer.appendChild(createFaqSection());
+
+    // Initialize ultra-advanced animation & physics engine
+    setTimeout(() => {
+        animationEngine.init();
+    }, 50);
 });
 
 const legacySlugs: Record<string, string> = {
@@ -67,6 +73,7 @@ router.add('/privacy', () => {
     initSEO();
     mainAppContainer.appendChild(createPrivacyPolicy());
     window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
 });
 
 router.add('/terms', () => {
@@ -74,6 +81,7 @@ router.add('/terms', () => {
     initSEO();
     mainAppContainer.appendChild(createTermsOfUse());
     window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
 });
 
 router.add('/project', (params, slug) => {
@@ -102,10 +110,11 @@ router.add('/project', (params, slug) => {
     if (project) {
         document.title = `${project.title} | ${project.location} | Harico Estates`;
         mainAppContainer.appendChild(createProjectDetails(project));
+        setTimeout(() => animationEngine.init(), 50);
     } else {
         console.warn('[Router] Project not found for slug:', slug);
         router.navigate('/'); // Fallback
     }
 });
 
-console.log("Harico Estates Master Portal Initialized with Expanded Architectural Suite");
+console.log("Harico Estates Portal Initialized with Ultra-Modern Physics & Animation Engine");

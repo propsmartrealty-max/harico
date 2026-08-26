@@ -9,353 +9,553 @@ export interface Project {
   image: string;
   type: string;
   price?: string;
+  landParcel?: string;
+  floors?: string;
+  possession?: string;
   reraNumber?: string;
   reraQRCodeUrl?: string;
 }
 
 export function createProjectCard(project: Project): HTMLElement {
   const card = document.createElement('article');
-  card.className = 'project-card';
+  card.className = 'project-card-3d card-3d-tilt';
 
-  // Card click handler (fallback if not clicking specific interactive elements)
+  const identifier = project.slug || project.id;
+
+  // Global card navigation fallback
   card.onclick = (e) => {
-    // Check if click originated from a button preventing default
-    if ((e.target as HTMLElement).tagName.toLowerCase() === 'button') return;
-
-    // Also ignore if clicking the "explore" button which has its own listener,
-    // though e.stopPropagation() there should handle it.
-
-    const identifier = project.slug || project.id;
+    const target = e.target as HTMLElement;
+    if (target.closest('button') || target.closest('a') || target.closest('.card-rera-interactive')) return;
     router.navigate(`/project/${identifier}`);
   };
 
   card.innerHTML = `
-    <div class="card-image-wrapper">
-      <img src="${project.image}" alt="${project.title}" class="card-image" loading="lazy">
-      <div class="card-badges">
-        <span class="status-badge ${project.status.toLowerCase()}">${project.status}</span>
-      </div>
-      <div class="card-overlay">
-        <button class="btn-overlay btn-explore" id="explore-${project.id}">Explore</button>
-        <button class="btn-overlay btn-enquire" onclick="event.stopPropagation(); window.showEnquireModal('${project.title}');">Enquire</button>
-      </div>
-    </div>
-    
-    <div class="card-content">
-      <div class="card-header">
-        <h3 class="card-title">${project.title}</h3>
-        <p class="card-location">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="margin-right:6px; color:var(--color-gold)"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-            ${project.location}
-        </p>
-      </div>
+    <!-- 3D Holographic Glare Sheen -->
+    <div class="card-glare-overlay"></div>
+
+    <!-- Image Container with Gradient Vignette -->
+    <div class="card-media-wrapper">
+      <img src="${project.image}" alt="${project.title}" class="card-hero-img" loading="lazy">
+      <div class="card-media-gradient"></div>
       
-      <div class="card-details">
-         <div class="detail-item">
-            <span class="detail-icon">🏢</span>
-            <div class="detail-text">
-                <span class="detail-label">Type</span>
-                <span class="detail-value">${project.type}</span>
-            </div>
-         </div>
-         ${project.price ? `
-         <div class="detail-item">
-            <span class="detail-icon">💰</span>
-            <div class="detail-text">
-                <span class="detail-label">Price</span>
-                <span class="detail-value">${project.price}</span>
-            </div>
-         </div>
-         ` : ''}
+      <!-- Top Badges Floating Layer -->
+      <div class="card-top-badges flex justify-between items-center w-full">
+        <!-- Live Pulsing Status Badge -->
+        <div class="status-badge-capsule ${project.status.toLowerCase()}">
+          <span class="status-radar-dot ${project.status === 'Ongoing' ? 'radar-pulse-ongoing' : ''}"></span>
+          <span class="status-text">${project.status}</span>
+        </div>
+
+        <!-- Micro Possession Pill -->
+        ${project.possession ? `
+          <div class="possession-capsule">
+            <i class="fa-solid fa-clock-rotate-left mr-1 text-gold"></i>
+            <span>${project.possession}</span>
+          </div>
+        ` : ''}
       </div>
 
-      ${project.reraNumber ? `
-      <div class="card-rera-badge" title="RERA: ${project.reraNumber}">
-          <span class="rera-txt">MahaRERA: ${project.reraNumber}</span>
-          ${project.reraQRCodeUrl ? `<img src="${project.reraQRCodeUrl}" alt="MahaRERA QR" class="rera-qr">` : ''}
-      </div>
-      ` : ''}
-
-      <div class="card-actions">
-        <button class="btn-text">
-          View Details 
-          <span class="arrow-icon">
-            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 1L17 6L12 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M17 6H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+      <!-- Quick Overlay Action on Image Hover -->
+      <div class="card-hover-overlay">
+        <button class="btn-card-preview btn-explore-trigger" data-slug="${identifier}">
+          <i class="fa-solid fa-eye mr-2"></i> View Project
         </button>
       </div>
     </div>
+    
+    <!-- Body Content Section -->
+    <div class="card-body-content">
+      
+      <!-- Header: Title & Location -->
+      <div class="card-main-header">
+        <div class="flex justify-between items-start">
+          <div>
+            <h3 class="card-project-title">${project.title}</h3>
+            <p class="card-project-loc">
+              <i class="fa-solid fa-location-dot text-gold mr-1"></i>
+              ${project.location}
+            </p>
+          </div>
+          ${project.price ? `
+            <div class="card-price-tag">
+              <span class="price-val">${project.price}</span>
+            </div>
+          ` : ''}
+        </div>
+      </div>
+
+      <!-- Key Specs Chips Matrix -->
+      <div class="card-specs-matrix">
+        <div class="spec-chip">
+          <span class="spec-chip-icon"><i class="fa-solid fa-bed"></i></span>
+          <div class="spec-chip-text">
+            <span class="spec-chip-lbl">Config</span>
+            <span class="spec-chip-val">${project.type}</span>
+          </div>
+        </div>
+
+        ${project.landParcel ? `
+          <div class="spec-chip">
+            <span class="spec-chip-icon"><i class="fa-solid fa-vector-square"></i></span>
+            <div class="spec-chip-text">
+              <span class="spec-chip-lbl">Parcel</span>
+              <span class="spec-chip-val">${project.landParcel}</span>
+            </div>
+          </div>
+        ` : ''}
+
+        ${project.floors ? `
+          <div class="spec-chip">
+            <span class="spec-chip-icon"><i class="fa-solid fa-building"></i></span>
+            <div class="spec-chip-text">
+              <span class="spec-chip-lbl">Scale</span>
+              <span class="spec-chip-val">${project.floors}</span>
+            </div>
+          </div>
+        ` : ''}
+      </div>
+
+      <!-- Interactive MahaRERA Pill -->
+      ${project.reraNumber ? `
+        <div class="card-rera-interactive" title="Click to view MahaRERA QR">
+          <div class="rera-info-group">
+            <span class="rera-pill-lbl"><i class="fa-solid fa-shield-halved text-success mr-1"></i> MahaRERA Verified</span>
+            <span class="rera-number-txt">${project.reraNumber}</span>
+          </div>
+          ${project.reraQRCodeUrl ? `
+            <div class="rera-qr-wrapper">
+              <img src="${project.reraQRCodeUrl}" alt="MahaRERA QR" class="rera-qr-thumb">
+              <div class="qr-zoom-tooltip">
+                <img src="${project.reraQRCodeUrl}" alt="MahaRERA QR Zoom" class="qr-zoom-img">
+                <span>Scan for MahaRERA Certificate</span>
+              </div>
+            </div>
+          ` : ''}
+        </div>
+      ` : ''}
+
+      <!-- Bottom Interactive Action CTAs -->
+      <div class="card-bottom-actions flex gap-sm items-center mt-auto pt-md">
+        <button class="btn-card-primary btn-explore-action btn-magnetic" data-slug="${identifier}">
+          <span>Explore Details</span>
+          <span class="btn-arrow-slide"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+
+        <button class="btn-card-whatsapp" onclick="event.stopPropagation(); window.showEnquireModal('${project.title}');" title="Quick WhatsApp Enquiry">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
   `;
 
-  // Attach listener to explore button after innerHTML is set
-  const exploreBtn = card.querySelector(`#explore-${project.id}`);
-  if (exploreBtn) {
-    exploreBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const identifier = project.slug || project.id;
-      router.navigate(`/project/${identifier}`);
+  // Attach button navigation listeners
+  setTimeout(() => {
+    const triggers = card.querySelectorAll<HTMLElement>('.btn-explore-trigger, .btn-explore-action');
+    triggers.forEach(t => {
+      t.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const slug = t.getAttribute('data-slug');
+        if (slug) router.navigate(`/project/${slug}`);
+      });
     });
-  }
-
-  // Attach listener to View Details text button
-  const textBtn = card.querySelector('.btn-text');
-  if (textBtn) {
-    textBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const identifier = project.slug || project.id;
-      router.navigate(`/project/${identifier}`);
-    });
-  }
+  }, 0);
 
   return card;
 }
 
 export const projectCardStyles = `
-  .project-card {
-    background: var(--color-white);
-    border-radius: var(--radius-lg);
+  .project-card-3d {
+    background: #FFFFFF;
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 35px -5px rgba(10, 25, 47, 0.08), 0 8px 16px -6px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    position: relative;
+    transform-style: preserve-3d;
+    will-change: transform, box-shadow;
   }
 
-  .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  .project-card-3d:hover {
+    box-shadow: 0 30px 60px -10px rgba(10, 25, 47, 0.18), 0 15px 30px -10px rgba(212, 175, 55, 0.12);
+    border-color: rgba(212, 175, 55, 0.5);
   }
 
-  /* Image Section */
-  .card-image-wrapper {
+  /* Holographic Glare Overlay */
+  .card-glare-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+  }
+
+  /* Media Section */
+  .card-media-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16 / 10;
     overflow: hidden;
+    background: #0A192F;
   }
 
-  .card-image {
+  .card-hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .project-card:hover .card-image {
-    transform: scale(1.1);
+  .project-card-3d:hover .card-hero-img {
+    transform: scale(1.08);
   }
 
-  .card-overlay {
+  .card-media-gradient {
     position: absolute;
     inset: 0;
-    background: rgba(10, 25, 47, 0.4);
-    opacity: 0;
-    transition: opacity 0.4s ease;
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, transparent 40%, rgba(10, 25, 47, 0.7) 100%);
+    pointer-events: none;
+  }
+
+  /* Badges Layer */
+  .card-top-badges {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    padding: 0 14px;
+    z-index: 5;
+  }
+
+  .status-badge-capsule {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .status-radar-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-gold);
+    display: inline-block;
+  }
+
+  .status-badge-capsule.ongoing .status-radar-dot { background-color: var(--color-gold); }
+  .status-badge-capsule.upcoming .status-radar-dot { background-color: #38BDF8; }
+  .status-badge-capsule.completed .status-radar-dot { background-color: #4ADE80; }
+
+  .possession-capsule {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  /* Hover Preview CTA */
+  .card-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 6;
   }
-  
-  .project-card:hover .card-overlay {
+
+  .project-card-3d:hover .card-hover-overlay {
     opacity: 1;
   }
-  
-  .btn-overlay {
-    background: var(--color-white);
+
+  .btn-card-preview {
+    background: #FFFFFF;
     color: var(--color-navy);
-    padding: 10px 24px;
-    border-radius: 50px;
-    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.82rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.4s 0.1s ease;
+    letter-spacing: 0.8px;
     border: none;
     cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(12px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  
-  .project-card:hover .btn-overlay {
+
+  .project-card-3d:hover .btn-card-preview {
     transform: translateY(0);
-    opacity: 1;
   }
-  
-  .btn-overlay.btn-explore { transition-delay: 0.1s; }
-  .btn-overlay.btn-enquire {
-    transition-delay: 0.2s;
-    margin-left: 10px;
+
+  .btn-card-preview:hover {
     background: var(--color-gold);
-    color: var(--color-white);
+    color: #FFFFFF;
   }
 
-  .card-badges {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    z-index: 2;
-  }
-
-  .status-badge {
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--color-navy);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-  }
-  
-  .status-badge.ongoing { border-left: 3px solid var(--color-gold); }
-  .status-badge.completed { border-left: 3px solid var(--color-success); }
-  .status-badge.upcoming { border-left: 3px solid var(--color-navy); }
-
-  /* Content Section */
-  .card-content {
-    padding: 25px;
+  /* Body Content */
+  .card-body-content {
+    padding: 22px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 20px;
+    gap: 16px;
   }
 
-  .card-header {
-    border-bottom: 1px solid var(--color-border-light);
-    padding-bottom: 15px;
-  }
-
-  .card-title {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 5px;
+  .card-project-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    margin: 0 0 4px;
     font-family: var(--font-heading);
     letter-spacing: -0.01em;
   }
 
-  .card-location {
-    font-size: 0.9rem;
+  .card-project-loc {
+    font-size: 0.85rem;
     color: var(--color-text-secondary);
-    display: flex;
-    align-items: center;
+    margin: 0;
     font-weight: 500;
   }
 
-  .card-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+  .card-price-tag {
+    background: rgba(212, 175, 55, 0.12);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
   }
 
-  .detail-item {
+  .price-val {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: var(--color-navy);
+    font-family: var(--font-heading);
+  }
+
+  /* Specs Matrix Chips */
+  .card-specs-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    background: #F8FAFC;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #F1F5F9;
+  }
+
+  .spec-chip {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
+    align-items: center;
+    gap: 8px;
   }
-  
-  .detail-icon {
-    margin-top: 2px;
-    font-size: 1.1rem;
+
+  .spec-chip-icon {
+    color: var(--color-gold);
+    font-size: 0.9rem;
   }
-  
-  .detail-text {
+
+  .spec-chip-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .spec-chip-lbl {
+    font-size: 0.65rem;
+    color: var(--color-text-light);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+  }
+
+  .spec-chip-val {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Interactive MahaRERA Pill */
+  .card-rera-interactive {
+    background: #FAFBFC;
+    border: 1px solid #E2E8F0;
+    border-left: 3px solid var(--color-gold);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+
+  .card-rera-interactive:hover {
+    background: #FFFFFF;
+    border-color: var(--color-gold);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
+  }
+
+  .rera-info-group {
     display: flex;
     flex-direction: column;
   }
 
-  .detail-label {
-    font-size: 0.7rem;
-    color: var(--color-text-light);
+  .rera-pill-lbl {
+    font-size: 0.68rem;
     text-transform: uppercase;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
-  }
-
-  .detail-value {
-    font-size: 0.9rem;
-    color: var(--color-navy);
-    font-weight: 600;
-  }
-
-  .card-actions {
-    margin-top: auto;
-    padding-top: 10px;
-  }
-
-  .btn-text {
-    width: 100%;
-    text-align: left;
-    padding: 0;
-    background: transparent;
-    color: var(--color-gold);
-    font-size: 0.9rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: color var(--transition-normal);
-    cursor: pointer;
+    color: var(--color-text-secondary);
+    letter-spacing: 0.5px;
+  }
+
+  .rera-number-txt {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-navy);
     font-family: var(--font-heading);
   }
 
-  .project-card:hover .btn-text {
-    color: var(--color-navy);
-  }
-  
-  .arrow-icon {
-    transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-  }
-  
-  .project-card:hover .arrow-icon {
-    transform: translateX(8px);
-    color: var(--color-navy);
-  }
-
-  .card-rera-badge {
-    margin-top: 15px;
-    padding: 8px 12px;
-    background: rgba(212, 175, 55, 0.1);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 0.75rem;
-    color: var(--color-navy);
-    font-weight: 600;
-  }
-
-  .rera-qr {
-    width: 24px;
-    height: 24px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-  }
-  
-  .card-rera-badge:hover .rera-qr {
-    transform: scale(3) translateX(-10px) translateY(-10px);
-    z-index: 10;
+  .rera-qr-wrapper {
     position: relative;
-    background: white;
+  }
+
+  .rera-qr-thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #CBD5E1;
+    background: #FFFFFF;
     padding: 2px;
-    border: 1px solid var(--color-gold);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: zoom-in;
+    transition: transform 0.25s ease;
+  }
+
+  /* Hover Zoom Tooltip */
+  .qr-zoom-tooltip {
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    background: #FFFFFF;
+    border: 2px solid var(--color-gold);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 140px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.85) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 20;
+  }
+
+  .qr-zoom-tooltip .qr-zoom-img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+  }
+
+  .qr-zoom-tooltip span {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    text-align: center;
+  }
+
+  .card-rera-interactive:hover .qr-zoom-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+  }
+
+  /* Bottom Actions */
+  .btn-card-primary {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #0A192F 0%, #172A45 100%);
+    color: #FFFFFF;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 11px 18px;
+    border-radius: 9999px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .btn-card-primary:hover {
+    background: linear-gradient(135deg, #D4AF37 0%, #AA8010 100%);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    border-color: var(--color-gold);
+  }
+
+  .btn-arrow-slide {
+    transition: transform 0.25s ease;
+  }
+
+  .btn-card-primary:hover .btn-arrow-slide {
+    transform: translateX(4px);
+  }
+
+  .btn-card-whatsapp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #25D366;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .btn-card-whatsapp:hover {
+    transform: scale(1.1);
+    background: #20BA56;
   }
 `;
-
