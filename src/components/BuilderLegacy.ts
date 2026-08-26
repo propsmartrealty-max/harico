@@ -1,358 +1,362 @@
 export function createBuilderLegacy(): HTMLElement {
   const section = document.createElement('section');
   section.id = 'builder-legacy';
-  section.className = 'builder-legacy-section';
+  section.className = 'section builder-legacy-section lux-reveal';
 
-  const legacyData = [
-    { year: '1987', name: 'SATYAM COMPLEX', location: 'THANE - DISTRICT', area: '48,000 SQ. FT.' },
-    { year: '1990', name: 'SHIVDHAM COMPLEX', location: 'THANE - DISTRICT', area: '2,52,500 SQ. FT.' },
-    { year: '1992', name: 'SAMARPAM COMPLEX', location: 'THANE - DISTRICT', area: '40,000 SQ. FT.' },
-    { year: '1997', name: 'GULRAJ RESIDENCY', location: 'KONDHWA', area: '60,000 SQ. FT.' },
-    { year: '2009', name: 'SENTOSA RESIDENCY', location: 'HADAPSAR', area: '32,000 SQ. FT.' },
-    { year: '2011', name: 'SENTOSA PARADISE', location: 'WAKAD', area: '48,000 SQ. FT.' },
-    { year: '2012', name: 'SENTOSA ELYSIUM', location: 'WAKAD', area: '45,692 SQ. FT.' },
-    { year: '2014', name: 'SENTOSA PEARL', location: 'WAKAD', area: '61,486 SQ. FT.' },
-    { year: '2016', name: 'ROYAL PALMS', location: 'THANE - DISTRICT', area: '2,10,000 SQ. FT.' },
-    { year: '2017', name: 'SENTOSA PALM', location: 'WAKAD', area: '22,023 SQ. FT.' },
-    { year: '2017', name: 'SENTOSA PRIDE PH 1', location: 'PUNAWALE', area: '1,75,303 SQ. FT.' },
-    { year: '2018', name: 'REGENCY PLAZA', location: 'THANE - DISTRICT', area: '2,12,922 SQ. FT.' },
-    { year: '2019', name: 'AMI INFRA PINK CITY', location: 'THANE - DISTRICT', area: '3,40,000 SQ. FT.' },
-    { year: '2023', name: 'SENTOSA SERENE', location: 'TATHAWADE', area: '88,197 SQ. FT.' },
-    { year: '2023', name: 'SENTOSA PRIDE PH 2', location: 'PUNAWALE', area: '1,22,473 SQ. FT.' },
-    { year: '2025', name: 'SENTOSA EKAM', location: 'PUNAWALE', area: '1,09,742 SQ. FT.' },
-    { year: '2026', name: 'SENTOSA PRIDE PH 3', location: 'PUNAWALE', area: '1,54,800 SQ. FT.' },
-    { year: '2026', name: 'SENTOSA ELITE BIZ HUB', location: 'WAKAD', area: '56,586 SQ. FT.' },
-    { year: '2026', name: 'SENTOSA EDGE', location: 'PUNAWALE', area: '48,000 SQ. FT.' },
-    { year: '2026', name: 'SENTOSA ERA', location: 'PRADHIKARAN MOSHI', area: '80,000 SQ. FT.' },
+  const milestones = [
+    { year: '2026', name: 'Sentosa Edge', location: 'Punawale, Pune', area: '48,000 SQ. FT.', type: 'Luxury High-Rise', highlight: true },
+    { year: '2026', name: 'Sentosa Era', location: 'Pradhikaran Moshi', area: '80,000 SQ. FT.', type: 'Residential Landmark', highlight: true },
+    { year: '2026', name: 'Sentosa Pride Ph 3', location: 'Punawale, Pune', area: '1,54,800 SQ. FT.', type: 'Gated Community' },
+    { year: '2026', name: 'Sentosa Elite Biz Hub', location: 'Wakad, Pune', area: '56,586 SQ. FT.', type: 'Commercial Landmark' },
+    { year: '2025', name: 'Sentosa Ekam', location: 'Punawale, Pune', area: '1,09,742 SQ. FT.', type: 'Premium Residences' },
+    { year: '2023', name: 'Sentosa Serene', location: 'Tathawade, Pune', area: '88,197 SQ. FT.', type: 'Residential Tower' },
+    { year: '2023', name: 'Sentosa Pride Ph 2', location: 'Punawale, Pune', area: '1,22,473 SQ. FT.', type: 'Luxury Homes' },
+    { year: '2019', name: 'Ami Infra Pink City', location: 'Thane District', area: '3,40,000 SQ. FT.', type: 'Township Project' },
+    { year: '2018', name: 'Regency Plaza', location: 'Thane District', area: '2,12,922 SQ. FT.', type: 'Residential Complex' },
+    { year: '2017', name: 'Sentosa Pride Ph 1', location: 'Punawale, Pune', area: '1,75,303 SQ. FT.', type: 'Residential Landmark' },
+    { year: '2017', name: 'Sentosa Palm', location: 'Wakad, Pune', area: '22,023 SQ. FT.', type: 'Boutique Residences' },
+    { year: '2016', name: 'Royal Palms', location: 'Thane District', area: '2,10,000 SQ. FT.', type: 'Luxury Apartments' },
+    { year: '2014', name: 'Sentosa Pearl', location: 'Wakad, Pune', area: '61,486 SQ. FT.', type: 'Residential Tower' },
+    { year: '2012', name: 'Sentosa Elysium', location: 'Wakad, Pune', area: '45,692 SQ. FT.', type: 'Gated Community' },
+    { year: '2011', name: 'Sentosa Paradise', location: 'Wakad, Pune', area: '48,000 SQ. FT.', type: 'Luxury Homes' },
+    { year: '2009', name: 'Sentosa Residency', location: 'Hadapsar, Pune', area: '32,000 SQ. FT.', type: 'Residential Building' },
+    { year: '1997', name: 'Gulraj Residency', location: 'Kondhwa, Pune', area: '60,000 SQ. FT.', type: 'Apartments' },
+    { year: '1992', name: 'Samarpam Complex', location: 'Thane District', area: '40,000 SQ. FT.', type: 'Residential' },
+    { year: '1990', name: 'Shivdham Complex', location: 'Thane District', area: '2,52,500 SQ. FT.', type: 'Township Complex' },
+    { year: '1987', name: 'Satyam Complex', location: 'Thane District', area: '48,000 SQ. FT.', type: 'Inaugural Milestone' }
   ];
-
-  const midPoint = Math.ceil(legacyData.length / 2);
-  const row1Data = legacyData.slice(0, midPoint);
-  const row2Data = legacyData.slice(midPoint);
-
-  function renderRow(data: typeof legacyData, startIndex: number) {
-    return `
-        <div class="timeline-row">
-            <div class="timeline-line"></div>
-            <div class="timeline-items">
-                ${data.map((item, i) => {
-      const globalIndex = startIndex + i;
-      const isLatest = globalIndex === legacyData.length - 1;
-      const positionClass = i % 2 === 0 ? 'top' : 'bottom';
-      const highlightClass = isLatest ? 'latest-project' : '';
-
-      return `
-                    <div class="timeline-item ${positionClass} ${highlightClass}">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <div class="timeline-year">${item.year}</div>
-                            <h4 class="timeline-project">${item.name}</h4>
-                            <p class="timeline-detail">COMPLETED</p>
-                            <p class="timeline-detail">${item.area}</p>
-                            <p class="timeline-detail">${item.location}</p>
-                            ${isLatest ? '<div class="latest-badge">LATEST</div>' : ''}
-                        </div>
-                    </div>
-                `}).join('')}
-            </div>
-        </div>
-      `;
-  }
 
   section.innerHTML = `
     <div class="container">
-      <div class="legacy-header text-center">
-        <h2 class="legacy-years">39</h2>
-        <div class="legacy-title-wrapper">
-            <span class="legacy-subtitle">YEARS OF REAL ESTATE<br>AND HOSPITALITY</span>
-            <h3 class="legacy-script">Legacy</h3>
+      
+      <!-- Refined Legacy Header Strip -->
+      <div class="legacy-refined-header">
+        <div class="legacy-stat-group">
+          <span class="legacy-big-num" data-counter-target="39" data-counter-suffix="+">39+</span>
+          <div class="legacy-header-text">
+            <span class="legacy-kicker">Established 1987</span>
+            <h2 class="legacy-main-title">Years of Real Estate & Hospitality Legacy</h2>
+            <p class="legacy-sub-desc">Built on vision, uncompromising civil engineering, and 20+ delivered landmark developments across Pune and Maharashtra.</p>
+          </div>
         </div>
-        <div class="legacy-vision">
-            BUILT ON VISION,<br>INTEGRITY<br>& INNOVATION
+        
+        <div class="legacy-trust-quote-box">
+          <i class="fa-solid fa-medal text-gold text-2xl mb-xs"></i>
+          <p class="quote-txt">"Transforming Pune's skyline with iconic architecture and timeless quality for over three decades."</p>
+          <span class="quote-author">— Sentosa Developers Leadership</span>
         </div>
       </div>
 
-      <div class="timeline-wrapper">
-        ${renderRow(row1Data, 0)}
-        ${renderRow(row2Data, midPoint)}
+      <!-- Decade Filter Pills -->
+      <div class="legacy-filter-bar mt-xl text-center">
+        <button class="legacy-filter-btn active" data-era="all">All 20+ Landmarks</button>
+        <button class="legacy-filter-btn" data-era="2020s">2020 — 2026 (High-Rise Era)</button>
+        <button class="legacy-filter-btn" data-era="2010s">2010 — 2019 (Wakad Expansion)</button>
+        <button class="legacy-filter-btn" data-era="classic">1987 — 2009 (Foundations)</button>
       </div>
+
+      <!-- Modern Milestone Grid -->
+      <div class="legacy-milestone-grid mt-lg">
+        ${milestones.map((m) => {
+          const eraClass = parseInt(m.year) >= 2020 ? 'era-2020s' : (parseInt(m.year) >= 2010 ? 'era-2010s' : 'era-classic');
+          return `
+            <div class="milestone-card-refined ${eraClass} ${m.highlight ? 'milestone-highlight' : ''}">
+              <div class="milestone-top-row">
+                <span class="milestone-year-badge">${m.year}</span>
+                <span class="milestone-status-badge"><i class="fa-solid fa-check text-success mr-1"></i> Delivered</span>
+              </div>
+              <h4 class="milestone-project-name">${m.name}</h4>
+              <div class="milestone-details-grid">
+                <div class="m-detail-item">
+                  <span class="m-detail-lbl">Location</span>
+                  <span class="m-detail-val">${m.location}</span>
+                </div>
+                <div class="m-detail-item">
+                  <span class="m-detail-lbl">Scale</span>
+                  <span class="m-detail-val">${m.area}</span>
+                </div>
+              </div>
+              <div class="milestone-footer-type">
+                <span>${m.type}</span>
+              </div>
+            </div>
+          `;
+        }).join('')}
+      </div>
+
     </div>
   `;
 
   const style = document.createElement('style');
   style.textContent = `
     .builder-legacy-section {
-      padding: var(--spacing-section) 0;
-      background-color: #FFFFFF;
-      overflow: hidden;
-      color: var(--color-navy);
-    }
-
-    .legacy-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 4rem;
+      padding: 90px 0;
+      background: #FFFFFF;
       position: relative;
     }
 
-    @media (min-width: 768px) {
-        .legacy-header {
-            flex-direction: row;
-            align-items: center;
-            gap: 2rem;
-            text-align: left;
-        }
+    .legacy-refined-header {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     }
 
-    .legacy-years {
-      font-family: var(--font-heading);
-      font-size: 8rem;
+    .legacy-stat-group {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .legacy-big-num {
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
       font-weight: 800;
       line-height: 1;
-      color: var(--color-navy);
-      margin: 0;
+      font-family: var(--font-heading);
+      background: linear-gradient(135deg, #D4AF37 0%, #AA8010 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      flex-shrink: 0;
     }
 
-    .legacy-title-wrapper {
-      position: relative;
+    .legacy-header-text {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
     }
 
-    .legacy-subtitle {
-      font-family: var(--font-heading);
+    .legacy-kicker {
+      font-size: 0.75rem;
       font-weight: 700;
-      font-size: 0.9rem;
+      text-transform: uppercase;
       letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 0.5rem;
+      color: var(--color-gold);
+      margin-bottom: 4px;
     }
 
-    .legacy-script {
-        font-family: 'Dancing Script', cursive;
-        font-family: var(--font-heading); 
-        font-style: italic;
-        font-weight: 300;
-        font-size: 4rem;
-        color: var(--color-accent-red);
-        line-height: 0.8;
-        margin: 0;
-        z-index: 1;
-    }
-
-    .legacy-vision {
+    .legacy-main-title {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin: 0 0 8px;
+      line-height: 1.25;
       font-family: var(--font-heading);
-      font-weight: 400;
-      font-size: 1.5rem;
+    }
+
+    .legacy-sub-desc {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .legacy-trust-quote-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-left: 4px solid var(--color-gold);
+      border-radius: 12px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    .quote-txt {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--color-navy);
+      margin: 0 0 10px;
+      line-height: 1.5;
+    }
+
+    .quote-author {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-gold);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      line-height: 1.4;
-      border-left: 2px solid var(--color-gold);
-      padding-left: 1.5rem;
-      margin-left: 2rem;
+      letter-spacing: 0.5px;
     }
 
-    /* Timeline Wrapper & Rows */
-    .timeline-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 20rem; /* Increased space to prevent overlap */
-        padding-top: 5rem; /* Space for top items of first row */
-        padding-bottom: 5rem;
+    /* Era Filter Bar */
+    .legacy-filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
-    .timeline-row {
-      position: relative;
-      /* padding: 2rem 0; */ /* Adjusted padding */
-      width: 100%;
+    .legacy-filter-btn {
+      background: #F8FAFC;
+      border: 1px solid #CBD5E1;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
-    /* Original timeline container styles adapted */
-    .timeline-line {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: var(--color-gold);
-      transform: translateY(-50%);
-      z-index: 0;
+    .legacy-filter-btn:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
     }
 
-    .timeline-items {
+    .legacy-filter-btn.active {
+      background: var(--color-navy);
+      color: #FFFFFF;
+      border-color: var(--color-navy);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.25);
+    }
+
+    /* Milestone Grid */
+    .legacy-milestone-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .milestone-card-refined {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    }
+
+    .milestone-card-refined:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(10, 25, 47, 0.1);
+      border-color: var(--color-gold);
+    }
+
+    .milestone-highlight {
+      border-color: rgba(212, 175, 55, 0.6);
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF7 100%);
+    }
+
+    .milestone-top-row {
       display: flex;
       justify-content: space-between;
-      width: 100%;
-      /* removed min-width forcing horizontal scroll for rows, assuming they fit or wrap gracefully on very small screens? Actually, for mobile let's keep scroll if needed or stack vertical */
-    }
-    
-    @media (max-width: 1024px) {
-        .timeline-items {
-            overflow-x: auto;
-            min-width: 100%;
-            padding-bottom: 20px; /* Scrollbar space */
-        }
-        .timeline-item {
-            min-width: 200px;
-        }
-        .timeline-line {
-            min-width: 1000px; /* Ensure line extends in scroll */
-        }
+      align-items: center;
     }
 
-    .timeline-item {
-      position: relative;
-      flex: 1;
-      text-align: center;
-      padding: 0 10px;
-      z-index: 1;
-    }
-
-    .timeline-marker {
-      width: 20px;
-      height: 20px;
-      background-color: var(--color-gold);
-      transform: rotate(45deg);
-      margin: 0 auto;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 50%;
-      margin-top: -10px;
-      z-index: 2;
-      box-shadow: 0 0 0 4px #FFF;
-      transition: all 0.3s ease;
-    }
-
-    .timeline-content {
-      background: #FFF;
-      padding: 1rem;
-      border-radius: 4px;
-      position: relative;
-      transition: all 0.3s ease;
-    }
-    
-    .timeline-item:hover .timeline-marker {
-        background-color: var(--color-navy);
-        transform: rotate(45deg) scale(1.2);
-    }
-    
-    .timeline-item:hover .timeline-content {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    /* Top Items */
-    .timeline-item.top .timeline-content {
-      margin-bottom: 2rem; 
-      transform: translateY(-100%);
-      top: -20px;
-    }
-    
-    /* Bottom Items */
-    .timeline-item.bottom .timeline-content {
-      margin-top: 50px; 
-    }
-
-    .timeline-year {
-      background-color: var(--color-navy);
-      color: #FFF;
-      display: inline-block;
-      padding: 4px 12px;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
-    }
-
-    .timeline-project {
-      color: var(--color-accent-red);
+    .milestone-year-badge {
+      background: var(--color-navy);
+      color: var(--color-gold);
+      font-size: 0.85rem;
       font-weight: 800;
-      font-size: 1rem;
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-family: var(--font-heading);
+    }
+
+    .milestone-status-badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      background: #F1F5F9;
+      padding: 3px 8px;
+      border-radius: 9999px;
       text-transform: uppercase;
-      margin: 0.5rem 0;
+      letter-spacing: 0.4px;
     }
 
-    .timeline-detail {
-        font-size: 0.75rem;
-        color: var(--color-text-secondary);
-        margin: 2px 0;
-        font-weight: 500;
-        text-transform: uppercase;
+    .milestone-project-name {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--color-navy);
+      margin: 0;
+      font-family: var(--font-heading);
+      letter-spacing: -0.01em;
     }
 
-    /* Latest Project Highlight */
-    .latest-project .timeline-marker {
-        background-color: var(--color-accent-red);
-        width: 30px;
-        height: 30px;
-        margin-top: -15px;
-        box-shadow: 0 0 0 6px rgba(198, 40, 40, 0.2);
-        animation: pulse 2s infinite;
+    .milestone-details-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      background: #F8FAFC;
+      padding: 10px;
+      border-radius: 8px;
     }
 
-    .latest-project .timeline-content {
-        border: 2px solid var(--color-accent-red);
-        background: #FFF5F5;
-        transform: scale(1.05) !important; /* Force scale */
-    }
-    
-    .timeline-item.top.latest-project .timeline-content {
-        transform: translateY(-105%) scale(1.05) !important;
+    .m-detail-item {
+      display: flex;
+      flex-direction: column;
     }
 
-    .latest-badge {
-        background-color: var(--color-accent-red);
-        color: white;
-        font-size: 0.7rem;
-        font-weight: bold;
-        padding: 4px 8px;
-        border-radius: 4px;
-        position: absolute;
-        top: -15px;
-        right: 50%;
-        transform: translateX(50%);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    
-    @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0.4); }
-        70% { box-shadow: 0 0 0 10px rgba(198, 40, 40, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(198, 40, 40, 0); }
+    .m-detail-lbl {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--color-text-light);
+      text-transform: uppercase;
     }
 
-    @media (max-width: 768px) {
-        .legacy-header {
-            flex-direction: column;
-            text-align: center;
-        }
-        .legacy-years { font-size: 5rem; }
-        .legacy-vision { 
-            border-left: none; 
-            border-top: 2px solid var(--color-gold);
-            margin-left: 0;
-            margin-top: 1rem;
-            padding-top: 1rem;
-        }
-        
-        .timeline-wrapper {
-            gap: 2rem;
-        }
-        
-        /* Adjust spacing for mobile stack if needed, or keep scroll */
-        .timeline-items {
-             padding-bottom: 250px; /* Extra space for bottom items overlapping next row */
-        }
-        
-        /* Reduce vertical space if items are huge */
-        .timeline-item.bottom .timeline-content {
-             margin-top: 40px;
-        }
+    .m-detail-val {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--color-navy);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .milestone-footer-type {
+      font-size: 0.72rem;
+      color: var(--color-text-secondary);
+      font-weight: 600;
+      border-top: 1px solid #F1F5F9;
+      padding-top: 8px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 900px) {
+      .legacy-refined-header {
+        grid-template-columns: 1fr;
+        padding: 25px;
+      }
+      .legacy-stat-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
     }
   `;
   section.appendChild(style);
+
+  // Era filter logic
+  setTimeout(() => {
+    const filterBtns = section.querySelectorAll('.legacy-filter-btn');
+    const cards = section.querySelectorAll('.milestone-card-refined');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const era = btn.getAttribute('data-era');
+
+        cards.forEach((card: any) => {
+          if (era === 'all' || card.classList.contains(`era-${era}`)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }, 0);
 
   return section;
 }

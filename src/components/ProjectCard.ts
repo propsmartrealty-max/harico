@@ -22,7 +22,7 @@ export function createProjectCard(project: Project): HTMLElement {
 
   const identifier = project.slug || project.id;
 
-  // Global card navigation fallback
+  // Global card click navigation
   card.onclick = (e) => {
     const target = e.target as HTMLElement;
     if (target.closest('button') || target.closest('a') || target.closest('.card-rera-interactive')) return;
@@ -33,20 +33,18 @@ export function createProjectCard(project: Project): HTMLElement {
     <!-- 3D Holographic Glare Sheen -->
     <div class="card-glare-overlay"></div>
 
-    <!-- Image Container with Gradient Vignette -->
+    <!-- Media Header -->
     <div class="card-media-wrapper">
       <img src="${project.image}" alt="${project.title}" class="card-hero-img" loading="lazy">
       <div class="card-media-gradient"></div>
       
-      <!-- Top Badges Floating Layer -->
+      <!-- Top Floating Badges -->
       <div class="card-top-badges flex justify-between items-center w-full">
-        <!-- Live Pulsing Status Badge -->
         <div class="status-badge-capsule ${project.status.toLowerCase()}">
           <span class="status-radar-dot ${project.status === 'Ongoing' ? 'radar-pulse-ongoing' : ''}"></span>
           <span class="status-text">${project.status}</span>
         </div>
 
-        <!-- Micro Possession Pill -->
         ${project.possession ? `
           <div class="possession-capsule">
             <i class="fa-solid fa-clock-rotate-left mr-1 text-gold"></i>
@@ -55,7 +53,7 @@ export function createProjectCard(project: Project): HTMLElement {
         ` : ''}
       </div>
 
-      <!-- Quick Overlay Action on Image Hover -->
+      <!-- Hover Action Overlay -->
       <div class="card-hover-overlay">
         <button class="btn-card-preview btn-explore-trigger" data-slug="${identifier}">
           <i class="fa-solid fa-eye mr-2"></i> View Project
@@ -66,30 +64,26 @@ export function createProjectCard(project: Project): HTMLElement {
     <!-- Body Content Section -->
     <div class="card-body-content">
       
-      <!-- Header: Title & Location -->
+      <!-- Title, Location & Price -->
       <div class="card-main-header">
-        <div class="flex justify-between items-start">
-          <div>
-            <h3 class="card-project-title">${project.title}</h3>
-            <p class="card-project-loc">
-              <i class="fa-solid fa-location-dot text-gold mr-1"></i>
-              ${project.location}
-            </p>
+        <div class="flex justify-between items-start gap-sm mb-xs">
+          <h3 class="card-project-title">${project.title}</h3>
+          <div class="card-price-tag">
+            <span class="price-val">${project.price || 'Price on Request'}</span>
           </div>
-          ${project.price ? `
-            <div class="card-price-tag">
-              <span class="price-val">${project.price}</span>
-            </div>
-          ` : ''}
         </div>
+        <p class="card-project-loc">
+          <i class="fa-solid fa-location-dot text-gold mr-1"></i>
+          ${project.location}
+        </p>
       </div>
 
-      <!-- Key Specs Chips Matrix -->
+      <!-- Key Specs Grid -->
       <div class="card-specs-matrix">
-        <div class="spec-chip">
+        <div class="spec-chip spec-chip-full">
           <span class="spec-chip-icon"><i class="fa-solid fa-bed"></i></span>
           <div class="spec-chip-text">
-            <span class="spec-chip-lbl">Config</span>
+            <span class="spec-chip-lbl">Configuration</span>
             <span class="spec-chip-val">${project.type}</span>
           </div>
         </div>
@@ -98,7 +92,7 @@ export function createProjectCard(project: Project): HTMLElement {
           <div class="spec-chip">
             <span class="spec-chip-icon"><i class="fa-solid fa-vector-square"></i></span>
             <div class="spec-chip-text">
-              <span class="spec-chip-lbl">Parcel</span>
+              <span class="spec-chip-lbl">Land Parcel</span>
               <span class="spec-chip-val">${project.landParcel}</span>
             </div>
           </div>
@@ -106,18 +100,18 @@ export function createProjectCard(project: Project): HTMLElement {
 
         ${project.floors ? `
           <div class="spec-chip">
-            <span class="spec-chip-icon"><i class="fa-solid fa-building"></i></span>
+            <span class="spec-chip-icon"><i class="fa-solid fa-layer-group"></i></span>
             <div class="spec-chip-text">
-              <span class="spec-chip-lbl">Scale</span>
+              <span class="spec-chip-lbl">Elevation</span>
               <span class="spec-chip-val">${project.floors}</span>
             </div>
           </div>
         ` : ''}
       </div>
 
-      <!-- Interactive MahaRERA Pill -->
+      <!-- MahaRERA Verified Strip with QR Hover -->
       ${project.reraNumber ? `
-        <div class="card-rera-interactive" title="Click to view MahaRERA QR">
+        <div class="card-rera-interactive" title="Click to inspect MahaRERA QR">
           <div class="rera-info-group">
             <span class="rera-pill-lbl"><i class="fa-solid fa-shield-halved text-success mr-1"></i> MahaRERA Verified</span>
             <span class="rera-number-txt">${project.reraNumber}</span>
@@ -135,13 +129,13 @@ export function createProjectCard(project: Project): HTMLElement {
       ` : ''}
 
       <!-- Bottom Interactive Action CTAs -->
-      <div class="card-bottom-actions flex gap-sm items-center mt-auto pt-md">
+      <div class="card-bottom-actions flex gap-sm items-center mt-auto pt-sm">
         <button class="btn-card-primary btn-explore-action btn-magnetic" data-slug="${identifier}">
           <span>Explore Details</span>
           <span class="btn-arrow-slide"><i class="fa-solid fa-arrow-right"></i></span>
         </button>
 
-        <button class="btn-card-whatsapp" onclick="event.stopPropagation(); window.showEnquireModal('${project.title}');" title="Quick WhatsApp Enquiry">
+        <button class="btn-card-whatsapp" onclick="event.stopPropagation(); if(window.showEnquireModal) window.showEnquireModal('${project.title}');" title="Instant WhatsApp Enquiry">
           <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>
@@ -177,7 +171,7 @@ export const projectCardStyles = `
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(226, 232, 240, 0.8);
+    border: 1px solid rgba(226, 232, 240, 0.9);
     position: relative;
     transform-style: preserve-3d;
     will-change: transform, box-shadow;
@@ -185,10 +179,9 @@ export const projectCardStyles = `
 
   .project-card-3d:hover {
     box-shadow: 0 30px 60px -10px rgba(10, 25, 47, 0.18), 0 15px 30px -10px rgba(212, 175, 55, 0.12);
-    border-color: rgba(212, 175, 55, 0.5);
+    border-color: rgba(212, 175, 55, 0.6);
   }
 
-  /* Holographic Glare Overlay */
   .card-glare-overlay {
     position: absolute;
     top: 0;
@@ -202,7 +195,6 @@ export const projectCardStyles = `
     border-radius: 20px;
   }
 
-  /* Media Section */
   .card-media-wrapper {
     position: relative;
     width: 100%;
@@ -225,11 +217,10 @@ export const projectCardStyles = `
   .card-media-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, transparent 40%, rgba(10, 25, 47, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(10, 25, 47, 0.4) 0%, transparent 45%, rgba(10, 25, 47, 0.75) 100%);
     pointer-events: none;
   }
 
-  /* Badges Layer */
   .card-top-badges {
     position: absolute;
     top: 14px;
@@ -248,11 +239,11 @@ export const projectCardStyles = `
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    background: rgba(10, 25, 47, 0.85);
+    background: rgba(10, 25, 47, 0.88);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     color: #FFFFFF;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
   .status-radar-dot {
@@ -268,7 +259,7 @@ export const projectCardStyles = `
   .status-badge-capsule.completed .status-radar-dot { background-color: #4ADE80; }
 
   .possession-capsule {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     padding: 4px 10px;
@@ -279,7 +270,6 @@ export const projectCardStyles = `
     border: 1px solid rgba(212, 175, 55, 0.3);
   }
 
-  /* Hover Preview CTA */
   .card-hover-overlay {
     position: absolute;
     inset: 0;
@@ -323,26 +313,26 @@ export const projectCardStyles = `
     color: #FFFFFF;
   }
 
-  /* Body Content */
   .card-body-content {
     padding: 22px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    gap: 16px;
+    gap: 14px;
   }
 
   .card-project-title {
     font-size: 1.35rem;
     font-weight: 800;
     color: var(--color-navy);
-    margin: 0 0 4px;
+    margin: 0;
     font-family: var(--font-heading);
     letter-spacing: -0.01em;
+    line-height: 1.2;
   }
 
   .card-project-loc {
-    font-size: 0.85rem;
+    font-size: 0.84rem;
     color: var(--color-text-secondary);
     margin: 0;
     font-weight: 500;
@@ -350,10 +340,13 @@ export const projectCardStyles = `
 
   .card-price-tag {
     background: rgba(212, 175, 55, 0.12);
-    border: 1px solid rgba(212, 175, 55, 0.35);
-    padding: 4px 10px;
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 5px 12px;
     border-radius: 6px;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .price-val {
@@ -363,32 +356,39 @@ export const projectCardStyles = `
     font-family: var(--font-heading);
   }
 
-  /* Specs Matrix Chips */
   .card-specs-matrix {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 8px;
     background: #F8FAFC;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #F1F5F9;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
   }
 
   .spec-chip {
     display: flex;
     align-items: center;
     gap: 8px;
+    min-width: 0;
+  }
+
+  .spec-chip.spec-chip-full {
+    grid-column: span 2;
+    border-bottom: 1px dashed #E2E8F0;
+    padding-bottom: 6px;
   }
 
   .spec-chip-icon {
     color: var(--color-gold);
     font-size: 0.9rem;
+    flex-shrink: 0;
   }
 
   .spec-chip-text {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    min-width: 0;
   }
 
   .spec-chip-lbl {
@@ -408,7 +408,6 @@ export const projectCardStyles = `
     text-overflow: ellipsis;
   }
 
-  /* Interactive MahaRERA Pill */
   .card-rera-interactive {
     background: #FAFBFC;
     border: 1px solid #E2E8F0;
@@ -453,8 +452,8 @@ export const projectCardStyles = `
   }
 
   .rera-qr-thumb {
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     border-radius: 4px;
     border: 1px solid #CBD5E1;
     background: #FFFFFF;
@@ -463,10 +462,9 @@ export const projectCardStyles = `
     transition: transform 0.25s ease;
   }
 
-  /* Hover Zoom Tooltip */
   .qr-zoom-tooltip {
     position: absolute;
-    bottom: 40px;
+    bottom: 42px;
     right: 0;
     background: #FFFFFF;
     border: 2px solid var(--color-gold);
@@ -504,7 +502,6 @@ export const projectCardStyles = `
     transform: scale(1) translateY(0);
   }
 
-  /* Bottom Actions */
   .btn-card-primary {
     flex-grow: 1;
     background: linear-gradient(135deg, #0A192F 0%, #172A45 100%);
