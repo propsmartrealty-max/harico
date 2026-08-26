@@ -120,16 +120,24 @@ export function createFooter(): HTMLElement {
 
       <!-- Popular Searches (Ultra-Advanced SEO & SGE Entity Mesh) -->
       <div class="popular-searches">
-        <h5 class="seo-heading">Sentosa & Harico Real Estate Entity Network • Pune & PCMC</h5>
-        <p class="seo-text">
-            <strong>Sentosa Group Pune Projects:</strong> Sentosa Edge Punawale | Sentosa Divaam Kiwale | Sentosa Ekam Punawale | Sentosa Pride Phase 1, 2 & 3 | Sentosa Serene Tathawade | Sentosa Paradise Wakad | Sentosa Elysium Wakad | Sentosa Pearl Wakad | Sentosa Palm Wakad | Sentosa Elite Biz Hub Wakad | Sentosa Era Moshi Pradhikaran | Sentosa Residency Hadapsar | Gulraj Residency Kondhwa.
-        </p>
+        <h5 class="seo-heading">Strategic Real Estate Entity Network • Punawale — Kiwale — Tathawade</h5>
+        
         <p class="seo-text mt-xs">
-            <strong>Harico Estates Flagship Developments:</strong> Harico Edge 2 & 3 BHK Punawale | Harico Divaam 24-Storey Kiwale Ravet | Harico Pride Punawale | Harico Ventures Pune | Sentosa Harico Joint Ventures.
+            <strong>🔥 Punawale Real Estate Market:</strong> <a href="/location/punawale" class="seo-link">Punawale Real Estate</a> | <a href="/flats/2-bhk-flats-in-punawale" class="seo-link">2 BHK Flats in Punawale</a> | <a href="/flats/3-bhk-flats-in-punawale" class="seo-link">3 BHK Flats in Punawale</a> | Harico Edge Punawale | Harico Pride Punawale | Sentosa Edge | Sentosa Ekam | Sentosa Pride Phase 1, 2 & 3 | Flats near Bhumkar Chowk | Flats near Hinjewadi IT Park | Flats near Mumbai-Pune Expressway | Flats for sale Punawale | New Launch Punawale | Luxury Flats Punawale | 2 BHK under 75 lakh Punawale | 3 BHK under 1 crore Punawale.
         </p>
+
         <p class="seo-text mt-xs">
-            <strong>PCMC & West Pune Micro-Market Coverage:</strong> 2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | 2 & 3 BHK Flats in Tathawade | Flats near Hinjewadi IT Park Phase 1, 2 & 3 | Rajiv Gandhi Infotech Park | Mukai Chowk Ravet | Bhumkar Chowk Wakad | Flats near Mumbai-Pune Expressway | D.Y. Patil & Symbiosis University corridor | Akshara International School Punawale | Real Estate Investment in PCMC | MahaRERA Approved Projects Pune.
+            <strong>🔥 Kiwale Real Estate Market:</strong> <a href="/location/kiwale" class="seo-link">Kiwale Real Estate</a> | <a href="/flats/2-bhk-flats-in-kiwale" class="seo-link">2 BHK Flats Kiwale</a> | <a href="/flats/3-bhk-flats-in-kiwale" class="seo-link">3 BHK Flats Kiwale</a> | <a href="/project/harico-divaam" class="seo-link">Harico Divaam Kiwale</a> | Sentosa Harico Divaam | Tallest 24-Storey Towers Kiwale | Flats opposite Sentosa Water Park | Flats near Mukai Chowk | Flats near Ravet | Flats near Dehu Road | Kiwale Property Investment | New Launch Flats Kiwale | 2 BHK under 75 lakh Kiwale | 3 BHK Luxury High-Rise Kiwale.
         </p>
+
+        <p class="seo-text mt-xs">
+            <strong>🔥 Tathawade Real Estate Market:</strong> <a href="/location/tathawade" class="seo-link">Tathawade Real Estate</a> | 2 BHK Flats Tathawade | 3 BHK Flats Tathawade | Sentosa Serene Tathawade | Sentosa Developers Tathawade | Flats near JSPM Tathawade | Flats near Indira College | Tathawade Hinjewadi IT Corridor | Flats for sale Tathawade | Property Investment Tathawade.
+        </p>
+
+        <p class="seo-text mt-xs">
+            <strong>🔥 Sentosa Developers Legacy & Commercial Hubs:</strong> <a href="/developer/sentosa-developers-pune" class="seo-link">Sentosa Developers 39-Year Legacy</a> | Sentosa Elite Wakad (Commercial Spaces) | Sentosa Palm Wakad | Sentosa Elysium Wakad | Sentosa Pearl Wakad | Sentosa Era Moshi Pradhikaran | Sentosa Residency Hadapsar | Gulraj Residency Kondhwa | Satyam Complex | Shivdham Complex | Samarpam Complex | Royal Palms.
+        </p>
+
         <p class="seo-text mt-xs">
             <span lang="mr">पुनावळे मधील नवीन २ आणि ३ बीएचके फ्लॅट्स | किवाळे सेंटोसा प्रोजेक्ट्स | तथावडे फ्लॅट विक्रीसाठी | हिंजवडी जवळ घरे | पिंपरी चिंचवड रिअल इस्टेट | हरिको इस्टेट्स पुणे</span>
         </p>
@@ -324,6 +332,17 @@ export function createFooter(): HTMLElement {
 
     .seo-text strong {
         color: rgba(255, 255, 255, 0.8);
+    }
+
+    .seo-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        transition: color 0.2s ease;
+    }
+
+    .seo-link:hover {
+        color: var(--color-gold);
     }
 
     .mt-xs {
