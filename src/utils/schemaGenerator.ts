@@ -202,8 +202,61 @@ export const updateOGTags = (title: string, description: string, image: string, 
     setMeta('twitter:image', image);
 };
 
+export const generateWebSiteSchema = () => {
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://haricoestates.in/#website",
+        "url": "https://haricoestates.in",
+        "name": "Harico Estates by Sentosa Developers",
+        "description": "Official portal for Harico Estates & Sentosa Developers. Luxury 2 & 3 BHK residences in Punawale and Kiwale, Pune.",
+        "publisher": {
+            "@id": "https://haricoestates.in/#organization"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://haricoestates.in/projects?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    };
+};
+
+export const generateBreadcrumbSchema = (project?: Project) => {
+    const items = [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://haricoestates.in"
+        }
+    ];
+
+    if (project) {
+        items.push({
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://haricoestates.in/projects"
+        });
+        items.push({
+            "@type": "ListItem",
+            "position": 3,
+            "name": project.title,
+            "item": `https://haricoestates.in/project/${project.slug}`
+        });
+    }
+
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items
+    };
+};
+
 export const initSEO = (project?: Project) => {
     injectSchema(generateOrganizationSchema(), 'org-schema');
+    injectSchema(generateWebSiteSchema(), 'website-schema');
+    injectSchema(generateBreadcrumbSchema(project), 'breadcrumb-schema');
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');

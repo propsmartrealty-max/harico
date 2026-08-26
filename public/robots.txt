@@ -1,5 +1,31 @@
+# ==============================================================================
+# Robots.txt - Harico Estates by Sentosa Developers
+# ==============================================================================
+
 User-agent: *
 Allow: /
 
-# Sitemaps
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Directives & Discovery Endpoints
 Sitemap: https://haricoestates.in/sitemap.xml
+# AI Knowledge Graph: https://haricoestates.in/llms.txt
