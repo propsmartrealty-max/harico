@@ -20,19 +20,22 @@ import { projectsData } from './data/projects';
 import { initSEO } from './utils/schemaGenerator';
 import { generateKeywords } from './data/seo_strategy';
 import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
+import { createMobileQuickBar } from './components/MobileQuickBar';
 import { animationEngine } from './utils/animationEngine';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const header = createHeader();
 const footer = createFooter();
 const enquireModal = createEnquireModal(); // Create modal
+const mobileQuickBar = createMobileQuickBar();
 
-// Mount static header, footer, modal
+// Mount static header, footer, modal, and mobile quick bar
 app.appendChild(header);
 const mainAppContainer = document.createElement('main');
 app.appendChild(mainAppContainer);
 app.appendChild(footer);
 app.appendChild(enquireModal);
+app.appendChild(mobileQuickBar);
 
 // Route Handlers
 router.add('/', () => {

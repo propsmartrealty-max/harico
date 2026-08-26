@@ -1,0 +1,21 @@
+{
+  "name": "Harico Estates by Sentosa Developers",
+  "short_name": "Harico Estates",
+  "description": "Ultra-Luxury 2 & 3 BHK Residences in Punawale and Kiwale, Pune by Sentosa Developers.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A192F",
+  "theme_color": "#0A192F",
+  "icons": [
+    {
+      "src": "/harico_logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/harico_logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
