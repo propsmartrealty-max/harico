@@ -11,7 +11,7 @@ export function createFooter(): HTMLElement {
              <img src="/harico_logo.png" alt="Harico Estates" class="footer-logo-img">
           </div>
           <p class="footer-desc">
-            Redefining luxury living since 2010. We build homes that inspire and elevate your lifestyle.
+            Redefining ultra-luxury real estate across Punawale & Kiwale. A proud venture backed by the 39-year legacy of Sentosa Developers.
           </p>
           <div class="social-links">
              <a href="javascript:void(0)" aria-label="Facebook">
@@ -31,17 +31,29 @@ export function createFooter(): HTMLElement {
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/projects">Projects</a></li>
-            <li><a href="/amenities">Amenities</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/project-comparison">Compare Landmarks</a></li>
+            <li><a href="/specifications">Material Specs</a></li>
+            <li><a href="/location-hub">Location Matrix</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Buyer Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/emi-calculator">EMI Calculator</a></li>
+            <li><a href="/amenities">Curated Amenities</a></li>
+            <li><a href="/faq">FAQ Knowledge Base</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4 class="footer-heading">Projects</h4>
           <ul class="footer-links">
-            <li><a href="/project/harico-edge">HARICO EDGE</a></li>
-            <li><a href="/project/harico-divaam">Harico Divaam</a></li>
-            <li><a href="/project/harico-pride">HARICO PRIDE</a></li>
+            <li><a href="/project/harico-edge">HARICO EDGE (Punawale)</a></li>
+            <li><a href="/project/harico-divaam">HARICO DIVAAM (Kiwale)</a></li>
+            <li><a href="/project/harico-pride">HARICO PRIDE (Punawale)</a></li>
           </ul>
         </div>
 
@@ -50,61 +62,65 @@ export function createFooter(): HTMLElement {
           <ul class="footer-contact">
             <li>
                 <span class="icon">📍</span>
-                <span>Punawale, Pune, Maharashtra 411033</span>
+                <span>Punawale & Kiwale, Pune, Maharashtra 411033</span>
             </li>
             <li>
                 <span class="icon">📞</span>
                 <a href="tel:+917744009295">+91 7744009295</a>
             </li>
             <li>
-                <span class="icon">✉️</span>
-                <!-- Email Removed -->
+                <span class="icon">💬</span>
+                <a href="https://wa.me/917744009295" target="_blank">WhatsApp Direct Assistance</a>
             </li>
           </ul>
         </div>
       </div>
       
       <div class="footer-bottom">
-        <p>&copy; 2025 Harico Estates. All rights reserved.</p>
+        <p>&copy; 2026 Harico Estates & Sentosa Developers. All rights reserved.</p>
         <div class="legal-links">
            <a href="/privacy">Privacy Policy</a>
            <a href="/terms">Terms of Use</a>
+           <a href="/faq">MahaRERA FAQs</a>
         </div>
       </div>
 
-      <!-- MahaRERA Disclaimer -->
-      <div class="footer-rera" style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px;">
-         <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 12px;">
+      <!-- MahaRERA Legal Disclaimer & QR Codes -->
+      <div class="footer-rera" style="text-align: center; margin-top: 30px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 25px;">
+         <div style="display: flex; justify-content: center; gap: 25px; margin-bottom: 15px; flex-wrap: wrap;">
              <!-- Verified QRs targeting MahaRERA API via wrapper -->
              <div style="text-align: center;">
-                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100031773" alt="Edge QR" title="Harico Edge QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
-                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Edge</div>
+                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100031773" alt="Harico Edge QR" title="Harico Edge QR" style="width: 55px; height: 55px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.65rem; color: var(--color-gold); margin-top: 4px; font-weight: bold;">Harico Edge</div>
+                 <div style="font-size: 0.6rem; color: #CBD5E1;">P52100031773</div>
              </div>
              <div style="text-align: center;">
-                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=PR1260002502389" alt="Divaam QR" title="Harico Divaam QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
-                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Divaam</div>
+                 <img src="/assets/harico-divaam-rera-qr.png" alt="Harico Divaam QR" title="Harico Divaam QR" style="width: 55px; height: 55px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.65rem; color: var(--color-gold); margin-top: 4px; font-weight: bold;">Harico Divaam</div>
+                 <div style="font-size: 0.6rem; color: #CBD5E1;">PR1260002502389</div>
              </div>
              <div style="text-align: center;">
-                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471" alt="Pride QR" title="Harico Pride QR" style="width: 50px; height: 50px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
-                 <div style="font-size: 0.6rem; color: var(--color-gold); margin-top: 4px;">Pride</div>
+                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471" alt="Harico Pride QR" title="Harico Pride QR" style="width: 55px; height: 55px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.65rem; color: var(--color-gold); margin-top: 4px; font-weight: bold;">Harico Pride</div>
+                 <div style="font-size: 0.6rem; color: #CBD5E1;">P52100018471</div>
              </div>
          </div>
-         <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); max-width: 900px; margin: 0 auto; line-height: 1.6;">
-            <strong>MahaRERA Registration Numbers:</strong> Harico Edge: P52100031773 | Harico Divaam: PR1260002502389 | Harico Pride: P52100018471. 
-            Detailed project information is available on the MahaRERA website (<a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold); text-decoration: none;">maharera.mahaonline.gov.in</a>) under registered projects. 
-            Harico Estates is a premium real estate venture by Sentosa Developers. The information provided on this website is for informational purposes only.
+         <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); max-width: 950px; margin: 0 auto; line-height: 1.6;">
+            <strong>MahaRERA Registered Projects:</strong> Harico Edge (P52100031773) | Harico Divaam (PR1260002502389) | Harico Pride (P52100018471). 
+            Comprehensive project details, approved building layouts, and legal title certificates are available on the official MahaRERA portal (<a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold); text-decoration: underline;">maharera.mahaonline.gov.in</a>). 
+            Harico Estates is a flagship real estate venture by Sentosa Developers.
          </p>
       </div>
 
-      <!-- Popular Searches (SEO Hidden Gem) -->
+      <!-- Popular Searches (SEO Entity Mesh) -->
       <div class="popular-searches">
-        <h5 class="seo-heading">Popular Searches</h5>
+        <h5 class="seo-heading">Pune Real Estate Micro-Market Searches</h5>
         <p class="seo-text">
-            2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | Flats near Hinjewadi IT Park | 
-            Sentosa Harico Projects | New Launch in Punawale | Flats near Bhumkar Chowk | 
-            Apartments near Mumbai-Pune Expressway | Harico Edge Price | Harico Divaam Brochure | 
-            Real Estate Investment Pune | Ready Possession Flats in Punawale | 
-            <span lang="mr">पुनावळे मध्ये 2 BHK फ्लॅट</span> | <span lang="mr">किवाळे रियल इस्टेट</span>
+            2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | Flats near Hinjewadi IT Park Phase 1 & 2 | 
+            Sentosa Harico Projects Pune | Tallest Towers in Kiwale Ravet | Flats near Bhumkar Chowk & Wakad | 
+            Luxury Apartments near Mumbai-Pune Expressway | Harico Edge Floor Plans | Harico Divaam Price & Brochure | 
+            Sentosa Group 39 Years Legacy | Home Loan Approved Projects SBI HDFC Punawale | 
+            <span lang="mr">पुनावळे मध्ये 2 व 3 BHK फ्लॅट</span> | <span lang="mr">किवाळे सेंटोसा प्रोजेक्ट्स</span>
         </p>
       </div>
     </div>
@@ -120,7 +136,6 @@ export function createFooter(): HTMLElement {
     }
     
     .footer-section::before {
-        /* Subtle gold top border */
         content: '';
         position: absolute;
         top: 0;
@@ -133,8 +148,8 @@ export function createFooter(): HTMLElement {
 
     .footer-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.5fr;
-      gap: var(--spacing-2xl);
+      grid-template-columns: 2fr 1fr 1fr 1.2fr 1.5fr;
+      gap: var(--spacing-xl);
       margin-bottom: var(--spacing-2xl);
     }
 
@@ -146,33 +161,31 @@ export function createFooter(): HTMLElement {
     }
 
     .footer-logo-wrapper {
-        margin-bottom: 15px;
-        /* background: white; Removed for transparent look */
-        padding: 0; /* Reduced padding since bg is gone */
+        margin-bottom: 10px;
         display: inline-block;
         width: fit-content;
     }
 
     .footer-logo-img {
-       height: 80px; /* Increased from 60px */
+       height: 70px;
        width: auto;
        display: block;
-       filter: brightness(0) invert(1); /* Make logo white for dark bg */
-       opacity: 0.9;
+       filter: brightness(0) invert(1);
+       opacity: 0.95;
     }
     
     .footer-desc {
       color: var(--color-text-light);
       line-height: 1.6;
       font-size: var(--font-size-sm);
-      max-width: 300px;
+      max-width: 320px;
     }
 
     /* Social Links */
     .social-links {
         display: flex;
-        gap: 15px;
-        margin-top: 10px;
+        gap: 12px;
+        margin-top: 5px;
     }
     
     .social-links a {
@@ -182,7 +195,7 @@ export function createFooter(): HTMLElement {
         align-items: center;
         justify-content: center;
         padding: 8px;
-        border: 1px solid rgba(255,255,255,0.1);
+        border: 1px solid rgba(255,255,255,0.15);
         border-radius: 50%;
     }
     
@@ -195,11 +208,11 @@ export function createFooter(): HTMLElement {
     /* Headings */
     .footer-heading {
       color: var(--color-gold);
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: var(--font-weight-bold);
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     /* Links */
@@ -209,13 +222,13 @@ export function createFooter(): HTMLElement {
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
     }
 
     .footer-links a {
       color: var(--color-text-light);
       text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: color var(--transition-fast), padding-left var(--transition-fast);
     }
 
@@ -228,27 +241,27 @@ export function createFooter(): HTMLElement {
     .footer-contact li {
         display: flex;
         align-items: flex-start;
-        gap: 12px;
+        gap: 10px;
         color: var(--color-text-light);
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         line-height: 1.5;
     }
     .footer-contact .icon {
         color: var(--color-gold);
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .footer-contact a {
         color: inherit;
+        text-decoration: none;
         transition: color var(--transition-fast);
     }
     .footer-contact a:hover {
         color: var(--color-gold);
     }
 
-
     /* Bottom Bar */
     .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.08);
       padding-top: var(--spacing-lg);
       font-size: 0.85rem;
       color: var(--color-text-light);
@@ -264,23 +277,24 @@ export function createFooter(): HTMLElement {
     
     .legal-links a {
         color: var(--color-text-light);
+        text-decoration: none;
         transition: color var(--transition-fast);
     }
     .legal-links a:hover {
         color: var(--color-white);
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 1024px) {
       .footer-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 40px;
+        gap: 35px;
       }
     }
 
     @media (max-width: 600px) {
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
       }
       .footer-bottom {
         flex-direction: column;
@@ -291,17 +305,17 @@ export function createFooter(): HTMLElement {
 
     /* Popular Searches SEO Block */
     .popular-searches {
-        margin-top: 30px;
+        margin-top: 25px;
         border-top: 1px solid rgba(255,255,255,0.05);
         padding-top: 20px;
         text-align: center;
-        opacity: 0.6;
+        opacity: 0.7;
     }
     
     .seo-heading {
         font-size: 0.8rem;
         color: var(--color-gold);
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -310,7 +324,7 @@ export function createFooter(): HTMLElement {
         font-size: 0.75rem;
         color: var(--color-text-light);
         line-height: 1.8;
-        max-width: 900px;
+        max-width: 950px;
         margin: 0 auto;
     }
   `;

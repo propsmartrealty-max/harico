@@ -73,8 +73,7 @@ projects.forEach(project => {
   console.log('[Prerender] Generated static route: /project/' + project.slug + '/index.html');
 });
 
-// Also create global index placeholder for Privacy / Terms simply to avoid 404 bots jumping directly into non-hydrated spaces
-const legalPages = ['privacy', 'terms', 'contact', 'amenities', 'projects'];
+const legalPages = ['privacy', 'terms', 'contact', 'amenities', 'projects', 'project-comparison', 'specifications', 'location-hub', 'emi-calculator', 'faq'];
 legalPages.forEach(page => {
     const pageDir = path.join(distDir, page);
     fs.mkdirSync(pageDir, { recursive: true });

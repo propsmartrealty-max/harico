@@ -3,47 +3,59 @@ import './styles/layout.css';
 
 import { createHeader } from './components/Header';
 import { createHero } from './components/Hero';
+import { createBuilderLegacy } from './components/BuilderLegacy';
 import { createProjectsGrid } from './components/ProjectsGrid';
+import { createProjectComparison } from './components/ProjectComparison';
+import { createSpecificationsMatrix } from './components/SpecificationsMatrix';
+import { createLocationIntelligence } from './components/LocationIntelligence';
 import { createAmenities } from './components/Amenities';
+import { createEmiCalculator } from './components/EmiCalculator';
+import { createTestimonials } from './components/Testimonials';
+import { createFaqSection } from './components/FaqSection';
 import { createFooter } from './components/Footer';
 import { createEnquireModal } from './components/EnquireModal';
 import { createProjectDetails } from './components/ProjectDetails';
-import { createBuilderLegacy } from './components/BuilderLegacy';
 import { router } from './router';
 import { projectsData } from './data/projects';
 import { initSEO } from './utils/schemaGenerator';
 import { generateKeywords } from './data/seo_strategy';
 import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
+
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const header = createHeader();
 const footer = createFooter();
 const enquireModal = createEnquireModal(); // Create modal
 
-// Mount static parts
+// Mount static header, footer, modal
 app.appendChild(header);
 const mainAppContainer = document.createElement('main');
 app.appendChild(mainAppContainer);
 app.appendChild(footer);
-app.appendChild(enquireModal); // Mount modal
+app.appendChild(enquireModal);
 
 // Route Handlers
 router.add('/', () => {
     mainAppContainer.innerHTML = ''; // Clear current view
-    document.title = 'Harico Estates | Premium Real Estate in Punawale by Sentosa'; // Reset title
+    document.title = 'Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa';
     
     // Inject global schema and dense keywords
     initSEO();
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) metaKeywords.setAttribute('content', generateKeywords('global', 300));
 
+    // Master narrative flow
     mainAppContainer.appendChild(createHero());
     mainAppContainer.appendChild(createBuilderLegacy());
     mainAppContainer.appendChild(createProjectsGrid());
+    mainAppContainer.appendChild(createProjectComparison());
+    mainAppContainer.appendChild(createSpecificationsMatrix());
+    mainAppContainer.appendChild(createLocationIntelligence());
     mainAppContainer.appendChild(createAmenities());
+    mainAppContainer.appendChild(createEmiCalculator());
+    mainAppContainer.appendChild(createTestimonials());
+    mainAppContainer.appendChild(createFaqSection());
 });
 
-// Handle /project/:slug or /project?id=:id
-// Handle /project/:slug or /project?id=:id
 const legacySlugs: Record<string, string> = {
     '2-3-bhk-flats-in-kiwale-harico-divaam': 'harico-divaam',
     'harico-edge-punawale': 'harico-edge',
@@ -69,30 +81,26 @@ router.add('/project', (params, slug) => {
 
     // Check for legacy slug first
     if (slug && legacySlugs[slug]) {
-        console.log(`[Router] Redirecting legacy slug: ${slug} -> ${legacySlugs[slug]}`);
         const newSlug = legacySlugs[slug];
-        // Redirect to new clean URL
         router.navigate(`/project/${newSlug}`);
         return;
     }
 
     let project = null;
 
-    // Strategy 1: Look up by slug (Passed from modified router or parsed path)
+    // Strategy 1: Look up by slug
     if (slug) {
         project = Object.values(projectsData).find(p => p.slug === slug);
     }
 
-    // Strategy 2: Look up by ID (Legacy query param)
+    // Strategy 2: Look up by ID
     if (!project && params?.get('id')) {
         const id = params.get('id');
         project = projectsData[id as keyof typeof projectsData];
     }
 
     if (project) {
-        // SEO: Dynamic Title Update
         document.title = `${project.title} | ${project.location} | Harico Estates`;
-
         mainAppContainer.appendChild(createProjectDetails(project));
     } else {
         console.warn('[Router] Project not found for slug:', slug);
@@ -100,4 +108,4 @@ router.add('/project', (params, slug) => {
     }
 });
 
-console.log("Harico Estates App Initialized with Router");
+console.log("Harico Estates Master Portal Initialized with Expanded Architectural Suite");
