@@ -1,3 +1,5 @@
+import { dispatchLead } from '../utils/leadDispatcher';
+
 export function createContactSection(): HTMLElement {
   const section = document.createElement('section');
   section.id = 'contact';
@@ -220,13 +222,24 @@ export function createContactSection(): HTMLElement {
       const slot = (section.querySelector('#contact-slot') as HTMLSelectElement)?.value;
       const msg = (section.querySelector('#contact-msg') as HTMLTextAreaElement)?.value;
 
+      // 1. Dispatch lead to propsmartrealty@gmail.com
+      dispatchLead({
+        name,
+        phone,
+        project,
+        timeSlot: slot,
+        message: msg,
+        interestType: 'VIP Site Visit Booking'
+      });
+
+      // 2. Open WhatsApp
       let waMsg = `*VIP Site Visit Booking Request* 🏛️\n\n`;
       waMsg += `*Name:* ${name}\n`;
       waMsg += `*Phone:* ${phone}\n`;
       waMsg += `*Selected Project:* ${project}\n`;
       waMsg += `*Time Slot:* ${slot}\n`;
       if (msg) waMsg += `*Requirements:* ${msg}\n`;
-      waMsg += `\n_Please confirm availability and share location coordinates._`;
+      waMsg += `\n_Lead dispatched to propsmartrealty@gmail.com_`;
 
       window.open(`https://wa.me/917744009295?text=${encodeURIComponent(waMsg)}`, '_blank');
       (e.target as HTMLFormElement).reset();
