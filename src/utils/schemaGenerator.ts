@@ -31,7 +31,7 @@ export const generateOrganizationSchema = () => {
         "description": "Premier real estate developer in West Pune & PCMC with a 39-year legacy. Builders of Harico Edge (Punawale), Harico Divaam (Kiwale Ravet), Harico Pride (Punawale), Sentosa Ekam, Sentosa Serene, and Sentosa Paradise.",
         "telephone": "+91-7744009295",
         "email": "contact@haricoestates.in",
-        "priceRange": "₹64.50 Lacs - ₹1.50 Cr",
+        "priceRange": "₹71.00 Lacs - ₹1.50 Cr",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Harico Estates, Near Bhumkar Chowk, Mumbai-Pune Expressway",
@@ -95,13 +95,13 @@ export const generateOrganizationSchema = () => {
                         "url": "https://haricoestates.in/project/harico-divaam"
                     },
                     "priceCurrency": "INR",
-                    "price": "6450000",
+                    "price": "7100000",
                     "priceSpecification": {
                         "@type": "PriceSpecification",
-                        "price": "6450000",
+                        "price": "7100000",
                         "priceCurrency": "INR",
-                        "minPrice": "6450000",
-                        "maxPrice": "9700000"
+                        "minPrice": "7100000",
+                        "maxPrice": "10800000"
                     }
                 },
                 {

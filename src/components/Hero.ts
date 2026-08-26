@@ -74,8 +74,8 @@ export function createHero(): HTMLElement {
           <div class="finder-input-box">
             <label class="finder-lbl"><i class="fa-solid fa-wallet text-gold mr-1"></i> Budget Range</label>
             <select id="finder-budget" class="finder-select-clean">
-              <option value="all">All Budgets (₹64.5L - ₹1.20Cr)</option>
-              <option value="under75">₹64.50 Lacs - ₹75 Lacs</option>
+              <option value="all">All Budgets (₹71L - ₹1.20Cr)</option>
+              <option value="under75">₹71.00 Lacs - ₹75 Lacs</option>
               <option value="75to100">₹75 Lacs - ₹1.00 Crore</option>
               <option value="above100">₹1.00 Crore & Above</option>
             </select>

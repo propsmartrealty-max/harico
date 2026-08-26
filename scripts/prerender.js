@@ -28,7 +28,7 @@ const projects = [
   {
     slug: 'harico-divaam',
     title: 'Harico Divaam 2 & 3 BHK in Kiwale Ravet | Tallest 24-Storey Towers | Sentosa Group',
-    description: 'Harico Divaam (Sentosa Divine): The tallest 24-storey landmark in Kiwale-Ravet. Luxury 2 & 3 BHK homes from ₹64.50 Lacs*. Directly opposite Sentosa Water Park, next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. MahaRERA PR1260002502389.',
+    description: 'Harico Divaam (Sentosa Divine): The tallest 24-storey landmark in Kiwale-Ravet. Luxury 2 & 3 BHK homes from ₹71.00 Lacs*. Directly opposite Sentosa Water Park, next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. MahaRERA PR1260002502389.',
     keywords: 'Harico Divaam Kiwale, Harico Diwaam Kiwale Ravet, Sentosa Divine Kiwale, Harico Divaam Brochure, Harico Divaam Price, Harico Divaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, Sentosa Developers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, MCA Stadium Gahunje, Hinjewadi Rajiv Gandhi Infotech Park, PCMC Pimpri Chinchwad, MahaRERA PR1260002502389',
     image: '/assets/harico-divaam-hero.jpg',
   },

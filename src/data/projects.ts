@@ -171,8 +171,8 @@ export const projectsData: Record<string, Project> = {
         location: 'Kiwale, Pune',
         status: 'Upcoming',
         type: '2 & 3 BHK Ultra-Luxury High-Rise Residences',
-        price: 'Starts ₹64.50 Lacs*',
-        startingPriceNumeric: 64.5,
+        price: 'Starts ₹71.00 Lacs*',
+        startingPriceNumeric: 71.0,
         possession: 'March 2028',
         landParcel: '5.0 Acres Megastructure',
         towers: '5 Iconic Sky Towers',
@@ -291,14 +291,14 @@ export const projectsData: Record<string, Project> = {
             { title: 'Ojas Multispecialty Hospital Ravet', time: '06 Min', distance: '3.1 km', category: 'Healthcare' }
         ],
         configurations: [
-            { type: '2 BHK Smart', carpet: '724 sq.ft', price: '₹ 64.50 - 66.50 Lacs*', bedrooms: 2 },
-            { type: '2 BHK Comfort', carpet: '760 sq.ft', price: '₹ 67.50 - 69.50 Lacs*', bedrooms: 2 },
-            { type: '2 BHK Prime', carpet: '791 sq.ft', price: '₹ 69.90 - 71.90 Lacs*', bedrooms: 2 },
-            { type: '2 BHK Grand', carpet: '848 sq.ft', price: '₹ 72.00 - 74.00 Lacs*', bedrooms: 2 },
-            { type: '3 BHK Smart', carpet: '920 sq.ft', price: '₹ 80.50 - 82.50 Lacs*', bedrooms: 3 },
-            { type: '3 BHK Comfort', carpet: '983 sq.ft', price: '₹ 86.00 - 88.00 Lacs*', bedrooms: 3 },
-            { type: '3 BHK Prime', carpet: '1051 sq.ft', price: '₹ 93.00 - 95.00 Lacs*', bedrooms: 3 },
-            { type: '3 BHK Grand', carpet: '1108 sq.ft', price: '₹ 95.00 - 97.00 Lacs*', bedrooms: 3 }
+            { type: '2 BHK Smart', carpet: '724 sq.ft', price: '₹ 71.00 - 73.00 Lacs*', bedrooms: 2 },
+            { type: '2 BHK Comfort', carpet: '760 sq.ft', price: '₹ 74.00 - 76.00 Lacs*', bedrooms: 2 },
+            { type: '2 BHK Prime', carpet: '791 sq.ft', price: '₹ 77.00 - 79.00 Lacs*', bedrooms: 2 },
+            { type: '2 BHK Grand', carpet: '848 sq.ft', price: '₹ 80.00 - 82.00 Lacs*', bedrooms: 2 },
+            { type: '3 BHK Smart', carpet: '920 sq.ft', price: '₹ 87.00 - 89.00 Lacs*', bedrooms: 3 },
+            { type: '3 BHK Comfort', carpet: '983 sq.ft', price: '₹ 93.00 - 95.00 Lacs*', bedrooms: 3 },
+            { type: '3 BHK Prime', carpet: '1051 sq.ft', price: '₹ 99.00 - 1.02 Cr*', bedrooms: 3 },
+            { type: '3 BHK Grand', carpet: '1108 sq.ft', price: '₹ 1.05 - 1.08 Cr*', bedrooms: 3 }
         ],
         masterLayout: '/assets/harico-divaam-master-layout.png',
         reraNumber: 'PR1260002502389',
@@ -314,7 +314,7 @@ export const projectsData: Record<string, Project> = {
         ],
         seo: {
             title: 'Harico Divaam 2 & 3 BHK in Kiwale | Tallest Towers near Ravet Expressway',
-            description: 'Harico Divaam (Divine): The tallest towers in Kiwale/Ravet. Luxury 2 & 3 BHK homes from ₹64.5 Lacs*. Next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. RERA PR1260002502389.',
+            description: 'Harico Divaam (Divine): The tallest towers in Kiwale/Ravet. Luxury 2 & 3 BHK homes from ₹71 Lacs*. Next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. RERA PR1260002502389.',
             keywords: generateKeywords('divaam')
         }
     },

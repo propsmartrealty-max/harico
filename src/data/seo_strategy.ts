@@ -112,7 +112,7 @@ export const propertyTypologies = [
 export const buyerIntents = [
     'Price',
     'Price List 2026',
-    'Starting ₹64.5 Lacs',
+    'Starting ₹71 Lacs',
     'Starting ₹74 Lacs',
     'Floor Plan PDF',
     'Brochure Download',
@@ -204,7 +204,7 @@ export const masterSeoStrategy = {
         'MahaRERA PR1260002502389',
         'Flats opposite Sentosa Water Park Kiwale',
         'Flats near Mukai Chowk Kiwale Ravet',
-        '2 BHK in Kiwale Ravet starts 64.5 Lacs',
+        '2 BHK in Kiwale Ravet starts 71 Lacs',
         '3 BHK luxury high rise in Kiwale Ravet',
         'Harico Divaam Sentosa Group',
         ...combineArrays(['Harico Divaam', 'Harico Diwaam', 'Sentosa Divine'], buyerIntents.slice(0, 8))
