@@ -281,8 +281,11 @@ export function createProjectDetails(project: any): HTMLElement {
     layoutsContent += `
         <div class="mb-xl">
             <h3 class="section-heading text-center mb-lg">Master Site Layout</h3>
-            <div class="layout-image-container fade-in-up" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; max-width: 900px; margin: 0 auto; border: 1px solid #E2E8F0;">
+            <div class="layout-image-container fade-in-up" onclick="if(window.openFloorPlanLightbox) window.openFloorPlanLightbox('${project.masterLayout}', 'Master Site Layout', '${project.title}', '${project.title}');" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); background: white; max-width: 900px; margin: 0 auto; border: 1px solid #E2E8F0; cursor: zoom-in; position: relative;" title="Click to view full-screen">
                 <img src="${project.masterLayout}" alt="Master Layout" style="width: 100%; height: auto; display: block;">
+                <div style="position: absolute; bottom: 12px; right: 12px; background: rgba(10,25,47,0.85); color: white; padding: 6px 14px; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+                  <i class="fa-solid fa-expand text-gold"></i> Click to Zoom Fullscreen
+                </div>
             </div>
         </div>
     `;
@@ -295,15 +298,21 @@ export function createProjectDetails(project: any): HTMLElement {
              <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
                 ${project.floorPlans.map((plan: any) => `
                     <div class="plan-item fade-in-up" style="background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid #E2E8F0; display: flex; flex-direction: column;">
-                        <div class="plan-img-wrapper" style="padding: 20px; background: #fff; flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+                        <div class="plan-img-wrapper" onclick="if(window.openFloorPlanLightbox) window.openFloorPlanLightbox('${plan.image}', '${plan.title.replace(/'/g, "\\'")}', '${plan.carpet || ''}', '${project.title.replace(/'/g, "\\'")}');" style="padding: 20px; background: #fff; flex-grow: 1; display: flex; align-items: center; justify-content: center; cursor: zoom-in; position: relative;" title="Click to Zoom Plan">
                             <img src="${plan.image}" alt="${plan.title}" style="width: 100%; max-height: 280px; object-fit: contain; display: block;">
+                            <span style="position: absolute; top: 12px; right: 12px; background: rgba(10,25,47,0.75); color: var(--color-gold); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
                         </div>
                         <div class="plan-info p-md text-center" style="border-top: 1px solid #F1F5F9; background: #FAFBFC;">
                             <h4 style="margin: 0 0 5px; color: var(--color-navy); font-family: var(--font-heading); font-size: 1.1rem;">${plan.title}</h4>
                             ${plan.carpet ? `<span style="font-size: 0.85rem; color: var(--color-gold); font-weight: 700; display: block; margin-bottom: 10px;">Carpet Area: ${plan.carpet}</span>` : ''}
-                            <a href="https://wa.me/917744009295?text=Hi,%20please%20send%20me%20the%20detailed%20high-res%20floorplan%20and%20dimensions%20for%20${encodeURIComponent(plan.title)}%20at%20${encodeURIComponent(project.title)}." target="_blank" class="btn btn-sm btn-primary w-full">
-                              <i class="fa-brands fa-whatsapp mr-1"></i> Request High-Res Plan
-                            </a>
+                            <div class="flex gap-xs">
+                              <button onclick="if(window.openFloorPlanLightbox) window.openFloorPlanLightbox('${plan.image}', '${plan.title.replace(/'/g, "\\'")}', '${plan.carpet || ''}', '${project.title.replace(/'/g, "\\'")}');" class="btn btn-sm btn-secondary w-full" style="padding: 8px;">
+                                <i class="fa-solid fa-expand mr-1"></i> Zoom
+                              </button>
+                              <a href="https://wa.me/917744009295?text=Hi,%20please%20send%20me%20the%20detailed%20high-res%20floorplan%20and%20dimensions%20for%20${encodeURIComponent(plan.title)}%20at%20${encodeURIComponent(project.title)}." target="_blank" class="btn btn-sm btn-primary w-full" style="padding: 8px;">
+                                <i class="fa-brands fa-whatsapp mr-1"></i> Cost Sheet
+                              </a>
+                            </div>
                         </div>
                     </div>
                 `).join('')}
