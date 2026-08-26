@@ -21,6 +21,8 @@ import { createMobileQuickBar } from './components/MobileQuickBar';
 import { createProjectDetails } from './components/ProjectDetails';
 import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
 import { createNotFound } from './components/NotFound';
+import { createProgrammaticHub } from './components/ProgrammaticHub';
+import { programmaticRoutes } from './data/programmatic_routes';
 import { router } from './router';
 import { projectsData } from './data/projects';
 import { initSEO } from './utils/schemaGenerator';
@@ -35,7 +37,7 @@ const floorPlanModal = createFloorPlanModal();
 const backToTop = createBackToTop();
 const mobileQuickBar = createMobileQuickBar();
 
-// Mount global static shells & modals
+// Mount global shells & modals
 app.appendChild(header);
 const mainAppContainer = document.createElement('main');
 app.appendChild(mainAppContainer);
@@ -45,7 +47,7 @@ app.appendChild(floorPlanModal);
 app.appendChild(backToTop);
 app.appendChild(mobileQuickBar);
 
-// Route Handlers
+// 1. Home Master Route
 router.add('/', () => {
     mainAppContainer.innerHTML = '';
     document.title = 'Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa';
@@ -54,7 +56,6 @@ router.add('/', () => {
     const metaKeywords = document.querySelector('meta[name="keywords"]');
     if (metaKeywords) metaKeywords.setAttribute('content', generateKeywords('global', 300));
 
-    // Master narrative flow
     mainAppContainer.appendChild(createHero());
     mainAppContainer.appendChild(createBuilderLegacy());
     mainAppContainer.appendChild(createProjectsGrid());
@@ -70,11 +71,76 @@ router.add('/', () => {
     setTimeout(() => animationEngine.init(), 50);
 });
 
-const legacySlugs: Record<string, string> = {
-    '2-3-bhk-flats-in-kiwale-harico-divaam': 'harico-divaam',
-    'harico-edge-punawale': 'harico-edge',
-    'harico-pride-punawale': 'harico-pride'
-};
+// 2. Direct Sub-Page Routes
+router.add('/projects', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Featured Luxury Projects in Punawale & Kiwale | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createProjectsGrid());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/project-comparison', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Compare Harico Edge vs Divaam vs Pride | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createProjectComparison());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/specifications', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Mivan Monolithic Concrete Specs & Branded Fittings | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createSpecificationsMatrix());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/location-hub', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Location Intelligence & Transit Matrix | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createLocationIntelligence());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/amenities', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = '100+ Curated World-Class Amenities | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createAmenities());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/emi-calculator', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Home Loan EMI Calculator & Bank Approvals | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createEmiCalculator());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/faq', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'MahaRERA & Homebuyer FAQs | Harico Estates';
+    initSEO();
+    mainAppContainer.appendChild(createFaqSection());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
 
 router.add('/contact', () => {
     mainAppContainer.innerHTML = '';
@@ -100,6 +166,26 @@ router.add('/terms', () => {
     window.scrollTo(0, 0);
     setTimeout(() => animationEngine.init(), 50);
 });
+
+// 3. Programmatic SEO Dynamic Routes
+programmaticRoutes.forEach(prog => {
+    router.add(`/${prog.path}`, () => {
+        mainAppContainer.innerHTML = '';
+        document.title = prog.title;
+        initSEO();
+        mainAppContainer.appendChild(createProgrammaticHub(prog));
+        mainAppContainer.appendChild(createContactSection());
+        window.scrollTo(0, 0);
+        setTimeout(() => animationEngine.init(), 50);
+    });
+});
+
+// 4. Project Detail Dynamic Handler
+const legacySlugs: Record<string, string> = {
+    '2-3-bhk-flats-in-kiwale-harico-divaam': 'harico-divaam',
+    'harico-edge-punawale': 'harico-edge',
+    'harico-pride-punawale': 'harico-pride'
+};
 
 router.add('/project', (params, slug) => {
     mainAppContainer.innerHTML = '';
@@ -131,4 +217,4 @@ router.add('/project', (params, slug) => {
     }
 });
 
-console.log("Harico Estates Complete Enterprise Suite Initialized");
+console.log("Harico Estates Enterprise Programmatic SEO Engine Initialized");
