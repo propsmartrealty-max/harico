@@ -1,10 +1,10 @@
 export function createHeader(): HTMLElement {
   const header = document.createElement('header');
-  header.className = 'header';
+  header.className = 'header-pill-wrapper';
 
-  // Add sticky functionality with scroll detection
+  // Add scroll detection for dynamic glassmorphism
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 20) {
+    if (window.scrollY > 25) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
@@ -18,13 +18,13 @@ export function createHeader(): HTMLElement {
       const section = document.getElementById(sectionId);
       if (section) {
         const sectionTop = section.offsetTop;
-        if (window.scrollY >= (sectionTop - 150)) {
+        if (window.scrollY >= (sectionTop - 160)) {
           currentSection = sectionId;
         }
       }
     });
 
-    document.querySelectorAll('.nav-link').forEach(link => {
+    document.querySelectorAll('.pill-nav-link').forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('data-target') === currentSection) {
         link.classList.add('active');
@@ -33,39 +33,38 @@ export function createHeader(): HTMLElement {
   });
 
   header.innerHTML = `
-    <div class="header-container">
+    <div class="pill-navbar">
       <!-- Logo Section -->
-      <a href="/" class="logo-link nav-link-internal" data-target="home">
-         <img src="/harico_logo.png" alt="Harico Estates" class="logo-img">
+      <a href="/" class="pill-logo-link nav-link-internal" data-target="home">
+        <img src="/harico_logo.png" alt="Harico Estates" class="pill-logo-img">
       </a>
       
-      <!-- Desktop Navigation -->
-      <nav class="nav-menu">
-        <ul class="nav-list">
-          <li><a href="/" class="nav-link nav-link-internal active" data-target="home">Home</a></li>
-          <li><a href="/projects" class="nav-link nav-link-internal" data-target="projects">Projects</a></li>
-          <li><a href="/project-comparison" class="nav-link nav-link-internal" data-target="project-comparison">Compare</a></li>
-          <li><a href="/specifications" class="nav-link nav-link-internal" data-target="specifications">Specs</a></li>
-          <li><a href="/location-hub" class="nav-link nav-link-internal" data-target="location-hub">Location</a></li>
-          <li><a href="/amenities" class="nav-link nav-link-internal" data-target="amenities">Amenities</a></li>
-          <li><a href="/emi-calculator" class="nav-link nav-link-internal" data-target="emi-calculator">EMI Calc</a></li>
-          <li><a href="/faq" class="nav-link nav-link-internal" data-target="faq">FAQs</a></li>
-          <li><a href="/contact" class="nav-link nav-link-internal" data-target="contact">Contact</a></li>
+      <!-- Desktop Navigation Menu Inside Pill -->
+      <nav class="pill-nav-menu">
+        <ul class="pill-nav-list">
+          <li><a href="/" class="pill-nav-link nav-link-internal active" data-target="home">Home</a></li>
+          <li><a href="/projects" class="pill-nav-link nav-link-internal" data-target="projects">Projects</a></li>
+          <li><a href="/project-comparison" class="pill-nav-link nav-link-internal" data-target="project-comparison">Compare</a></li>
+          <li><a href="/specifications" class="pill-nav-link nav-link-internal" data-target="specifications">Specs</a></li>
+          <li><a href="/location-hub" class="pill-nav-link nav-link-internal" data-target="location-hub">Location</a></li>
+          <li><a href="/amenities" class="pill-nav-link nav-link-internal" data-target="amenities">Amenities</a></li>
+          <li><a href="/emi-calculator" class="pill-nav-link nav-link-internal" data-target="emi-calculator">EMI Calc</a></li>
+          <li><a href="/faq" class="pill-nav-link nav-link-internal" data-target="faq">FAQs</a></li>
+          <li><a href="/contact" class="pill-nav-link nav-link-internal" data-target="contact">Contact</a></li>
         </ul>
       </nav>
 
-      <!-- Actions Section -->
-      <div class="header-actions">
-        <!-- Contact Icons -->
-        <a href="https://wa.me/917744009295?text=Hi, I have an enquiry regarding Harico Estates." target="_blank" class="btn btn-whatsapp header-whatsapp">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <!-- Action Button inside Pill -->
+      <div class="pill-actions">
+        <a href="https://wa.me/917744009295?text=Hi,%20I%20have%20an%20enquiry%20regarding%20Harico%20Estates%20projects." target="_blank" class="btn-pill-whatsapp">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
           </svg>
-          <span class="btn-text-content">+91 7744009295</span>
+          <span class="btn-text">Enquire</span>
         </a>
 
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-btn" aria-label="Menu">
+        <!-- Mobile Toggle Button -->
+        <button class="pill-mobile-toggle" aria-label="Toggle Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -73,191 +72,200 @@ export function createHeader(): HTMLElement {
       </div>
     </div>
 
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav">
-      <ul class="mobile-nav-list">
-        <li><a href="/" class="mobile-nav-link" data-target="home">Home</a></li>
-        <li><a href="/projects" class="mobile-nav-link" data-target="projects">Projects</a></li>
-        <li><a href="/project-comparison" class="mobile-nav-link" data-target="project-comparison">Compare Landmarks</a></li>
-        <li><a href="/specifications" class="mobile-nav-link" data-target="specifications">Specifications</a></li>
-        <li><a href="/location-hub" class="mobile-nav-link" data-target="location-hub">Location Hub</a></li>
-        <li><a href="/amenities" class="mobile-nav-link" data-target="amenities">Amenities</a></li>
-        <li><a href="/emi-calculator" class="mobile-nav-link" data-target="emi-calculator">EMI Calculator</a></li>
-        <li><a href="/faq" class="mobile-nav-link" data-target="faq">FAQs</a></li>
-        <li><a href="/contact" class="mobile-nav-link" data-target="contact">Contact</a></li>
+    <!-- Mobile Drawer Overlay -->
+    <div class="pill-mobile-drawer">
+      <div class="mobile-drawer-header flex justify-between items-center pb-md border-bottom">
+        <img src="/harico_logo.png" alt="Harico Estates" style="height: 38px;">
+        <button class="drawer-close-btn">&times;</button>
+      </div>
+      <ul class="mobile-drawer-list mt-md">
+        <li><a href="/" class="mobile-drawer-link" data-target="home">Home</a></li>
+        <li><a href="/projects" class="mobile-drawer-link" data-target="projects">Featured Projects</a></li>
+        <li><a href="/project-comparison" class="mobile-drawer-link" data-target="project-comparison">Compare Landmarks</a></li>
+        <li><a href="/specifications" class="mobile-drawer-link" data-target="specifications">Construction Specs</a></li>
+        <li><a href="/location-hub" class="mobile-drawer-link" data-target="location-hub">Location Matrix</a></li>
+        <li><a href="/amenities" class="mobile-drawer-link" data-target="amenities">Lifestyle Amenities</a></li>
+        <li><a href="/emi-calculator" class="mobile-drawer-link" data-target="emi-calculator">EMI Calculator</a></li>
+        <li><a href="/faq" class="mobile-drawer-link" data-target="faq">MahaRERA FAQs</a></li>
+        <li><a href="/contact" class="mobile-drawer-link" data-target="contact">Contact & Site Visit</a></li>
       </ul>
+      <div class="mt-lg">
+        <a href="tel:+917744009295" class="btn btn-primary w-full text-center block">
+          <i class="fa-solid fa-phone mr-2"></i> Call +91 7744009295
+        </a>
+      </div>
     </div>
   `;
 
   // Attach Styles
   const style = document.createElement('style');
   style.textContent = `
-    .header {
+    .header-pill-wrapper {
       position: fixed;
-      top: 0;
+      top: 18px;
       left: 0;
+      right: 0;
       width: 100%;
-      height: 90px;
-      z-index: var(--z-header);
-      background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
-      transition: all var(--transition-normal);
+      z-index: 1000;
       display: flex;
-      align-items: center;
       justify-content: center;
+      padding: 0 16px;
+      pointer-events: none; /* Allows click-through outside the pill */
+      transition: top 0.3s ease;
     }
 
-    .header.scrolled {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(12px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      height: 70px;
-    }
-
-    .header-container {
+    .pill-navbar {
+      pointer-events: auto; /* Re-enable clicks inside pill */
       width: 100%;
-      max-width: var(--container-width);
-      padding: 0 var(--container-padding);
+      max-width: 1240px;
+      background: rgba(10, 25, 47, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+      padding: 8px 18px 8px 24px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      height: 100%;
+      justify-content: space-between;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    /* Logo Styling */
-    .logo-link {
+    .header-pill-wrapper.scrolled .pill-navbar {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Logo inside Pill */
+    .pill-logo-link {
       display: flex;
       align-items: center;
       text-decoration: none;
-      height: 100%;
-      z-index: 10;
+      margin-right: 15px;
     }
-    
-    .logo-img {
-      height: 55px;
+
+    .pill-logo-img {
+      height: 40px;
       width: auto;
       object-fit: contain;
-      transition: all var(--transition-normal);
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-    }
-    
-    .header.scrolled .logo-img {
-       height: 45px;
+      filter: brightness(0) invert(1);
+      transition: filter 0.3s ease;
     }
 
-    /* Desktop Navigation */
-    .nav-menu {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+    .header-pill-wrapper.scrolled .pill-logo-img {
+      filter: none;
     }
 
-    .nav-list {
+    /* Nav Links inside Pill */
+    .pill-nav-menu {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .pill-nav-list {
       list-style: none;
       margin: 0;
       padding: 0;
       display: flex;
-      gap: 1.8rem;
       align-items: center;
+      gap: 4px;
     }
 
-    .nav-link {
-      color: var(--color-white);
-      font-weight: 500;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      padding: 6px 0;
-      transition: color var(--transition-fast);
-      font-family: var(--font-heading);
-    }
-    
-    .nav-link.active::after {
-        width: 100%;
-    }
-
-    .header.scrolled .nav-link {
-      color: var(--color-navy);
+    .pill-nav-link {
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.82rem;
       font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      text-decoration: none;
+      padding: 7px 14px;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+      font-family: var(--font-heading);
+      white-space: nowrap;
     }
 
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background-color: var(--color-gold);
-      transition: width var(--transition-normal);
+    .header-pill-wrapper.scrolled .pill-nav-link {
+      color: var(--color-navy);
     }
 
-    .nav-link:hover::after {
-      width: 100%;
-    }
-    
-    .nav-link:hover, .nav-link.active {
-        color: var(--color-gold);
+    .pill-nav-link:hover {
+      color: var(--color-gold);
+      background: rgba(212, 175, 55, 0.15);
     }
 
-    /* Actions Area */
-    .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        z-index: 10;
+    .pill-nav-link.active {
+      color: #FFFFFF;
+      background: var(--color-gold);
+      box-shadow: 0 2px 10px rgba(212, 175, 55, 0.4);
     }
-    
-    .btn-whatsapp {
+
+    .header-pill-wrapper.scrolled .pill-nav-link.active {
+      color: #FFFFFF;
+      background: var(--color-navy);
+    }
+
+    /* Action Buttons inside Pill */
+    .pill-actions {
       display: flex;
       align-items: center;
       gap: 8px;
-      background-color: #25D366;
-      color: white;
-      padding: 8px 18px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-decoration: none;
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      box-shadow: 0 4px 6px -1px rgba(37, 211, 102, 0.4);
-      letter-spacing: 0.5px;
-    }
-    
-    .btn-whatsapp:hover {
-      transform: translateY(-2px) scale(1.03);
-      background-color: #20BA56;
+      margin-left: 10px;
     }
 
-    /* Mobile Menu Button */
-    .mobile-menu-btn {
+    .btn-pill-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #25D366;
+      color: #FFFFFF;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn-pill-whatsapp:hover {
+      background: #20BA56;
+      transform: scale(1.04);
+      color: #FFFFFF;
+    }
+
+    /* Mobile Toggle Button */
+    .pill-mobile-toggle {
       display: none;
       flex-direction: column;
       justify-content: space-between;
-      width: 28px;
-      height: 20px;
-      z-index: calc(var(--z-header) + 10);
-      cursor: pointer;
+      width: 24px;
+      height: 18px;
       background: transparent;
       border: none;
+      cursor: pointer;
+      padding: 0;
     }
-    
-    .mobile-menu-btn span {
+
+    .pill-mobile-toggle span {
       display: block;
       width: 100%;
       height: 2px;
-      background-color: var(--color-white);
-      transition: all var(--transition-fast);
+      background-color: #FFFFFF;
       border-radius: 2px;
-    }
-    .header.scrolled .mobile-menu-btn span { background-color: var(--color-navy); }
-    
-    body.menu-open .mobile-menu-btn span {
-        background-color: var(--color-navy) !important;
+      transition: background-color 0.3s ease;
     }
 
-    /* Mobile Nav Overlay */
-    .mobile-nav {
+    .header-pill-wrapper.scrolled .pill-mobile-toggle span {
+      background-color: var(--color-navy);
+    }
+
+    /* Mobile Drawer */
+    .pill-mobile-drawer {
       position: fixed;
       top: 0;
       right: -100%;
@@ -265,108 +273,100 @@ export function createHeader(): HTMLElement {
       max-width: 320px;
       height: 100vh;
       background: rgba(255, 255, 255, 0.99);
-      backdrop-filter: blur(10px);
-      z-index: var(--z-header);
-      padding: 100px 30px 40px;
-      transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: -5px 0 25px rgba(0,0,0,0.1);
+      backdrop-filter: blur(20px);
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+      padding: 30px 25px;
       display: flex;
       flex-direction: column;
+      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1100;
+      pointer-events: auto;
       overflow-y: auto;
     }
 
-    .mobile-nav.open {
+    .pill-mobile-drawer.open {
       right: 0;
     }
 
-    .mobile-nav-list {
+    .drawer-close-btn {
+      font-size: 2rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--color-navy);
+      line-height: 1;
+    }
+
+    .mobile-drawer-list {
       list-style: none;
       padding: 0;
+      margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
-    
-    .mobile-nav-link {
-      font-size: 1.15rem;
+
+    .mobile-drawer-link {
+      font-size: 1.05rem;
       color: var(--color-navy);
       font-weight: 600;
       text-decoration: none;
       display: block;
-      transition: color 0.2s;
+      transition: color 0.2s ease, transform 0.2s ease;
       font-family: var(--font-heading);
     }
-    
-    .mobile-nav-link:hover {
-        color: var(--color-gold);
-        transform: translateX(5px);
+
+    .mobile-drawer-link:hover {
+      color: var(--color-gold);
+      transform: translateX(4px);
     }
 
-    @media (max-width: 1150px) {
-      .nav-menu { display: none; }
-      .mobile-menu-btn { display: flex; }
-      .header-actions {
-        gap: 0.5rem;
+    @media (max-width: 1180px) {
+      .pill-nav-menu {
+        display: none;
       }
-      .btn-whatsapp .btn-text-content { display: none; } 
-      .btn-whatsapp { 
-        padding: 8px; 
+      .pill-mobile-toggle {
+        display: flex;
+      }
+      .pill-navbar {
+        padding: 8px 16px;
+      }
+      .btn-pill-whatsapp .btn-text {
+        display: none;
+      }
+      .btn-pill-whatsapp {
+        padding: 8px;
         border-radius: 50%;
-        width: 38px;
-        height: 38px;
+        width: 34px;
+        height: 34px;
         justify-content: center;
-        gap: 0;
       }
-      .logo-img { height: 45px; }
-      .header { height: 70px; }
     }
   `;
   header.appendChild(style);
 
-  // Logic
+  // Bind Drawer Interactions
   setTimeout(() => {
-    document.querySelectorAll('.nav-link-internal, .mobile-nav-link').forEach(link => {
+    const toggleBtn = header.querySelector('.pill-mobile-toggle');
+    const closeBtn = header.querySelector('.drawer-close-btn');
+    const drawer = header.querySelector('.pill-mobile-drawer');
+
+    toggleBtn?.addEventListener('click', () => {
+      drawer?.classList.add('open');
+      document.body.classList.add('menu-open');
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      drawer?.classList.remove('open');
+      document.body.classList.remove('menu-open');
+    });
+
+    header.querySelectorAll('.mobile-drawer-link').forEach(link => {
       link.addEventListener('click', () => {
-        const mobileNav = header.querySelector('.mobile-nav') as HTMLElement;
-        if (mobileNav.classList.contains('open')) {
-          mobileNav.classList.remove('open');
-          document.body.classList.remove('menu-open');
-          const mobileBtn = header.querySelector('.mobile-menu-btn') as HTMLElement;
-          resetBurger(mobileBtn);
-        }
+        drawer?.classList.remove('open');
+        document.body.classList.remove('menu-open');
       });
     });
-
-    const mobileBtn = header.querySelector('.mobile-menu-btn') as HTMLElement;
-    const mobileNav = header.querySelector('.mobile-nav') as HTMLElement;
-
-    mobileBtn.addEventListener('click', () => {
-      mobileNav.classList.toggle('open');
-      document.body.classList.toggle('menu-open');
-
-      const spans = mobileBtn.querySelectorAll('span');
-      if (mobileNav.classList.contains('open')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
-        spans.forEach(s => s.style.backgroundColor = 'var(--color-navy)');
-      } else {
-        resetBurger(mobileBtn);
-      }
-    });
-
-    function resetBurger(btn: HTMLElement) {
-      const spans = btn.querySelectorAll('span');
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
-
-      if (!header.classList.contains('scrolled')) {
-        spans.forEach(s => s.style.backgroundColor = 'var(--color-white)');
-      } else {
-        spans.forEach(s => s.style.backgroundColor = 'var(--color-navy)');
-      }
-    }
   }, 0);
 
   return header;

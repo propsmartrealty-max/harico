@@ -3,62 +3,88 @@ import { router } from '../router';
 export function createHero(): HTMLElement {
   const section = document.createElement('section');
   section.id = 'home';
-  section.className = 'hero-section';
+  section.className = 'hero-section-refined';
 
   section.innerHTML = `
-    <div class="hero-overlay"></div>
-    <div class="hero-content container flex flex-col justify-center items-center text-center">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-glow-orb"></div>
+    
+    <div class="container hero-container-refined flex flex-col justify-center items-center text-center">
       
-      <!-- Top Trust Tag -->
-      <div class="hero-trust-tag fade-in-up">
-        <span class="trust-shield-icon"><i class="fa-solid fa-shield-halved"></i></span>
-        <span>A 39-Year Legacy by Sentosa Developers & Harico Estates</span>
+      <!-- Luxury Pre-heading Capsule -->
+      <div class="hero-pre-badge fade-in-up">
+        <span class="badge-sparkle">✦</span>
+        <span>A 39-Year Legacy of Luxury by Sentosa Developers</span>
+        <span class="badge-sparkle">✦</span>
       </div>
 
-      <h1 class="hero-title fade-in-up delay-1">
-        Experience Ultra-Luxury Living <br />
-        <span class="text-gold">in Punawale & Kiwale</span>
+      <!-- Refined Hero Headline -->
+      <h1 class="hero-title-refined fade-in-up delay-1">
+        Architectural Elegance <br />
+        <span class="text-gold-gradient">Crafted for Elevated Living</span>
       </h1>
       
-      <p class="hero-subtitle fade-in-up delay-1">
-        Spacious 2 & 3 BHK Homes with Dual Balconies, 100+ Lifestyle Amenities, and 2-Minute Expressway Proximity.
+      <!-- Refined Subtitle -->
+      <p class="hero-subtitle-refined fade-in-up delay-1">
+        Spacious 2 & 3 BHK luxury residences in Punawale & Kiwale featuring dual private balconies, 100+ curated amenities, and seamless 2-minute connectivity to the Mumbai-Pune Expressway.
       </p>
 
-      <!-- Quick Finder Search Bar Widget -->
-      <div class="hero-quick-finder fade-in-up delay-2">
-        <div class="finder-form-grid">
+      <!-- Key Micro-Feature Chips -->
+      <div class="hero-feature-chips fade-in-up delay-2">
+        <div class="feature-chip">
+          <i class="fa-solid fa-shield-halved text-gold"></i>
+          <span>100% MahaRERA Verified</span>
+        </div>
+        <div class="feature-chip">
+          <i class="fa-solid fa-compass-drafting text-gold"></i>
+          <span>Zero Space Wastage Plans</span>
+        </div>
+        <div class="feature-chip">
+          <i class="fa-solid fa-road text-gold"></i>
+          <span>2 Mins to Expressway</span>
+        </div>
+        <div class="feature-chip">
+          <i class="fa-solid fa-leaf text-gold"></i>
+          <span>70% Open Green Zones</span>
+        </div>
+      </div>
+
+      <!-- Refined Concierge Property Finder Widget -->
+      <div class="hero-finder-card fade-in-up delay-2">
+        <div class="finder-inner-grid">
           
-          <div class="finder-field">
-            <label><i class="fa-solid fa-location-dot text-gold mr-1"></i> Micro-Location</label>
-            <select id="finder-location" class="finder-select">
-              <option value="all">All Locations (Punawale & Kiwale)</option>
-              <option value="punawale">Punawale, Pune</option>
-              <option value="kiwale">Kiwale, Pune</option>
+          <div class="finder-input-box">
+            <label class="finder-lbl"><i class="fa-solid fa-location-dot text-gold mr-1"></i> Location</label>
+            <select id="finder-location" class="finder-select-clean">
+              <option value="all">All Micro-Markets (Punawale & Kiwale)</option>
+              <option value="punawale">Punawale, Pune (Harico Edge & Pride)</option>
+              <option value="kiwale">Kiwale, Pune (Harico Divaam 24-Storey)</option>
             </select>
           </div>
 
-          <div class="finder-field">
-            <label><i class="fa-solid fa-bed text-gold mr-1"></i> Configuration</label>
-            <select id="finder-config" class="finder-select">
-              <option value="all">2 & 3 BHK Homes</option>
-              <option value="2bhk">2 BHK Luxury (724 - 848 sq.ft)</option>
-              <option value="3bhk">3 BHK Grand (920 - 1180 sq.ft)</option>
+          <div class="finder-input-box">
+            <label class="finder-lbl"><i class="fa-solid fa-bed text-gold mr-1"></i> Configuration</label>
+            <select id="finder-config" class="finder-select-clean">
+              <option value="all">2 & 3 BHK Ultra-Premium</option>
+              <option value="2bhk">2 BHK Smart & Grande (724 - 848 sq.ft)</option>
+              <option value="3bhk">3 BHK Luxury & Royale (920 - 1180 sq.ft)</option>
             </select>
           </div>
 
-          <div class="finder-field">
-            <label><i class="fa-solid fa-indian-rupee-sign text-gold mr-1"></i> Price Budget</label>
-            <select id="finder-budget" class="finder-select">
-              <option value="all">All Budgets (₹64.5L - ₹1.2Cr)</option>
-              <option value="under75">₹64.5 Lacs - ₹75 Lacs</option>
+          <div class="finder-input-box">
+            <label class="finder-lbl"><i class="fa-solid fa-wallet text-gold mr-1"></i> Budget Range</label>
+            <select id="finder-budget" class="finder-select-clean">
+              <option value="all">All Budgets (₹64.5L - ₹1.20Cr)</option>
+              <option value="under75">₹64.50 Lacs - ₹75 Lacs</option>
               <option value="75to100">₹75 Lacs - ₹1.00 Crore</option>
-              <option value="above100">₹1.00 Crore+</option>
+              <option value="above100">₹1.00 Crore & Above</option>
             </select>
           </div>
 
-          <div class="finder-action">
-            <button id="btn-hero-search" class="btn btn-primary btn-finder-search">
-              <i class="fa-solid fa-magnifying-glass mr-2"></i> Explore Homes
+          <div class="finder-submit-box">
+            <button id="btn-hero-search" class="btn btn-primary btn-finder-action">
+              <span>Find Residences</span>
+              <i class="fa-solid fa-arrow-right ml-2"></i>
             </button>
           </div>
 
@@ -66,46 +92,52 @@ export function createHero(): HTMLElement {
       </div>
 
       <!-- Action Buttons -->
-      <div class="hero-actions fade-in-up delay-2 mt-lg">
-        <a href="/projects" class="btn btn-primary hero-btn">Explore All Projects</a>
-        <button class="btn btn-glass hero-enquire-btn">Schedule Site Visit</button>
+      <div class="hero-cta-group fade-in-up delay-3 mt-lg">
+        <a href="/projects" class="btn btn-primary btn-hero-gold">
+          <i class="fa-solid fa-building-circle-check mr-2"></i> Explore All Projects
+        </a>
+        <button class="btn btn-glass btn-hero-tour hero-enquire-btn">
+          <i class="fa-solid fa-calendar-check mr-2"></i> Schedule VIP Site Tour
+        </button>
       </div>
 
-      <!-- Trust Metrics Bar inside Hero -->
-      <div class="hero-stats-strip fade-in-up delay-3 mt-xl">
-        <div class="stat-pill">
-          <span class="stat-num">39+</span>
-          <span class="stat-lbl">Years Legacy</span>
+      <!-- Refined Trust Metric Capsules -->
+      <div class="hero-trust-metrics-bar fade-in-up delay-3 mt-xl">
+        <div class="metric-capsule">
+          <span class="metric-val">39+</span>
+          <span class="metric-txt">Years of Legacy</span>
         </div>
-        <div class="stat-sep"></div>
-        <div class="stat-pill">
-          <span class="stat-num">20+</span>
-          <span class="stat-lbl">Landmarks Delivered</span>
+        <div class="metric-divider-line"></div>
+        <div class="metric-capsule">
+          <span class="metric-val">20+</span>
+          <span class="metric-txt">Landmarks Delivered</span>
         </div>
-        <div class="stat-sep"></div>
-        <div class="stat-pill">
-          <span class="stat-num">5,000+</span>
-          <span class="stat-lbl">Happy Families</span>
+        <div class="metric-divider-line"></div>
+        <div class="metric-capsule">
+          <span class="metric-val">5,000+</span>
+          <span class="metric-txt">Delighted Families</span>
         </div>
-        <div class="stat-sep"></div>
-        <div class="stat-pill">
-          <span class="stat-num">100%</span>
-          <span class="stat-lbl">MahaRERA Registered</span>
+        <div class="metric-divider-line"></div>
+        <div class="metric-capsule">
+          <span class="metric-val">100+</span>
+          <span class="metric-txt">Curated Amenities</span>
         </div>
       </div>
 
     </div>
     
-    <div class="scroll-indicator fade-in-up delay-3">
-        <span class="mouse-icon">
-            <span class="wheel"></span>
-        </span>
+    <!-- Floating Minimalist Scroll Cue -->
+    <div class="hero-scroll-cue fade-in-up delay-3">
+      <span class="mouse-frame">
+        <span class="mouse-dot"></span>
+      </span>
+      <span class="scroll-cue-txt">Scroll to explore</span>
     </div>
   `;
 
   const style = document.createElement('style');
   style.textContent = `
-    .hero-section {
+    .hero-section-refined {
       min-height: 100vh;
       width: 100%;
       position: relative;
@@ -116,282 +148,373 @@ export function createHero(): HTMLElement {
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--color-white);
-      margin-top: -90px;
-      padding: 140px 0 100px;
+      color: #FFFFFF;
+      padding: 130px 0 90px;
+      overflow: hidden;
     }
 
-    .hero-overlay {
+    .hero-bg-overlay {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       background: linear-gradient(
-        to bottom,
-        rgba(10, 25, 47, 0.75) 0%,
-        rgba(10, 25, 47, 0.88) 100%
+        180deg,
+        rgba(5, 15, 30, 0.78) 0%,
+        rgba(10, 25, 47, 0.88) 60%,
+        rgba(10, 25, 47, 0.96) 100%
       );
       z-index: 1;
     }
 
-    .hero-content {
+    .hero-glow-orb {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%, -20%);
+      width: 600px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, rgba(212, 175, 55, 0) 70%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-container-refined {
       position: relative;
       z-index: 2;
-      max-width: 1100px;
+      max-width: 1120px;
     }
 
-    .hero-trust-tag {
+    /* Pre-heading Badge */
+    .hero-pre-badge {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      padding: 8px 18px;
-      border-radius: 30px;
+      gap: 10px;
+      background: rgba(212, 175, 55, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      padding: 7px 20px;
+      border-radius: 9999px;
       font-size: 0.85rem;
-      font-weight: 600;
+      font-weight: 700;
       color: var(--color-gold);
-      margin-bottom: 20px;
-      letter-spacing: 0.5px;
+      margin-bottom: 22px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
     
-    .trust-shield-icon {
+    .badge-sparkle {
       color: var(--color-gold);
+      font-size: 0.9rem;
     }
 
-    .hero-title {
-      font-size: clamp(2.6rem, 5.5vw, 4.5rem);
+    /* Hero Typography */
+    .hero-title-refined {
+      font-size: clamp(2.6rem, 5.2vw, 4.4rem);
       font-weight: 800;
       line-height: 1.15;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.2rem;
       letter-spacing: -0.02em;
       color: #FFFFFF;
-      text-shadow: 0 4px 30px rgba(0,0,0,0.8);
+      text-shadow: 0 4px 35px rgba(0, 0, 0, 0.7);
       font-family: var(--font-heading);
     }
     
-    .text-gold {
-      color: var(--color-gold);
-      position: relative;
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #F3E7C4 0%, #D4AF37 50%, #AA8010 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 500;
     }
 
-    .hero-subtitle {
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
+    .hero-subtitle-refined {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
       font-weight: 400;
-      margin-bottom: 2rem;
-      max-width: 800px;
+      margin-bottom: 1.8rem;
+      max-width: 820px;
       color: #E2E8F0;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.8);
-      line-height: 1.6;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+      line-height: 1.65;
     }
 
-    /* Quick Finder Widget */
-    .hero-quick-finder {
+    /* Micro Feature Chips */
+    .hero-feature-chips {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .feature-chip {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.25s ease;
+    }
+
+    .feature-chip:hover {
+      background: rgba(212, 175, 55, 0.15);
+      border-color: var(--color-gold);
+      transform: translateY(-2px);
+    }
+
+    /* Concierge Property Finder Card */
+    .hero-finder-card {
       background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(16px);
-      border-radius: var(--radius-lg);
-      padding: 16px 20px;
-      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-      border: 1px solid rgba(212, 175, 55, 0.5);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 16px;
+      padding: 18px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(212, 175, 55, 0.45);
       width: 100%;
-      max-width: 950px;
+      max-width: 980px;
       margin: 0 auto;
     }
     
-    .finder-form-grid {
+    .finder-inner-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr auto;
-      gap: 15px;
+      grid-template-columns: 1.2fr 1.2fr 1.1fr auto;
+      gap: 16px;
       align-items: center;
     }
     
-    .finder-field {
+    .finder-input-box {
       text-align: left;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
     }
     
-    .finder-field label {
-      font-size: 0.75rem;
+    .finder-lbl {
+      font-size: 0.72rem;
       font-weight: 700;
       color: var(--color-navy);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.6px;
     }
     
-    .finder-select {
+    .finder-select-clean {
       background: #F8FAFC;
       border: 1px solid #CBD5E1;
-      padding: 10px 12px;
-      border-radius: 6px;
+      padding: 11px 14px;
+      border-radius: 8px;
       color: var(--color-navy);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       outline: none;
       cursor: pointer;
-      transition: border-color 0.2s ease;
+      transition: all 0.2s ease;
     }
     
-    .finder-select:focus {
+    .finder-select-clean:focus {
       border-color: var(--color-gold);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
     }
     
-    .btn-finder-search {
-      padding: 14px 26px;
+    .btn-finder-action {
+      padding: 13px 24px;
       white-space: nowrap;
       height: 100%;
-      border-radius: 6px;
+      border-radius: 8px;
       font-size: 0.9rem;
       font-weight: 700;
+      background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+      color: var(--color-navy);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+      transition: all 0.25s ease;
+      cursor: pointer;
     }
 
-    .hero-actions {
+    .btn-finder-action:hover {
+      background: linear-gradient(135deg, #E5C158 0%, #C9970C 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    }
+
+    /* CTA Group */
+    .hero-cta-group {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       flex-wrap: wrap;
       justify-content: center;
     }
     
-    .hero-btn {
-      padding: 16px 36px;
-      font-size: 1rem;
-      letter-spacing: 1px;
+    .btn-hero-gold {
+      padding: 15px 32px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #D4AF37 0%, #AA8010 100%);
+      color: #FFFFFF;
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-hero-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+      background: linear-gradient(135deg, #E5C158 0%, #BD9118 100%);
     }
     
-    .btn-glass {
+    .btn-hero-tour {
       background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      color: white;
-      padding: 16px 36px;
-      font-size: 1rem;
-      letter-spacing: 1px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: #FFFFFF;
+      padding: 15px 32px;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
       font-weight: 600;
-      border-radius: 50px;
+      border-radius: 9999px;
       transition: all 0.3s ease;
       cursor: pointer;
     }
     
-    .btn-glass:hover {
-      background: var(--color-gold);
-      border-color: var(--color-gold);
+    .btn-hero-tour:hover {
+      background: var(--color-white);
       color: var(--color-navy);
+      border-color: var(--color-white);
       transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
 
-    /* Hero Stats Strip */
-    .hero-stats-strip {
+    /* Trust Metric Capsules Bar */
+    .hero-trust-metrics-bar {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(10, 25, 47, 0.6);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 50px;
-      padding: 12px 30px;
-      gap: 25px;
+      background: rgba(10, 25, 47, 0.65);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 9999px;
+      padding: 12px 34px;
+      gap: 28px;
       width: fit-content;
       margin-left: auto;
       margin-right: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
     
-    .stat-pill {
+    .metric-capsule {
       display: flex;
       flex-direction: column;
       align-items: center;
     }
     
-    .stat-num {
-      font-size: 1.4rem;
+    .metric-val {
+      font-size: 1.45rem;
       font-weight: 800;
       color: var(--color-gold);
       font-family: var(--font-heading);
       line-height: 1.1;
     }
     
-    .stat-lbl {
-      font-size: 0.7rem;
+    .metric-txt {
+      font-size: 0.72rem;
       color: #CBD5E1;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       font-weight: 500;
     }
     
-    .stat-sep {
+    .metric-divider-line {
       width: 1px;
-      height: 25px;
-      background: rgba(255, 255, 255, 0.2);
+      height: 26px;
+      background: rgba(255, 255, 255, 0.18);
     }
 
-    /* Scroll Indicator */
-    .scroll-indicator {
+    /* Scroll Cue */
+    .hero-scroll-cue {
       position: absolute;
-      bottom: 25px;
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
-      opacity: 0.8;
-      animation: bounce 2s infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0.75;
     }
     
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
-      40% {transform: translateX(-50%) translateY(-10px);}
-      60% {transform: translateX(-50%) translateY(-5px);}
+    .scroll-cue-txt {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #CBD5E1;
+      font-weight: 600;
     }
 
-    .mouse-icon {
+    .mouse-frame {
       display: block;
-      width: 26px;
-      height: 42px;
-      border: 2px solid rgba(255,255,255,0.7);
-      border-radius: 20px;
+      width: 22px;
+      height: 34px;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      border-radius: 14px;
       position: relative;
     }
 
-    .wheel {
+    .mouse-dot {
       display: block;
       width: 4px;
-      height: 8px;
+      height: 6px;
       background: var(--color-gold);
       border-radius: 2px;
       position: absolute;
-      top: 6px;
+      top: 5px;
       left: 50%;
       transform: translateX(-50%);
-      animation: scrollWheel 2s infinite;
+      animation: mouseScrollAnim 2s infinite;
     }
 
-    @keyframes scrollWheel {
+    @keyframes mouseScrollAnim {
       0% { transform: translate(-50%, 0); opacity: 1; }
-      100% { transform: translate(-50%, 16px); opacity: 0; }
+      100% { transform: translate(-50%, 14px); opacity: 0; }
     }
 
     @media (max-width: 900px) {
-      .finder-form-grid {
+      .finder-inner-grid {
         grid-template-columns: 1fr;
       }
-      .hero-stats-strip {
+      .hero-trust-metrics-bar {
         flex-wrap: wrap;
         border-radius: 16px;
         gap: 15px;
         padding: 15px;
       }
-      .stat-sep {
+      .metric-divider-line {
         display: none;
+      }
+      .hero-section-refined {
+        padding: 110px 0 70px;
       }
     }
   `;
   section.appendChild(style);
 
-  // Quick search button logic
+  // Search logic & event handlers
   setTimeout(() => {
     const searchBtn = section.querySelector('#btn-hero-search');
     const locSelect = section.querySelector<HTMLSelectElement>('#finder-location');
@@ -410,7 +533,7 @@ export function createHero(): HTMLElement {
     const enquireBtn = section.querySelector('.hero-enquire-btn');
     enquireBtn?.addEventListener('click', () => {
       if ((window as any).showEnquireModal) {
-        (window as any).showEnquireModal('VIP Site Visit Request (Hero)');
+        (window as any).showEnquireModal('VIP Site Tour Request (Refined Hero)');
       }
     });
   }, 0);
