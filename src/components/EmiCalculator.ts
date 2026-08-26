@@ -351,6 +351,12 @@ export function createEmiCalculator(): HTMLElement {
       if (barInterest) barInterest.style.width = interestPct + '%';
       if (pctPrincipal) pctPrincipal.textContent = principalPct + '%';
       if (pctInterest) pctInterest.textContent = interestPct + '%';
+
+      const loanCta = section.querySelector<HTMLAnchorElement>('.btn-loan-cta');
+      if (loanCta) {
+        const msg = `Hi Harico Estates Financial Desk, I calculated an estimated EMI of ₹${formatINR(emi)}/month for a loan of ₹${formatINR(P)} at ${parseFloat(rateSlider.value).toFixed(2)}% for ${tenureSlider.value} years. Please share pre-approved bank loan options and interest subsidies.`;
+        loanCta.href = `https://wa.me/917744009295?text=${encodeURIComponent(msg)}`;
+      }
     }
 
     amountSlider?.addEventListener('input', calculate);
