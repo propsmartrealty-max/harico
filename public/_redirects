@@ -1,0 +1,24 @@
+# ==============================================================================
+# Cloudflare Pages Redirects & Canonical Routing Matrix - Harico Estates
+# ==============================================================================
+
+# 1. Legacy Slug 301 Permanent Redirects for SEO Equity Preservation
+/project/2-3-bhk-flats-in-kiwale-harico-divaam    /project/harico-divaam    301!
+/project/harico-edge-punawale                    /project/harico-edge      301!
+/project/harico-pride-punawale                   /project/harico-pride     301!
+
+# 2. Section Deep Link Aliases (Clean URL Standard)
+/project-comparison                              /project-comparison/index.html   200
+/specifications                                  /specifications/index.html       200
+/location-hub                                    /location-hub/index.html         200
+/emi-calculator                                  /emi-calculator/index.html       200
+/faq                                             /faq/index.html                  200
+/amenities                                       /amenities/index.html            200
+/projects                                        /projects/index.html             200
+/contact                                         /contact/index.html              200
+/privacy                                         /privacy/index.html              200
+/terms                                           /terms/index.html                200
+
+# 3. Global Single Page Application (SPA) 200 Rewrite Fallback
+# Matches all remaining non-file routes and routes to root index.html
+/*                                               /index.html                      200
