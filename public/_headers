@@ -1,8 +1,8 @@
 # ==============================================================================
-# Cloudflare Pages Headers & Edge Security Architecture - Harico Estates
+# Cloudflare Pages Global Edge Acceleration & Tiered Caching - Harico Estates
 # ==============================================================================
 
-# Global Edge Security & SEO Indexing Defaults
+# Global Edge Security & Tiered Edge Cache Defaults
 /*
   # Enterprise Grade Security Headers (A+ SSL Labs / Mozilla Observatory Rating)
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
@@ -11,49 +11,73 @@
   X-XSS-Protection: 1; mode=block
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()
+  Timing-Allow-Origin: *
   
-  # Content Security Policy (Optimized for Fonts, Google Maps, QR APIs, & Analytics)
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: https://api.qrserver.com https://images.unsplash.com https://maharerait.mahaonline.gov.in; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https: https://cloudflareinsights.com https://api.qrserver.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me tel: mailto:;
+  # Content Security Policy (Optimized for Fonts, Google Maps, Lead Dispatch, QR APIs, & Cloudflare Insights)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: https://api.qrserver.com https://images.unsplash.com https://maharerait.mahaonline.gov.in; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https: https://cloudflareinsights.com https://api.qrserver.com https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me tel: mailto: https://formsubmit.co;
   
-  # Google Search Engine Optimization (SGE & Snippet Permissions)
+  # Google & Global Search Engine Permissions
   X-Robots-Tag: all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
   
-  # Edge Performance & Compression Hints
-  Accept-CH: Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-DPR, Sec-CH-Viewport-Width
+  # Edge Tiered Cache & Purge Tags
+  Cache-Tag: harico-edge-global, harico-web
+  Vary: Accept-Encoding, Accept
 
-# Static Hashed Vite Chunks (Immutable 1-Year Edge & Browser Cache)
+# Static Hashed Vite Chunks (Immutable 1-Year Edge Cache on All 330+ Global Cloudflare PoPs)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=604800
+  CDN-Cache-Control: max-age=31536000
+  Cache-Tag: harico-assets, harico-scripts
   Access-Control-Allow-Origin: *
 
-# High-Resolution Images, Layouts & Floorplans
+# High-Resolution Architectural Renders, Layouts & Floorplans
 /assets/*.png
   Cache-Control: public, max-age=2592000, s-maxage=31536000, stale-while-revalidate=86400
+  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=86400
+  Cache-Tag: harico-images
   Access-Control-Allow-Origin: *
 
 /assets/*.jpg
   Cache-Control: public, max-age=2592000, s-maxage=31536000, stale-while-revalidate=86400
+  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=86400
+  Cache-Tag: harico-images
   Access-Control-Allow-Origin: *
 
 /assets/*.webp
   Cache-Control: public, max-age=2592000, s-maxage=31536000, stale-while-revalidate=86400
+  Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=86400
+  Cache-Tag: harico-images
   Access-Control-Allow-Origin: *
 
-# Static HTML Pages & Route Backbones (Instant Edge Revalidation)
+# HTML Pages & Programmatic Landing Hubs (Sub-Millisecond Edge Cache with Background Revalidation)
 /*.html
   Cache-Control: public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800
+  Cloudflare-CDN-Cache-Control: max-age=86400, stale-while-revalidate=604800
+  CDN-Cache-Control: max-age=86400
+  Cache-Tag: harico-html
   Content-Type: text/html; charset=UTF-8
 
 /
   Cache-Control: public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800
+  Cloudflare-CDN-Cache-Control: max-age=86400, stale-while-revalidate=604800
+  CDN-Cache-Control: max-age=86400
+  Cache-Tag: harico-html
   Content-Type: text/html; charset=UTF-8
 
 # XML Sitemaps & Search Engine Directives
 /sitemap.xml
   Cache-Control: public, max-age=3600, s-maxage=86400, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=86400
   Content-Type: application/xml; charset=UTF-8
   X-Robots-Tag: noindex
 
 /robots.txt
   Cache-Control: public, max-age=3600, s-maxage=86400, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=86400
   Content-Type: text/plain; charset=UTF-8
+
+/site.webmanifest
+  Cache-Control: public, max-age=86400, s-maxage=604800
+  Content-Type: application/manifest+json; charset=UTF-8
+  Access-Control-Allow-Origin: *
