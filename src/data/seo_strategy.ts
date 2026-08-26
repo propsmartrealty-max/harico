@@ -1,152 +1,265 @@
-// Master SEO Strategy - Deep Market Data & 1000+ Keyword Implementation
+// Master SEO Strategy - Ultra-Advanced Search Engine & AI-Conversational (SGE) Entity Mesh
+// Covers: Sentosa Group (All 20+ Pune Projects), Harico Estates (All Pune Projects),
+// and entire West Pune & PCMC micro-markets (Punawale, Kiwale, Ravet, Tathawade, Hinjewadi, Wakad, Moshi, PCMC).
 
-// Base Clusters for Combinatorics
-const locations = [
-    'Punawale', 'Kiwale', 'Ravet', 'Wakad Annexe', 'PCMC', 'Pune West',
-    'Near Mumbai-Pune Expressway', 'Near Bhumkar Chowk', 'Near Mukai Chowk',
-    'Near Hinjewadi IT Park', 'Near Sentosa Resort', 'Pradhikaran'
+// 1. All Projects Across Sentosa Group & Harico Estates Legacy (39 Years)
+export const allSentosaAndHaricoProjects = [
+    // Harico Estates Flagship Projects
+    'Harico Edge Punawale',
+    'Harico Divaam Kiwale',
+    'Harico Divaam Ravet',
+    'Harico Divaam Sentosa',
+    'Harico Pride Punawale',
+    'Harico Estates Punawale',
+    'Harico Estates Kiwale',
+    'Harico Estates Pune',
+    
+    // Sentosa Developers Pune Landmarks (1987 - 2026)
+    'Sentosa Edge Punawale',
+    'Sentosa Divaam Kiwale',
+    'Sentosa Divine Kiwale',
+    'Sentosa Ekam Punawale',
+    'Sentosa Pride Phase 1 Punawale',
+    'Sentosa Pride Phase 2 Punawale',
+    'Sentosa Pride Phase 3 Punawale',
+    'Sentosa Serene Tathawade',
+    'Sentosa Paradise Wakad',
+    'Sentosa Elysium Wakad',
+    'Sentosa Pearl Wakad',
+    'Sentosa Palm Wakad',
+    'Sentosa Elite Biz Hub Wakad',
+    'Sentosa Era Moshi Pradhikaran',
+    'Sentosa Residency Hadapsar',
+    'Gulraj Residency Kondhwa Pune',
+    'Satyam Complex',
+    'Shivdham Complex',
+    'Samarpam Complex',
+    'Royal Palms',
+    'Regency Plaza',
+    'Ami Infra Pink City'
 ];
 
-const developers = [
-    'Sentosa Developers', 'Sentosa Group', 'Harico Estates', 'Harico Group', 
-    'Sentos', 'Sentosa Ventures', 'Sentosa Real Estate', 'Harico Developers'
+// 2. Micro-Markets Across PCMC & West Pune
+export const microMarketLocations = [
+    'Punawale',
+    'Kiwale',
+    'Ravet',
+    'Tathawade',
+    'Hinjewadi',
+    'Hinjewadi Phase 1',
+    'Hinjewadi Phase 2',
+    'Hinjewadi Phase 3',
+    'Wakad',
+    'Wakad Annexe',
+    'Bhumkar Chowk',
+    'Mukai Chowk',
+    'Dange Chowk',
+    'Kaspate Vasti',
+    'Pradhikaran',
+    'Moshi',
+    'Akurdi',
+    'Nigdi',
+    'Chinchwad',
+    'Pimpri',
+    'PCMC',
+    'Pimpri Chinchwad',
+    'West Pune',
+    'Near Mumbai-Pune Expressway',
+    'Near Sentosa Water Park',
+    'Near MCA International Cricket Stadium Gahunje',
+    'Near Symbiosis University Kiwale',
+    'Near JSPM Tathawade',
+    'Near D.Y. Patil Akurdi Tathawade',
+    'Near Phoenix Mall of the Millennium Wakad',
+    'Near Aditya Birla Memorial Hospital'
 ];
 
-const projectQueries = [
-    'Projects', 'Upcoming Projects', 'New Launch', 'Properties', 'Flats', 'Apartments', 'Real Estate'
+// 3. Developer & Entity Query Clusters
+export const developerEntities = [
+    'Sentosa Developers',
+    'Sentosa Group',
+    'Harico Estates',
+    'Harico Developers',
+    'Sentosa Real Estate Pune',
+    'Sentosa Harico Venture',
+    'Sentos Punawale',
+    'Sentosa Kiwale',
+    'Harico Group Pune',
+    'Sentosa Group 39 Years Legacy'
 ];
 
-const propertyTypes = [
-    '2 BHK', '3 BHK', '4 BHK', '2.5 BHK', 'Spacious Homes', 'Luxury Flats',
-    'Affordable Apartments', 'Premium Residences', 'Jodi Flats', 'Duplex',
-    'Penthouse', 'Row Houses', 'Smart Homes'
+// 4. Property Typologies & Configurations
+export const propertyTypologies = [
+    '2 BHK Flats',
+    '2 BHK Luxury Apartments',
+    '2 BHK Premium Homes',
+    '2 BHK Smart Homes',
+    '2 BHK with 2 Balconies',
+    '3 BHK Ultra-Luxury Flats',
+    '3 BHK Grand Residences',
+    '3 BHK with Walk-in Wardrobe',
+    '3 BHK Royale Apartments',
+    'Spacious 2 & 3 BHK Homes',
+    'Tallest Towers in Kiwale Ravet',
+    'Gated Community Apartments',
+    'High-Rise 24 Storey Towers',
+    '22 Storey Towers in Punawale',
+    'Mivan Construction Flats',
+    '100+ Amenities Residential Project'
 ];
 
-const attributes = [
-    'with Balcony', 'with Terrace', 'with Servant Room', 'Vastu Compliant',
-    'Garden Facing', 'High Rise', 'Gated Community', 'Ready Possession',
-    'Under Construction', 'New Launch', 'Pre-Launch', 'Premium Look'
+// 5. Commercial & Buyer Intent Modifiers
+export const buyerIntents = [
+    'Price',
+    'Price List 2026',
+    'Starting ₹64.5 Lacs',
+    'Starting ₹74 Lacs',
+    'Floor Plan PDF',
+    'Brochure Download',
+    'Sample Flat Video Walkthrough',
+    'Site Visit Booking',
+    'Contact Number',
+    'Sales Office Address',
+    'MahaRERA Number P52100031773',
+    'MahaRERA Number PR1260002502389',
+    'MahaRERA Number P52100018471',
+    'Possession Date 2027 2028 2029',
+    'Cost Sheet & Payment Plan',
+    'Pre-Launch Offers',
+    'New Launch Discount',
+    'Zero Brokerage Direct Builder',
+    'Home Loan Approval SBI HDFC ICICI',
+    'Rental Yield Hinjewadi IT Crowd',
+    'Capital Appreciation Trends PCMC'
 ];
 
-const intents = [
-    'Price', 'Cost', 'Rates', 'For Sale', 'Booking', 'Review', 'Floor Plan',
-    'Brochure', 'Sample Flat', 'Site Visit', 'Contact Number', 'Location Map',
-    'Possession Date', 'Payment Plan', 'Offers', 'No Brokerage', 'Direct from Builder'
+// 6. Regional Multilingual Entity Bank (Marathi & Hindi)
+export const regionalEntities = [
+    'पुनावळे मधील नवीन 2 आणि 3 BHK फ्लॅट्स',
+    'किवाळे सेंटोसा प्रोजेक्ट्स',
+    'तथावडे फ्लॅट विक्रीसाठी',
+    'हिंजवडी जवळ 2 BHK घरे',
+    'पिंपरी चिंचवड मधील सर्वोत्कृष्ट बिल्डर्स',
+    'हरिको इस्टेट्स पुनावळे किंमत',
+    'हरिको दिवाम किवाळे ब्रोशर',
+    'सेंटोसा डेव्हलपर्स पुणे नवीन प्रोजेक्ट्स',
+    'पुनावळे मध्ये घर खरेदी',
+    'वाकड जवळ फ्लॅट्स'
 ];
 
-const investmentTerms = [
-    'Rental Yield', 'ROI', 'Investment', 'Price Appreciation', 'Future Development',
-    'Best Area to Invest', 'Property Trends 2026', 'Real Estate Market'
-];
-
-const nearbyLandmarks = [
-    'Near JSPM College', 'Near Indira College', 'Near D Y Patil University',
-    'Near Aditya Birla Hospital', 'Near Phoenix Mall of the Millennium',
-    'Near MCA Stadium', 'Near Symbiosis Skills University', 'Near Akshara International School'
-];
-
-const competitors = [
-    'Near Life Republic', 'Near Lodha Belmondo', 'Near Godrej Woodsville',
-    'Near Rohan Viti', 'Near Pharande Spaces', 'Near 41 Estera', 'Near Sentosa Ekam'
-];
-
-// Marathi Clusters
-const marathiLocations = ['पुनावळे', 'किवाळे', 'रावेत', 'वाकड', 'पिंपरी चिंचवड'];
-const marathiTypes = ['2 BHK फ्लॅट', '3 BHK घरे', 'लक्झरी अपार्टमेंट्स', 'स्वस्त घरे', 'नवीन प्रोजेक्ट्स'];
-const marathiIntents = ['किंमत', 'विक्रीसाठी', 'बुकिंग', 'ताबा', 'संपर्क', 'माहिती'];
-
-// Specific Project Clusters
-const haricoEdgeUnique = [
-    'Flats near Wakad Highway', 'Punawale Bhumkar Chowk Projects', 'Harico Edge Launch Price',
-    'Sentosa Group Punawale', 'Properties near Decathlon Wakad', 'Sentosa Developers Edge'
-];
-
-const haricoDivaamUnique = [
-    'Tallest Towers in Kiwale', 'Flats near Mukai Chowk', 'Harico Divaam Brochure',
-    'Luxury Homes near Expressway', 'Sentosa Divine Kiwale', 'Harico Estates Divaam'
-];
-
-const haricoPrideUnique = [
-    'New Launch in Punawale 2025', 'Harico Pride Pre-launch', 'Spacious 2 BHK Punawale',
-    'Flats near Bhiku Vallabh School', 'Harico projects punawale', 'sentos punawale projects'
-];
-
-// Helper to generate combinations
-const combine = (arr1: string[], arr2: string[]) => {
-    const result: string[] = [];
-    arr1.forEach(i1 => {
-        arr2.forEach(i2 => {
-            result.push(`${i1} ${i2}`);
+// Helper combination generator
+const combineArrays = (arr1: string[], arr2: string[]) => {
+    const res: string[] = [];
+    arr1.forEach(a => {
+        arr2.forEach(b => {
+            res.push(`${a} ${b}`);
         });
     });
-    return result;
+    return res;
 };
 
-// Generate Massive Lists (1000+ Permutations Synthesized)
-const builderLocations = combine(developers, locations); // e.g. "Sentosa Developers Punawale"
-const builderProjects = combine(builderLocations, projectQueries); // e.g. "Sentosa Developers Punawale Projects"
-const mainKeywords = combine(propertyTypes, locations); // e.g., "2 BHK Punawale"
-const intentKeywords = combine(mainKeywords, intents); // e.g., "2 BHK Punawale Price"
-const builderIntentKeywords = combine(builderProjects, intents.slice(0, 5)); // e.g., "Sentosa Developers Punawale Projects Price"
+// Combinatorial Synthesis
+const devWithLocations = combineArrays(developerEntities, microMarketLocations);
+const typologiesWithLocations = combineArrays(propertyTypologies, microMarketLocations);
+const intentWithTypologies = combineArrays(typologiesWithLocations.slice(0, 100), buyerIntents.slice(0, 10));
+const projectWithIntents = combineArrays(allSentosaAndHaricoProjects, buyerIntents.slice(0, 12));
 
-const attributeKeywords = combine(attributes.slice(0, 5), locations.slice(0, 5));
-const investmentKeywords = combine(locations.slice(0, 5), investmentTerms);
-const marathiKeywords = [...combine(marathiLocations, marathiTypes), ...combine(marathiLocations, marathiIntents)];
-
-// Master Export
+// Master Export Collection
 export const masterSeoStrategy = {
-    // 1. Core permutations (High Volume)
-    core: [...mainKeywords, ...intentKeywords],
-
-    // 2. High Value Builder Keywords (Massive Authority Injection)
-    builder: [...builderLocations, ...builderProjects, ...builderIntentKeywords],
-
-    // 3. Niche / Long Tail (High Intent)
-    longTail: [
-        ...attributeKeywords,
-        ...investmentKeywords,
-        ...combine(['Flats'], nearbyLandmarks),
-        ...competitors
+    allProjects: allSentosaAndHaricoProjects,
+    locations: microMarketLocations,
+    developers: developerEntities,
+    coreKeywords: [
+        ...devWithLocations,
+        ...typologiesWithLocations,
+        ...intentWithTypologies,
+        ...projectWithIntents
+    ],
+    regional: regionalEntities,
+    
+    // Project-Specific Target Keywords
+    edge: [
+        'Harico Edge Punawale',
+        'Sentosa Edge Punawale',
+        'Harico Edge Price',
+        'Harico Edge Floor Plan',
+        'Harico Edge 2 BHK Punawale',
+        'Harico Edge 3 BHK Punawale',
+        'MahaRERA P52100031773',
+        'Flats near Akshara International School Punawale',
+        'Flats near Mumbai Pune Highway Punawale',
+        '2 BHK in Punawale with 2 Balconies',
+        'Harico Edge Sentosa Developers',
+        ...combineArrays(['Harico Edge', 'Sentosa Edge'], buyerIntents.slice(0, 8))
     ],
 
-    // 4. Regional
-    regional: marathiKeywords,
+    divaam: [
+        'Harico Divaam Kiwale',
+        'Harico Diwaam Kiwale Ravet',
+        'Sentosa Divine Kiwale',
+        'Harico Divaam Brochure',
+        'Harico Divaam Price',
+        'Harico Divaam 24 Storey Towers',
+        'Tallest Towers in Kiwale Ravet',
+        'MahaRERA PR1260002502389',
+        'Flats opposite Sentosa Water Park Kiwale',
+        'Flats near Mukai Chowk Kiwale Ravet',
+        '2 BHK in Kiwale Ravet starts 64.5 Lacs',
+        '3 BHK luxury high rise in Kiwale Ravet',
+        'Harico Divaam Sentosa Group',
+        ...combineArrays(['Harico Divaam', 'Harico Diwaam', 'Sentosa Divine'], buyerIntents.slice(0, 8))
+    ],
 
-    // 5. Project Specific
-    edge: [...haricoEdgeUnique, ...combine(['2 BHK', '3 BHK'], ['Punawale', 'Wakad'])],
-    divaam: [...haricoDivaamUnique, ...combine(['2 BHK', '3 BHK'], ['Kiwale', 'Ravet'])],
-    pride: [...haricoPrideUnique, 'New Projects Punawale']
+    pride: [
+        'Harico Pride Punawale',
+        'Sentosa Pride Punawale',
+        'Sentosa Pride Phase 1 2 3 Punawale',
+        'Harico Pride Pre-Launch Price',
+        'MahaRERA P52100018471',
+        'Flats near Bhiku Vallabh Kale School Punawale',
+        'Spacious 2 BHK Punawale Biggest Carpet',
+        '3 BHK Luxury Apartments Punawale Harico Pride',
+        ...combineArrays(['Harico Pride', 'Sentosa Pride'], buyerIntents.slice(0, 8))
+    ]
 };
 
-export const generateKeywords = (type: 'edge' | 'divaam' | 'pride' | 'global', maxLimit: number = 300) => {
-    let base: string[] = [];
+/**
+ * Generate deep, deduplicated keyword manifest
+ */
+export const generateKeywords = (type: 'edge' | 'divaam' | 'pride' | 'global', maxLimit: number = 400): string => {
+    let result: string[] = [];
 
-    // Prioritize critical entity keywords
-    const entityKeywords = [
-        'Sentosa developers', 'Harico Estates Punawale', 'harico projects punawale', 'sentos punawale'
+    // Core entity anchors (Mandatory on all pages)
+    const entityAnchors = [
+        'Sentosa Developers', 'Harico Estates', 'Sentosa Group Pune', 'Harico Estates Punawale',
+        'Harico Divaam Kiwale', 'Harico Edge Punawale', 'Harico Pride Punawale',
+        '2 BHK Flats in Punawale', '3 BHK Flats in Kiwale Ravet', 'Flats near Hinjewadi IT Park',
+        'Real Estate PCMC Pune', 'MahaRERA Registered Projects Pune'
     ];
 
     if (type === 'global') {
-        base = [
-            ...entityKeywords,
-            ...masterSeoStrategy.builder.slice(0, 50),
-            ...masterSeoStrategy.core.slice(0, 50), 
-            ...masterSeoStrategy.regional.slice(0, 20)
+        result = [
+            ...entityAnchors,
+            ...allSentosaAndHaricoProjects,
+            ...masterSeoStrategy.coreKeywords.slice(0, 150),
+            ...regionalEntities,
+            ...masterSeoStrategy.edge.slice(0, 20),
+            ...masterSeoStrategy.divaam.slice(0, 20),
+            ...masterSeoStrategy.pride.slice(0, 20)
         ];
     } else {
-        // Project specific mix
-        const projectSpecific = masterSeoStrategy[type];
-        
-        // Find relevant geo keywords in builder list
-        const locationFilter = type === 'edge' || type === 'pride' ? 'Punawale' : 'Kiwale';
-        const relevantBuilder = masterSeoStrategy.builder.filter(k => k.includes(locationFilter)).slice(0, 50);
-        const relevantCore = masterSeoStrategy.core.filter(k => k.includes(locationFilter)).slice(0, 50);
-        const relevantLongTail = masterSeoStrategy.longTail.slice(0, 30);
+        const projectSpecific = masterSeoStrategy[type] || [];
+        const locationTag = (type === 'edge' || type === 'pride') ? 'Punawale' : 'Kiwale';
+        const matchedKeywords = masterSeoStrategy.coreKeywords.filter(k => k.includes(locationTag)).slice(0, 150);
 
-        base = [...entityKeywords, ...projectSpecific, ...relevantBuilder, ...relevantCore, ...relevantLongTail];
+        result = [
+            ...entityAnchors,
+            ...projectSpecific,
+            ...matchedKeywords,
+            ...allSentosaAndHaricoProjects.slice(0, 15),
+            ...regionalEntities.slice(0, 6)
+        ];
     }
 
-    // Dedupe and join, enforcing max limit to prevent payload bloat while satisfying 1000+ injection across the site
-    return Array.from(new Set(base)).slice(0, maxLimit).join(', ');
+    return Array.from(new Set(result)).slice(0, maxLimit).join(', ');
 };
-

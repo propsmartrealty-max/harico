@@ -112,15 +112,20 @@ export function createFooter(): HTMLElement {
          </p>
       </div>
 
-      <!-- Popular Searches (SEO Entity Mesh) -->
+      <!-- Popular Searches (Ultra-Advanced SEO & SGE Entity Mesh) -->
       <div class="popular-searches">
-        <h5 class="seo-heading">Pune Real Estate Micro-Market Searches</h5>
+        <h5 class="seo-heading">Sentosa & Harico Real Estate Entity Network • Pune & PCMC</h5>
         <p class="seo-text">
-            2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | Flats near Hinjewadi IT Park Phase 1 & 2 | 
-            Sentosa Harico Projects Pune | Tallest Towers in Kiwale Ravet | Flats near Bhumkar Chowk & Wakad | 
-            Luxury Apartments near Mumbai-Pune Expressway | Harico Edge Floor Plans | Harico Divaam Price & Brochure | 
-            Sentosa Group 39 Years Legacy | Home Loan Approved Projects SBI HDFC Punawale | 
-            <span lang="mr">पुनावळे मध्ये 2 व 3 BHK फ्लॅट</span> | <span lang="mr">किवाळे सेंटोसा प्रोजेक्ट्स</span>
+            <strong>Sentosa Group Pune Projects:</strong> Sentosa Edge Punawale | Sentosa Divaam Kiwale | Sentosa Ekam Punawale | Sentosa Pride Phase 1, 2 & 3 | Sentosa Serene Tathawade | Sentosa Paradise Wakad | Sentosa Elysium Wakad | Sentosa Pearl Wakad | Sentosa Palm Wakad | Sentosa Elite Biz Hub Wakad | Sentosa Era Moshi Pradhikaran | Sentosa Residency Hadapsar | Gulraj Residency Kondhwa.
+        </p>
+        <p class="seo-text mt-xs">
+            <strong>Harico Estates Flagship Developments:</strong> Harico Edge 2 & 3 BHK Punawale | Harico Divaam 24-Storey Kiwale Ravet | Harico Pride Punawale | Harico Ventures Pune | Sentosa Harico Joint Ventures.
+        </p>
+        <p class="seo-text mt-xs">
+            <strong>PCMC & West Pune Micro-Market Coverage:</strong> 2 BHK Flats in Punawale | 3 BHK Luxury Homes Kiwale | 2 & 3 BHK Flats in Tathawade | Flats near Hinjewadi IT Park Phase 1, 2 & 3 | Rajiv Gandhi Infotech Park | Mukai Chowk Ravet | Bhumkar Chowk Wakad | Flats near Mumbai-Pune Expressway | D.Y. Patil & Symbiosis University corridor | Akshara International School Punawale | Real Estate Investment in PCMC | MahaRERA Approved Projects Pune.
+        </p>
+        <p class="seo-text mt-xs">
+            <span lang="mr">पुनावळे मधील नवीन २ आणि ३ बीएचके फ्लॅट्स | किवाळे सेंटोसा प्रोजेक्ट्स | तथावडे फ्लॅट विक्रीसाठी | हिंजवडी जवळ घरे | पिंपरी चिंचवड रिअल इस्टेट | हरिको इस्टेट्स पुणे</span>
         </p>
       </div>
     </div>
