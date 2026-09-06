@@ -101,7 +101,7 @@ export function createContactSection(): HTMLElement {
             <div class="office-loc-item pb-sm mb-sm border-bottom">
               <p class="font-bold text-navy text-sm m-0">Harico Edge & Pride Site Gallery</p>
               <p class="text-xs text-muted m-0">Near Bhumkar Chowk, 2 mins from Mumbai-Pune Expressway, Punawale, Pune 411033</p>
-              <a href="https://maps.google.com/?q=Punawale+Pune" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
+              <a href="https://www.google.com/maps?q=harico+estates" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
                 <i class="fa-solid fa-diamond-turn-right mr-1"></i> Get Driving Directions &rarr;
               </a>
             </div>
@@ -109,7 +109,7 @@ export function createContactSection(): HTMLElement {
             <div class="office-loc-item">
               <p class="font-bold text-navy text-sm m-0">Harico Divaam Sales Lounge</p>
               <p class="text-xs text-muted m-0">Opposite Sentosa Water Park, Mukai Chowk corridor, Kiwale-Ravet, PCMC 412101</p>
-              <a href="https://maps.google.com/?q=Kiwale+Pune" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
+              <a href="https://maps.google.com/?q=Sentosa+Water+Park+Kiwale+Pune" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
                 <i class="fa-solid fa-diamond-turn-right mr-1"></i> Get Driving Directions &rarr;
               </a>
             </div>

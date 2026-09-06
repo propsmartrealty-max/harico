@@ -6,6 +6,11 @@ pages_build_output_dir = "dist"
 [vars]
 ENVIRONMENT = "production"
 SITE_URL = "https://haricoestates.in"
+ORIGIN_URL = "https://haricoestates.in"
+LEAD_RECIPIENT = "propsmartrealty@gmail.com"
 
 [placement]
 mode = "smart"
+
+[observability]
+enabled = true

@@ -13,14 +13,11 @@ export function createFooter(): HTMLElement {
             Redefining ultra-luxury real estate across Punawale & Kiwale. A proud venture backed by the 39-year legacy of Sentosa Developers.
           </p>
           <div class="social-links">
-             <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+             <a href="https://facebook.com/haricoestates" target="_blank" aria-label="Facebook">
                 <i class="fa-brands fa-facebook-f"></i>
              </a>
-             <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+             <a href="https://instagram.com/haricoestates" target="_blank" aria-label="Instagram">
                 <i class="fa-brands fa-instagram"></i>
-             </a>
-             <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i>
              </a>
              <a href="https://wa.me/917744009295" target="_blank" aria-label="WhatsApp">
                 <i class="fa-brands fa-whatsapp"></i>
@@ -65,7 +62,9 @@ export function createFooter(): HTMLElement {
           <ul class="footer-contact">
             <li>
                 <span class="icon">📍</span>
-                <span>Punawale & Kiwale, Pune, Maharashtra 411033</span>
+                <a href="https://www.google.com/maps?q=harico+estates" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;" class="hover-gold" title="Open Harico Estates on Google Maps">
+                  <span>Punawale & Kiwale, Pune, Maharashtra 411033</span>
+                </a>
             </li>
             <li>
                 <span class="icon">📞</span>

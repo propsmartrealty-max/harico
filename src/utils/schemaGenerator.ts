@@ -21,14 +21,20 @@ export const generateOrganizationSchema = () => {
         "alternateName": [
             "Sentosa Developers",
             "Sentosa Group Pune",
+            "Sentosa Group",
             "Harico Group",
             "Harico Ventures",
-            "Sentosa Real Estate Pune"
+            "Harico Builders Pune",
+            "Harico Realty",
+            "Sentosa Real Estate Pune",
+            "Harico Estates Punawale",
+            "Harico Estates Kiwale",
+            "Sentosa Water Park Builders"
         ],
         "url": "https://haricoestates.in",
         "logo": "https://haricoestates.in/harico_logo.png",
         "image": "https://haricoestates.in/harico_logo.png",
-        "description": "Premier real estate developer in West Pune & PCMC with a 39-year legacy. Builders of Harico Edge (Punawale), Harico Divaam (Kiwale Ravet), Harico Pride (Punawale), Sentosa Ekam, Sentosa Serene, and Sentosa Paradise.",
+        "description": "Premier real estate developer in West Pune & PCMC with a 39-year legacy (since 1987). Builders of Harico Edge (Punawale), Harico Divaam / Diwaam (Kiwale Ravet), Harico Pride (Punawale), Sentosa Ekam, Sentosa Serene, and Sentosa Paradise.",
         "telephone": "+91-7744009295",
         "email": "contact@haricoestates.in",
         "priceRange": "₹71.00 Lacs - ₹1.50 Cr",
@@ -141,12 +147,47 @@ export const generateOrganizationSchema = () => {
 };
 
 export const generateProjectSchema = (project: Project) => {
+    let alternateNames = [`Sentosa ${project.title}`, `${project.title} by Sentosa Group`];
+    if (project.slug === 'harico-divaam') {
+        alternateNames = [
+            'Harico Diwaam',
+            'Harico Divaam Kiwale',
+            'Harico Diwaam Kiwale',
+            'Sentosa Harico Divaam',
+            'Sentosa Harico Diwaam',
+            'Sentosa Divaam',
+            'Sentosa Diwaam',
+            'Harico Divam',
+            'Harico Diwam',
+            'Harico Estates Divaam',
+            'Harico Estates Diwaam',
+            'Codename Divine Kiwale'
+        ];
+    } else if (project.slug === 'harico-edge') {
+        alternateNames = [
+            'Harico Edge Punawale',
+            'Sentosa Harico Edge',
+            'Sentosa Edge',
+            'Sentosa Edge Punawale',
+            'Harico Edge Pune',
+            'Harico Estates Edge',
+            'Harico Edge by Sentosa'
+        ];
+    } else if (project.slug === 'harico-pride') {
+        alternateNames = [
+            'Harico Pride Punawale',
+            'Sentosa Harico Pride',
+            'Sentosa Pride',
+            'Harico Estates Pride'
+        ];
+    }
+
     return {
         "@context": "https://schema.org",
         "@type": "ApartmentComplex",
         "@id": `https://haricoestates.in/project/${project.slug}#complex`,
         "name": project.title,
-        "alternateName": [`Sentosa ${project.title}`, `${project.title} by Sentosa Group`],
+        "alternateName": alternateNames,
         "image": [
             "https://haricoestates.in" + project.image,
             ...(project.floorPlans || []).map((fp: any) => "https://haricoestates.in" + fp.image)
@@ -154,6 +195,7 @@ export const generateProjectSchema = (project: Project) => {
         "description": project.description,
         "url": `https://haricoestates.in/project/${project.slug}`,
         "telephone": "+91-7744009295",
+        "keywords": project.seo?.keywords || "",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",

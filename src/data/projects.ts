@@ -159,8 +159,8 @@ export const projectsData: Record<string, Project> = {
             { type: '3 BHK Royale', carpet: '1148 sq.ft', price: '₹ 1.18 Cr*', bedrooms: 3 }
         ],
         seo: {
-            title: 'Harico Edge 2 & 3 BHK Flats in Punawale | Near Wakad & Highway | Sentosa Group',
-            description: 'Harico Edge by Sentosa: Premium 2 & 3 BHK flats in Punawale starting ₹74 Lacs*. Just 2 mins from Mumbai-Pune Highway. RERA Registered P52100031773. Enquire for Floor Plans.',
+            title: 'Harico Punawale | Harico Edge & Sentosa Punawale 2 & 3 BHK Luxury Flats',
+            description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. MahaRERA P52100031773. Call +91 7744009295.',
             keywords: generateKeywords('edge')
         }
     },
@@ -313,9 +313,9 @@ export const projectsData: Record<string, Project> = {
             { title: '3 BHK Grand', image: '/assets/harico-divaam-3bhk-grand-v3.png', carpet: '1108 sq.ft' }
         ],
         seo: {
-            title: 'Harico Divaam 2 & 3 BHK in Kiwale | Tallest Towers near Ravet Expressway',
-            description: 'Harico Divaam (Divine): The tallest towers in Kiwale/Ravet. Luxury 2 & 3 BHK homes from ₹71 Lacs*. Next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. RERA PR1260002502389.',
-            keywords: generateKeywords('divaam')
+            title: 'Harico Diwaam | Harico Kiwale 2 & 3 BHK Flats Opposite Sentosa Water Park',
+            description: 'Harico Diwaam (Harico Divaam Kiwale): Tallest 24-storey luxury towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+            keywords: generateKeywords('harico-diwaam')
         }
     },
     '3': {
@@ -361,21 +361,12 @@ export const projectsData: Record<string, Project> = {
                 ]
             },
             {
-                category: 'Flooring & Paint',
+                category: 'Flooring & Finishes',
                 icon: 'fa-layer-group',
                 items: [
-                    'Premium 800mm x 800mm Vitrified Tiles in entire apartment',
-                    'Anti-skid ceramic tiles in Terrace and Bathrooms',
-                    'Oil Bound Distemper internally & Premium weather-proof exterior paint'
-                ]
-            },
-            {
-                category: 'Kitchen & Fixtures',
-                icon: 'fa-kitchen-set',
-                items: [
-                    'Granite Kitchen Platform with SS Sink and branded CP fitting',
-                    'Glazed ceramic tile dado up to 2-ft above platform',
-                    'Provision for water purifier, exhaust fan, and refrigerator power outlet'
+                    '800x800 mm double charged vitrified tiles in all rooms',
+                    'Anti-skid ceramic tiles in dry balconies and bathrooms',
+                    'Granite kitchen platform with SS sink and glazed tile dado'
                 ]
             },
             {
@@ -406,8 +397,8 @@ export const projectsData: Record<string, Project> = {
         reraNumber: 'P52100018471',
         reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471',
         seo: {
-            title: 'Harico Pride Punawale | New Launch Spacious 2 & 3 BHK | Pre-Launch Offers',
-            description: 'Harico Pride: New Launch in Punawale offering spacious 2 & 3 BHK homes. Located near Bhiku Vallabh Kale School. Avail Pre-Launch Price Benefits. RERA P52100018471.',
+            title: 'Harico Punawale | Harico Pride & Sentosa Punawale 2 & 3 BHK Flats',
+            description: 'Harico Punawale: Harico Pride by Sentosa Developers Punawale near Bhiku Vallabh Kale School. Largest carpet layouts, rooftop pool & 2 mins to Expressway. MahaRERA P52100018471. Call +91 7744009295.',
             keywords: generateKeywords('pride')
         }
     }

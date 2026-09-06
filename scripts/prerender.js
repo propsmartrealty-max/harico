@@ -15,61 +15,116 @@ if (!fs.existsSync(indexHtmlPath)) {
 
 const template = fs.readFileSync(indexHtmlPath, 'utf-8');
 
-const globalKeywords = 'Sentosa Developers, Harico Estates, Sentosa Group Pune, Harico Estates Punawale, Harico Divaam Kiwale, Harico Edge Punawale, Harico Pride Punawale, Sentosa Ekam, Sentosa Serene Tathawade, Sentosa Paradise Wakad, Sentosa Elysium, Sentosa Pearl, Sentosa Palm, Sentosa Elite Biz Hub, Sentosa Era Moshi, Sentosa Residency Hadapsar, 2 BHK Flats in Punawale, 3 BHK Flats in Kiwale Ravet, 2 BHK in Tathawade, Flats near Hinjewadi IT Park Phase 1 2 3, Rajiv Gandhi Infotech Park, Real Estate PCMC Pune, Pimpri Chinchwad, Tallest Towers Kiwale Ravet, Mukai Chowk, Bhumkar Chowk, Mumbai-Pune Expressway Flats, MahaRERA Registered Projects Pune, पुनावळे मधील २ आणि ३ बीएचके फ्लॅट्स, किवाळे सेंटोसा प्रोजेक्ट्स, तथावडे फ्लॅट, हिंजवडी घरे';
+const globalKeywords = 'Harico Estates, Sentosa Developers, Sentosa Group Pune, Harico Estates Punawale, Harico Estates Kiwale, Harico Divaam Kiwale, Harico Diwaam Kiwale, Harico Edge Punawale, Harico Pride Punawale, Sentosa Edge Punawale, Sentosa Pride Punawale, Sentosa Ekam Punawale, Sentosa Divaam Kiwale, Sentosa Diwaam Kiwale, Sentosa Serene Tathawade, Sentosa Paradise Wakad, Sentosa Elysium, Sentosa Pearl, Sentosa Palm, Sentosa Elite Biz Hub, Sentosa Era Moshi, Sentosa Residency Hadapsar, 2 BHK Flats in Punawale, 3 BHK Flats in Punawale, 2 BHK Flats in Kiwale, 3 BHK Flats in Kiwale Ravet, 2 BHK in Tathawade, Flats near Hinjewadi IT Park Phase 1 2 3, Rajiv Gandhi Infotech Park, Real Estate PCMC Pune, Pimpri Chinchwad, Tallest Towers Kiwale Ravet, Mukai Chowk, Bhumkar Chowk, Mumbai-Pune Expressway Flats, MahaRERA Registered Projects Pune, Harico Estates contact 7744009295, Sentosa Developers 39 years legacy, Sentosa Water Park builder, पुनावळे मधील २ आणि ३ बीएचके फ्लॅट्स, किवाळे सेंटोसा प्रोजेक्ट्स, तथावडे फ्लॅट, हिंजवडी घरे, हरिको इस्टेट्स, सेंटोसा डेव्हलपर्स';
 
 const projects = [
   {
     slug: 'harico-edge',
-    title: 'Harico Edge 2 & 3 BHK Flats in Punawale | Near Wakad & Expressway | Sentosa Group',
-    description: 'Harico Edge by Sentosa: Premium 2 & 3 BHK ultra-luxury flats in Punawale starting ₹74 Lacs*. 2 mins from Mumbai-Pune Expressway, near Wakad & Hinjewadi IT Park. MahaRERA Registered P52100031773.',
-    keywords: 'Harico Edge Punawale, Sentosa Edge Punawale, Harico Edge Price, Harico Edge Floor Plan, Harico Edge 2 BHK Punawale, Harico Edge 3 BHK Punawale, Sentosa Developers Punawale, Harico Estates, 2 BHK with 2 Balconies Punawale, Flats near Akshara International School, Flats near Bhumkar Chowk, Tathawade IT Corridor, Hinjewadi Phase 1, PCMC Pune Real Estate, MahaRERA P52100031773, Sentosa Ekam, Sentosa Pride Phase 1 2 3, Sentosa Serene Tathawade',
+    title: 'Harico Punawale | Harico Edge & Sentosa Punawale 2 & 3 BHK Luxury Flats',
+    description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. MahaRERA P52100031773. Call +91 7744009295.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Edge, Harico Edge Punawale, Sentosa Edge, Sentosa Edge Punawale, Sentosa Harico Edge, Harico Estates Punawale, Harico Edge Price, Harico Edge Price List, Harico Edge Floor Plan, Harico Edge 2 BHK Punawale, Harico Edge 3 BHK Punawale, Harico Edge Brochure PDF, Harico Edge Sample Flat, Harico Edge RERA P52100031773, Harico Edge Possession Date, Harico Edge Contact 7744009295, Sentosa Developers Punawale, Flats near Bhumkar Chowk, Flats near Akshara International School, Flats near Hinjewadi IT Park, 2 BHK with 2 Balconies Punawale, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, हरिको एज पुनावळे, हॅरिको एज, हरिको पुनावळे',
     image: '/assets/harico-edge-hero.png',
   },
   {
     slug: 'harico-divaam',
-    title: 'Harico Divaam 2 & 3 BHK in Kiwale Ravet | Tallest 24-Storey Towers | Sentosa Group',
-    description: 'Harico Divaam (Sentosa Divine): The tallest 24-storey landmark in Kiwale-Ravet. Luxury 2 & 3 BHK homes from ₹71.00 Lacs*. Directly opposite Sentosa Water Park, next to Mumbai-Pune Expressway & Mukai Chowk. 100+ Amenities. MahaRERA PR1260002502389.',
-    keywords: 'Harico Divaam Kiwale, Harico Diwaam Kiwale Ravet, Sentosa Divine Kiwale, Harico Divaam Brochure, Harico Divaam Price, Harico Divaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, Sentosa Developers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, MCA Stadium Gahunje, Hinjewadi Rajiv Gandhi Infotech Park, PCMC Pimpri Chinchwad, MahaRERA PR1260002502389',
+    title: 'Harico Diwaam | Harico Kiwale 2 & 3 BHK Flats Opposite Sentosa Water Park',
+    description: 'Harico Diwaam (Harico Divaam Kiwale): Tallest 24-storey luxury towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+    keywords: 'Harico Diwaam, Harico Diwaam Kiwale, Harico Kiwale, Harico Divaam, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Sentosa Harico Diwaam, Sentosa Harico Divaam, Codename Divine Kiwale, Harico Diwaam Price, Harico Divaam Price, Harico Diwaam 2 BHK, Harico Diwaam 3 BHK, Harico Diwaam Floor Plan, Harico Diwaam Brochure PDF, Harico Diwaam Sample Flat, Harico Diwaam RERA PR1260002502389, Harico Diwaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, 5 Sky Towers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, Kiwale Ravet Real Estate, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, Contact 7744009295, हरिको दिवाम किवाळे, हॅरिको दिवाम, हरिको किवाळे',
     image: '/assets/harico-divaam-hero.jpg',
   },
   {
     slug: 'harico-pride',
-    title: 'Harico Pride Punawale | Spacious 2 & 3 BHK Luxury Residences | Sentosa Group',
-    description: 'Harico Pride: New Launch in Punawale offering the largest carpet 2 & 3 BHK luxury homes. Located near Bhiku Vallabh Kale School, 2 mins from Expressway. Pre-Launch Benefits. MahaRERA P52100018471.',
-    keywords: 'Harico Pride Punawale, Sentosa Pride Punawale, Sentosa Pride Phase 1 2 3 Punawale, Harico Pride Pre-Launch Price, Harico Estates Punawale, Sentosa Developers, Spacious 2 BHK Punawale, 3 BHK Luxury Apartments Punawale, Flats near Bhiku Vallabh Kale School, Tathawade, Hinjewadi IT Park, PCMC Pune, MahaRERA P52100018471',
+    title: 'Harico Punawale | Harico Pride & Sentosa Punawale 2 & 3 BHK Flats',
+    description: 'Harico Punawale: Harico Pride by Sentosa Developers Punawale near Bhiku Vallabh Kale School. Largest carpet layouts, rooftop pool & 2 mins to Expressway. MahaRERA P52100018471. Call +91 7744009295.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Pride, Harico Pride Punawale, Sentosa Pride Punawale, Sentosa Pride Phase 1 2 3 Punawale, Harico Estates Pride, Harico Pride 2 BHK, Harico Pride 3 BHK, Harico Pride Price, Harico Pride Floor Plan, Harico Pride Brochure, Harico Pride RERA P52100018471, Harico Pride Contact 7744009295, Flats near Bhiku Vallabh Kale School, Punawale Largest Carpet Flats, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, Sentosa Developers Punawale, हरिको प्राईड पुनावळे',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
   }
 ];
 
 const programmaticPages = [
   // Location hubs
-  { path: 'location/punawale', title: '2 & 3 BHK Luxury Flats in Punawale, Pune | Harico Estates & Sentosa', desc: 'Explore premium 2 & 3 BHK residences in Punawale with dual balconies and 2-min expressway access. Harico Edge & Harico Pride.' },
-  { path: 'location/kiwale', title: 'Tallest 24-Storey 2 & 3 BHK Towers in Kiwale Ravet | Harico Divaam', desc: 'Discover Harico Divaam in Kiwale opposite Sentosa Water Park starting ₹71 Lacs*. 5 Iconic Sky Towers with 100+ Amenities.' },
-  { path: 'location/ravet', title: 'Luxury 2 & 3 BHK Homes near Mukai Chowk Ravet | Sentosa Harico', desc: 'Luxury homes near Mukai Chowk & Ravet BRTS corridor. 5 mins to Akurdi Railway Station and Expressway.' },
-  { path: 'location/tathawade', title: 'Flats near Tathawade & Wakad IT Hub | Harico Estates Portfolio', desc: 'Premium residences 5 mins from JSPM and Indira College Tathawade with high rental demand and Mivan construction.' },
-  { path: 'location/hinjewadi', title: 'Luxury Residences near Hinjewadi Rajiv Gandhi Infotech Park | Harico', desc: 'Homes for IT professionals just 15 mins from Hinjewadi Phase 1, 2 & 3. Dual balconies, co-working studios & zero brokerage.' },
+  { 
+    path: 'location/punawale', 
+    title: 'Harico Punawale & Sentosa Punawale | 2 & 3 BHK Luxury Flats in Punawale, Pune', 
+    desc: 'Harico Punawale & Sentosa Punawale: Premium 2 & 3 BHK luxury residences with dual balconies and 2-min expressway access. Harico Edge & Harico Pride.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Estates Punawale, Sentosa Developers Punawale, Harico Edge Punawale, Harico Pride Punawale, Sentosa Edge Punawale, Sentosa Pride Punawale, Sentosa Ekam Punawale, 2 BHK Flats in Punawale, 3 BHK Luxury Flats Punawale, Flats near Bhumkar Chowk, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, पुनावळे फ्लॅट्स'
+  },
+  { 
+    path: 'location/kiwale', 
+    title: 'Harico Kiwale & Harico Diwaam | 24-Storey 2 & 3 BHK Towers Opposite Sentosa', 
+    desc: 'Harico Kiwale & Harico Diwaam: Tallest 24-storey high-rise luxury towers in Kiwale opposite Sentosa Water Park starting ₹71 Lacs*. 5 Iconic Sky Towers with 100+ Amenities.',
+    keywords: 'Harico Kiwale, Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Harico Estates Kiwale, Sentosa Developers Kiwale, Flats in Kiwale, 2 BHK in Kiwale Ravet, 3 BHK in Kiwale Pune, Tallest Towers Kiwale, Flats opposite Sentosa Water Park, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, किवाळे फ्लॅट्स'
+  },
+  { 
+    path: 'location/ravet', 
+    title: 'Luxury 2 & 3 BHK Homes near Mukai Chowk Ravet | Sentosa Harico', 
+    desc: 'Luxury homes near Mukai Chowk & Ravet BRTS corridor. 5 mins to Akurdi Railway Station and Expressway.',
+    keywords: 'Harico Diwaam Ravet, Harico Divaam Ravet, Flats in Ravet Pune, 2 BHK near Mukai Chowk, 3 BHK flats Ravet, Sentosa Group Ravet, Sentosa Developers Kiwale Ravet, Harico Kiwale, Ravet BRTS Connectivity Flats, Harico Estates Kiwale Ravet'
+  },
+  { 
+    path: 'location/tathawade', 
+    title: 'Flats near Tathawade & Wakad IT Hub | Harico Estates Portfolio', 
+    desc: 'Premium residences 5 mins from JSPM and Indira College Tathawade with high rental demand and Mivan construction.',
+    keywords: 'Flats in Tathawade, 2 BHK in Tathawade Pune, 3 BHK in Tathawade, Flats near JSPM Tathawade, Flats near Indira College, Wakad Hinjewadi Corridor Flats, Sentosa Serene Tathawade, Harico Punawale Tathawade, Sentosa Developers Tathawade'
+  },
+  { 
+    path: 'location/hinjewadi', 
+    title: 'Luxury Residences near Hinjewadi Rajiv Gandhi Infotech Park | Harico', 
+    desc: 'Homes for IT professionals just 15 mins from Hinjewadi Phase 1, 2 & 3. Dual balconies, co-working studios & zero brokerage.',
+    keywords: 'Flats near Hinjewadi IT Park, 2 BHK near Hinjewadi Phase 1, 3 BHK near Hinjewadi, Homes for IT Professionals Pune, Harico Edge Hinjewadi, Harico Divaam Hinjewadi, Harico Punawale Hinjewadi, Harico Kiwale Hinjewadi, Sentosa Hinjewadi Flats'
+  },
   
   // Typology hubs
-  { path: 'flats/2-bhk-flats-in-punawale', title: '2 BHK Flats in Punawale with 2 Balconies from ₹74 Lacs* | Harico Edge', desc: 'Zero-wastage 2 BHK Smart & Premium homes in Punawale with dual balconies and 50+ amenities.' },
-  { path: 'flats/3-bhk-flats-in-punawale', title: 'Spacious 3 BHK Luxury Residences in Punawale | Harico Edge & Pride', desc: 'Expansive 3 BHK luxury residences in Punawale with walk-in wardrobes and large private decks.' },
-  { path: 'flats/2-bhk-flats-in-kiwale', title: '2 BHK High-Rise Residences in Kiwale from ₹71.00 Lacs* | Harico Divaam', desc: 'Kiwale’s tallest 24-storey residential development opposite Sentosa Water Park, starting ₹71.00 Lacs*.' },
-  { path: 'flats/3-bhk-flats-in-kiwale', title: '3 BHK Panoramic Sky Residences in Kiwale Ravet | Harico Divaam', desc: 'Palatial 3 BHK sky residences in Kiwale with 1,108 sq.ft carpet, designer lobbies, and 12 luxury guest suites.' },
+  { 
+    path: 'flats/2-bhk-flats-in-punawale', 
+    title: '2 BHK Flats in Punawale | Harico Punawale & Sentosa Edge from ₹74 Lacs*', 
+    desc: 'Zero-wastage 2 BHK Smart & Premium homes in Punawale with dual balconies and 50+ amenities.',
+    keywords: 'Harico Punawale 2 BHK, Sentosa Punawale 2 BHK, 2 BHK Flats in Punawale, 2 BHK with 2 Balconies Punawale, Affordable Luxury 2 BHK Pune, Harico Edge 2 BHK Price, Sentosa Edge 2 BHK Punawale, Best 2 BHK in PCMC, 2 BHK under 75 lakh Punawale'
+  },
+  { 
+    path: 'flats/3-bhk-flats-in-punawale', 
+    title: '3 BHK Flats in Punawale | Harico Punawale & Sentosa Pride Luxury Residences', 
+    desc: 'Expansive 3 BHK luxury residences in Punawale with walk-in wardrobes and large private decks.',
+    keywords: 'Harico Punawale 3 BHK, Sentosa Punawale 3 BHK, 3 BHK Flats in Punawale, Large Carpet 3 BHK Pune, 3 BHK with Walk-In Wardrobe, Harico Edge 3 BHK, Harico Pride 3 BHK, Sentosa Edge 3 BHK, Sentosa Pride 3 BHK, 3 BHK under 1 crore Punawale'
+  },
+  { 
+    path: 'flats/2-bhk-flats-in-kiwale', 
+    title: '2 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam from ₹71.00 Lacs*', 
+    desc: 'Kiwale’s tallest 24-storey residential development opposite Sentosa Water Park, starting ₹71.00 Lacs*.',
+    keywords: 'Harico Kiwale 2 BHK, Harico Diwaam 2 BHK, 2 BHK Flats in Kiwale, 2 BHK in Kiwale Ravet starts 71 Lacs, Harico Divaam 2 BHK Price, Harico Diwaam 2 BHK, Sentosa Divaam 2 BHK, Sentosa Diwaam 2 BHK, 2 BHK under 75 lakh Kiwale'
+  },
+  { 
+    path: 'flats/3-bhk-flats-in-kiwale', 
+    title: '3 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam Sky Residences', 
+    desc: 'Palatial 3 BHK sky residences in Kiwale with 1,108 sq.ft carpet, designer lobbies, and 12 luxury guest suites.',
+    keywords: 'Harico Kiwale 3 BHK, Harico Diwaam 3 BHK, 3 BHK in Kiwale, 3 BHK Luxury High Rise Kiwale Ravet, Harico Divaam 3 BHK Price, Harico Diwaam 3 BHK, Tallest Towers 3 BHK Pune, Sentosa Divaam 3 BHK, 3 BHK under 1 crore Kiwale'
+  },
   
   // Institutional hubs
-  { path: 'developer/sentosa-developers-pune', title: 'Sentosa Developers Pune | 39-Year Legacy (1987-2026) in Real Estate & Hospitality', desc: '39 years of trusted civil engineering, 20+ delivered landmark projects, and world-class hospitality by Sentosa Group.' },
-  { path: 'maharera-registered-projects-pune', title: 'MahaRERA Approved & Registered Projects | Harico Estates Transparency', desc: '100% legal verification, clear title certificates, and sanctioned layouts: Harico Edge, Divaam & Pride.' },
+  { 
+    path: 'developer/sentosa-developers-pune', 
+    title: 'Sentosa Punawale & Sentosa Developers Pune | 39-Year Real Estate Legacy', 
+    desc: '39 years of trusted civil engineering, 20+ delivered landmark projects, and world-class hospitality by Sentosa Group.',
+    keywords: 'Sentosa Punawale, Sentosa Punwale, Sentosa Developers, Sentosa Developers Pune, Sentosa Group Pune, Sentosa Real Estate, Harico Estates Sentosa, Sentosa Water Park Builder, Sentosa Projects Pune, 39 Years Legacy Builder Pune, Sentosa Edge Punawale, Sentosa Pride Punawale, Sentosa Ekam Punawale'
+  },
+  { 
+    path: 'maharera-registered-projects-pune', 
+    title: 'MahaRERA Approved & Registered Projects | Harico Estates Transparency', 
+    desc: '100% legal verification, clear title certificates, and sanctioned layouts: Harico Edge, Divaam & Pride.',
+    keywords: 'MahaRERA Approved Projects Pune, Harico Edge RERA P52100031773, Harico Divaam RERA PR1260002502389, Harico Pride RERA P52100018471, Verified Real Estate PCMC, RERA registered flats Punawale Kiwale'
+  },
 
   // Standard subpages
-  { path: 'privacy', title: 'Privacy Policy | Harico Estates & Sentosa Developers', desc: 'Official privacy policy for Harico Estates and Sentosa Developers.' },
-  { path: 'terms', title: 'Terms of Use | Harico Estates & Sentosa Developers', desc: 'Terms of use and legal disclaimers for Harico Estates web portal.' },
-  { path: 'contact', title: 'Contact Sales & VIP Site Visit | Harico Estates Punawale & Kiwale', desc: 'Schedule priority VIP site visits and connect directly with developer sales consultants.' },
-  { path: 'amenities', title: '100+ World Class Curated Amenities | Harico Estates & Sentosa', desc: 'Explore 100+ curated lifestyle amenities across wellness, sports, and sky lounges.' },
-  { path: 'projects', title: 'Luxury 2 & 3 BHK Projects in Punawale & Kiwale | Harico Estates', desc: 'Explore all ongoing and upcoming luxury residential developments by Harico Estates.' },
-  { path: 'project-comparison', title: 'Compare Harico Edge vs Divaam vs Pride | Harico Estates', desc: 'Detailed side-by-side comparison matrix of carpet areas, pricing, and amenities.' },
-  { path: 'specifications', title: 'Mivan Construction & Luxury Technical Specs | Harico Estates', desc: 'Technical specifications, Mivan monolithic concrete engineering, and branded fittings.' },
-  { path: 'location-hub', title: 'Punawale, Kiwale, Tathawade & Hinjewadi Connectivity Matrix', desc: 'Comprehensive micro-market transit times and road connectivity matrix.' },
-  { path: 'emi-calculator', title: 'Home Loan EMI Calculator & Bank Approvals | Harico Estates', desc: 'Calculate exact monthly EMIs and explore pre-approved bank loans from SBI, HDFC, ICICI.' },
-  { path: 'faq', title: 'MahaRERA & Homebuyer FAQ Knowledge Hub | Harico Estates', desc: 'Frequently asked questions on approvals, possession timelines, and purchasing process.' }
+  { path: 'privacy', title: 'Privacy Policy | Harico Estates & Sentosa Developers', desc: 'Official privacy policy for Harico Estates and Sentosa Developers.', keywords: globalKeywords },
+  { path: 'terms', title: 'Terms of Use | Harico Estates & Sentosa Developers', desc: 'Terms of use and legal disclaimers for Harico Estates web portal.', keywords: globalKeywords },
+  { path: 'contact', title: 'Contact Sales & VIP Site Visit | Harico Estates Punawale & Kiwale', desc: 'Schedule priority VIP site visits and connect directly with developer sales consultants.', keywords: 'Harico Estates contact, Harico Estates phone 7744009295, Harico Estates site visit, Harico Edge site office, Harico Divaam site office, Sentosa Developers office Pune' },
+  { path: 'amenities', title: '100+ World Class Curated Amenities | Harico Estates & Sentosa', desc: 'Explore 100+ curated lifestyle amenities across wellness, sports, and sky lounges.', keywords: 'Harico Estates amenities, Harico Divaam amenities, Harico Edge amenities, rooftop infinity pool Punawale, sky gymnasium Kiwale' },
+  { path: 'projects', title: 'Luxury 2 & 3 BHK Projects in Punawale & Kiwale | Harico Estates', desc: 'Explore all ongoing and upcoming luxury residential developments by Harico Estates.', keywords: 'Harico Estates projects, Harico Edge, Harico Divaam, Harico Pride, Sentosa Developers projects Pune, 2 BHK Punawale, 3 BHK Kiwale' },
+  { path: 'project-comparison', title: 'Compare Harico Edge vs Divaam vs Pride | Harico Estates', desc: 'Detailed side-by-side comparison matrix of carpet areas, pricing, and amenities.', keywords: 'Compare Harico Edge vs Divaam vs Pride, Harico Edge vs Harico Divaam, Punawale vs Kiwale property, flats comparison PCMC' },
+  { path: 'specifications', title: 'Mivan Construction & Luxury Technical Specs | Harico Estates', desc: 'Technical specifications, Mivan monolithic concrete engineering, and branded fittings.', keywords: 'Mivan construction flats Pune, Harico Estates specifications, Kohler fittings, earthquake resistant homes Punawale Kiwale' },
+  { path: 'location-hub', title: 'Punawale, Kiwale, Tathawade & Hinjewadi Connectivity Matrix', desc: 'Comprehensive micro-market transit times and road connectivity matrix.', keywords: 'Punawale Kiwale Tathawade Hinjewadi connectivity, Mumbai Pune Expressway flats, Bhumkar Chowk, Mukai Chowk' },
+  { path: 'emi-calculator', title: 'Home Loan EMI Calculator & Bank Approvals | Harico Estates', desc: 'Calculate exact monthly EMIs and explore pre-approved bank loans from SBI, HDFC, ICICI.', keywords: 'Home loan EMI calculator Pune, Harico Estates bank approvals, SBI home loan Harico Edge, HDFC home loan Harico Divaam' },
+  { path: 'faq', title: 'MahaRERA & Homebuyer FAQ Knowledge Hub | Harico Estates', desc: 'Frequently asked questions on approvals, possession timelines, and purchasing process.', keywords: 'Harico Estates FAQ, Harico Edge possession date, Harico Divaam RERA number, buying flat in Punawale Kiwale' }
 ];
 
 console.log('[Prerender] Generating ultra-advanced static HTML routes for Programmatic SEO...');
@@ -112,7 +167,8 @@ programmaticPages.forEach(page => {
     if (page.desc) {
       html = html.replace(/<meta name="description"[\s\S]*?>/is, `<meta name="description" content="${page.desc}">`);
     }
-    html = html.replace(/<meta name="keywords"[\s\S]*?>/is, `<meta name="keywords" content="${globalKeywords}">`);
+    const pageKeywords = page.keywords || globalKeywords;
+    html = html.replace(/<meta name="keywords"[\s\S]*?>/is, `<meta name="keywords" content="${pageKeywords}">`);
 
     fs.writeFileSync(path.join(pageDir, 'index.html'), html, 'utf-8');
     console.log(`[Prerender] Generated programmatic route: /${page.path}/index.html`);
