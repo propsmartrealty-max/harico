@@ -141,7 +141,9 @@ export const generateOrganizationSchema = () => {
         "sameAs": [
             "https://www.facebook.com/haricoestates",
             "https://www.instagram.com/haricoestates",
-            "https://maharera.mahaonline.gov.in"
+            "https://maharera.mahaonline.gov.in",
+            "https://www.google.com/maps?q=harico+estates",
+            "https://www.google.com/maps?q=harico+divaam"
         ]
     };
 };
@@ -231,6 +233,7 @@ export const generateProjectSchema = (project: Project) => {
             "latitude": project.slug === 'harico-divaam' ? "18.6738" : "18.6366",
             "longitude": project.slug === 'harico-divaam' ? "73.7225" : "73.7483"
         },
+        "hasMap": project.slug === 'harico-divaam' ? "https://www.google.com/maps?q=harico+divaam" : "https://www.google.com/maps?q=harico+estates",
         "amenityFeature": Array.isArray(project.amenities)
             ? (typeof project.amenities[0] === 'string'
                 ? project.amenities.map((a: any) => ({ "@type": "LocationFeatureSpecification", "name": a, "value": true }))
