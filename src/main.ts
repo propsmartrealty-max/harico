@@ -37,6 +37,9 @@ const floorPlanModal = createFloorPlanModal();
 const backToTop = createBackToTop();
 const mobileQuickBar = createMobileQuickBar();
 
+// Clean any prerendered shell before mounting dynamic SPA components
+app.innerHTML = '';
+
 // Mount global shells & modals
 app.appendChild(header);
 const mainAppContainer = document.createElement('main');

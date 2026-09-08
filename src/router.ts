@@ -45,33 +45,38 @@ class Router {
     }
 
     private handleLocationChange() {
-        const path = window.location.pathname;
+        const rawPath = window.location.pathname;
         const search = window.location.search;
+        const normalizedPath = rawPath.replace(/\/$/, '') || '/';
 
-        const pathSegments = path.split('/').filter(Boolean); // ['project', 'slug-name'] or ['projects']
-        const rootSegment = pathSegments[0];
+        const pathSegments = normalizedPath.split('/').filter(Boolean); // ['project', 'slug-name'] or ['location', 'punawale']
+        const params = new URLSearchParams(search);
 
-        // Determine root route path
-        // IF /project/slug -> rootPath = '/project'
-        // IF /projects -> rootPath = '/' (fallback to home but scroll to section)
-        let rootPath = '/';
-        let slug = undefined;
+        // 1. Check for exact path match (e.g., '/', '/location/punawale', '/faq', '/privacy', etc.)
+        let matchedRoute = this.routes.find(r => r.path === normalizedPath);
+        let slug: string | undefined = undefined;
 
-        if (rootSegment === 'project') {
-            rootPath = '/project';
+        // 2. If no exact match, check for /project/:slug wildcard match
+        if (!matchedRoute && pathSegments.length >= 1 && pathSegments[0] === 'project') {
+            matchedRoute = this.routes.find(r => r.path === '/project');
             slug = pathSegments[1];
         }
 
-        // Match route
-        const matchedRoute = this.routes.find(r => r.path === rootPath);
+        // 3. If still no match, check if first segment is registered as a direct route
+        if (!matchedRoute && pathSegments.length > 0) {
+            matchedRoute = this.routes.find(r => r.path === `/${pathSegments[0]}`);
+        }
+
+        // 4. Default fallback to root '/'
+        if (!matchedRoute) {
+            matchedRoute = this.routes.find(r => r.path === '/');
+        }
 
         if (matchedRoute) {
-            const params = new URLSearchParams(search);
             matchedRoute.handler(params, slug);
 
-            // --- SEO Logic ---
-            if (rootPath === '/project' && slug) {
-                // Find project by slug
+            // --- SEO Metadata Logic ---
+            if (slug) {
                 const project = Object.values(projectsData).find(p => p.slug === slug);
                 if (project && project.seo) {
                     MetaManager.setTitle(project.seo.title);
@@ -80,7 +85,6 @@ class Router {
                     MetaManager.setImage(project.image);
                     MetaManager.setUrl(window.location.href);
 
-                    // Schema Injection - Advanced Real Estate Schema
                     MetaManager.setSchema({
                         "@context": "https://schema.org",
                         "@type": "ApartmentComplex",
@@ -93,11 +97,11 @@ class Router {
                             "addressLocality": project.location.split(',')[0].trim(),
                             "addressRegion": "Maharashtra",
                             "addressCountry": "IN",
-                            "postalCode": "411033" // Default for Punawale/Kiwale area
+                            "postalCode": "411033"
                         },
                         "geo": {
                             "@type": "GeoCoordinates",
-                            "latitude": "18.6366", // Approx center for Punawale/Kiwale
+                            "latitude": "18.6366",
                             "longitude": "73.7483"
                         },
                         "priceRange": project.price,
@@ -124,38 +128,26 @@ class Router {
                         }
                     });
                 } else if (project) {
-                    // Fallback
                     MetaManager.setTitle(`${project.title} | Harico Estates`);
                     MetaManager.setDescription(project.description.slice(0, 160));
                     MetaManager.setImage(project.image);
                     MetaManager.setUrl(window.location.href);
                 }
-            } else {
-                // Reset to Home/Default
-                MetaManager.reset();
             }
-            // -----------------
 
-            // Handle Scrolling for Home Sections
+            // Smooth Scroll Handling
             setTimeout(() => {
-                if (rootPath === '/') {
-                    // Check if pathSegment corresponds to a section ID (e.g. /amenities)
-                    const sectionId = rootSegment;
-                    if (sectionId) {
-                        const section = document.getElementById(sectionId);
-                        if (section) {
-                            const offset = 80;
-                            const top = section.getBoundingClientRect().top + window.pageYOffset - offset;
-                            window.scrollTo({ top: top, behavior: 'smooth' });
-                            return;
-                        }
+                const hash = window.location.hash.replace('#', '');
+                if (hash) {
+                    const el = document.getElementById(hash);
+                    if (el) {
+                        const offset = 80;
+                        const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                        return;
                     }
-                    // Default scroll top
-                    window.scrollTo(0, 0);
-                } else {
-                    // Details page
-                    window.scrollTo(0, 0);
                 }
+                window.scrollTo(0, 0);
             }, 50);
         }
     }
