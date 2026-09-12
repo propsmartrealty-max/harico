@@ -74,9 +74,9 @@ export function createProjectComparison(): HTMLElement {
               </tr>
               <tr>
                 <td class="feature-name"><i class="fa-solid fa-calendar-check mr-2 text-gold"></i> Target Possession</td>
-                <td>December 2028</td>
-                <td class="highlight-cell">March 2028</td>
-                <td>June 2027</td>
+                <td>${pEdge.possession || 'June 2030'}</td>
+                <td class="highlight-cell">${pDivaam.possession || 'December 2030'} (Major Launch)</td>
+                <td>${pPride.possession || 'June 2027'}</td>
               </tr>
               <tr>
                 <td class="feature-name"><i class="fa-solid fa-shield-halved mr-2 text-gold"></i> MahaRERA Status</td>

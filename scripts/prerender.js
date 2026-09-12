@@ -25,9 +25,10 @@ const projects = [
     name: 'Harico Edge',
     location: 'Punawale, Pune',
     price: 'Starts ₹74.00 Lacs*',
+    possession: 'June 2030',
     rera: 'P52100031773',
-    description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. MahaRERA P52100031773. Call +91 7744009295.',
-    keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Edge, Harico Edge Punawale, Sentosa Edge, Sentosa Edge Punawale, Sentosa Harico Edge, Harico Estates Punawale, Harico Edge Price, Harico Edge Price List, Harico Edge Floor Plan, Harico Edge 2 BHK Punawale, Harico Edge 3 BHK Punawale, Harico Edge Brochure PDF, Harico Edge Sample Flat, Harico Edge RERA P52100031773, Harico Edge Possession Date, Harico Edge Contact 7744009295, Sentosa Developers Punawale, Flats near Bhumkar Chowk, Flats near Akshara International School, Flats near Hinjewadi IT Park, 2 BHK with 2 Balconies Punawale, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, हरिको एज पुनावळे, हॅरिको एज, हरिको पुनावळे',
+    description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. Target Possession June 2030. MahaRERA P52100031773. Call +91 7744009295.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Edge, Harico Edge Punawale, Sentosa Edge, Sentosa Edge Punawale, Sentosa Harico Edge, Harico Estates Punawale, Harico Edge Price, Harico Edge Price List, Harico Edge Floor Plan, Harico Edge 2 BHK Punawale, Harico Edge 3 BHK Punawale, Harico Edge Brochure PDF, Harico Edge Sample Flat, Harico Edge RERA P52100031773, Harico Edge Possession June 2030, Harico Edge Contact 7744009295, Sentosa Developers Punawale, Flats near Bhumkar Chowk, Flats near Akshara International School, Flats near Hinjewadi IT Park, 2 BHK with 2 Balconies Punawale, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, हरिको एज पुनावळे, हॅरिको एज, हरिको पुनावळे, हरिको एज पुनावळे जून 2030',
     image: '/assets/harico-edge-hero.png',
     configs: [
       { type: '2 BHK Smart', carpet: '741 sq.ft', price: '₹ 74.00 Lacs*' },
@@ -38,6 +39,7 @@ const projects = [
       { type: '3 BHK Royale', carpet: '1148 sq.ft', price: '₹ 1.18 Cr*' }
     ],
     features: [
+      'Target Possession: June 2030 with Structured MahaRERA Milestones',
       'Dual Private Balconies with Panoramic Greenery Views',
       'Mivan Monolithic Concrete Construction (Earthquake Resistant)',
       '2 Minutes to Mumbai-Pune Expressway & Bhumkar Chowk',
@@ -45,7 +47,7 @@ const projects = [
       '50+ Curated World-Class Lifestyle Amenities'
     ],
     faqs: [
-      { q: 'What is the RERA registration number for Harico Edge Punawale?', a: 'Harico Edge in Punawale is registered under MahaRERA with registration number P52100031773.' },
+      { q: 'What is the RERA registration number and possession date for Harico Edge Punawale?', a: 'Harico Edge in Punawale is registered under MahaRERA number P52100031773 with target possession scheduled for June 2030.' },
       { q: 'What are the starting prices and configurations at Harico Edge?', a: 'Harico Edge offers spacious 2 & 3 BHK luxury residences with dual private balconies starting from ₹74.00 Lacs*.' },
       { q: 'Where is Harico Edge located and how far is it from Hinjewadi?', a: 'Harico Edge is located near Bhumkar Chowk in Punawale, just 2 minutes from the Mumbai-Pune Expressway and 12-14 minutes from Hinjewadi IT Park Phase 1.' }
     ]
@@ -53,13 +55,14 @@ const projects = [
   {
     slug: 'harico-divaam',
     id: '2',
-    title: 'Harico Diwaam | Harico Kiwale 2 & 3 BHK Flats Opposite Sentosa Water Park',
-    name: 'Harico Divaam (Harico Diwaam)',
+    title: 'Harico Diwaam Kiwale | Major New Launch 2 & 3 BHK Flats Opposite Sentosa Water Park',
+    name: 'Harico Divaam (Harico Diwaam Kiwale)',
     location: 'Kiwale-Ravet, Pune',
     price: 'Starts ₹71.00 Lacs*',
+    possession: 'December 2030',
     rera: 'PR1260002502389',
-    description: 'Harico Diwaam (Harico Divaam Kiwale): Tallest 24-storey luxury towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
-    keywords: 'Harico Diwaam, Harico Diwaam Kiwale, Harico Kiwale, Harico Divaam, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Sentosa Harico Diwaam, Sentosa Harico Divaam, Codename Divine Kiwale, Harico Diwaam Price, Harico Divaam Price, Harico Diwaam 2 BHK, Harico Diwaam 3 BHK, Harico Diwaam Floor Plan, Harico Diwaam Brochure PDF, Harico Diwaam Sample Flat, Harico Diwaam RERA PR1260002502389, Harico Diwaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, 5 Sky Towers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, Kiwale Ravet Real Estate, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, Contact 7744009295, हरिको दिवाम किवाळे, हॅरिको दिवाम, हरिको किवाळे',
+    description: 'Harico Diwaam (Harico Divaam Kiwale): Major New Launch 24-storey luxury sky towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+    keywords: 'Harico Diwaam, Harico Diwaam Kiwale, Harico Kiwale, Harico Divaam, Harico Divaam Kiwale, Harico new launch, Harico new launch Kiwale, Harico new launch Pune, Harico new launch Punawale, Harico Diwaam new launch, Harico Divaam new launch, Harico Diwaam Kiwale new launch, Sentosa Diwaam, Sentosa Divaam, Sentosa Harico Diwaam, Sentosa Harico Divaam, Codename Divine Kiwale, Harico Diwaam Price, Harico Divaam Price, Harico Diwaam 2 BHK, Harico Diwaam 3 BHK, Harico Diwaam Floor Plan, Harico Diwaam Brochure PDF, Harico Diwaam Sample Flat, Harico Diwaam RERA PR1260002502389, Harico Diwaam Possession December 2030, Harico Diwaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, 5 Sky Towers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, Kiwale Ravet Real Estate, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, Contact 7744009295, हरिको दिवाम किवाळे, हॅरिको दिवाम, हरिको किवाळे, हरिको दिवाम नवीन लाँच, हरिको नवीन लाँच पुणे',
     image: '/assets/harico-divaam-hero.jpg',
     configs: [
       { type: '2 BHK Smart', carpet: '724 sq.ft', price: '₹ 71.00 - 73.00 Lacs*' },
@@ -70,14 +73,15 @@ const projects = [
       { type: '3 BHK Grand', carpet: '1108 sq.ft', price: '₹ 1.05 - 1.08 Cr*' }
     ],
     features: [
-      'Tallest 24-Storey High-Rise Towers in Kiwale-Ravet',
+      '🔥 Flagship Mega New Launch: Tallest 24-Storey High-Rise Towers in Kiwale-Ravet',
+      'Target Possession: December 2030 with MahaRERA PR1260002502389 Sanction',
       '5 Iconic Sky Towers Spread Across 5.0 Acres Land Parcel',
       'Directly Opposite Sentosa Water Park & Resort on Expressway Corridor',
-      '100+ Curated Resort-Style Amenities & Sky Observation Deck',
+      '100+ Curated Resort-Style Amenities & 24th Floor Sky Observation Deck',
       '2 Minutes to Mukai Chowk & 5 Minutes to Akurdi Railway Station'
     ],
     faqs: [
-      { q: 'What is the MahaRERA number for Harico Diwaam / Harico Divaam Kiwale?', a: 'Harico Divaam (Harico Diwaam) is registered under MahaRERA with registration number PR1260002502389.' },
+      { q: 'What is the MahaRERA number and possession date for Harico Diwaam Kiwale?', a: 'Harico Divaam (Harico Diwaam) is registered under MahaRERA registration number PR1260002502389 with target possession scheduled for December 2030.' },
       { q: 'What are the pricing and configurations at Harico Diwaam Kiwale?', a: 'Harico Diwaam offers 2 & 3 BHK luxury residences starting from ₹71.00 Lacs* with carpet areas ranging from 724 sq.ft to 1,108 sq.ft.' },
       { q: 'Who is the developer of Harico Divaam / Diwaam Kiwale?', a: 'Harico Divaam is developed by Harico Estates in venture with Sentosa Developers (backed by a 39-year legacy since 1987 and builders of Sentosa Water Park).' }
     ]
@@ -89,6 +93,7 @@ const projects = [
     name: 'Harico Pride',
     location: 'Punawale, Pune',
     price: 'Starts ₹78.00 Lacs*',
+    possession: 'June 2027',
     rera: 'P52100018471',
     description: 'Harico Punawale: Harico Pride by Sentosa Developers Punawale near Bhiku Vallabh Kale School. Largest carpet layouts, rooftop pool & 2 mins to Expressway. MahaRERA P52100018471. Call +91 7744009295.',
     keywords: 'Harico Punawale, Sentosa Punawale, Sentosa Punwale, Harico Pride, Harico Pride Punawale, Sentosa Pride Punawale, Sentosa Pride Phase 1 2 3 Punawale, Harico Estates Pride, Harico Pride 2 BHK, Harico Pride 3 BHK, Harico Pride Price, Harico Pride Floor Plan, Harico Pride Brochure, Harico Pride RERA P52100018471, Harico Pride Contact 7744009295, Flats near Bhiku Vallabh Kale School, Punawale Largest Carpet Flats, 2 BHK under 75 lakh Punawale, 3 BHK under 1 crore Punawale, Sentosa Developers Punawale, हरिको प्राईड पुनावळे',
@@ -295,6 +300,7 @@ projects.forEach(project => {
         <div style="margin-top:15px; display:flex; gap:15px; flex-wrap:wrap;">
           <span style="background:#0A192F; color:#FFF; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">MahaRERA: ${project.rera}</span>
           <span style="background:#D4AF37; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">${project.price}</span>
+          <span style="background:#0A192F; color:#D4AF37; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold; border:1px solid #D4AF37;">🔑 Possession: ${project.possession}</span>
           <span style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">📍 ${project.location}</span>
           <span style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">📞 Sales: +91 7744009295</span>
         </div>

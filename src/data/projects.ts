@@ -51,15 +51,16 @@ export const projectsData: Record<string, Project> = {
         type: '2 & 3 BHK Ultra-Premium Homes',
         price: '₹74 Lacs Onwards',
         startingPriceNumeric: 74,
-        possession: 'December 2028',
+        possession: 'June 2030',
         landParcel: '2.5 Acres Luxury Enclave',
         towers: '3 Grand High-Rise Towers',
         floors: '22 Storeys of Iconic Architecture',
         unitsTotal: '280+ Exclusive Residences',
         image: '/assets/harico-edge-hero.png',
-        tagline: 'A Glimpse Into Excellence | The Edge Of Timeless Modern Sophistication',
-        description: 'Harico Edge (formerly Sentosa Edge) represents the pinnacle of modern architectural luxury in Punawale, West Pune’s fastest-growing residential corridor. Set across a 2.5-acre lush land parcel, each residence offers 2 expansive balconies, zero-wastage smart layouts, dedicated walk-in wardrobe provisions, and panoramic views of the Western Ghats. Crafted with Mivan monolithic concrete technology, Harico Edge delivers unmatched structural longevity, acoustic privacy, and 50+ handpicked lifestyle amenities.',
+        tagline: 'A Glimpse Into Excellence | The Edge Of Timeless Modern Sophistication | Possession June 2030',
+        description: 'Harico Edge (formerly Sentosa Edge) represents the pinnacle of modern architectural luxury in Punawale, West Pune’s fastest-growing residential corridor. Set across a 2.5-acre lush land parcel with possession scheduled for June 2030, each residence offers 2 expansive balconies, zero-wastage smart layouts, dedicated walk-in wardrobe provisions, and panoramic views of the Western Ghats. Crafted with Mivan monolithic concrete technology, Harico Edge delivers unmatched structural longevity, acoustic privacy, and 50+ handpicked lifestyle amenities.',
         highlights: [
+            'Target Possession: June 2030 with Structured MahaRERA Milestones',
             '2.5-Acre Gated Community with 70% Open & Green Spaces',
             'Zero Space Wastage Floor Layouts with Dual Private Balconies',
             'Walk-in Wardrobe Spaces in all 3 BHK Master Bedrooms',
@@ -160,7 +161,7 @@ export const projectsData: Record<string, Project> = {
         ],
         seo: {
             title: 'Harico Punawale | Harico Edge & Sentosa Punawale 2 & 3 BHK Luxury Flats',
-            description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. MahaRERA P52100031773. Call +91 7744009295.',
+            description: 'Harico Punawale: Harico Edge by Sentosa Developers Punawale. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. Possession June 2030. MahaRERA P52100031773. Call +91 7744009295.',
             keywords: generateKeywords('edge')
         }
     },
@@ -173,16 +174,17 @@ export const projectsData: Record<string, Project> = {
         type: '2 & 3 BHK Ultra-Luxury High-Rise Residences',
         price: 'Starts ₹71.00 Lacs*',
         startingPriceNumeric: 71.0,
-        possession: 'March 2028',
+        possession: 'December 2030',
         landParcel: '5.0 Acres Megastructure',
         towers: '5 Iconic Sky Towers',
         floors: '24 Storeys (Tallest Towers in Kiwale-Ravet)',
         unitsTotal: '500+ Luxury Residences',
         image: '/assets/harico-divaam-hero.jpg',
-        tagline: 'Divine Living Experience | Tallest 24-Storey Landmark | A Sentosa Group Venture',
-        description: 'Harico Divaam (Sentosa Harico Codename Divine) is the crowning jewel of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park, Divaam offers over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones. Featuring expansive carpet layouts, designer sky lounges, co-working studios, and unmatched expressway connectivity.',
+        tagline: '🚨 Flagship Mega Launch | Tallest 24-Storey Landmark Opposite Sentosa Water Park | Possession Dec 2030',
+        description: 'Harico Divaam (Harico Diwaam Kiwale by Sentosa Developers) is the premier flagship mega new launch of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park with possession scheduled for December 2030, Divaam offers over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones. Featuring expansive carpet layouts, designer sky lounges, co-working studios, and unmatched expressway connectivity.',
         highlights: [
-            'Tallest 24-Storey High-Rise Towers in Kiwale-Ravet Corridor',
+            '🔥 Major New Launch: Tallest 24-Storey High-Rise Towers in Kiwale-Ravet',
+            'Target Possession: December 2030 with MahaRERA PR1260002502389 Backing',
             '5-Acre Integrated Master Community with 100+ Lifestyle Amenities',
             'Direct Access: 2 Minutes from Mumbai-Pune Expressway & Mukai Chowk',
             '12 Fully Serviced Guest Suites for Resident Visitors',
@@ -313,8 +315,8 @@ export const projectsData: Record<string, Project> = {
             { title: '3 BHK Grand', image: '/assets/harico-divaam-3bhk-grand-v3.png', carpet: '1108 sq.ft' }
         ],
         seo: {
-            title: 'Harico Diwaam | Harico Kiwale 2 & 3 BHK Flats Opposite Sentosa Water Park',
-            description: 'Harico Diwaam (Harico Divaam Kiwale): Tallest 24-storey luxury towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+            title: 'Harico Diwaam Kiwale | Major New Launch 2 & 3 BHK Flats Opposite Sentosa Water Park',
+            description: 'Harico Diwaam (Harico Divaam Kiwale): Major New Launch 24-storey luxury sky towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
             keywords: generateKeywords('harico-diwaam')
         }
     },

@@ -95,7 +95,7 @@ export const sentosaBrandKeywords = [
 ];
 
 // ==========================================
-// PRIMARY #1 RANK TARGET 1: HARICO DIWAAM / DIVAAM
+// PRIMARY #1 RANK TARGET 1: HARICO DIWAAM / DIVAAM (MAJOR NEW LAUNCH)
 // ==========================================
 export const focusHaricoDiwaamKeywords = [
   'Harico Diwaam',
@@ -108,6 +108,20 @@ export const focusHaricoDiwaamKeywords = [
   'harico diwaam kiwale',
   'Harico Divaam Kiwale',
   'harico divaam kiwale',
+  'Harico new launch',
+  'harico new launch',
+  'Harico new launch Pune',
+  'harico new launch pune',
+  'Harico new launch Kiwale',
+  'harico new launch kiwale',
+  'Harico new launch Punawale',
+  'harico new launch punawale',
+  'Harico Diwaam new launch',
+  'harico diwaam new launch',
+  'Harico Divaam new launch',
+  'harico divaam new launch',
+  'Harico Diwaam Kiwale new launch',
+  'Harico Divaam Kiwale new launch',
   'Harico Diwaam Kiwale Pune',
   'Harico Divaam Kiwale Pune',
   'Harico Diwaam Ravet',
@@ -145,6 +159,8 @@ export const focusHaricoDiwaamKeywords = [
   'Harico Divaam RERA PR1260002502389',
   'Harico Diwaam possession date',
   'Harico Divaam possession date',
+  'Harico Diwaam possession December 2030',
+  'Harico Divaam possession Dec 2030',
   'Harico Diwaam 24 storeys',
   'Harico Divaam tallest towers in Kiwale',
   'Harico Diwaam 5 sky towers',
@@ -159,9 +175,16 @@ export const focusHaricoDiwaamKeywords = [
   '2 BHK flats in Harico Divaam Kiwale',
   '3 BHK flats in Harico Diwaam',
   '3 BHK flats in Harico Divaam Kiwale',
+  'Harico Diwaam 2 BHK starting 71 lakhs',
+  'Harico Diwaam 3 BHK starting 87 lakhs',
+  'Harico Diwaam review',
+  'Harico Diwaam construction update',
   'हरिको दिवाम',
   'हॅरिको दिवाम',
-  'हरिको दिवाम किवाळे'
+  'हरिको दिवाम किवाळे',
+  'हरिको दिवाम नवीन लाँच',
+  'हरिको नवीन लाँच पुणे',
+  'हरिको किवाळे २ आणि ३ बीएचके'
 ];
 
 // ==========================================
@@ -216,9 +239,14 @@ export const focusHaricoKiwaleKeywords = [
   'Harico Estates Kiwale',
   'harico estates kiwale',
   'Harico Diwaam Kiwale',
+  'harico diwaam kiwale',
   'Harico Divaam Kiwale',
+  'harico divaam kiwale',
   'Harico projects in Kiwale',
   'Harico new launch Kiwale',
+  'harico new launch kiwale',
+  'Harico Diwaam Kiwale new launch',
+  'Harico Divaam Kiwale new launch',
   'Harico upcoming project Kiwale',
   'Harico Kiwale flats',
   'Harico Kiwale 2 BHK',
@@ -234,6 +262,8 @@ export const focusHaricoKiwaleKeywords = [
   'Harico Kiwale RERA PR1260002502389',
   'Harico Kiwale brochure pdf',
   'Harico Kiwale sample flat',
+  'Harico Kiwale possession December 2030',
+  'Harico Diwaam possession Dec 2030',
   'flats in Kiwale Harico Estates',
   'luxury flats in Kiwale by Harico',
   'tallest tower in Kiwale Harico',
@@ -241,7 +271,8 @@ export const focusHaricoKiwaleKeywords = [
   'Harico Kiwale PCMC',
   'हरिको किवाळे',
   'हॅरिको किवाळे',
-  'हरिको इस्टेट्स किवाळे'
+  'हरिको इस्टेट्स किवाळे',
+  'हरिको दिवाम किवाळे नवीन लाँच'
 ];
 
 // ==========================================
@@ -258,12 +289,16 @@ export const focusHaricoPunawaleKeywords = [
   'harico pride punawale',
   'Harico projects in Punawale',
   'Harico new launch Punawale',
+  'harico new launch punawale',
+  'Harico Edge new launch Punawale',
   'Harico upcoming project Punawale',
   'Harico Punawale flats',
   'Harico Punawale 2 BHK',
   'Harico Punawale 3 BHK',
   'Harico Punawale price',
   'Harico Punawale price starting 74 lakhs',
+  'Harico Edge possession June 2030',
+  'Harico Punawale possession June 2030',
   'Harico Punawale Bhumkar Chowk',
   'Harico Punawale near Expressway',
   'Harico Punawale near Akshara School',
@@ -282,7 +317,8 @@ export const focusHaricoPunawaleKeywords = [
   'Harico Punawale PCMC',
   'हरिको पुनावळे',
   'हॅरिको पुनावळे',
-  'हरिको इस्टेट्स पुनावळे'
+  'हरिको इस्टेट्स पुनावळे',
+  'हरिको एज पुनावळे जून 2030'
 ];
 
 // ==========================================

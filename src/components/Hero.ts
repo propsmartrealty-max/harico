@@ -18,6 +18,14 @@ export function createHero(): HTMLElement {
         <span class="badge-sparkle">✦</span>
       </div>
 
+      <!-- Mega Launch Alert Capsule -->
+      <a href="/project/harico-divaam" class="hero-launch-banner-pill fade-in-up">
+        <span class="launch-live-dot"></span>
+        <span class="launch-text-bold">🚨 MEGA NEW LAUNCH:</span>
+        <span class="launch-text-sub">Harico Diwaam Kiwale (Tallest 24-Storey Towers | Dec 2030)</span>
+        <i class="fa-solid fa-arrow-right-long text-gold ml-2"></i>
+      </a>
+
       <!-- Refined Hero Headline -->
       <h1 class="hero-title-refined fade-in-up delay-1">
         Architectural Elegance <br />
@@ -26,7 +34,7 @@ export function createHero(): HTMLElement {
       
       <!-- Refined Subtitle -->
       <p class="hero-subtitle-refined fade-in-up delay-1">
-        Spacious 2 & 3 BHK luxury residences in Punawale & Kiwale featuring dual private balconies, 100+ curated amenities, and seamless 2-minute connectivity to the Mumbai-Pune Expressway.
+        Spacious 2 & 3 BHK luxury residences in Punawale & Kiwale featuring dual private balconies, 100+ curated amenities, and seamless 2-minute connectivity to the Mumbai-Pune Expressway. Possessions: Harico Edge (June 2030) & Harico Diwaam (Dec 2030).
       </p>
 
       <!-- Key Micro-Feature Chips -->
@@ -209,6 +217,57 @@ export function createHero(): HTMLElement {
     .badge-sparkle {
       color: var(--color-gold);
       font-size: 0.9rem;
+    }
+
+    /* Mega Launch Banner Pill */
+    .hero-launch-banner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(10, 25, 47, 0.9) 100%);
+      border: 1.5px solid var(--color-gold);
+      padding: 9px 24px;
+      border-radius: 9999px;
+      margin-bottom: 22px;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.92rem;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .hero-launch-banner-pill:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.6);
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.35) 0%, rgba(10, 25, 47, 0.95) 100%);
+    }
+
+    .launch-live-dot {
+      width: 10px;
+      height: 10px;
+      background: #EF4444;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 10px #EF4444;
+      animation: pulse-live 1.5s infinite;
+    }
+
+    @keyframes pulse-live {
+      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+      70% { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+    }
+
+    .launch-text-bold {
+      font-weight: 800;
+      color: var(--color-gold);
+      letter-spacing: 0.5px;
+    }
+
+    .launch-text-sub {
+      color: #F8FAFC;
+      font-weight: 600;
     }
 
     /* Hero Typography */

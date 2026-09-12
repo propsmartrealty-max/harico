@@ -40,9 +40,16 @@ export function createProjectCard(project: Project): HTMLElement {
       
       <!-- Top Floating Badges -->
       <div class="card-top-badges flex justify-between items-center w-full">
-        <div class="status-badge-capsule ${project.status.toLowerCase()}">
-          <span class="status-radar-dot ${project.status === 'Ongoing' ? 'radar-pulse-ongoing' : ''}"></span>
-          <span class="status-text">${project.status}</span>
+        <div class="flex items-center gap-xs">
+          <div class="status-badge-capsule ${project.status.toLowerCase()}">
+            <span class="status-radar-dot ${project.status === 'Ongoing' ? 'radar-pulse-ongoing' : ''}"></span>
+            <span class="status-text">${project.status}</span>
+          </div>
+          ${project.slug === 'harico-divaam' ? `
+            <div class="launch-flagship-pill">
+              <i class="fa-solid fa-crown text-gold mr-1"></i> Mega Launch
+            </div>
+          ` : ''}
         </div>
 
         ${project.possession ? `
@@ -268,6 +275,18 @@ export const projectCardStyles = `
     font-weight: 600;
     color: var(--color-navy);
     border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  .launch-flagship-pill {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(170, 128, 16, 0.95) 100%);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #0A192F;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
   }
 
   .card-hover-overlay {
