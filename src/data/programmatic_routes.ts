@@ -32,7 +32,7 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
     path: 'location/kiwale',
     title: 'Harico Kiwale & Harico Diwaam | 24-Storey 2 & 3 BHK Towers Opposite Sentosa',
     eyebrow: 'Signature Sky Landmark',
-    subtitle: 'Discover Harico Diwaam (Harico Divaam Kiwale), the tallest 24-storey high-rise development in Kiwale-Ravet directly opposite Sentosa Water Park, starting from ₹71.00 Lacs*.',
+    subtitle: 'Discover Harico Diwaam (Harico Divaam Kiwale), the tallest 24-storey high-rise development in Kiwale-Ravet directly opposite Sentosa Water Park, starting from ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs* onwards).',
     description: 'Harico Kiwale and Harico Diwaam deliver 5 iconic sky towers with 100+ resort-grade amenities, sky observation decks, and direct 2-minute connectivity to Mukai Chowk and the Mumbai-Pune Expressway.',
     targetLocation: 'Kiwale',
     metaKeywords: 'Harico Kiwale, Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Harico Estates Kiwale, Sentosa Developers Kiwale, Flats in Kiwale, 2 BHK in Kiwale Ravet, 3 BHK in Kiwale Pune, Tallest Towers Kiwale, Flats opposite Sentosa Water Park, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, किवाळे फ्लॅट्स',
@@ -41,7 +41,7 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
       'Directly Opposite Sentosa Water Park & Resort',
       '5 Iconic Sky Towers with 100+ Curated Lifestyle Amenities',
       'Air-Conditioned Co-Working Lounges & Creator Studios',
-      'Prices starting at ₹71.00 Lacs* with Zero Space Wastage'
+      'Prices starting at ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*) with Zero Space Wastage'
     ]
   },
   {
@@ -130,15 +130,15 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
   },
   {
     path: 'flats/2-bhk-flats-in-kiwale',
-    title: '2 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam from ₹71.00 Lacs*',
+    title: '2 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam from ₹70.00 Lacs*',
     eyebrow: 'Divine Living',
-    subtitle: 'Live high above the city in Kiwale’s tallest 24-storey residential development opposite Sentosa Water Park, starting ₹71.00 Lacs*.',
+    subtitle: 'Live high above the city in Kiwale’s tallest 24-storey residential development opposite Sentosa Water Park, starting ₹70.00 Lacs*.',
     description: 'Harico Divaam offers 2 BHK Smart, Comfort, Prime, and Grand configurations in Kiwale. Spread across 5 acres with 5 iconic towers, residents enjoy private mini-theatres, box cricket turfs, and resort-grade pools.',
     targetLocation: 'Kiwale',
     targetBhk: '2 BHK',
-    metaKeywords: 'Harico Kiwale 2 BHK, Harico Diwaam 2 BHK, 2 BHK Flats in Kiwale, 2 BHK in Kiwale Ravet starts 71 Lacs, Harico Divaam 2 BHK Price, Harico Diwaam 2 BHK, Sentosa Divaam 2 BHK, Sentosa Diwaam 2 BHK, 2 BHK under 75 lakh Kiwale',
+    metaKeywords: 'Harico Kiwale 2 BHK, Harico Diwaam 2 BHK, 2 BHK Flats in Kiwale, 2 BHK in Kiwale Ravet starts 70 Lacs, Harico Divaam 2 BHK Price, Harico Diwaam 2 BHK, Sentosa Divaam 2 BHK, Sentosa Diwaam 2 BHK, 2 BHK under 75 lakh Kiwale',
     highlights: [
-      'Starting Price: ₹71.00 Lacs* for 724 sq.ft Carpet',
+      'Starting Price: ₹70.00 Lacs* for 724 sq.ft Carpet',
       '24-Storey Elevation with Panoramic Mountain & Greenery Views',
       '100+ Amenities including Heated Pool & Pet Exercise Park',
       'Opposite Sentosa Water Park & 2 Mins to Expressway',
@@ -147,9 +147,9 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
   },
   {
     path: 'flats/3-bhk-flats-in-kiwale',
-    title: '3 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam Sky Residences',
+    title: '3 BHK Flats in Kiwale | Harico Kiwale & Harico Diwaam from ₹89.90 Lacs*',
     eyebrow: 'Sky Living Collection',
-    subtitle: 'Palatial 3 BHK residences on 24-storey sky towers with 1,108 sq.ft carpet, designer lobbies, and 12 luxury guest suites.',
+    subtitle: 'Palatial 3 BHK residences on 24-storey sky towers from ₹89.90 Lacs* with 1,108 sq.ft carpet, designer lobbies, and 12 luxury guest suites.',
     description: 'Experience ultra-luxury at Harico Divaam in Kiwale. Designed for grand family celebrations and quiet sunset moments, our 3 BHK sky residences set a new standard for luxury in PCMC.',
     targetLocation: 'Kiwale',
     targetBhk: '3 BHK',
@@ -159,7 +159,7 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
       '24th Floor Sky Observation Lounge & Sky Gymnasium',
       '12 Fully Furnished Guest Suites for Visiting Relatives',
       'Private 40-Seater Mini Theatre with Dolby Atmos Sound',
-      'Prices starting from ₹87.00 Lacs* Onwards'
+      'Prices starting from ₹89.90 Lacs* Onwards'
     ]
   },
 
@@ -198,9 +198,9 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
   // 4. Exact-Match Keyword Landing Pages for Search Hardening
   {
     path: 'harico-new-launch',
-    title: 'Harico New Launch | Major Launch Harico Diwaam Kiwale Dec 2030 Starts ₹71L*',
+    title: 'Harico New Launch | Major Launch Harico Diwaam Kiwale Dec 2030 Starts ₹70L*',
     eyebrow: '🔥 Mega New Launch 2026',
-    subtitle: 'Explore the major flagship new launch of Harico Diwaam in Kiwale (Dec 2030) and Harico Edge in Punawale (June 2030). Tallest 24-storey towers opposite Sentosa Water Park starting ₹71.00 Lacs*.',
+    subtitle: 'Explore the major flagship new launch of Harico Diwaam in Kiwale (Dec 2030) and Harico Edge in Punawale (June 2030). Tallest 24-storey towers opposite Sentosa Water Park starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*).',
     description: 'Harico New Launch represents the latest landmark chapter by Harico Estates and Sentosa Developers. Featuring Harico Diwaam Kiwale — 5 iconic 24-storey sky towers across 5 acres with 100+ resort-grade amenities, sky gymnasium, observation deck, and seamless 2-minute connectivity to Mukai Chowk and Mumbai-Pune Expressway.',
     targetLocation: 'Kiwale',
     metaKeywords: 'Harico new launch, Harico new launch Kiwale, Harico new launch Pune, Harico new launch Punawale, Harico Diwaam new launch, Harico Divaam new launch, Harico Diwaam Kiwale new launch, Harico Diwaam, Harico Divaam, Harico Kiwale, Harico Punawale, Sentosa new launch, Sentosa Diwaam new launch, 2 BHK new launch Kiwale, 3 BHK new launch Kiwale, new launch flats near Expressway, हरिको नवीन लाँच, हरिको दिवाम नवीन लाँच पुणे',
@@ -209,13 +209,13 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
       'Directly Opposite Sentosa Water Park on Expressway Corridor',
       'Target Possession: December 2030 (MahaRERA PR1260002502389)',
       '100+ Curated Lifestyle Amenities & 24th Floor Sky Observation Deck',
-      'Attractive Pre-Launch Inaugural Pricing starting at ₹71.00 Lacs*',
+      'Attractive Pre-Launch Inaugural Pricing starting at ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*)',
       '2 Minutes to Mukai Chowk BRTS & 15 Minutes to Hinjewadi Phase 1'
     ]
   },
   {
     path: 'harico-diwaam-kiwale',
-    title: 'Harico Diwaam Kiwale | 2 & 3 BHK Flats Opposite Sentosa Water Park Starts ₹71L*',
+    title: 'Harico Diwaam Kiwale | 2 & 3 BHK Flats Opposite Sentosa Water Park Starts ₹70L*',
     eyebrow: 'Signature Sky Landmark',
     subtitle: 'Harico Diwaam (Harico Divaam Kiwale): 24-storey luxury sky towers opposite Sentosa Water Park & Resort. Possession Dec 2030. MahaRERA PR1260002502389.',
     description: 'Harico Diwaam Kiwale is the flagship high-rise development by Harico Estates and Sentosa Developers. Offering luxury 2 & 3 BHK residences with 100+ amenities, sky gymnasium, creator studios, private cinema, and immediate access to Mukai Chowk, Ravet, and Mumbai-Pune Expressway.',
@@ -227,12 +227,12 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
       'Directly Opposite Sentosa Water Park & Resorts',
       '100+ Curated World-Class Lifestyle Amenities',
       'MahaRERA Sanctioned PR1260002502389 | Possession Dec 2030',
-      'Prices starting at ₹71.00 Lacs* with Flexible Milestone Payment Plan'
+      'Prices starting at ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*) with Flexible Milestone Payment Plan'
     ]
   },
   {
     path: 'harico-kiwale',
-    title: 'Harico Kiwale | Luxury 2 & 3 BHK Flats in Kiwale Ravet Pune Starts ₹71L*',
+    title: 'Harico Kiwale | Luxury 2 & 3 BHK Flats in Kiwale Ravet Pune Starts ₹70L*',
     eyebrow: 'Kiwale Real Estate Ecosystem',
     subtitle: 'Discover Harico Kiwale residences by Sentosa Developers. Featuring Harico Diwaam with 24-storey sky elevation, 100+ amenities, and immediate access to Mumbai-Pune Expressway.',
     description: 'Harico Kiwale delivers world-class residential architecture to the Kiwale-Ravet growth belt. Centered around Harico Diwaam opposite Sentosa Water Park, residents enjoy unobstructed Sahyadri mountain vistas, zero space wastage layouts, and direct connectivity to Nigdi, Akurdi, and Hinjewadi.',
@@ -243,7 +243,7 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
       '24-Storey Landmark Sky Towers with Dual Balcony Homes',
       'Direct Proximity to Symbiosis University & Akurdi Railway Station',
       '100+ Resort-Style Amenities including 24th Floor Sky Lounge',
-      'Prices from ₹71.00 Lacs* Onwards with MahaRERA PR1260002502389'
+      'Prices from ₹70.00 Lacs* Onwards (3 BHK from ₹89.90 Lacs*) with MahaRERA PR1260002502389'
     ]
   },
   {
@@ -264,9 +264,9 @@ export const programmaticRoutes: ProgrammaticRouteConfig[] = [
   },
   {
     path: 'flats-opposite-sentosa-water-park-kiwale',
-    title: 'Flats Opposite Sentosa Water Park Kiwale | Harico Diwaam 2 & 3 BHK Sky Towers',
+    title: 'Flats Opposite Sentosa Water Park Kiwale | Harico Diwaam 2 & 3 BHK Starts ₹70L*',
     eyebrow: 'Prime Expressway Landmark',
-    subtitle: 'Premium 2 & 3 BHK residences situated directly opposite Sentosa Water Park & Resort on the Kiwale-Ravet Expressway corridor. Starts ₹71.00 Lacs*.',
+    subtitle: 'Premium 2 & 3 BHK residences situated directly opposite Sentosa Water Park & Resort on the Kiwale-Ravet Expressway corridor. Starts ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*).',
     description: 'Looking for flats opposite Sentosa Water Park Kiwale? Harico Diwaam (Harico Divaam) is a 24-storey landmark development by Sentosa Developers. 5 acres, 5 sky towers, 100+ curated amenities, and unbeatable connectivity to Mukai Chowk, Ravet, and Hinjewadi.',
     targetLocation: 'Kiwale',
     metaKeywords: 'Flats opposite Sentosa Water Park, Flats opposite Sentosa Water Park Kiwale, Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Sentosa Diwaam, Sentosa Water Park Kiwale Flats, Kiwale Ravet High Rise, 2 BHK opposite Sentosa, 3 BHK opposite Sentosa Water Park, Harico Kiwale, Sentosa Developers Kiwale, सेंटोसा वॉटर पार्क जवळील फ्लॅट्स किवाळे',

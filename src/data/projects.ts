@@ -172,16 +172,16 @@ export const projectsData: Record<string, Project> = {
         location: 'Kiwale, Pune',
         status: 'Upcoming',
         type: '2 & 3 BHK Ultra-Luxury High-Rise Residences',
-        price: 'Starts ₹71.00 Lacs*',
-        startingPriceNumeric: 71.0,
+        price: 'Starts ₹70.00 Lacs*',
+        startingPriceNumeric: 70.0,
         possession: 'December 2030',
         landParcel: '5.0 Acres Megastructure',
         towers: '5 Iconic Sky Towers',
         floors: '24 Storeys (Tallest Towers in Kiwale-Ravet)',
         unitsTotal: '500+ Luxury Residences',
         image: '/assets/harico-divaam-hero.jpg',
-        tagline: '🚨 Flagship Mega Launch | Tallest 24-Storey Landmark Opposite Sentosa Water Park | Possession Dec 2030',
-        description: 'Harico Divaam (Harico Diwaam Kiwale by Sentosa Developers) is the premier flagship mega new launch of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park with possession scheduled for December 2030, Divaam offers over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones. Featuring expansive carpet layouts, designer sky lounges, co-working studios, and unmatched expressway connectivity.',
+        tagline: '🚨 Flagship Mega Launch | Tallest 24-Storey Landmark Opposite Sentosa Water Park | Starts ₹70L* (3 BHK from ₹89.90L*) | Possession Dec 2030',
+        description: 'Harico Divaam (Harico Diwaam Kiwale by Sentosa Developers) is the premier flagship mega new launch of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park with possession scheduled for December 2030, Divaam offers luxury 2 BHK residences from ₹70 Lacs* and spacious 3 BHK residences from ₹89.90 Lacs* onwards with over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones.',
         highlights: [
             '🔥 Major New Launch: Tallest 24-Storey High-Rise Towers in Kiwale-Ravet',
             'Target Possession: December 2030 with MahaRERA PR1260002502389 Backing',
@@ -293,11 +293,11 @@ export const projectsData: Record<string, Project> = {
             { title: 'Ojas Multispecialty Hospital Ravet', time: '06 Min', distance: '3.1 km', category: 'Healthcare' }
         ],
         configurations: [
-            { type: '2 BHK Smart', carpet: '724 sq.ft', price: '₹ 71.00 - 73.00 Lacs*', bedrooms: 2 },
+            { type: '2 BHK Smart', carpet: '724 sq.ft', price: '₹ 70.00 Lacs* Onwards', bedrooms: 2 },
             { type: '2 BHK Comfort', carpet: '760 sq.ft', price: '₹ 74.00 - 76.00 Lacs*', bedrooms: 2 },
             { type: '2 BHK Prime', carpet: '791 sq.ft', price: '₹ 77.00 - 79.00 Lacs*', bedrooms: 2 },
             { type: '2 BHK Grand', carpet: '848 sq.ft', price: '₹ 80.00 - 82.00 Lacs*', bedrooms: 2 },
-            { type: '3 BHK Smart', carpet: '920 sq.ft', price: '₹ 87.00 - 89.00 Lacs*', bedrooms: 3 },
+            { type: '3 BHK Smart', carpet: '920 sq.ft', price: '₹ 89.90 Lacs* Onwards', bedrooms: 3 },
             { type: '3 BHK Comfort', carpet: '983 sq.ft', price: '₹ 93.00 - 95.00 Lacs*', bedrooms: 3 },
             { type: '3 BHK Prime', carpet: '1051 sq.ft', price: '₹ 99.00 - 1.02 Cr*', bedrooms: 3 },
             { type: '3 BHK Grand', carpet: '1108 sq.ft', price: '₹ 1.05 - 1.08 Cr*', bedrooms: 3 }
@@ -316,7 +316,7 @@ export const projectsData: Record<string, Project> = {
         ],
         seo: {
             title: 'Harico Diwaam Kiwale | Major New Launch 2 & 3 BHK Flats Opposite Sentosa Water Park',
-            description: 'Harico Diwaam (Harico Divaam Kiwale): Major New Launch 24-storey luxury sky towers in Kiwale Ravet opposite Sentosa Water Park starting ₹71 Lacs*. Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+            description: 'Harico Diwaam (Harico Divaam Kiwale): Major New Launch 24-storey luxury sky towers in Kiwale Ravet opposite Sentosa Water Park starting ₹70 Lacs* (3 BHK from ₹89.90 Lacs* onwards). Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
             keywords: generateKeywords('harico-diwaam')
         }
     },

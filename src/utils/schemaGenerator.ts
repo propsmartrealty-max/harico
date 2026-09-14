@@ -37,7 +37,7 @@ export const generateOrganizationSchema = () => {
         "description": "Premier real estate developer in West Pune & PCMC with a 39-year legacy (since 1987). Builders of Harico Edge (Punawale), Harico Divaam / Diwaam (Kiwale Ravet), Harico Pride (Punawale), Sentosa Ekam, Sentosa Serene, and Sentosa Paradise.",
         "telephone": "+91-7744009295",
         "email": "contact@haricoestates.in",
-        "priceRange": "₹71.00 Lacs - ₹1.50 Cr",
+        "priceRange": "₹70.00 Lacs - ₹1.50 Cr",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "4.9",
@@ -116,12 +116,12 @@ export const generateOrganizationSchema = () => {
                         "url": "https://haricoestates.in/project/harico-divaam"
                     },
                     "priceCurrency": "INR",
-                    "price": "7100000",
+                    "price": "7000000",
                     "priceSpecification": {
                         "@type": "PriceSpecification",
-                        "price": "7100000",
+                        "price": "7000000",
                         "priceCurrency": "INR",
-                        "minPrice": "7100000",
+                        "minPrice": "7000000",
                         "maxPrice": "10800000"
                     }
                 },
@@ -288,7 +288,7 @@ export const generateProjectFaqSchema = (project: Project) => {
         faqs = [
             {
                 name: "What is the starting price for flats in Harico Divaam Kiwale?",
-                text: "Harico Divaam luxury 2 & 3 BHK residences start from ₹71.00 Lacs* onwards for 724 sq.ft carpet area with panoramic high-rise views."
+                text: "Harico Divaam luxury 2 & 3 BHK residences start from ₹70.00 Lacs* onwards for 2 BHK and ₹89.90 Lacs* onwards for 3 BHK with panoramic high-rise views."
             },
             {
                 name: "How many floors and towers are in Harico Divaam Kiwale?",
@@ -346,7 +346,7 @@ export const generateFaqSchema = () => {
                 "name": "What is the price and elevation of Harico Divaam in Kiwale Ravet?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Harico Divaam is the tallest residential landmark in the Kiwale-Ravet corridor, featuring 5 iconic 24-storey towers across 5 acres. 2 & 3 BHK luxury residences start from ₹71.00 Lacs* onwards directly opposite Sentosa Water Park."
+                    "text": "Harico Divaam is the tallest residential landmark in the Kiwale-Ravet corridor, featuring 5 iconic 24-storey towers across 5 acres. 2 BHK luxury residences start from ₹70.00 Lacs* and 3 BHK from ₹89.90 Lacs* onwards directly opposite Sentosa Water Park."
                 }
             },
             {

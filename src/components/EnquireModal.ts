@@ -45,7 +45,7 @@ export function createEnquireModal(): HTMLElement {
           <div class="chip-selector-grid" id="project-chip-group">
             <button type="button" class="project-chip active" data-project="Harico Divaam (Kiwale)">
               <span class="chip-title">Harico Divaam</span>
-              <span class="chip-meta">Kiwale-Ravet • Starts ₹71L*</span>
+              <span class="chip-meta">Kiwale-Ravet • Starts ₹70L*</span>
             </button>
             <button type="button" class="project-chip" data-project="Harico Edge (Punawale)">
               <span class="chip-title">Harico Edge</span>
