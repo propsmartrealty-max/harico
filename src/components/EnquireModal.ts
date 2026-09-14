@@ -43,8 +43,8 @@ export function createEnquireModal(): HTMLElement {
         <div class="form-section-group">
           <label class="adv-label">1. Select Project of Interest *</label>
           <div class="chip-selector-grid" id="project-chip-group">
-            <button type="button" class="project-chip active" data-project="Harico Divaam (Kiwale)">
-              <span class="chip-title">Harico Divaam</span>
+            <button type="button" class="project-chip active" data-project="Harico Diwaam (Kiwale)">
+              <span class="chip-title">Harico Diwaam</span>
               <span class="chip-meta">Kiwale-Ravet • Starts ₹70L*</span>
             </button>
             <button type="button" class="project-chip" data-project="Harico Edge (Punawale)">
@@ -131,7 +131,7 @@ export function createEnquireModal(): HTMLElement {
   const btnText = submitBtn.querySelector('.btn-text') as HTMLElement;
   const btnLoader = submitBtn.querySelector('.btn-loader') as HTMLElement;
 
-  let selectedProject = 'Harico Divaam (Kiwale)';
+  let selectedProject = 'Harico Diwaam (Kiwale)';
 
   // Chip selection logic
   projectChips.forEach((chip) => {

@@ -66,7 +66,7 @@ export function createHero(): HTMLElement {
             <select id="finder-location" class="finder-select-clean">
               <option value="all">All Micro-Markets (Punawale & Kiwale)</option>
               <option value="punawale">Punawale, Pune (Harico Edge & Pride)</option>
-              <option value="kiwale">Kiwale, Pune (Harico Divaam 24-Storey)</option>
+              <option value="kiwale">Kiwale, Pune (Harico Diwaam 24-Storey)</option>
             </select>
           </div>
 

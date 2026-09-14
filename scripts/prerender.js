@@ -57,13 +57,13 @@ const projects = [
   {
     slug: 'harico-divaam',
     id: '2',
-    title: 'Harico Divaam (Harico Diwaam Kiwale) | Sentosa Developers | 2 & 3 BHK Sky Towers',
-    name: 'Harico Divaam (Harico Diwaam Kiwale)',
+    title: 'Harico Diwaam Kiwale | 2 & 3 BHK Sky Towers by Sentosa Developers',
+    name: 'Harico Diwaam',
     location: 'Kiwale-Ravet, Pune',
     price: 'Starts ₹70.00 Lacs*',
     possession: 'December 2030',
     rera: 'PR1260002502389',
-    description: 'Harico Divaam (Harico Diwaam Kiwale) by Sentosa Developers: 24-storey luxury sky towers in Kiwale Ravet opposite Sentosa Water Park starting ₹70 Lacs* (3 BHK from ₹89.90 Lacs* onwards). Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+    description: 'Harico Diwaam in Kiwale Ravet by Sentosa Developers: 24-storey luxury sky towers opposite Sentosa Water Park starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs* onwards). Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
     keywords: 'Harico Diwaam, Harico Diwaam Kiwale, Harico Kiwale, Harico Divaam, Harico Divaam Kiwale, Harico new launch, Harico new launch Kiwale, Harico new launch Pune, Harico new launch Punawale, Harico Diwaam new launch, Harico Divaam new launch, Harico Diwaam Kiwale new launch, Sentosa Diwaam, Sentosa Divaam, Sentosa Harico Diwaam, Sentosa Harico Divaam, Codename Divine Kiwale, Harico Diwaam Price, Harico Divaam Price, Harico Diwaam 2 BHK, Harico Diwaam 3 BHK, Harico Diwaam Floor Plan, Harico Diwaam Brochure PDF, Harico Diwaam Sample Flat, Harico Diwaam RERA PR1260002502389, Harico Diwaam Possession December 2030, Harico Diwaam 24 Storey Towers, Tallest Towers in Kiwale Ravet, 5 Sky Towers Kiwale, Flats opposite Sentosa Water Park, Flats near Mukai Chowk, Symbiosis University Kiwale, Kiwale Ravet Real Estate, 2 BHK under 75 lakh Kiwale, 3 BHK under 1 crore Kiwale, Contact 7744009295, हरिको दिवाम किवाळे, हॅरिको दिवाम, हरिको किवाळे, हरिको दिवाम नवीन लाँच, हरिको नवीन लाँच पुणे',
     image: '/assets/harico-divaam-hero.jpg',
     configs: [
@@ -357,13 +357,6 @@ projects.forEach(project => {
     "image": `https://haricoestates.in${project.image}`,
     "telephone": "+91-7744009295",
     "priceRange": project.price,
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "148",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "INR",
@@ -399,14 +392,6 @@ projects.forEach(project => {
       { "@type": "LocationFeatureSpecification", "name": "Mivan Monolithic Concrete Structure", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Co-Working Lounges & Creator Studios", "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Dual Balconies", "value": true }
-    ],
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "author": { "@type": "Person", "name": "Rahul Deshmukh" },
-        "reviewBody": `${project.name} by Sentosa Developers offers top-tier construction, clear MahaRERA compliance, and ideal connectivity to Mumbai-Pune Expressway.`
-      }
     ]
   };
 

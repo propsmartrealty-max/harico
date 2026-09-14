@@ -44,9 +44,9 @@ export function createContactSection(): HTMLElement {
               <div class="form-group-clean">
                 <label class="form-lbl">Preferred Project *</label>
                 <select id="contact-project" class="input-clean" required>
-                  <option value="Harico Edge (Punawale)">Harico Edge (Punawale - 2 & 3 BHK)</option>
-                  <option value="Harico Divaam (Kiwale-Ravet)">Harico Divaam (Kiwale - 24 Storeys)</option>
-                  <option value="Harico Pride (Punawale)">Harico Pride (Punawale - Pre-Launch)</option>
+                  <option value="All Projects">All Projects / General Enquiry</option>
+                  <option value="Harico Diwaam (Kiwale-Ravet)">Harico Diwaam (Kiwale - 24 Storeys)</option>
+                  <option value="Harico Edge (Punawale)">Harico Edge (Punawale - Near Bhumkar Chowk)</option>
                   <option value="All Sentosa Projects">All Projects / Investment Advice</option>
                 </select>
               </div>
@@ -107,7 +107,7 @@ export function createContactSection(): HTMLElement {
             </div>
 
             <div class="office-loc-item">
-              <p class="font-bold text-navy text-sm m-0">Harico Divaam Sales Lounge</p>
+              <p class="font-bold text-navy text-sm m-0">Harico Diwaam Sales Lounge</p>
               <p class="text-xs text-muted m-0">Opposite Sentosa Water Park, Mukai Chowk corridor, Kiwale-Ravet, PCMC 412101</p>
               <a href="https://www.google.com/maps?q=harico+divaam" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
                 <i class="fa-solid fa-diamond-turn-right mr-1"></i> Get Driving Directions &rarr;

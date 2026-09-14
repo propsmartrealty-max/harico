@@ -12,7 +12,7 @@ export function createPrivacyPolicy(): HTMLElement {
       '<p>Sentosa Developers ("we," "our," or "us") operates the Harico Estates website. We collect personal information out of business necessity. This includes your name, email address, phone number, and any other details you provide when filling out contact forms or interacting with our digital assets.</p>' +
 
       '<h3>2. How We Use Your Information</h3>' +
-      '<p>The information collected is used exclusively to provide you with property updates, sales offers, and customer service. We may send you promotional emails or SMS messages regarding new launches like Harico Edge, Harico Divaam, and Harico Pride.</p>' +
+      '<p>The information collected is used exclusively to provide you with property updates, sales offers, and customer service. We may send you promotional emails or SMS messages regarding new launches like Harico Edge, Harico Diwaam, and Harico Pride.</p>' +
 
       '<h3>3. Data Protection and MahaRERA Compliance</h3>' +
       '<p>We implement stringent security measures to maintain the safety of your personal data. We comply with all local privacy regulations and MahaRERA guidelines for consumer transparency.</p>' +
@@ -50,7 +50,7 @@ export function createTermsOfUse(): HTMLElement {
       '<h3>3. MahaRERA Registration</h3>' +
       '<p>All projects listed on this platform are registered with MahaRERA. The official details are physically verified and actively updated on the MahaRERA website. The numbers assigned are:<br>' +
       'Harico Edge: <strong>P52100031773</strong><br>' +
-      'Harico Divaam: <strong>PR1260002502389</strong><br>' +
+      'Harico Diwaam: <strong>PR1260002502389</strong><br>' +
       'Harico Pride: <strong>P52100018471</strong></p>' +
 
       '<h3>4. Pricing</h3>' +

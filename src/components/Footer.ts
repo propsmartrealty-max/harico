@@ -103,8 +103,8 @@ export function createFooter(): HTMLElement {
                  <div style="font-size: 0.6rem; color: #CBD5E1;">P52100031773</div>
              </div>
              <div style="text-align: center;">
-                 <img src="/assets/harico-divaam-rera-qr.png" alt="Harico Divaam QR" title="Harico Divaam QR" style="width: 55px; height: 55px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
-                 <div style="font-size: 0.65rem; color: var(--color-gold); margin-top: 4px; font-weight: bold;">Harico Divaam</div>
+                 <img src="/assets/harico-divaam-rera-qr.png" alt="Harico Diwaam QR" title="Harico Diwaam QR" style="width: 55px; height: 55px; border: 2px solid var(--color-gold); border-radius: 6px; background: white; padding: 3px;">
+                 <div style="font-size: 0.65rem; color: var(--color-gold); margin-top: 4px; font-weight: bold;">Harico Diwaam</div>
                  <div style="font-size: 0.6rem; color: #CBD5E1;">PR1260002502389</div>
              </div>
              <div style="text-align: center;">
@@ -114,7 +114,7 @@ export function createFooter(): HTMLElement {
              </div>
          </div>
          <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); max-width: 950px; margin: 0 auto; line-height: 1.6;">
-            <strong>MahaRERA Registered Projects:</strong> Harico Edge (P52100031773) | Harico Divaam (PR1260002502389) | Harico Pride (P52100018471). 
+            <strong>MahaRERA Registered Projects:</strong> Harico Edge (P52100031773) | Harico Diwaam (PR1260002502389) | Harico Pride (P52100018471). 
             Comprehensive project details, approved building layouts, and legal title certificates are available on the official MahaRERA portal (<a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" style="color:var(--color-gold); text-decoration: underline;">maharera.mahaonline.gov.in</a>). 
             Harico Estates is a flagship real estate venture by Sentosa Developers.
          </p>
@@ -129,7 +129,7 @@ export function createFooter(): HTMLElement {
         </p>
 
         <p class="seo-text mt-xs">
-            <strong>🔥 Kiwale Real Estate Market:</strong> <a href="/location/kiwale" class="seo-link">Kiwale Real Estate</a> | <a href="/flats/2-bhk-flats-in-kiwale" class="seo-link">2 BHK Flats Kiwale</a> | <a href="/flats/3-bhk-flats-in-kiwale" class="seo-link">3 BHK Flats Kiwale</a> | <a href="/project/harico-divaam" class="seo-link">Harico Divaam Kiwale</a> | Sentosa Harico Divaam | Tallest 24-Storey Towers Kiwale | Flats opposite Sentosa Water Park | Flats near Mukai Chowk | Flats near Ravet | Flats near Dehu Road | Kiwale Property Investment | New Launch Flats Kiwale | 2 BHK under 75 lakh Kiwale | 3 BHK Luxury High-Rise Kiwale.
+            <strong>🔥 Kiwale Real Estate Market:</strong> <a href="/location/kiwale" class="seo-link">Kiwale Real Estate</a> | <a href="/flats/2-bhk-flats-in-kiwale" class="seo-link">2 BHK Flats Kiwale</a> | <a href="/flats/3-bhk-flats-in-kiwale" class="seo-link">3 BHK Flats Kiwale</a> | <a href="/project/harico-divaam" class="seo-link">Harico Diwaam Kiwale</a> | Sentosa Harico Diwaam | Tallest 24-Storey Towers Kiwale | Flats opposite Sentosa Water Park | Flats near Mukai Chowk | Flats near Ravet | Flats near Dehu Road | Kiwale Property Investment | New Launch Flats Kiwale | 2 BHK under 75 lakh Kiwale | 3 BHK Luxury High-Rise Kiwale.
         </p>
 
         <p class="seo-text mt-xs">

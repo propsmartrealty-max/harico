@@ -199,29 +199,6 @@ export const generateProjectSchema = (project: Project) => {
         "url": `https://haricoestates.in/project/${project.slug}`,
         "telephone": "+91-7744009295",
         "keywords": project.seo?.keywords || "",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "92",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Rajesh Malhotra (Tech Lead, Hinjewadi)" },
-                "datePublished": "2026-02-15",
-                "reviewBody": `The layout at ${project.title} has zero space wastage. Dual balconies and high-speed expressway connectivity made it an easy decision for our family.`,
-                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-            },
-            {
-                "@type": "Review",
-                "author": { "@type": "Person", "name": "Sneha & Amit Kulkarni" },
-                "datePublished": "2026-01-20",
-                "reviewBody": `Mivan construction quality and the 39-year Sentosa legacy give complete peace of mind. MahaRERA registration and verified legal titles.`,
-                "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-            }
-        ],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": `${project.title}, ${project.location}`,

@@ -15,10 +15,10 @@ export function createTestimonials(): HTMLElement {
     {
       name: 'Amitabh Deshmukh',
       designation: 'VP of Engineering, Global Tech Firm',
-      project: 'Harico Divaam Investor',
+      project: 'Harico Diwaam Investor',
       rating: 5,
       avatar: '💼',
-      quote: 'Sentosa Developers’ 39-year track record gave me complete peace of mind. Harico Divaam with 24 storeys and 100+ resort amenities is a landmark in Kiwale. The expressway connectivity and upcoming metro make it Pune’s most promising capital appreciation asset.'
+      quote: 'Sentosa Developers’ 39-year track record gave me complete peace of mind. Harico Diwaam with 24 storeys and 100+ resort amenities is a landmark in Kiwale. The expressway connectivity and upcoming metro make it Pune’s most promising capital appreciation asset.'
     },
     {
       name: 'Pooja & Vikram Sharma',
