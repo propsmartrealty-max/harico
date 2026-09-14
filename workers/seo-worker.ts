@@ -247,6 +247,21 @@ export default {
           el.setAttribute('content', routeSEO.ogImage);
         }
       })
+      .on('meta[name="twitter:title"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.title);
+        }
+      })
+      .on('meta[name="twitter:description"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.description);
+        }
+      })
+      .on('meta[name="twitter:image"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.ogImage);
+        }
+      })
       .on('head', {
         element(el) {
           el.append(
@@ -291,8 +306,9 @@ export default {
     newHeaders.set('CDN-Cache-Control', 'max-age=604800');
     newHeaders.set('Cache-Tag', 'harico-estates-seo, sentosa-developers, harico-diwaam, sentosa-punawale, harico-kiwale, harico-punawale');
 
+    // Universal unconstrained SERP snippet controls for Googlebot & search engines
+    newHeaders.set('X-Robots-Tag', 'all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
     if (isSearchEngine || isAIBot || isSocialBot) {
-      newHeaders.set('X-Robots-Tag', 'all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
       newHeaders.set('X-Edge-Bot-Status', 'Indexed-AI-Verified');
     }
 

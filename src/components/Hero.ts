@@ -28,8 +28,8 @@ export function createHero(): HTMLElement {
 
       <!-- Refined Hero Headline -->
       <h1 class="hero-title-refined fade-in-up delay-1">
-        Architectural Elegance <br />
-        <span class="text-gold-gradient">Crafted for Elevated Living</span>
+        Harico Diwaam & Harico Edge <br />
+        <span class="text-gold-gradient">Luxury 2 & 3 BHK Flats in Punawale & Kiwale</span>
       </h1>
       
       <!-- Refined Subtitle -->

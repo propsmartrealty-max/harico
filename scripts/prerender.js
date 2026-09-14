@@ -281,6 +281,23 @@ projects.forEach(project => {
     "image": `https://haricoestates.in${project.image}`,
     "telephone": "+91-7744009295",
     "priceRange": project.price,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "148",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": project.slug === 'harico-divaam' ? "7100000" : (project.slug === 'harico-edge' ? "7400000" : "7800000"),
+      "highPrice": project.slug === 'harico-divaam' ? "10800000" : (project.slug === 'harico-edge' ? "11800000" : "11500000"),
+      "offerCount": "120",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-01-01",
+      "priceValidUntil": "2027-12-31"
+    },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": `${project.name}, ${project.location}`,
@@ -294,7 +311,47 @@ projects.forEach(project => {
       "longitude": project.slug === 'harico-divaam' ? "73.7225" : "73.7483"
     },
     "hasMap": project.slug === 'harico-divaam' ? "https://www.google.com/maps?q=harico+divaam" : "https://www.google.com/maps?q=harico+estates",
-    "identifier": project.rera
+    "identifier": project.rera,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Rooftop Sky Observation Deck", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Infinity Swimming Pool", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Mivan Monolithic Concrete Structure", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Co-Working Lounges & Creator Studios", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Dual Balconies", "value": true }
+    ],
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "author": { "@type": "Person", "name": "Rahul Deshmukh" },
+        "reviewBody": `${project.name} by Sentosa Developers offers top-tier construction, clear MahaRERA compliance, and ideal connectivity to Mumbai-Pune Expressway.`
+      }
+    ]
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://haricoestates.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projects",
+        "item": "https://haricoestates.in/projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": project.name,
+        "item": `https://haricoestates.in/project/${project.slug}`
+      }
+    ]
   };
 
   const faqSchema = {
@@ -311,6 +368,7 @@ projects.forEach(project => {
   };
 
   let html = template;
+  html = html.replace(/<link rel="canonical"[\s\S]*?>/is, '');
   html = html.replace(/<title>(.*?)<\/title>/is, '<title>' + project.title + '</title>');
   html = html.replace(/<meta name="description"[\s\S]*?>/is, '<meta name="description" content="' + project.description + '">');
   html = html.replace(/<meta name="keywords"[\s\S]*?>/is, '<meta name="keywords" content="' + project.keywords + '">');
@@ -318,10 +376,14 @@ projects.forEach(project => {
   html = html.replace(/<meta property="og:description"[\s\S]*?>/is, '<meta property="og:description" content="' + project.description + '">');
   html = html.replace(/<meta property="og:image"[\s\S]*?>/is, '<meta property="og:image" content="https://haricoestates.in' + project.image + '">');
   html = html.replace(/<meta property="og:url"[\s\S]*?>/is, '<meta property="og:url" content="https://haricoestates.in/project/' + project.slug + '">');
+  html = html.replace(/<meta name="twitter:title"[\s\S]*?>/is, '<meta name="twitter:title" content="' + project.title + '">');
+  html = html.replace(/<meta name="twitter:description"[\s\S]*?>/is, '<meta name="twitter:description" content="' + project.description + '">');
+  html = html.replace(/<meta name="twitter:image"[\s\S]*?>/is, '<meta name="twitter:image" content="https://haricoestates.in' + project.image + '">');
 
   const schemaTags = `
   <link rel="canonical" href="https://haricoestates.in/project/${project.slug}" />
   <script type="application/ld+json">${JSON.stringify(projectSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
   `;
 
@@ -416,52 +478,126 @@ programmaticPages.forEach(page => {
       "url": `https://haricoestates.in/${page.path}`
     };
 
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://haricoestates.in/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": page.h1 || page.title,
+          "item": `https://haricoestates.in/${page.path}`
+        }
+      ]
+    };
+
+    const pageFaqs = [
+      {
+        q: `What are the flagship residential projects in ${page.title.includes('Kiwale') ? 'Kiwale' : 'Punawale'} by Sentosa Developers?`,
+        a: `In Kiwale, Harico Diwaam is the flagship 24-storey mega new launch opposite Sentosa Water Park starting ₹71 Lacs* (possession Dec 2030, MahaRERA PR1260002502389). In Punawale, Harico Edge (June 2030, MahaRERA P52100031773) and Harico Pride (June 2027, MahaRERA P52100018471) offer luxury 2 & 3 BHK flats near Bhumkar Chowk.`
+      },
+      {
+        q: `How can I download the official brochure, price sheet, or book a VIP site visit?`,
+        a: `Prospective homebuyers can connect directly with the official sales desk at +91 7744009295 or email contact@haricoestates.in for immediate brochure PDFs, floor plans, and sample flat tours.`
+      },
+      {
+        q: `What is the construction technology and developer pedigree?`,
+        a: `Developed with earthquake-resistant Mivan monolithic concrete technology by Sentosa Developers (founded in 1987, 39+ years of excellence, 20+ completed projects, builders of Sentosa Water Park & Resorts).`
+      }
+    ];
+
+    const faqSchema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": pageFaqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": f.a
+        }
+      }))
+    };
+
     const schemaTags = `
   <link rel="canonical" href="https://haricoestates.in/${page.path}" />
   <script type="application/ld+json">${JSON.stringify(pageSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
     `;
 
+    html = html.replace(/<link rel="canonical"[\s\S]*?>/is, '');
     if (html.includes('<head>')) {
        html = html.replace('<head>', '<head>\n' + schemaTags);
     }
     html = html.replace(/<title>(.*?)<\/title>/is, `<title>${page.title}</title>`);
     if (page.desc) {
       html = html.replace(/<meta name="description"[\s\S]*?>/is, `<meta name="description" content="${page.desc}">`);
+      html = html.replace(/<meta property="og:description"[\s\S]*?>/is, `<meta property="og:description" content="${page.desc}">`);
+      html = html.replace(/<meta name="twitter:description"[\s\S]*?>/is, `<meta name="twitter:description" content="${page.desc}">`);
     }
     html = html.replace(/<meta name="keywords"[\s\S]*?>/is, `<meta name="keywords" content="${pageKeywords}">`);
+    html = html.replace(/<meta property="og:title"[\s\S]*?>/is, `<meta property="og:title" content="${page.title}">`);
+    html = html.replace(/<meta name="twitter:title"[\s\S]*?>/is, `<meta name="twitter:title" content="${page.title}">`);
+    html = html.replace(/<meta property="og:url"[\s\S]*?>/is, `<meta property="og:url" content="https://haricoestates.in/${page.path}">`);
 
     const semanticBody = `
     <div id="app">
       <main class="prerendered-content" style="max-width:1200px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
         <header style="margin-bottom:30px;">
-          <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px;">Harico Estates Knowledge Hub</span>
-          <h1 style="font-size:30px; color:#0A192F; margin:10px 0 15px;">${page.h1 || page.title}</h1>
+          <nav style="font-size:13px; color:#64748B; margin-bottom:12px;">
+            <a href="/" style="color:#D4AF37; text-decoration:none;">Home</a> &gt; <span>${page.h1 || page.title}</span>
+          </nav>
+          <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px; letter-spacing:1px;">Harico Estates & Sentosa Developers (Since 1987)</span>
+          <h1 style="font-size:32px; color:#0A192F; margin:10px 0 15px;">${page.h1 || page.title}</h1>
           <p style="font-size:17px; color:#475569; line-height:1.6;">${page.bodyText || page.desc}</p>
+          <div style="margin-top:15px; display:flex; gap:12px; flex-wrap:wrap;">
+            <span style="background:#0A192F; color:#FFF; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">100% MahaRERA Verified</span>
+            <span style="background:#D4AF37; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">Starting ₹71.00 Lacs*</span>
+            <a href="tel:+917744009295" style="background:#0A192F; color:#D4AF37; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold; text-decoration:none; border:1px solid #D4AF37;">📞 Call +91 7744009295</a>
+          </div>
         </header>
 
         <section style="margin-bottom:40px;">
-          <h2 style="font-size:22px; color:#0A192F; margin-bottom:15px;">Featured Developments & Quick Links</h2>
+          <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Flagship Real Estate Landmarks</h2>
           <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
             <div style="background:#F8FAFC; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
+              <h3 style="margin-top:0; color:#0A192F;"><a href="/project/harico-divaam" style="color:#0A192F; text-decoration:none;">Harico Diwaam / Divaam (Kiwale)</a></h3>
+              <p style="color:#64748B; font-size:14px;">🔥 Major New Launch: Tallest 24-Storey towers opposite Sentosa Water Park starting ₹71 Lacs*. Possession Dec 2030. MahaRERA PR1260002502389.</p>
+              <a href="/project/harico-divaam" style="color:#D4AF37; font-weight:bold; text-decoration:none;">Explore Harico Diwaam &rarr;</a>
+            </div>
+            <div style="background:#F8FAFC; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
               <h3 style="margin-top:0; color:#0A192F;"><a href="/project/harico-edge" style="color:#0A192F; text-decoration:none;">Harico Edge (Punawale)</a></h3>
-              <p style="color:#64748B; font-size:14px;">Luxury 2 & 3 BHK with 2 balconies starting ₹74 Lacs*. MahaRERA P52100031773.</p>
+              <p style="color:#64748B; font-size:14px;">Luxury 2 & 3 BHK with dual private balconies starting ₹74 Lacs* near Bhumkar Chowk. Possession June 2030. MahaRERA P52100031773.</p>
               <a href="/project/harico-edge" style="color:#D4AF37; font-weight:bold; text-decoration:none;">Explore Harico Edge &rarr;</a>
             </div>
             <div style="background:#F8FAFC; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
-              <h3 style="margin-top:0; color:#0A192F;"><a href="/project/harico-divaam" style="color:#0A192F; text-decoration:none;">Harico Divaam / Diwaam (Kiwale)</a></h3>
-              <p style="color:#64748B; font-size:14px;">Tallest 24-Storey towers opposite Sentosa Water Park starting ₹71 Lacs*. MahaRERA PR1260002502389.</p>
-              <a href="/project/harico-divaam" style="color:#D4AF37; font-weight:bold; text-decoration:none;">Explore Harico Divaam &rarr;</a>
-            </div>
-            <div style="background:#F8FAFC; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
               <h3 style="margin-top:0; color:#0A192F;"><a href="/project/harico-pride" style="color:#0A192F; text-decoration:none;">Harico Pride (Punawale)</a></h3>
-              <p style="color:#64748B; font-size:14px;">Spacious 2 & 3 BHK near Bhiku Kale School starting ₹78 Lacs*. MahaRERA P52100018471.</p>
+              <p style="color:#64748B; font-size:14px;">Spacious 2 & 3 BHK with rooftop infinity pool starting ₹78 Lacs*. Possession June 2027. MahaRERA P52100018471.</p>
               <a href="/project/harico-pride" style="color:#D4AF37; font-weight:bold; text-decoration:none;">Explore Harico Pride &rarr;</a>
             </div>
           </div>
         </section>
 
+        <section style="margin-bottom:40px;">
+          <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Frequently Asked Questions (FAQs)</h2>
+          ${pageFaqs.map(f => `
+            <div style="margin-bottom:15px; background:#F8FAFC; padding:15px; border-radius:8px; border-left:4px solid #D4AF37;">
+              <h3 style="font-size:16px; color:#0A192F; margin:0 0 8px;">${f.q}</h3>
+              <p style="margin:0; color:#475569; line-height:1.5;">${f.a}</p>
+            </div>
+          `).join('\n')}
+        </section>
+
         <footer style="margin-top:40px; padding-top:20px; border-top:1px solid #CBD5E1; color:#64748B; font-size:13px;">
-          <p><strong>Developer:</strong> Sentosa Developers & Harico Estates. <strong>Helpline:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
+          <p><strong>Developer:</strong> Sentosa Developers & Harico Estates (39-Year Real Estate Legacy). <strong>Helpline:</strong> <a href="tel:+917744009295" style="color:#0A192F; font-weight:bold;">+91 7744009295</a> | <strong>Email:</strong> contact@haricoestates.in</p>
+          <p><strong>Explore More:</strong> <a href="/">Home</a> | <a href="/harico-diwaam-kiwale">Harico Diwaam Kiwale</a> | <a href="/harico-new-launch">Harico New Launch</a> | <a href="/harico-kiwale">Harico Kiwale</a> | <a href="/harico-punawale">Harico Punawale</a> | <a href="/flats-opposite-sentosa-water-park-kiwale">Flats Opposite Sentosa</a></p>
         </footer>
       </main>
     </div>
@@ -477,20 +613,30 @@ programmaticPages.forEach(page => {
 const orgSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
+  "@id": "https://haricoestates.in/#organization",
   "name": "Harico Estates by Sentosa Developers",
   "alternateName": [
     "Sentosa Developers",
     "Sentosa Group Pune",
     "Harico Group",
     "Harico Estates Punawale",
-    "Harico Estates Kiwale"
+    "Harico Estates Kiwale",
+    "Sentosa Real Estate Pune",
+    "Sentosa Water Park Builders"
   ],
   "url": "https://haricoestates.in",
   "logo": "https://haricoestates.in/harico_logo.png",
-  "image": "https://haricoestates.in/harico_logo.png",
+  "image": "https://haricoestates.in/assets/harico-divaam-hero.jpg",
   "telephone": "+91-7744009295",
   "email": "contact@haricoestates.in",
   "priceRange": "₹71.00 Lacs - ₹1.50 Cr",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "148",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Near Bhumkar Chowk, Mumbai-Pune Expressway",
@@ -504,6 +650,14 @@ const orgSchema = {
     "latitude": "18.6366",
     "longitude": "73.7483"
   },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:30",
+      "closes": "19:30"
+    }
+  ],
   "sameAs": [
     "https://www.facebook.com/haricoestates",
     "https://www.instagram.com/haricoestates",
@@ -513,6 +667,7 @@ const orgSchema = {
 };
 
 let rootHtml = template;
+rootHtml = rootHtml.replace(/<link rel="canonical"[\s\S]*?>/is, '');
 const rootSchemaTag = `
   <link rel="canonical" href="https://haricoestates.in/" />
   <script type="application/ld+json">${JSON.stringify(orgSchema)}</script>

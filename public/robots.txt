@@ -5,12 +5,23 @@
 User-agent: *
 Allow: /
 
+# Google Search Engine Crawlers
 User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Mediapartners-Google
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+# Bing, Apple, and AI Indexers
 User-agent: Bingbot
 Allow: /
 
