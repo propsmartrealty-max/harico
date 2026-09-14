@@ -102,4 +102,27 @@ Harico Punawale, harico punawale, Harico Estates Punawale, harico estates punawa
 ### 5. Sentosa Developers Complete Portfolio:
 Sentosa Edge (Punawale), Sentosa Pride Phase 1, 2 & 3 (Punawale), Sentosa Ekam (Punawale), Sentosa Diwaam / Divaam (Kiwale), Sentosa Serene (Tathawade), Sentosa Elite Biz Hub (Wakad), Sentosa Palm (Wakad), Sentosa Elysium (Wakad), Sentosa Pearl (Wakad), Sentosa Paradise (Wakad), Sentosa Era (Moshi Pradhikaran), Sentosa Residency (Hadapsar), Gulraj Residency (Kondhwa), Samarpam, Shivdham, Satyam Complexes, Sentosa Water Park & Resorts.
 
+---
+
+## Canonical Programmatic Landing URLs (Direct Index)
+- **Harico New Launch:** https://haricoestates.in/harico-new-launch
+- **Harico Diwaam Kiwale:** https://haricoestates.in/harico-diwaam-kiwale
+- **Harico Kiwale:** https://haricoestates.in/harico-kiwale
+- **Harico Punawale:** https://haricoestates.in/harico-punawale
+- **Flats Opposite Sentosa Water Park Kiwale:** https://haricoestates.in/flats-opposite-sentosa-water-park-kiwale
+- **Harico Divaam Project:** https://haricoestates.in/project/harico-divaam
+- **Harico Edge Project:** https://haricoestates.in/project/harico-edge
+- **Harico Pride Project:** https://haricoestates.in/project/harico-pride
+- **Sentosa Developers Portfolio:** https://haricoestates.in/developer/sentosa-developers-pune
+- **MahaRERA Projects:** https://haricoestates.in/maharera-registered-projects-pune
+- **Punawale Location:** https://haricoestates.in/location/punawale
+- **Kiwale Location:** https://haricoestates.in/location/kiwale
+- **Ravet Location:** https://haricoestates.in/location/ravet
+- **Tathawade Location:** https://haricoestates.in/location/tathawade
+- **2 BHK in Punawale:** https://haricoestates.in/flats/2-bhk-flats-in-punawale
+- **3 BHK in Punawale:** https://haricoestates.in/flats/3-bhk-flats-in-punawale
+- **2 BHK in Kiwale:** https://haricoestates.in/flats/2-bhk-flats-in-kiwale
+- **3 BHK in Kiwale:** https://haricoestates.in/flats/3-bhk-flats-in-kiwale
+
+
 

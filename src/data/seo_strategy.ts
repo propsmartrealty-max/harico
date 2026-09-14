@@ -98,16 +98,27 @@ export const sentosaBrandKeywords = [
 // PRIMARY #1 RANK TARGET 1: HARICO DIWAAM / DIVAAM (MAJOR NEW LAUNCH)
 // ==========================================
 export const focusHaricoDiwaamKeywords = [
+  // Exact Brand & Spelling Variations
   'Harico Diwaam',
   'harico diwaam',
   'Harico Divaam',
   'harico divaam',
   'Harico Diwam',
   'Harico Divam',
+  'Harico Dewaam',
+  'Harico Devam',
   'Harico Diwaam Kiwale',
   'harico diwaam kiwale',
   'Harico Divaam Kiwale',
   'harico divaam kiwale',
+  'Harico Diwam Kiwale',
+  'Harico Divam Kiwale',
+  'Harico Estates Diwaam Kiwale',
+  'Harico Estates Divaam Kiwale',
+  'Harico Estates Kiwale Diwaam',
+  'Harico Estates Kiwale Divaam',
+  
+  // New Launch Query Permutations
   'Harico new launch',
   'harico new launch',
   'Harico new launch Pune',
@@ -122,69 +133,161 @@ export const focusHaricoDiwaamKeywords = [
   'harico divaam new launch',
   'Harico Diwaam Kiwale new launch',
   'Harico Divaam Kiwale new launch',
-  'Harico Diwaam Kiwale Pune',
-  'Harico Divaam Kiwale Pune',
-  'Harico Diwaam Ravet',
-  'Harico Divaam Ravet',
-  'Harico Diwaam Mukai Chowk',
-  'Harico Divaam Mukai Chowk',
-  'Harico Diwaam Sentosa Water Park',
-  'Harico Divaam Sentosa Water Park',
+  'Harico new residential project Kiwale',
+  'Harico new launch near Sentosa Water Park',
+  'Harico upcoming project Kiwale 2026',
+  
+  // Sentosa Co-Brand Permutations
   'Sentosa Diwaam',
   'sentosa diwaam',
   'Sentosa Divaam',
   'sentosa divaam',
+  'Sentosa Diwam',
+  'Sentosa Divam',
   'Sentosa Harico Diwaam',
   'Sentosa Harico Divaam',
   'Sentosa Diwaam Kiwale',
   'Sentosa Divaam Kiwale',
+  'Sentosa Harico Diwaam Kiwale',
+  'Sentosa Harico Divaam Kiwale',
   'Codename Divine Kiwale',
   'Sentosa Divine Kiwale',
+  'Harico Codename Divine',
+  'Sentosa Codename Divine Kiwale',
+  
+  // Location & Corridor Permutations
+  'Harico Diwaam Kiwale Pune',
+  'Harico Divaam Kiwale Pune',
+  'Harico Diwaam Ravet',
+  'Harico Divaam Ravet',
+  'Harico Diwaam Kiwale Ravet',
+  'Harico Divaam Kiwale Ravet',
+  'Harico Diwaam Mukai Chowk',
+  'Harico Divaam Mukai Chowk',
+  'Harico Diwaam Sentosa Water Park',
+  'Harico Divaam Sentosa Water Park',
+  'Harico Diwaam opposite Sentosa',
+  'Harico Divaam opposite Sentosa',
+  'flats opposite Sentosa Water Park Kiwale',
+  'flats near Sentosa Water Park Kiwale',
+  'flats near Mukai Chowk Kiwale',
+  'flats near Akurdi Railway Station Kiwale',
+  'flats near Symbiosis Kiwale',
+  'Harico Diwaam Expressway',
+  'Harico Divaam Expressway corridor',
+  
+  // Typology, Area & Pricing Permutations
+  'Harico Diwaam 2 BHK',
+  'Harico Divaam 2 BHK',
+  'Harico Diwaam 2 BHK price',
+  'Harico Divaam 2 BHK price',
+  'Harico Diwaam 2 BHK price 71 lakhs',
+  'Harico Divaam 2 BHK price 71 lakhs',
+  'Harico Diwaam 2 BHK carpet area',
+  'Harico Divaam 2 BHK carpet area',
+  'Harico Diwaam 2 BHK 724 sq ft',
+  'Harico Diwaam 2 BHK 760 sq ft',
+  'Harico Diwaam 2 BHK 848 sq ft',
+  'Harico Diwaam 3 BHK',
+  'Harico Divaam 3 BHK',
+  'Harico Diwaam 3 BHK price',
+  'Harico Divaam 3 BHK price',
+  'Harico Diwaam 3 BHK carpet area',
+  'Harico Divaam 3 BHK carpet area',
+  'Harico Diwaam 3 BHK 920 sq ft',
+  'Harico Diwaam 3 BHK 1108 sq ft',
+  'Harico Diwaam 3 BHK price 87 lakhs',
+  'Harico Diwaam 2 BHK under 75 lakhs',
+  'Harico Diwaam 3 BHK under 1 crore',
+  '2 BHK flats in Harico Diwaam',
+  '2 BHK flats in Harico Divaam Kiwale',
+  '3 BHK flats in Harico Diwaam',
+  '3 BHK flats in Harico Divaam Kiwale',
+  '2 BHK flats in Kiwale Ravet',
+  '3 BHK flats in Kiwale Ravet',
+  
+  // Buyer Intent & Deliverables Permutations
   'Harico Diwaam price',
   'Harico Divaam price',
   'Harico Diwaam cost sheet',
-  'Harico Divaam 2 BHK price',
-  'Harico Diwaam 2 BHK price',
-  'Harico Divaam 3 BHK price',
-  'Harico Diwaam 3 BHK price',
+  'Harico Divaam cost sheet',
+  'Harico Diwaam all inclusive price',
   'Harico Diwaam floor plan',
   'Harico Divaam floor plan',
+  'Harico Diwaam 2 BHK floor plan',
+  'Harico Diwaam 3 BHK floor plan',
+  'Harico Diwaam master layout',
+  'Harico Divaam master layout',
+  'Harico Diwaam brochure',
+  'Harico Divaam brochure',
   'Harico Diwaam brochure pdf',
-  'Harico Divaam brochure pdf',
+  'Harico Divaam brochure pdf download',
   'Harico Diwaam sample flat',
   'Harico Divaam sample flat',
   'Harico Diwaam sample flat video',
-  'Harico Divaam sample flat video',
+  'Harico Divaam sample flat video tour',
+  'Harico Diwaam reviews',
+  'Harico Divaam reviews',
+  'Harico Diwaam construction update',
+  'Harico Divaam construction status',
+  'Harico Diwaam site visit booking',
+  
+  // Regulatory & Possession Permutations
+  'Harico Diwaam RERA',
+  'Harico Divaam RERA',
+  'Harico Diwaam RERA number',
   'Harico Diwaam RERA PR1260002502389',
   'Harico Divaam RERA PR1260002502389',
   'Harico Diwaam possession date',
   'Harico Divaam possession date',
   'Harico Diwaam possession December 2030',
   'Harico Divaam possession Dec 2030',
+  'Harico Diwaam delivery date 2030',
+  
+  // Scale & Architecture Permutations
   'Harico Diwaam 24 storeys',
+  'Harico Divaam 24 storeys',
+  'Harico Diwaam 24 floors',
   'Harico Divaam tallest towers in Kiwale',
+  'tallest high rise tower in Kiwale Ravet',
   'Harico Diwaam 5 sky towers',
-  'Harico Diwaam contact 7744009295',
-  'Harico Divaam contact 7744009295',
+  'Harico Divaam 5 sky towers 5 acres',
+  'Harico Diwaam 100 amenities',
+  'Harico Divaam sky lounge 24th floor',
+  'Harico Diwaam observation deck',
+  'Harico Diwaam 12 guest suites',
+  
+  // Contact & Location Coordinates Permutations
+  'Harico Diwaam contact number',
+  'Harico Divaam contact number',
+  'Harico Diwaam phone 7744009295',
+  'Harico Divaam phone 7744009295',
   'Harico Diwaam sales office Kiwale',
   'Harico Divaam sales office Kiwale',
+  'Harico Diwaam site office address',
   'Harico Diwaam Google Maps',
   'Harico Divaam Google Maps',
-  'flats opposite Sentosa Water Park Kiwale',
-  '2 BHK flats in Harico Diwaam',
-  '2 BHK flats in Harico Divaam Kiwale',
-  '3 BHK flats in Harico Diwaam',
-  '3 BHK flats in Harico Divaam Kiwale',
-  'Harico Diwaam 2 BHK starting 71 lakhs',
-  'Harico Diwaam 3 BHK starting 87 lakhs',
-  'Harico Diwaam review',
-  'Harico Diwaam construction update',
+  'Harico Diwaam driving directions',
+  'Harico Diwaam location map',
+  
+  // Marathi / Vernacular Permutations
   'हरिको दिवाम',
   'हॅरिको दिवाम',
   'हरिको दिवाम किवाळे',
+  'हरिको दिवाम किवाळे पुणे',
   'हरिको दिवाम नवीन लाँच',
+  'हरिको दिवाम किंमत',
+  'हरिको दिवाम २ बीएचके',
+  'हरिको दिवाम ३ बीएचके',
+  'हरिको दिवाम फ्लॉट्स किवाळे',
+  'हरिको दिवाम ब्रोशर',
+  'हरिको दिवाम रेरा PR1260002502389',
+  'हरिको दिवाम पझेशन डिसेंबर 2030',
+  'हरिको दिवाम २४ मजले',
+  'हरिको दिवाम सेंटोसा वॉटर पार्क',
   'हरिको नवीन लाँच पुणे',
-  'हरिको किवाळे २ आणि ३ बीएचके'
+  'हरिको किवाळे २ आणि ३ बीएचके',
+  'सेंटोसा दिवाम किवाळे'
 ];
 
 // ==========================================
@@ -966,18 +1069,28 @@ export const microMarketLocations = [
  * Universal Deduplicated Keyword Generator for HTML meta headers
  */
 export const generateKeywords = (
-  type: 'edge' | 'divaam' | 'pride' | 'punawale' | 'kiwale' | 'tathawade' | 'harico-brand' | 'sentosa-brand' | 'harico-diwaam' | 'sentosa-punawale' | 'harico-kiwale' | 'harico-punawale' | 'global',
+  type: 'edge' | 'divaam' | 'diwaam' | 'pride' | 'punawale' | 'kiwale' | 'tathawade' | 'harico-brand' | 'sentosa-brand' | 'harico-diwaam' | 'harico-divaam' | 'sentosa-punawale' | 'harico-kiwale' | 'harico-punawale' | 'harico-new-launch' | 'new-launch' | 'global' | string,
   maxLimit: number = 400
 ): string => {
   let list: string[] = [];
 
   switch (type) {
     case 'harico-diwaam':
+    case 'harico-divaam':
+    case 'diwaam':
+    case 'divaam':
+    case 'harico-new-launch':
+    case 'new-launch':
       list = [
         ...focusHaricoDiwaamKeywords,
+        ...focusHaricoKiwaleKeywords,
         ...haricoProjectKeywords.divaam,
+        ...sentosaProjectKeywords.divaam,
+        ...kiwaleMarketKeywords.core,
         ...kiwaleMarketKeywords.highIntent,
-        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Divaam') || k.includes('Diwaam') || k.includes('Kiwale'))
+        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Divaam') || k.includes('Diwaam') || k.includes('Kiwale')),
+        ...haricoBrandKeywords.slice(0, 10),
+        ...sentosaBrandKeywords.slice(0, 10)
       ];
       break;
     case 'sentosa-punawale':
@@ -990,19 +1103,33 @@ export const generateKeywords = (
       ];
       break;
     case 'harico-kiwale':
+    case 'kiwale':
       list = [
         ...focusHaricoKiwaleKeywords,
         ...focusHaricoDiwaamKeywords,
         ...kiwaleMarketKeywords.highIntent,
-        ...haricoProjectKeywords.divaam
+        ...kiwaleMarketKeywords.core,
+        ...haricoProjectKeywords.divaam,
+        ...sentosaProjectKeywords.divaam,
+        ...haricoBrandKeywords.slice(0, 8),
+        ...sentosaBrandKeywords.slice(0, 8),
+        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Kiwale') || k.includes('Diwaam') || k.includes('Divaam'))
       ];
       break;
     case 'harico-punawale':
+    case 'punawale':
       list = [
         ...focusHaricoPunawaleKeywords,
+        ...focusSentosaPunawaleKeywords,
+        ...punawaleMarketKeywords.highIntent,
+        ...punawaleMarketKeywords.core,
+        ...punawaleMarketKeywords.locationAndUsp,
         ...haricoProjectKeywords.edge,
         ...haricoProjectKeywords.pride,
-        ...punawaleMarketKeywords.highIntent
+        ...sentosaProjectKeywords.ekam,
+        ...haricoBrandKeywords.slice(0, 8),
+        ...sentosaBrandKeywords.slice(0, 8),
+        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Punawale'))
       ];
       break;
     case 'harico-brand':
@@ -1029,6 +1156,7 @@ export const generateKeywords = (
       ];
       break;
     case 'edge':
+    case 'harico-edge':
       list = [
         ...focusHaricoPunawaleKeywords,
         ...focusSentosaPunawaleKeywords.slice(0, 10),
@@ -1042,6 +1170,7 @@ export const generateKeywords = (
       ];
       break;
     case 'pride':
+    case 'harico-pride':
       list = [
         ...focusHaricoPunawaleKeywords,
         ...focusSentosaPunawaleKeywords.slice(0, 10),
@@ -1052,47 +1181,6 @@ export const generateKeywords = (
         ...haricoBrandKeywords.slice(0, 10),
         ...sentosaBrandKeywords.slice(0, 10),
         ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Punawale') || k.includes('Pride'))
-      ];
-      break;
-    case 'divaam':
-      list = [
-        ...focusHaricoDiwaamKeywords,
-        ...focusHaricoKiwaleKeywords,
-        ...haricoProjectKeywords.divaam,
-        ...sentosaProjectKeywords.divaam,
-        ...kiwaleMarketKeywords.core,
-        ...kiwaleMarketKeywords.highIntent,
-        ...haricoBrandKeywords.slice(0, 10),
-        ...sentosaBrandKeywords.slice(0, 10),
-        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Kiwale') || k.includes('Divaam') || k.includes('Diwaam'))
-      ];
-      break;
-    case 'punawale':
-      list = [
-        ...focusHaricoPunawaleKeywords,
-        ...focusSentosaPunawaleKeywords,
-        ...punawaleMarketKeywords.highIntent,
-        ...punawaleMarketKeywords.core,
-        ...punawaleMarketKeywords.locationAndUsp,
-        ...haricoProjectKeywords.edge,
-        ...haricoProjectKeywords.pride,
-        ...sentosaProjectKeywords.ekam,
-        ...haricoBrandKeywords.slice(0, 8),
-        ...sentosaBrandKeywords.slice(0, 8),
-        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Punawale'))
-      ];
-      break;
-    case 'kiwale':
-      list = [
-        ...focusHaricoKiwaleKeywords,
-        ...focusHaricoDiwaamKeywords,
-        ...kiwaleMarketKeywords.highIntent,
-        ...kiwaleMarketKeywords.core,
-        ...haricoProjectKeywords.divaam,
-        ...sentosaProjectKeywords.divaam,
-        ...haricoBrandKeywords.slice(0, 8),
-        ...sentosaBrandKeywords.slice(0, 8),
-        ...bestKeywordClusters.highPurchaseIntent.filter(k => k.includes('Kiwale'))
       ];
       break;
     case 'tathawade':
@@ -1106,7 +1194,7 @@ export const generateKeywords = (
     case 'global':
     default:
       list = [
-        ...focusHaricoDiwaamKeywords.slice(0, 10),
+        ...focusHaricoDiwaamKeywords.slice(0, 15),
         ...focusSentosaPunawaleKeywords.slice(0, 10),
         ...focusHaricoKiwaleKeywords.slice(0, 10),
         ...focusHaricoPunawaleKeywords.slice(0, 10),
