@@ -382,12 +382,17 @@ export const updateOGTags = (title: string, description: string, image: string, 
         let meta = document.querySelector(`meta[property="${property}"]`) || document.querySelector(`meta[name="${property}"]`);
         if (!meta) {
             meta = document.createElement('meta');
-            meta.setAttribute('property', property);
+            if (property.startsWith('og:')) {
+                meta.setAttribute('property', property);
+            } else {
+                meta.setAttribute('name', property);
+            }
             document.head.appendChild(meta);
         }
         meta.setAttribute('content', content);
     };
 
+    setMeta('description', description);
     setMeta('og:title', title);
     setMeta('og:description', description);
     setMeta('og:image', image);
@@ -397,6 +402,14 @@ export const updateOGTags = (title: string, description: string, image: string, 
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
     setMeta('twitter:image', image);
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+    }
+    canonical.setAttribute('href', url);
 };
 
 export const generateWebSiteSchema = () => {
@@ -418,7 +431,7 @@ export const generateWebSiteSchema = () => {
     };
 };
 
-export const generateBreadcrumbSchema = (project?: Project) => {
+export const generateBreadcrumbSchema = (project?: Project, prog?: any) => {
     const items = [
         {
             "@type": "ListItem",
@@ -441,6 +454,13 @@ export const generateBreadcrumbSchema = (project?: Project) => {
             "name": project.title,
             "item": `https://haricoestates.in/project/${project.slug}`
         });
+    } else if (prog) {
+        items.push({
+            "@type": "ListItem",
+            "position": 2,
+            "name": prog.h1 || prog.title,
+            "item": `https://haricoestates.in/${prog.path}`
+        });
     }
 
     return {
@@ -450,19 +470,42 @@ export const generateBreadcrumbSchema = (project?: Project) => {
     };
 };
 
-export const initSEO = (project?: Project) => {
+export const initSEO = (project?: Project, prog?: any) => {
     injectSchema(generateOrganizationSchema(), 'org-schema');
     injectSchema(generateWebSiteSchema(), 'website-schema');
-    injectSchema(generateBreadcrumbSchema(project), 'breadcrumb-schema');
+    injectSchema(generateBreadcrumbSchema(project, prog), 'breadcrumb-schema');
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');
         injectSchema(generateProjectFaqSchema(project), 'project-faq-schema');
+
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords && project.seo?.keywords) {
+            metaKeywords.setAttribute('content', project.seo.keywords);
+        }
+
         updateOGTags(
             `${project.title} | ${project.location} | Harico Estates`,
             project.description,
             "https://haricoestates.in" + project.image,
             "https://haricoestates.in/project/" + project.slug
+        );
+    } else if (prog) {
+        const prodSchemaEl = document.getElementById('project-schema');
+        if (prodSchemaEl) prodSchemaEl.remove();
+        const prodFaqEl = document.getElementById('project-faq-schema');
+        if (prodFaqEl) prodFaqEl.remove();
+
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords && prog.metaKeywords) {
+            metaKeywords.setAttribute('content', prog.metaKeywords);
+        }
+
+        updateOGTags(
+            prog.title,
+            prog.description || prog.subtitle,
+            "https://haricoestates.in/assets/harico-divaam-hero.jpg",
+            `https://haricoestates.in/${prog.path}`
         );
     } else {
         const prodSchemaEl = document.getElementById('project-schema');
@@ -476,7 +519,7 @@ export const initSEO = (project?: Project) => {
             "Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa",
             "Harico Estates & Sentosa Developers (39-Year Legacy). Ultra-luxury 2 & 3 BHK homes across Punawale, Kiwale, Ravet, Tathawade, and Hinjewadi corridor.",
             "https://haricoestates.in/harico_logo.png",
-            window.location.href
+            "https://haricoestates.in/"
         );
     }
 };

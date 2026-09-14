@@ -259,6 +259,62 @@ const programmaticPages = [
   }
 ];
 
+const clusterFooterHtml = `
+      <section style="margin-top:50px; padding:30px; background:#F8FAFC; border-radius:12px; border:1px solid #E2E8F0;">
+        <h3 style="font-size:18px; color:#0A192F; margin-top:0; margin-bottom:15px; border-bottom:2px solid #D4AF37; padding-bottom:8px;">Harico Estates Real Estate Network & Micro-Market Directory</h3>
+        
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:20px; font-size:13px; line-height:1.8;">
+          <div>
+            <strong style="color:#0A192F; display:block; margin-bottom:6px;">Flagship Projects</strong>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="/project/harico-divaam" style="color:#2563EB; text-decoration:none;">Harico Diwaam Kiwale (2 & 3 BHK)</a></li>
+              <li><a href="/project/harico-edge" style="color:#2563EB; text-decoration:none;">Harico Edge Punawale (2 & 3 BHK)</a></li>
+              <li><a href="/project/harico-pride" style="color:#2563EB; text-decoration:none;">Harico Pride Punawale (2 & 3 BHK)</a></li>
+              <li><a href="/harico-new-launch" style="color:#2563EB; text-decoration:none;">Harico New Launch Kiwale 2026</a></li>
+              <li><a href="/harico-diwaam-kiwale" style="color:#2563EB; text-decoration:none;">Harico Diwaam 24-Storey Towers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <strong style="color:#0A192F; display:block; margin-bottom:6px;">Key Locations & Corridors</strong>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="/harico-punawale" style="color:#2563EB; text-decoration:none;">Harico Punawale Corridor</a></li>
+              <li><a href="/harico-kiwale" style="color:#2563EB; text-decoration:none;">Harico Kiwale Corridor</a></li>
+              <li><a href="/flats-opposite-sentosa-water-park-kiwale" style="color:#2563EB; text-decoration:none;">Flats Opposite Sentosa Water Park</a></li>
+              <li><a href="/location/punawale" style="color:#2563EB; text-decoration:none;">Punawale Real Estate Guide</a></li>
+              <li><a href="/location/kiwale" style="color:#2563EB; text-decoration:none;">Kiwale Real Estate Guide</a></li>
+              <li><a href="/location/ravet" style="color:#2563EB; text-decoration:none;">Ravet & Mukai Chowk Homes</a></li>
+              <li><a href="/location/tathawade" style="color:#2563EB; text-decoration:none;">Tathawade & Wakad Hub</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <strong style="color:#0A192F; display:block; margin-bottom:6px;">Popular Searches & Budgets</strong>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="/punawale/2-bhk" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Punawale</a></li>
+              <li><a href="/punawale/3-bhk" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Punawale</a></li>
+              <li><a href="/kiwale/2-bhk" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Kiwale Ravet</a></li>
+              <li><a href="/kiwale/3-bhk" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Kiwale Ravet</a></li>
+              <li><a href="/price/under-75-lakh" style="color:#2563EB; text-decoration:none;">Flats under 75 Lakh in Punawale/Kiwale</a></li>
+              <li><a href="/price/under-1-crore" style="color:#2563EB; text-decoration:none;">Flats under 1 Crore in Punawale/Kiwale</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <strong style="color:#0A192F; display:block; margin-bottom:6px;">Sentosa Developers Heritage</strong>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="/developer/sentosa-developers-pune" style="color:#2563EB; text-decoration:none;">Sentosa Developers Pune (Since 1987)</a></li>
+              <li><a href="/developer/sentosa-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Punawale Projects</a></li>
+              <li><a href="/developer/sentosa-kiwale" style="color:#2563EB; text-decoration:none;">Sentosa Kiwale Projects</a></li>
+              <li><a href="/developer/sentosa-ekam-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Ekam Punawale</a></li>
+              <li><a href="/developer/sentosa-edge-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Edge Punawale</a></li>
+              <li><a href="/developer/sentosa-pride-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Pride Punawale</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+`;
+
 console.log('[Prerender] Generating ultra-advanced static HTML routes with full crawlable semantic HTML & pre-baked JSON-LD schemas...');
 
 // 1. Generate Project Pages with Full Crawlable HTML & Pre-Baked Schemas
@@ -300,8 +356,13 @@ projects.forEach(project => {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": `${project.name}, ${project.location}`,
-      "addressLocality": project.location,
+      "streetAddress": project.slug === 'harico-divaam' 
+        ? "Harico Diwaam, Opposite Sentosa Water Park, Mumbai-Pune Expressway, Kiwale-Ravet, PCMC, Pune"
+        : (project.slug === 'harico-edge' 
+          ? "Harico Edge, Near Bhumkar Chowk, Mumbai-Pune Expressway, Punawale, PCMC, Pune"
+          : "Harico Pride, Near Bhiku Vallabh Kale School, Punawale, PCMC, Pune"),
+      "addressLocality": project.slug === 'harico-divaam' ? "Kiwale-Ravet, Pune" : "Punawale, Pune",
+      "postalCode": project.slug === 'harico-divaam' ? "412101" : "411033",
       "addressRegion": "Maharashtra",
       "addressCountry": "IN"
     },
@@ -395,6 +456,14 @@ projects.forEach(project => {
   const semanticBody = `
   <div id="app">
     <main class="prerendered-content" style="max-width:1200px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
+      <nav aria-label="Breadcrumb" style="font-size:13px; color:#64748B; margin-bottom:15px;">
+        <ol style="list-style:none; padding:0; margin:0; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <li><a href="/" style="color:#D4AF37; text-decoration:none;">Home</a> &gt;</li>
+          <li><a href="/#projects" style="color:#D4AF37; text-decoration:none;">Projects</a> &gt;</li>
+          <li aria-current="page" style="color:#0A192F; font-weight:600;">${project.name}</li>
+        </ol>
+      </nav>
+
       <header style="margin-bottom:30px;">
         <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px;">Harico Estates by Sentosa Developers</span>
         <h1 style="font-size:32px; color:#0A192F; margin:10px 0 15px;">${project.title}</h1>
@@ -403,10 +472,14 @@ projects.forEach(project => {
           <span style="background:#0A192F; color:#FFF; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">MahaRERA: ${project.rera}</span>
           <span style="background:#D4AF37; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">${project.price}</span>
           <span style="background:#0A192F; color:#D4AF37; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold; border:1px solid #D4AF37;">🔑 Possession: ${project.possession}</span>
-          <span style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">📍 ${project.location}</span>
-          <span style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">📞 Sales: +91 7744009295</span>
+          <span style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold;">📍 ${project.location} (PIN: ${project.slug === 'harico-divaam' ? '412101' : '411033'})</span>
+          <a href="tel:+917744009295" style="background:#F1F5F9; color:#0A192F; padding:6px 14px; border-radius:20px; font-size:13px; font-weight:bold; text-decoration:none;">📞 Sales: +91 7744009295</a>
         </div>
       </header>
+
+      <div style="margin-bottom:35px; border-radius:12px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+        <img src="${project.image}" alt="${project.title} - Luxury 2 & 3 BHK Apartments by Sentosa Developers" width="1200" height="630" loading="eager" fetchpriority="high" style="width:100%; height:auto; display:block; object-fit:cover; max-height:480px;" />
+      </div>
 
       <section style="margin-bottom:40px;">
         <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Key Project Highlights</h2>
@@ -446,6 +519,8 @@ projects.forEach(project => {
           </div>
         `).join('\n')}
       </section>
+
+      ${clusterFooterHtml}
 
       <footer style="margin-top:40px; padding-top:20px; border-top:1px solid #CBD5E1; color:#64748B; font-size:13px;">
         <p><strong>Developer:</strong> Sentosa Developers & Harico Estates (39-Year Legacy since 1987). <strong>Contact Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
@@ -551,8 +626,11 @@ programmaticPages.forEach(page => {
     <div id="app">
       <main class="prerendered-content" style="max-width:1200px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
         <header style="margin-bottom:30px;">
-          <nav style="font-size:13px; color:#64748B; margin-bottom:12px;">
-            <a href="/" style="color:#D4AF37; text-decoration:none;">Home</a> &gt; <span>${page.h1 || page.title}</span>
+          <nav aria-label="Breadcrumb" style="font-size:13px; color:#64748B; margin-bottom:12px;">
+            <ol style="list-style:none; padding:0; margin:0; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+              <li><a href="/" style="color:#D4AF37; text-decoration:none;">Home</a> &gt;</li>
+              <li aria-current="page" style="color:#0A192F; font-weight:600;">${page.h1 || page.title}</li>
+            </ol>
           </nav>
           <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px; letter-spacing:1px;">Harico Estates & Sentosa Developers (Since 1987)</span>
           <h1 style="font-size:32px; color:#0A192F; margin:10px 0 15px;">${page.h1 || page.title}</h1>
@@ -594,6 +672,8 @@ programmaticPages.forEach(page => {
             </div>
           `).join('\n')}
         </section>
+
+        ${clusterFooterHtml}
 
         <footer style="margin-top:40px; padding-top:20px; border-top:1px solid #CBD5E1; color:#64748B; font-size:13px;">
           <p><strong>Developer:</strong> Sentosa Developers & Harico Estates (39-Year Real Estate Legacy). <strong>Helpline:</strong> <a href="tel:+917744009295" style="color:#0A192F; font-weight:bold;">+91 7744009295</a> | <strong>Email:</strong> contact@haricoestates.in</p>
@@ -719,6 +799,8 @@ const rootSemanticBody = `
       <h2 style="font-size:24px; color:#0A192F; margin-top:0;">Sentosa Developers — 39 Years of Trusted Real Estate (1987-2026)</h2>
       <p style="color:#475569; line-height:1.6;">With over 20 delivered landmark projects and 5,000+ delighted resident families, Sentosa Developers is a hallmark of structural strength, timely possession, and world-class hospitality (Sentosa Water Park & Resorts). Flagship portfolio includes Sentosa Edge, Sentosa Pride, Sentosa Ekam, Sentosa Serene, Sentosa Elite, Sentosa Palm, Sentosa Elysium, and Sentosa Era.</p>
     </section>
+
+    ${clusterFooterHtml}
 
     <footer style="padding-top:25px; border-top:1px solid #E2E8F0; color:#64748B; font-size:13px; text-align:center;">
       <p>&copy; 2026 Harico Estates by Sentosa Developers. <strong>Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>

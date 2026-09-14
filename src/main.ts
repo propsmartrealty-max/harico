@@ -175,7 +175,7 @@ programmaticRoutes.forEach(prog => {
     router.add(`/${prog.path}`, () => {
         mainAppContainer.innerHTML = '';
         document.title = prog.title;
-        initSEO();
+        initSEO(undefined, prog);
         mainAppContainer.appendChild(createProgrammaticHub(prog));
         mainAppContainer.appendChild(createContactSection());
         window.scrollTo(0, 0);
@@ -212,6 +212,7 @@ router.add('/project', (params, slug) => {
 
     if (project) {
         document.title = `${project.title} | ${project.location} | Harico Estates`;
+        initSEO(project);
         mainAppContainer.appendChild(createProjectDetails(project));
         mainAppContainer.appendChild(createContactSection());
         setTimeout(() => animationEngine.init(), 50);
