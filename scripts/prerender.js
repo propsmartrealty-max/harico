@@ -47,9 +47,11 @@ const projects = [
       '50+ Curated World-Class Lifestyle Amenities'
     ],
     faqs: [
-      { q: 'What is the RERA registration number and possession date for Harico Edge Punawale?', a: 'Harico Edge in Punawale is registered under MahaRERA number P52100031773 with target possession scheduled for June 2030.' },
-      { q: 'What are the starting prices and configurations at Harico Edge?', a: 'Harico Edge offers spacious 2 & 3 BHK luxury residences with dual private balconies starting from ₹74.00 Lacs*.' },
-      { q: 'Where is Harico Edge located and how far is it from Hinjewadi?', a: 'Harico Edge is located near Bhumkar Chowk in Punawale, just 2 minutes from the Mumbai-Pune Expressway and 12-14 minutes from Hinjewadi IT Park Phase 1.' }
+      { q: 'What is the RERA registration number and target possession date for Harico Edge Punawale?', a: 'Harico Edge in Punawale is registered under MahaRERA number P52100031773 with target possession scheduled for June 2030.' },
+      { q: 'What are the starting prices and carpet areas at Harico Edge Punawale?', a: 'Harico Edge offers spacious 2 & 3 BHK luxury residences starting from ₹74.00 Lacs* with carpet areas ranging from 741 sq.ft to 1,148 sq.ft.' },
+      { q: 'Where is Harico Edge located and what is the transit connectivity?', a: 'Harico Edge is located near Bhumkar Chowk in Punawale, just 2 minutes from the Mumbai-Pune Expressway and 12-14 minutes from Hinjewadi Rajiv Gandhi Infotech Park Phase 1.' },
+      { q: 'What amenities are offered at Harico Edge?', a: 'Harico Edge features over 50 curated lifestyle amenities including rooftop infinity pool, sky terrace lounge, co-working spaces, indoor sports arenas, and landscaped gardens.' },
+      { q: 'Who is developing Harico Edge?', a: 'Harico Edge is developed by Harico Estates and Sentosa Developers, bringing a 39-year legacy (since 1987) of trusted engineering across Pune.' }
     ]
   },
   {
@@ -81,9 +83,14 @@ const projects = [
       '2 Minutes to Mukai Chowk & 5 Minutes to Akurdi Railway Station'
     ],
     faqs: [
-      { q: 'What is the MahaRERA number and possession date for Harico Diwaam Kiwale?', a: 'Harico Divaam (Harico Diwaam) is registered under MahaRERA registration number PR1260002502389 with target possession scheduled for December 2030.' },
-      { q: 'What are the pricing and configurations at Harico Diwaam Kiwale?', a: 'Harico Diwaam offers luxury 2 & 3 BHK residences with 2 BHK starting from ₹70.00 Lacs* onwards and 3 BHK starting from ₹89.90 Lacs* onwards with carpet areas ranging from 724 sq.ft to 1,108 sq.ft.' },
-      { q: 'Who is the developer of Harico Divaam / Diwaam Kiwale?', a: 'Harico Divaam is developed by Harico Estates in venture with Sentosa Developers (backed by a 39-year legacy since 1987 and builders of Sentosa Water Park).' }
+      { q: 'What is the starting price for 2 BHK and 3 BHK flats in Harico Divaam / Diwaam Kiwale?', a: 'Harico Divaam (Harico Diwaam Kiwale) luxury residences start from ₹70.00 Lacs* onwards for 2 BHK (724 sq.ft carpet) and ₹89.90 Lacs* onwards for 3 BHK (920 sq.ft carpet), with flexible milestone payment plans and pre-approved home loans from SBI, HDFC, and ICICI.' },
+      { q: 'What are the exact configurations and carpet areas in Harico Diwaam Kiwale?', a: 'Harico Diwaam offers 2 BHK Smart (724 sq.ft), 2 BHK Comfort (760 sq.ft), 2 BHK Grand (848 sq.ft), 3 BHK Smart (920 sq.ft), 3 BHK Comfort (983 sq.ft), and 3 BHK Grand (1,108 sq.ft) usable carpet areas with dual private balconies.' },
+      { q: 'How many floors, towers, and land acreage does Harico Diwaam have?', a: 'Harico Diwaam is the tallest residential landmark in the Kiwale-Ravet corridor, featuring 5 iconic sky towers standing 24 storeys tall across an expansive 5.0-acre master development.' },
+      { q: 'What is the MahaRERA registration number and target possession date for Harico Diwaam?', a: 'Harico Divaam is officially approved and registered under MahaRERA No. PR1260002502389 with target possession scheduled for December 2030.' },
+      { q: 'What amenities are available at Harico Diwaam Kiwale?', a: 'Harico Diwaam features over 100+ resort-grade lifestyle amenities, including a 24th-floor Sky Observation Deck, infinity swimming pool, sky gymnasium, 40-seater Dolby Atmos mini-theatre, podcasting & creator studios, co-working lounges, and 12 luxury guest suites for visiting family.' },
+      { q: 'Where is Harico Diwaam located and how far is it from Hinjewadi and Expressway?', a: 'Harico Diwaam is located directly opposite Sentosa Water Park on the Mumbai-Pune Expressway corridor in Kiwale-Ravet. It is 2 minutes from Mukai Chowk BRTS, 5-7 minutes from Akurdi Railway Station, and 12-15 minutes from Hinjewadi Rajiv Gandhi Infotech Park.' },
+      { q: 'What construction technology is being used at Harico Diwaam?', a: 'Harico Diwaam is constructed using earthquake-resistant Mivan monolithic concrete technology, providing seismic Zone III compliance, superior acoustic insulation, and seamless crack-free finishes.' },
+      { q: 'Who is the developer of Harico Diwaam Kiwale?', a: 'Harico Diwaam is developed by Harico Estates in partnership with Sentosa Developers, a trusted real estate group with a 39-year legacy (since 1987), 20+ completed projects, and builders of Sentosa Water Park & Resorts.' }
     ]
   },
   {
@@ -112,8 +119,9 @@ const projects = [
       '100% Vastu-Compliant East-West Orientations'
     ],
     faqs: [
-      { q: 'What is the MahaRERA registration for Harico Pride Punawale?', a: 'Harico Pride in Punawale is registered under MahaRERA number P52100018471.' },
-      { q: 'What configurations are available in Harico Pride?', a: 'Harico Pride features expansive 2 & 3 BHK luxury residences with large usable carpets up to 1,180 sq.ft.' }
+      { q: 'What is the MahaRERA registration and possession date for Harico Pride Punawale?', a: 'Harico Pride in Punawale is registered under MahaRERA number P52100018471 with possession in June 2027.' },
+      { q: 'What configurations and carpet areas are available at Harico Pride?', a: 'Harico Pride offers expansive 2 & 3 BHK residences with large usable carpets from 765 sq.ft to 1,180 sq.ft starting from ₹78.00 Lacs*.' },
+      { q: 'Where is Harico Pride located in Punawale?', a: 'Harico Pride is situated near Bhiku Vallabh Kale School in Punawale, 2 minutes from the Mumbai-Pune Expressway and close to Bhumkar Chowk.' }
     ]
   }
 ];
@@ -490,20 +498,22 @@ projects.forEach(project => {
 
       <section style="margin-bottom:40px;">
         <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Available Configurations & Price List</h2>
-        <table style="width:100%; border-collapse:collapse; margin-top:10px;">
+        <table style="width:100%; border-collapse:collapse; margin-top:10px; box-shadow:0 2px 8px rgba(0,0,0,0.05); border-radius:8px; overflow:hidden;">
           <thead>
             <tr style="background:#0A192F; color:#FFF; text-align:left;">
-              <th style="padding:12px;">Configuration</th>
-              <th style="padding:12px;">Carpet Area</th>
-              <th style="padding:12px;">Starting Price</th>
+              <th style="padding:14px;">Configuration</th>
+              <th style="padding:14px;">Carpet Area</th>
+              <th style="padding:14px;">Starting Price</th>
+              <th style="padding:14px;">Layout Highlights</th>
             </tr>
           </thead>
           <tbody>
             ${project.configs.map(c => `
-              <tr style="border-bottom:1px solid #E2E8F0;">
-                <td style="padding:12px; font-weight:bold; color:#0A192F;">${c.type}</td>
-                <td style="padding:12px; color:#475569;">${c.carpet}</td>
-                <td style="padding:12px; color:#D4AF37; font-weight:bold;">${c.price}</td>
+              <tr style="border-bottom:1px solid #E2E8F0; background:#FFF;">
+                <td style="padding:14px; font-weight:bold; color:#0A192F;">${c.type}</td>
+                <td style="padding:14px; color:#475569;">${c.carpet}</td>
+                <td style="padding:14px; color:#D4AF37; font-weight:bold;">${c.price}</td>
+                <td style="padding:14px; color:#64748B; font-size:13px;">Dual Balconies, Zero Space Wastage, Vastu Compliant</td>
               </tr>
             `).join('\n')}
           </tbody>
@@ -511,11 +521,112 @@ projects.forEach(project => {
       </section>
 
       <section style="margin-bottom:40px;">
+        <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Curated Resort-Style Amenities & Club Lifestyle</h2>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
+          <div style="background:#F8FAFC; padding:20px; border-radius:10px; border:1px solid #E2E8F0;">
+            <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:10px; border-bottom:2px solid #D4AF37; padding-bottom:6px;">☁️ Sky & Rooftop Indulgence</h3>
+            <ul style="padding-left:18px; margin:0; line-height:1.8; color:#475569; font-size:14px;">
+              <li>24th Floor Rooftop Sky Observation Deck</li>
+              <li>Infinity Edge Swimming Pool & Sunset Deck</li>
+              <li>Sky Yoga, Meditation & Reflexology Lawn</li>
+              <li>Telescopic Stargazing Point with Sahyadri Views</li>
+            </ul>
+          </div>
+          <div style="background:#F8FAFC; padding:20px; border-radius:10px; border:1px solid #E2E8F0;">
+            <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:10px; border-bottom:2px solid #D4AF37; padding-bottom:6px;">🎭 Entertainment & Hospitality</h3>
+            <ul style="padding-left:18px; margin:0; line-height:1.8; color:#475569; font-size:14px;">
+              <li>40-Seater Private Mini Theatre with Dolby Atmos</li>
+              <li>12 Fully-Furnished Luxury Guest Suites for Visitors</li>
+              <li>Grand Double-Height Banquet & Celebration Hall</li>
+              <li>Barbeque Pavilion & Alfresco Dining Cabanas</li>
+            </ul>
+          </div>
+          <div style="background:#F8FAFC; padding:20px; border-radius:10px; border:1px solid #E2E8F0;">
+            <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:10px; border-bottom:2px solid #D4AF37; padding-bottom:6px;">💼 Co-Working & Creator Studio</h3>
+            <ul style="padding-left:18px; margin:0; line-height:1.8; color:#475569; font-size:14px;">
+              <li>Acoustic Podcasting & YouTube Creator Studio</li>
+              <li>High-Speed Wi-Fi Business Lounges & Work Pods</li>
+              <li>Private Conference Rooms for Remote Professionals</li>
+              <li>Digital Library & Reading Cafe</li>
+            </ul>
+          </div>
+          <div style="background:#F8FAFC; padding:20px; border-radius:10px; border:1px solid #E2E8F0;">
+            <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:10px; border-bottom:2px solid #D4AF37; padding-bottom:6px;">🏅 Sports, Fitness & Wellness</h3>
+            <ul style="padding-left:18px; margin:0; line-height:1.8; color:#475569; font-size:14px;">
+              <li>Full-Fledged Gymnasium with Cardio & Strength Zones</li>
+              <li>Badminton Court & Half Basketball Court</li>
+              <li>Indoor Games Arena (Billiards, Table Tennis, Chess)</li>
+              <li>Steam, Sauna & Wellness Spa Treatment Rooms</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section style="margin-bottom:40px;">
+        <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Strategic Transit Connectivity & Proximity Matrix</h2>
+        <table style="width:100%; border-collapse:collapse; margin-top:10px; box-shadow:0 2px 8px rgba(0,0,0,0.05); border-radius:8px; overflow:hidden;">
+          <thead>
+            <tr style="background:#0A192F; color:#FFF; text-align:left;">
+              <th style="padding:12px;">Key Landmark / Destination</th>
+              <th style="padding:12px;">Distance</th>
+              <th style="padding:12px;">Travel Time</th>
+              <th style="padding:12px;">Connectivity Advantage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#FFF;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Sentosa Water Park & Resorts</td>
+              <td style="padding:12px; color:#475569;">Directly Opposite</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">0 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Immediate pedestrian access to leisure and dining</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#F8FAFC;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Mumbai-Pune Expressway</td>
+              <td style="padding:12px; color:#475569;">1.5 km</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">2 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Direct ramp connectivity to Mumbai and Navi Mumbai</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#FFF;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Mukai Chowk & Ravet BRTS</td>
+              <td style="padding:12px; color:#475569;">1.2 km</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">2 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Key transport junction for Aundh, Shivaji Nagar, PCMC</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#F8FAFC;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Akurdi Railway Station (Local Trains)</td>
+              <td style="padding:12px; color:#475569;">4.2 km</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">5-7 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Fast rail transit to Pune Junction, Lonavala & Talegaon</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#FFF;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Hinjewadi Rajiv Gandhi IT Park (Phase 1)</td>
+              <td style="padding:12px; color:#475569;">9.5 km</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">12-15 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Hassle-free commute for Infosys, Wipro, TCS tech professionals</td>
+            </tr>
+            <tr style="border-bottom:1px solid #E2E8F0; background:#F8FAFC;">
+              <td style="padding:12px; font-weight:600; color:#0A192F;">Phoenix Mall of the Millennium, Wakad</td>
+              <td style="padding:12px; color:#475569;">10.2 km</td>
+              <td style="padding:12px; color:#16A34A; font-weight:bold;">15 Mins</td>
+              <td style="padding:12px; color:#64748B; font-size:13px;">Premium international shopping, multiplexes & fine dining</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section style="margin-bottom:40px; background:#F1F5F9; padding:25px; border-radius:12px; border-left:5px solid #0A192F;">
+        <h2 style="font-size:22px; color:#0A192F; margin-top:0; margin-bottom:10px;">Engineering Excellence: Mivan Monolithic Concrete Technology</h2>
+        <p style="color:#475569; line-height:1.7; margin-bottom:0;">
+          All Harico Estates developments utilize precision-engineered <strong>Mivan monolithic aluminium formwork construction</strong>. This advanced casting technique delivers superior seismic resistance (Zone III compliant), earthquake safety, monolithic jointless walls that prevent water seepage, and higher carpet-to-super-built-up area efficiency. Every residence is finished with acoustic double-glazed windows, branded premium sanitaryware (Kohler / Jaquar), and concealed copper electrical wiring.
+        </p>
+      </section>
+
+      <section style="margin-bottom:40px;">
         <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Frequently Asked Questions (FAQs)</h2>
         ${project.faqs.map(f => `
-          <div style="margin-bottom:15px; background:#F8FAFC; padding:15px; border-radius:8px; border-left:4px solid #D4AF37;">
+          <div style="margin-bottom:15px; background:#F8FAFC; padding:18px; border-radius:8px; border-left:4px solid #D4AF37; box-shadow:0 1px 3px rgba(0,0,0,0.04);">
             <h3 style="font-size:16px; color:#0A192F; margin:0 0 8px;">${f.q}</h3>
-            <p style="margin:0; color:#475569; line-height:1.5;">${f.a}</p>
+            <p style="margin:0; color:#475569; line-height:1.6;">${f.a}</p>
           </div>
         `).join('\n')}
       </section>

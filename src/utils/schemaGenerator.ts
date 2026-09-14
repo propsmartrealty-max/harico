@@ -287,16 +287,36 @@ export const generateProjectFaqSchema = (project: Project) => {
     } else if (project.slug === 'harico-divaam') {
         faqs = [
             {
-                name: "What is the starting price for flats in Harico Divaam Kiwale?",
-                text: "Harico Divaam luxury 2 & 3 BHK residences start from ₹70.00 Lacs* onwards for 2 BHK and ₹89.90 Lacs* onwards for 3 BHK with panoramic high-rise views."
+                name: "What is the starting price for 2 BHK and 3 BHK flats in Harico Divaam / Diwaam Kiwale?",
+                text: "Harico Divaam (Harico Diwaam Kiwale) luxury residences start from ₹70.00 Lacs* onwards for 2 BHK (724 sq.ft carpet) and ₹89.90 Lacs* onwards for 3 BHK (920 sq.ft carpet), with flexible milestone payment plans and pre-approved home loans from SBI, HDFC, and ICICI."
             },
             {
-                name: "How many floors and towers are in Harico Divaam Kiwale?",
-                text: "Harico Divaam is the tallest landmark in the Kiwale-Ravet corridor with 5 iconic sky towers standing 24 storeys tall across 5.0 acres."
+                name: "What are the exact configurations and carpet areas in Harico Diwaam Kiwale?",
+                text: "Harico Diwaam offers 2 BHK Smart (724 sq.ft), 2 BHK Comfort (760 sq.ft), 2 BHK Grand (848 sq.ft), 3 BHK Smart (920 sq.ft), 3 BHK Comfort (983 sq.ft), and 3 BHK Grand (1,108 sq.ft) usable carpet areas with dual private balconies."
             },
             {
-                name: "What is the MahaRERA number for Harico Divaam?",
-                text: "Harico Divaam is registered under MahaRERA No. PR1260002502389, directly opposite Sentosa Water Park on the Mukai Chowk corridor."
+                name: "How many floors, towers, and land acreage does Harico Diwaam have?",
+                text: "Harico Diwaam is the tallest residential landmark in the Kiwale-Ravet corridor, featuring 5 iconic sky towers standing 24 storeys tall across an expansive 5.0-acre master development."
+            },
+            {
+                name: "What is the MahaRERA registration number and target possession date for Harico Diwaam?",
+                text: "Harico Divaam is officially approved and registered under MahaRERA No. PR1260002502389 with target possession scheduled for December 2030."
+            },
+            {
+                name: "What amenities are available at Harico Diwaam Kiwale?",
+                text: "Harico Diwaam features over 100+ resort-grade lifestyle amenities, including a 24th-floor Sky Observation Deck, infinity swimming pool, sky gymnasium, 40-seater Dolby Atmos mini-theatre, podcasting & creator studios, co-working lounges, and 12 luxury guest suites for visiting family."
+            },
+            {
+                name: "Where is Harico Diwaam located and how far is it from Hinjewadi and Expressway?",
+                text: "Harico Diwaam is located directly opposite Sentosa Water Park on the Mumbai-Pune Expressway corridor in Kiwale-Ravet. It is 2 minutes from Mukai Chowk BRTS, 5-7 minutes from Akurdi Railway Station, and 12-15 minutes from Hinjewadi Rajiv Gandhi Infotech Park."
+            },
+            {
+                name: "What construction technology is being used at Harico Diwaam?",
+                text: "Harico Diwaam is constructed using earthquake-resistant Mivan monolithic concrete technology, providing seismic Zone III compliance, superior acoustic insulation, and seamless crack-free finishes."
+            },
+            {
+                name: "Who is the developer of Harico Diwaam Kiwale?",
+                text: "Harico Diwaam is developed by Harico Estates in partnership with Sentosa Developers, a trusted real estate group with a 39-year legacy (since 1987), 20+ completed projects, and builders of Sentosa Water Park & Resorts."
             }
         ];
     } else {

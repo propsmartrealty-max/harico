@@ -97,202 +97,300 @@ export const sentosaBrandKeywords = [
 // ==========================================
 // PRIMARY #1 RANK TARGET 1: HARICO DIWAAM / DIVAAM (MAJOR NEW LAUNCH)
 // ==========================================
+// ==============================================================================
+// MASTER TOPICAL KEYWORD ECOSYSTEM — HARICO DIWAAM KIWALE & HARICO ESTATES
+// 100% Google Helpful Content & Semantic Entity Compliant
+// ==============================================================================
+export const haricoMasterTopicalEcosystem = {
+  // 1. Core Brand Keywords
+  coreBrand: [
+    'Harico Diwaam', 'Harico Divaam', 'Harico Diwaam Kiwale', 'Harico Divaam Kiwale',
+    'Harico Diwaam Pune', 'Harico Divaam Pune', 'Harico Diwaam Kiwale Pune',
+    'Harico Diwaam Ravet', 'Harico Divaam Ravet', 'Harico Diwaam Kiwale Ravet',
+    'Harico Diwaam project', 'Harico Divaam project', 'Harico Diwaam residential project',
+    'Harico Diwaam residential project Kiwale', 'Harico Diwaam apartments', 'Harico Diwaam flats',
+    'Harico Diwaam homes', 'Harico Diwaam residences', 'Harico Diwaam property',
+    'Harico Diwaam real estate', 'Harico Diwaam housing project', 'Harico Diwaam luxury project',
+    'Harico Diwaam premium project', 'Harico Diwaam residential property', 'Harico Diwaam new project',
+    'Harico Diwaam new launch', 'Harico Diwaam latest project', 'Harico Diwaam upcoming project',
+    'Harico Diwaam landmark project'
+  ],
+
+  // 2. High-Intent Buy Keywords
+  highIntentBuy: [
+    'Harico Diwaam flats for sale', 'Harico Diwaam apartments for sale', 'Harico Diwaam homes for sale',
+    'Harico Diwaam property for sale', 'Harico Diwaam flats Kiwale for sale',
+    'Harico Diwaam apartments Kiwale for sale', 'Harico Diwaam property Kiwale for sale',
+    'Harico Diwaam new flats for sale', 'Harico Diwaam new apartments for sale',
+    'Harico Diwaam premium flats for sale', 'Harico Diwaam luxury flats for sale',
+    'Harico Diwaam residential flats for sale', 'Harico Diwaam 2 BHK for sale',
+    'Harico Diwaam 3 BHK for sale', 'buy flat in Harico Diwaam', 'buy apartment in Harico Diwaam',
+    'buy home in Harico Diwaam', 'buy property in Harico Diwaam', 'buy 2 BHK Harico Diwaam',
+    'buy 3 BHK Harico Diwaam', 'book Harico Diwaam', 'Harico Diwaam booking',
+    'Harico Diwaam online booking', 'Harico Diwaam site visit', 'Harico Diwaam availability',
+    'Harico Diwaam latest availability'
+  ],
+
+  // 3. 2 BHK Keyword Ecosystem (Smart 724, Comfort 760, Grand 848)
+  twoBhkEcosystem: [
+    'Harico Diwaam 2 BHK', 'Harico Divaam 2 BHK', 'Harico Diwaam 2 BHK Kiwale',
+    'Harico Diwaam 2 BHK Pune', 'Harico Diwaam 2 BHK flats', 'Harico Diwaam 2 BHK apartments',
+    'Harico Diwaam 2 BHK homes', 'Harico Diwaam 2 BHK residence', 'Harico Diwaam 2 BHK property',
+    'Harico Diwaam 2 BHK for sale', 'Harico Diwaam 2 BHK price', 'Harico Diwaam 2 BHK cost',
+    'Harico Diwaam 2 BHK price list', 'Harico Diwaam 2 BHK starting price',
+    'Harico Diwaam 2 BHK current price', 'Harico Diwaam 2 BHK all inclusive price',
+    'Harico Diwaam 2 BHK cost sheet', 'Harico Diwaam 2 BHK EMI', 'Harico Diwaam 2 BHK booking amount',
+    'Harico Diwaam 2 BHK carpet area', 'Harico Diwaam 724 sq ft', 'Harico Diwaam 724 sqft',
+    'Harico Diwaam 760 sq ft', 'Harico Diwaam 760 sqft', 'Harico Diwaam 848 sq ft',
+    'Harico Diwaam 848 sqft', 'Harico Diwaam 2 BHK 724 sqft', 'Harico Diwaam 2 BHK 760 sqft',
+    'Harico Diwaam 2 BHK 848 sqft', 'Harico Diwaam 2 BHK Smart', 'Harico Diwaam 2 BHK Smart price',
+    'Harico Diwaam 2 BHK Smart carpet area', 'Harico Diwaam 2 BHK Smart floor plan',
+    'Harico Diwaam 724 sq ft 2 BHK', 'Harico Diwaam 2 BHK Comfort', 'Harico Diwaam 2 BHK Comfort price',
+    'Harico Diwaam 2 BHK Comfort floor plan', 'Harico Diwaam 760 sq ft 2 BHK',
+    'Harico Diwaam 2 BHK Grand', 'Harico Diwaam 2 BHK Grand price',
+    'Harico Diwaam 2 BHK Grand floor plan', 'Harico Diwaam 848 sq ft 2 BHK'
+  ],
+
+  // 4. 3 BHK Keyword Ecosystem (Smart 920, Comfort 983, Grand 1108)
+  threeBhkEcosystem: [
+    'Harico Diwaam 3 BHK', 'Harico Divaam 3 BHK', 'Harico Diwaam 3 BHK Kiwale',
+    'Harico Diwaam 3 BHK Pune', 'Harico Diwaam 3 BHK flats', 'Harico Diwaam 3 BHK apartments',
+    'Harico Diwaam 3 BHK homes', 'Harico Diwaam 3 BHK residences', 'Harico Diwaam 3 BHK property',
+    'Harico Diwaam 3 BHK for sale', 'Harico Diwaam 3 BHK price', 'Harico Diwaam 3 BHK cost',
+    'Harico Diwaam 3 BHK price list', 'Harico Diwaam 3 BHK starting price',
+    'Harico Diwaam 3 BHK current price', 'Harico Diwaam 3 BHK all inclusive price',
+    'Harico Diwaam 3 BHK cost sheet', 'Harico Diwaam 3 BHK EMI', 'Harico Diwaam 3 BHK booking amount',
+    'Harico Diwaam 3 BHK carpet area', 'Harico Diwaam 920 sq ft', 'Harico Diwaam 920 sqft',
+    'Harico Diwaam 983 sq ft', 'Harico Diwaam 983 sqft', 'Harico Diwaam 1108 sq ft',
+    'Harico Diwaam 1108 sqft', 'Harico Diwaam 3 BHK 920 sqft', 'Harico Diwaam 3 BHK 983 sqft',
+    'Harico Diwaam 3 BHK 1108 sqft', 'Harico Diwaam 3 BHK Smart', 'Harico Diwaam 3 BHK Smart price',
+    'Harico Diwaam 3 BHK Smart floor plan', 'Harico Diwaam 920 sq ft 3 BHK',
+    'Harico Diwaam 3 BHK Comfort', 'Harico Diwaam 3 BHK Comfort price',
+    'Harico Diwaam 3 BHK Comfort floor plan', 'Harico Diwaam 983 sq ft 3 BHK',
+    'Harico Diwaam 3 BHK Grand', 'Harico Diwaam 3 BHK Grand price',
+    'Harico Diwaam 3 BHK Grand floor plan', 'Harico Diwaam 1108 sq ft 3 BHK'
+  ],
+
+  // 5. Price Keywords
+  priceKeywords: [
+    'Harico Diwaam price', 'Harico Divaam price', 'Harico Diwaam price in Kiwale',
+    'Harico Diwaam Pune price', 'Harico Diwaam latest price', 'Harico Diwaam current price',
+    'Harico Diwaam starting price', 'Harico Diwaam price list', 'Harico Diwaam apartment price',
+    'Harico Diwaam flat price', 'Harico Diwaam property price', 'Harico Diwaam price per sq ft',
+    'Harico Diwaam rate per sq ft', 'Harico Diwaam 2 BHK price', 'Harico Diwaam 3 BHK price',
+    'Harico Diwaam price 2026', 'Harico Diwaam latest price 2026', 'Harico Diwaam cost',
+    'Harico Diwaam total cost', 'Harico Diwaam all inclusive cost', 'Harico Diwaam price breakup',
+    'Harico Diwaam payment plan', 'Harico Diwaam booking amount', 'Harico Diwaam down payment',
+    'Harico Diwaam EMI', 'Harico Diwaam home loan', 'Harico Diwaam starts 70 lakhs',
+    'Harico Diwaam 3 BHK starts 89.90 lakhs'
+  ],
+
+  // 6. Carpet Area Keywords
+  carpetAreaKeywords: [
+    'Harico Diwaam carpet area', 'Harico Diwaam apartment size', 'Harico Diwaam flat size',
+    'Harico Diwaam area', 'Harico Diwaam 724 carpet', 'Harico Diwaam 760 carpet',
+    'Harico Diwaam 848 carpet', 'Harico Diwaam 920 carpet', 'Harico Diwaam 983 carpet',
+    'Harico Diwaam 1108 carpet', 'Harico Diwaam 2 BHK carpet area', 'Harico Diwaam 3 BHK carpet area',
+    'Harico Diwaam largest 2 BHK', 'Harico Diwaam largest 3 BHK', 'Harico Diwaam spacious 2 BHK',
+    'Harico Diwaam spacious 3 BHK'
+  ],
+
+  // 7. Floor Plan Keywords
+  floorPlanKeywords: [
+    'Harico Diwaam floor plan', 'Harico Divaam floor plan', 'Harico Diwaam 2 BHK floor plan',
+    'Harico Diwaam 3 BHK floor plan', 'Harico Diwaam apartment floor plan',
+    'Harico Diwaam flat floor plan', 'Harico Diwaam layout', 'Harico Diwaam apartment layout',
+    'Harico Diwaam master plan', 'Harico Diwaam site plan', 'Harico Diwaam tower plan',
+    'Harico Diwaam 724 floor plan', 'Harico Diwaam 760 floor plan', 'Harico Diwaam 848 floor plan',
+    'Harico Diwaam 920 floor plan', 'Harico Diwaam 983 floor plan', 'Harico Diwaam 1108 floor plan',
+    'Harico Diwaam 2 BHK layout', 'Harico Diwaam 3 BHK layout', 'Harico Diwaam master layout'
+  ],
+
+  // 8. Project Master Plan / Tower Keywords
+  towerKeywords: [
+    'Harico Diwaam master plan', 'Harico Diwaam master layout', 'Harico Diwaam tower',
+    'Harico Diwaam towers', 'Harico Diwaam 5 towers', 'Harico Diwaam five towers',
+    'Harico Diwaam sky towers', 'Harico Diwaam iconic towers', 'Harico Diwaam 24 storey',
+    'Harico Diwaam 24 storey towers', 'Harico Diwaam tallest tower', 'Harico Diwaam high rise',
+    'Harico Diwaam high rise towers', 'Harico Diwaam landmark tower', 'Harico Diwaam building',
+    'Harico Diwaam tower height', 'Harico Diwaam floor count', 'Harico Diwaam tower plan',
+    '5 acre project Kiwale'
+  ],
+
+  // 9. RERA Keyword Ecosystem
+  reraKeywords: [
+    'Harico Diwaam RERA', 'Harico Divaam RERA', 'Harico Diwaam MahaRERA',
+    'Harico Diwaam RERA number', 'Harico Diwaam MahaRERA number', 'Harico Diwaam RERA registration',
+    'Harico Diwaam RERA status', 'Harico Diwaam RERA details', 'Harico Diwaam RERA certificate',
+    'Harico Diwaam RERA approved', 'Harico Diwaam registered project', 'Harico Diwaam RERA Kiwale',
+    'Harico Diwaam RERA Pune', 'Harico Diwaam RERA PR1260002502389', 'PR1260002502389',
+    'PR1260002502389 Harico', 'PR1260002502389 Kiwale', 'PR1260002502389 Pune',
+    'Harico Diwaam MahaRERA PR1260002502389', 'Harico Edge RERA P52100031773',
+    'Harico Pride RERA P52100018471'
+  ],
+
+  // 10. Amenities Keyword Ecosystem
+  amenitiesKeywords: [
+    'Harico Diwaam amenities', 'Harico Diwaam 100+ amenities', 'Harico Diwaam luxury amenities',
+    'Harico Diwaam premium amenities', 'Harico Diwaam resort amenities', 'Harico Diwaam lifestyle amenities',
+    'Harico Diwaam clubhouse', 'Harico Diwaam swimming pool', 'Harico Diwaam gym',
+    'Harico Diwaam fitness centre', 'Harico Diwaam gymnasium', 'Harico Diwaam yoga',
+    'Harico Diwaam meditation', 'Harico Diwaam jogging track', 'Harico Diwaam walking track',
+    'Harico Diwaam kids play area', 'Harico Diwaam children play area', 'Harico Diwaam indoor games',
+    'Harico Diwaam outdoor games', 'Harico Diwaam sports amenities', 'Harico Diwaam multipurpose hall',
+    'Harico Diwaam party lawn', 'Harico Diwaam landscaped garden', 'Harico Diwaam gardens',
+    'Harico Diwaam green area', 'Harico Diwaam recreation', 'Harico Diwaam community amenities',
+    'Harico Diwaam senior citizen area', 'Harico Diwaam sky amenities', 'Harico Diwaam sky deck',
+    'Harico Diwaam observation deck', 'Harico Diwaam sky observation deck'
+  ],
+
+  // 11. Sky Observation / Sky Tower Keywords
+  skyTowerKeywords: [
+    'Harico Diwaam sky tower', 'Harico Diwaam sky towers', 'Harico Diwaam sky deck',
+    'Harico Diwaam sky observation deck', 'Harico Diwaam observation deck',
+    'Harico Diwaam rooftop amenities', 'Harico Diwaam sky amenities', 'Harico Diwaam rooftop lifestyle',
+    'Harico Diwaam high rise lifestyle', 'Harico Diwaam 24 storey luxury', 'Harico Diwaam tower amenities',
+    'Harico Diwaam panoramic views', 'Harico Diwaam city views', 'Harico Diwaam skyline views',
+    'Harico Diwaam elevated lifestyle'
+  ],
+
+  // 12. Location & Micro-Market Keywords
+  locationKeywords: [
+    'Harico Diwaam Kiwale', 'Harico Diwaam Kiwale Pune', 'Harico Diwaam Kiwale Road',
+    'Harico Diwaam Kiwale location', 'Harico Diwaam Kiwale property', 'Harico Diwaam Kiwale apartments',
+    'Harico Diwaam Kiwale flats', 'Harico Diwaam Kiwale residential project',
+    'Harico Diwaam Kiwale luxury flats', 'Harico Diwaam Kiwale premium apartments',
+    'Harico Diwaam Kiwale 2 BHK', 'Harico Diwaam Kiwale 3 BHK', 'Harico Diwaam Ravet',
+    'Harico Diwaam Ravet Kiwale', 'Harico Diwaam near Ravet', 'Harico Diwaam Ravet apartments',
+    'Harico Diwaam Ravet flats', 'Harico Diwaam Ravet property', 'Harico Diwaam Ravet residential project',
+    'Harico Diwaam Ravet 2 BHK', 'Harico Diwaam Ravet 3 BHK', 'Harico Diwaam Kiwale Ravet',
+    'Harico Diwaam Kiwale-Ravet', 'Harico Diwaam Kiwale Ravet Pune', 'Harico Diwaam Kiwale Ravet project',
+    'Harico Diwaam Kiwale Ravet flats', 'Harico Diwaam Kiwale Ravet apartments',
+    'Harico Diwaam Kiwale Ravet 2 BHK', 'Harico Diwaam Kiwale Ravet 3 BHK'
+  ],
+
+  // 13. Sentosa Water Park Keywords
+  sentosaWaterParkKeywords: [
+    'Harico Diwaam opposite Sentosa Water Park', 'Harico Diwaam near Sentosa Water Park',
+    'Harico Diwaam Sentosa Water Park', 'Harico Diwaam opposite Sentosa',
+    'Harico Diwaam near Sentosa Resort', 'flats opposite Sentosa Water Park',
+    'apartments opposite Sentosa Water Park', 'homes opposite Sentosa Water Park',
+    'luxury flats near Sentosa Water Park', '2 BHK near Sentosa Water Park',
+    '3 BHK near Sentosa Water Park', 'flats near Sentosa Kiwale', 'apartments near Sentosa Kiwale',
+    'property near Sentosa Water Park', 'residential project opposite Sentosa Water Park'
+  ],
+
+  // 14. Expressway Keywords
+  expresswayKeywords: [
+    'Harico Diwaam near Mumbai Pune Expressway', 'Harico Diwaam Mumbai Pune Expressway',
+    'Harico Diwaam Pune Mumbai Expressway', 'Harico Diwaam Expressway',
+    'Harico Diwaam Expressway corridor', 'Harico Diwaam near Expressway',
+    'flats near Mumbai Pune Expressway Kiwale', 'apartments near Mumbai Pune Expressway Kiwale',
+    '2 BHK near Mumbai Pune Expressway', '3 BHK near Mumbai Pune Expressway',
+    'luxury flats near Mumbai Pune Expressway', 'residential projects near Mumbai Pune Expressway',
+    'property near Mumbai Pune Expressway', 'investment property near Mumbai Pune Expressway'
+  ],
+
+  // 15. Mukai Chowk & Akurdi Station Keywords
+  transitKeywords: [
+    'Harico Diwaam Mukai Chowk', 'Harico Diwaam near Mukai Chowk',
+    'Harico Diwaam Mukai Chowk Kiwale', 'Harico Diwaam 2 minutes from Mukai Chowk',
+    'flats near Mukai Chowk', 'apartments near Mukai Chowk', '2 BHK near Mukai Chowk',
+    '3 BHK near Mukai Chowk', 'luxury flats near Mukai Chowk', 'property near Mukai Chowk',
+    'Harico Diwaam near Akurdi Railway Station', 'Harico Diwaam Akurdi Railway Station',
+    'Harico Diwaam 5 minutes from Akurdi station', 'flats near Akurdi Railway Station',
+    'apartments near Akurdi Railway Station', '2 BHK near Akurdi Railway Station',
+    '3 BHK near Akurdi Railway Station', 'property near Akurdi Railway Station'
+  ],
+
+  // 16. Hinjewadi, Wakad & Punawale Keywords
+  subMarketKeywords: [
+    'Harico Diwaam near Hinjewadi', 'Harico Diwaam Hinjewadi', 'Harico Diwaam near Hinjawadi IT Park',
+    'Harico Diwaam near Rajiv Gandhi Infotech Park', 'flats near Hinjewadi from Kiwale',
+    '2 BHK near Hinjewadi', '3 BHK near Hinjewadi', 'Harico Diwaam near Wakad',
+    'Harico Diwaam Wakad', 'flats near Wakad', '2 BHK near Wakad', '3 BHK near Wakad',
+    'Harico Diwaam near Punawale', 'Harico Diwaam Punawale', 'Harico Diwaam near Tathawade',
+    'Harico Diwaam Tathawade'
+  ],
+
+  // 17. Investment & ROI Keywords
+  investmentKeywords: [
+    'Harico Diwaam investment', 'Harico Diwaam property investment', 'Harico Diwaam real estate investment',
+    'Harico Diwaam investment opportunity', 'Harico Diwaam investment potential',
+    'Harico Diwaam ROI', 'Harico Diwaam rental yield', 'Harico Diwaam rental income',
+    'Harico Diwaam capital appreciation', 'Harico Diwaam property appreciation',
+    'Harico Diwaam investment Kiwale', 'Kiwale real estate investment', 'Kiwale property investment',
+    'best investment property Kiwale', 'best flats for investment Kiwale',
+    'best 2 BHK investment Kiwale', 'best 3 BHK investment Kiwale',
+    'Kiwale investment near Expressway', 'Kiwale property near Hinjewadi investment'
+  ],
+
+  // 18. Possession & Construction Status
+  possessionKeywords: [
+    'Harico Diwaam possession', 'Harico Diwaam possession date', 'Harico Diwaam expected possession',
+    'Harico Diwaam possession December 2030', 'Harico Diwaam construction status',
+    'Harico Diwaam construction update', 'Harico Diwaam construction progress',
+    'Harico Diwaam latest construction update', 'Harico Diwaam project status',
+    'Harico Diwaam completion date', 'Harico Diwaam handover date', 'Harico Diwaam under construction',
+    'Harico Diwaam Mivan construction', 'Harico Edge possession June 2030',
+    'Harico Pride possession June 2027'
+  ],
+
+  // 19. Reviews & Trust Keywords
+  reviewKeywords: [
+    'Harico Diwaam reviews', 'Harico Divaam reviews', 'Harico Diwaam Kiwale reviews',
+    'Harico Diwaam Pune reviews', 'Harico Diwaam customer reviews', 'Harico Diwaam buyer reviews',
+    'Harico Diwaam owner reviews', 'Harico Diwaam Google reviews', 'Harico Diwaam ratings',
+    'Harico Diwaam experience', 'Harico Diwaam honest review', 'Harico Diwaam pros and cons',
+    'Harico Diwaam advantages', 'Is Harico Diwaam worth buying', 'Is Harico Diwaam a good project',
+    'Should I buy Harico Diwaam', 'Harico Diwaam investment review'
+  ],
+
+  // 20. Price-Intent Combinations
+  priceBandKeywords: [
+    'Harico Diwaam flats under 80 lakhs', 'Harico Diwaam 2 BHK under 80 lakhs',
+    'Harico Diwaam 2 BHK around 75 lakhs', '2 BHK Kiwale under 80 lakhs',
+    'luxury 2 BHK Kiwale under 80 lakhs', '2 BHK near Expressway under 80 lakhs',
+    '2 BHK near Sentosa Water Park under 80 lakhs', 'Harico Diwaam 2 BHK 80 lakh',
+    'Harico Diwaam 3 BHK under 90 lakhs', 'Harico Diwaam 3 BHK around 90 lakhs',
+    '3 BHK Kiwale under 90 lakhs', '3 BHK near Expressway under 90 lakhs',
+    'Harico Diwaam 3 BHK under 1 crore', 'Harico Diwaam 3 BHK around 95 lakhs',
+    '3 BHK Kiwale under 1 crore', 'luxury 3 BHK Kiwale under 1 crore',
+    'Harico Diwaam 3 BHK 1 crore', 'Harico Diwaam 3 BHK 1.05 crore',
+    'Harico Diwaam 3 BHK Grand', 'premium 3 BHK Kiwale above 1 crore'
+  ]
+};
+
+// Flattened Master Array for Direct Injection & High-Intent Google Search
 export const focusHaricoDiwaamKeywords = [
-  // Exact Brand & Spelling Variations
-  'Harico Diwaam',
-  'harico diwaam',
-  'Harico Divaam',
-  'harico divaam',
-  'Harico Diwam',
-  'Harico Divam',
-  'Harico Dewaam',
-  'Harico Devam',
-  'Harico Diwaam Kiwale',
-  'harico diwaam kiwale',
-  'Harico Divaam Kiwale',
-  'harico divaam kiwale',
-  'Harico Diwam Kiwale',
-  'Harico Divam Kiwale',
-  'Harico Estates Diwaam Kiwale',
-  'Harico Estates Divaam Kiwale',
-  'Harico Estates Kiwale Diwaam',
-  'Harico Estates Kiwale Divaam',
-  
-  // New Launch Query Permutations
-  'Harico new launch',
-  'harico new launch',
-  'Harico new launch Pune',
-  'harico new launch pune',
-  'Harico new launch Kiwale',
-  'harico new launch kiwale',
-  'Harico new launch Punawale',
-  'harico new launch punawale',
-  'Harico Diwaam new launch',
-  'harico diwaam new launch',
-  'Harico Divaam new launch',
-  'harico divaam new launch',
-  'Harico Diwaam Kiwale new launch',
-  'Harico Divaam Kiwale new launch',
-  'Harico new residential project Kiwale',
-  'Harico new launch near Sentosa Water Park',
-  'Harico upcoming project Kiwale 2026',
-  
-  // Sentosa Co-Brand Permutations
-  'Sentosa Diwaam',
-  'sentosa diwaam',
-  'Sentosa Divaam',
-  'sentosa divaam',
-  'Sentosa Diwam',
-  'Sentosa Divam',
-  'Sentosa Harico Diwaam',
-  'Sentosa Harico Divaam',
-  'Sentosa Diwaam Kiwale',
-  'Sentosa Divaam Kiwale',
-  'Sentosa Harico Diwaam Kiwale',
-  'Sentosa Harico Divaam Kiwale',
-  'Codename Divine Kiwale',
-  'Sentosa Divine Kiwale',
-  'Harico Codename Divine',
-  'Sentosa Codename Divine Kiwale',
-  
-  // Location & Corridor Permutations
-  'Harico Diwaam Kiwale Pune',
-  'Harico Divaam Kiwale Pune',
-  'Harico Diwaam Ravet',
-  'Harico Divaam Ravet',
-  'Harico Diwaam Kiwale Ravet',
-  'Harico Divaam Kiwale Ravet',
-  'Harico Diwaam Mukai Chowk',
-  'Harico Divaam Mukai Chowk',
-  'Harico Diwaam Sentosa Water Park',
-  'Harico Divaam Sentosa Water Park',
-  'Harico Diwaam opposite Sentosa',
-  'Harico Divaam opposite Sentosa',
-  'flats opposite Sentosa Water Park Kiwale',
-  'flats near Sentosa Water Park Kiwale',
-  'flats near Mukai Chowk Kiwale',
-  'flats near Akurdi Railway Station Kiwale',
-  'flats near Symbiosis Kiwale',
-  'Harico Diwaam Expressway',
-  'Harico Divaam Expressway corridor',
-  
-  // Typology, Area & Pricing Permutations
-  'Harico Diwaam 2 BHK',
-  'Harico Divaam 2 BHK',
-  'Harico Diwaam 2 BHK price',
-  'Harico Divaam 2 BHK price',
-  'Harico Diwaam 2 BHK price 70 lakhs',
-  'Harico Divaam 2 BHK price 70 lakhs',
-  'Harico Diwaam 2 BHK price 70 lacs',
-  'Harico Diwaam starts 70 lakhs',
-  'Harico Diwaam 2 BHK carpet area',
-  'Harico Divaam 2 BHK carpet area',
-  'Harico Diwaam 2 BHK 724 sq ft',
-  'Harico Diwaam 2 BHK 760 sq ft',
-  'Harico Diwaam 2 BHK 848 sq ft',
-  'Harico Diwaam 3 BHK',
-  'Harico Divaam 3 BHK',
-  'Harico Diwaam 3 BHK price',
-  'Harico Divaam 3 BHK price',
-  'Harico Diwaam 3 BHK price 89.90 lakhs',
-  'Harico Divaam 3 BHK price 89.90 lakhs',
-  'Harico Diwaam 3 BHK starting 89.90 lacs',
-  'Harico Diwaam 3 BHK carpet area',
-  'Harico Divaam 3 BHK carpet area',
-  'Harico Diwaam 3 BHK 920 sq ft',
-  'Harico Diwaam 3 BHK 1108 sq ft',
-  'Harico Diwaam 3 BHK price 87 lakhs',
-  'Harico Diwaam 2 BHK under 75 lakhs',
-  'Harico Diwaam 3 BHK under 1 crore',
-  '2 BHK flats in Harico Diwaam',
-  '2 BHK flats in Harico Divaam Kiwale',
-  '3 BHK flats in Harico Diwaam',
-  '3 BHK flats in Harico Divaam Kiwale',
-  '2 BHK flats in Kiwale Ravet',
-  '3 BHK flats in Kiwale Ravet',
-  
-  // Buyer Intent & Deliverables Permutations
-  'Harico Diwaam price',
-  'Harico Divaam price',
-  'Harico Diwaam cost sheet',
-  'Harico Divaam cost sheet',
-  'Harico Diwaam all inclusive price',
-  'Harico Diwaam floor plan',
-  'Harico Divaam floor plan',
-  'Harico Diwaam 2 BHK floor plan',
-  'Harico Diwaam 3 BHK floor plan',
-  'Harico Diwaam master layout',
-  'Harico Divaam master layout',
-  'Harico Diwaam brochure',
-  'Harico Divaam brochure',
-  'Harico Diwaam brochure pdf',
-  'Harico Divaam brochure pdf download',
-  'Harico Diwaam sample flat',
-  'Harico Divaam sample flat',
-  'Harico Diwaam sample flat video',
-  'Harico Divaam sample flat video tour',
-  'Harico Diwaam reviews',
-  'Harico Divaam reviews',
-  'Harico Diwaam construction update',
-  'Harico Divaam construction status',
-  'Harico Diwaam site visit booking',
-  
-  // Regulatory & Possession Permutations
-  'Harico Diwaam RERA',
-  'Harico Divaam RERA',
-  'Harico Diwaam RERA number',
-  'Harico Diwaam RERA PR1260002502389',
-  'Harico Divaam RERA PR1260002502389',
-  'Harico Diwaam possession date',
-  'Harico Divaam possession date',
-  'Harico Diwaam possession December 2030',
-  'Harico Divaam possession Dec 2030',
-  'Harico Diwaam delivery date 2030',
-  
-  // Scale & Architecture Permutations
-  'Harico Diwaam 24 storeys',
-  'Harico Divaam 24 storeys',
-  'Harico Diwaam 24 floors',
-  'Harico Divaam tallest towers in Kiwale',
-  'tallest high rise tower in Kiwale Ravet',
-  'Harico Diwaam 5 sky towers',
-  'Harico Divaam 5 sky towers 5 acres',
-  'Harico Diwaam 100 amenities',
-  'Harico Divaam sky lounge 24th floor',
-  'Harico Diwaam observation deck',
-  'Harico Diwaam 12 guest suites',
-  
-  // Contact & Location Coordinates Permutations
-  'Harico Diwaam contact number',
-  'Harico Divaam contact number',
-  'Harico Diwaam phone 7744009295',
-  'Harico Divaam phone 7744009295',
-  'Harico Diwaam sales office Kiwale',
-  'Harico Divaam sales office Kiwale',
-  'Harico Diwaam site office address',
-  'Harico Diwaam Google Maps',
-  'Harico Divaam Google Maps',
-  'Harico Diwaam driving directions',
-  'Harico Diwaam location map',
-  
-  // Marathi / Vernacular Permutations
+  ...haricoMasterTopicalEcosystem.coreBrand,
+  ...haricoMasterTopicalEcosystem.highIntentBuy,
+  ...haricoMasterTopicalEcosystem.twoBhkEcosystem,
+  ...haricoMasterTopicalEcosystem.threeBhkEcosystem,
+  ...haricoMasterTopicalEcosystem.priceKeywords,
+  ...haricoMasterTopicalEcosystem.carpetAreaKeywords,
+  ...haricoMasterTopicalEcosystem.floorPlanKeywords,
+  ...haricoMasterTopicalEcosystem.towerKeywords,
+  ...haricoMasterTopicalEcosystem.reraKeywords,
+  ...haricoMasterTopicalEcosystem.amenitiesKeywords,
+  ...haricoMasterTopicalEcosystem.skyTowerKeywords,
+  ...haricoMasterTopicalEcosystem.locationKeywords,
+  ...haricoMasterTopicalEcosystem.sentosaWaterParkKeywords,
+  ...haricoMasterTopicalEcosystem.expresswayKeywords,
+  ...haricoMasterTopicalEcosystem.transitKeywords,
+  ...haricoMasterTopicalEcosystem.subMarketKeywords,
+  ...haricoMasterTopicalEcosystem.investmentKeywords,
+  ...haricoMasterTopicalEcosystem.possessionKeywords,
+  ...haricoMasterTopicalEcosystem.reviewKeywords,
+  ...haricoMasterTopicalEcosystem.priceBandKeywords,
   'हरिको दिवाम',
   'हॅरिको दिवाम',
   'हरिको दिवाम किवाळे',
-  'हरिको दिवाम किवाळे पुणे',
   'हरिको दिवाम नवीन लाँच',
-  'हरिको दिवाम किंमत',
   'हरिको दिवाम २ बीएचके',
   'हरिको दिवाम ३ बीएचके',
-  'हरिको दिवाम फ्लॉट्स किवाळे',
-  'हरिको दिवाम ब्रोशर',
   'हरिको दिवाम रेरा PR1260002502389',
-  'हरिको दिवाम पझेशन डिसेंबर 2030',
-  'हरिको दिवाम २४ मजले',
-  'हरिको दिवाम सेंटोसा वॉटर पार्क',
-  'हरिको नवीन लाँच पुणे',
-  'हरिको किवाळे २ आणि ३ बीएचके',
-  'सेंटोसा दिवाम किवाळे'
+  'हरिको दिवाम पझेशन डिसेंबर 2030'
 ];
 
 // ==========================================
