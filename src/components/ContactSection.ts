@@ -77,7 +77,7 @@ export function createContactSection(): HTMLElement {
           
           <!-- Sales Desk Card -->
           <div class="info-card-box p-lg rounded-lg bg-navy text-white">
-            <h4 class="text-gold font-bold text-lg mb-sm"><i class="fa-solid fa-headset mr-2"></i> Official Developer Helpline</h4>
+            <h4 class="text-gold font-bold text-lg mb-sm"><i class="fa-solid fa-headset mr-2"></i> Direct Sales Helpline</h4>
             <p class="text-sm text-light mb-md">Our sales gallery is open 7 days a week from 9:30 AM to 7:30 PM.</p>
             
             <div class="contact-line-item mb-sm">
