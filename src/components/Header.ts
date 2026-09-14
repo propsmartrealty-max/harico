@@ -121,23 +121,47 @@ export function createHeader(): HTMLElement {
       pointer-events: auto;
       width: 100%;
       max-width: 1260px;
-      background: rgba(10, 25, 47, 0.92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: rgba(10, 25, 47, 0.82);
+      backdrop-filter: var(--liquid-glass-blur);
+      -webkit-backdrop-filter: var(--liquid-glass-blur);
       border-radius: 9999px;
-      border: 1px solid rgba(212, 175, 55, 0.4);
-      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      box-shadow: 
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.25),
+        0 14px 40px rgba(0, 0, 0, 0.4);
       padding: 6px 16px 6px 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+
+    .pill-navbar::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: radial-gradient(
+        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 255, 255, 0.2),
+        rgba(212, 175, 55, 0.08) 40%,
+        transparent 70%
+      );
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
     }
 
     .header-pill-wrapper.scrolled .pill-navbar {
-      background: rgba(255, 255, 255, 0.98);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: var(--liquid-glass-blur);
+      -webkit-backdrop-filter: var(--liquid-glass-blur);
       border: 1px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      box-shadow: 
+        inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.85),
+        0 14px 35px rgba(10, 25, 47, 0.12);
     }
 
     /* Logo inside Pill */
@@ -273,13 +297,17 @@ export function createHeader(): HTMLElement {
       width: 100%;
       max-width: 320px;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.99);
-      backdrop-filter: blur(20px);
-      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: var(--liquid-glass-blur-heavy);
+      -webkit-backdrop-filter: var(--liquid-glass-blur-heavy);
+      border-left: 1px solid rgba(212, 175, 55, 0.35);
+      box-shadow: 
+        inset 1.5px 0 1px 0 rgba(255, 255, 255, 0.8),
+        -10px 0 40px rgba(0, 0, 0, 0.25);
       padding: 30px 25px;
       display: flex;
       flex-direction: column;
-      transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
       z-index: 1100;
       pointer-events: auto;
       overflow-y: auto;

@@ -18,7 +18,7 @@ export const generateOrganizationSchema = () => {
         "@context": "https://schema.org",
         "@type": "RealEstateAgent",
         "@id": "https://haricoestates.in/#organization",
-        "name": "Harico Estates by Sentosa Developers",
+        "name": "Harico Estates, a Joint Venture by Sentosa Developers",
         "alternateName": [
             "Sentosa Developers",
             "Sentosa Group Pune",
@@ -189,7 +189,7 @@ export const generateProjectSchema = (project: Project) => {
         "@context": "https://schema.org",
         "@type": "ApartmentComplex",
         "@id": `https://haricoestates.in/project/${project.slug}#complex`,
-        "name": project.title,
+        "name": `${project.title} by Harico Estates`,
         "alternateName": alternateNames,
         "image": [
             "https://haricoestates.in" + project.image,
@@ -238,7 +238,7 @@ export const generateProjectSchema = (project: Project) => {
             "availability": "https://schema.org/InStock",
             "seller": {
                 "@type": "RealEstateAgent",
-                "name": "Harico Estates by Sentosa Developers"
+                "name": "Harico Estates, a Joint Venture by Sentosa Developers"
             }
         }))
     };
@@ -294,7 +294,7 @@ export const generateProjectFaqSchema = (project: Project) => {
             },
             {
                 name: "Who is the developer of Harico Diwaam Kiwale?",
-                text: "Harico Diwaam is developed by Harico Estates in partnership with Sentosa Developers, a trusted real estate group with a 39-year legacy (since 1987), 20+ completed projects, and builders of Sentosa Water Park & Resorts."
+                text: "Harico Diwaam is developed by Harico Estates, a Joint Venture by Sentosa Developers, a trusted real estate group with a 39-year legacy (since 1987), 20+ completed projects, and builders of Sentosa Water Park & Resorts."
             }
         ];
     } else {
@@ -416,8 +416,8 @@ export const generateWebSiteSchema = () => {
         "@type": "WebSite",
         "@id": "https://haricoestates.in/#website",
         "url": "https://haricoestates.in",
-        "name": "Harico Estates by Sentosa Developers",
-        "description": "Official portal for Harico Estates & Sentosa Developers. Luxury 2 & 3 BHK residences in Punawale and Kiwale, Pune.",
+        "name": "Harico Estates, a Joint Venture by Sentosa Developers",
+        "description": "Harico Estates, a Joint Venture by Sentosa Developers: Luxury 2 & 3 BHK residences in Punawale and Kiwale, Pune.",
         "publisher": {
             "@id": "https://haricoestates.in/#organization"
         },
@@ -446,7 +446,7 @@ export const generateArticleSchema = (article: Article) => {
         },
         "publisher": {
             "@type": "Organization",
-            "name": "Harico Estates by Sentosa Developers",
+            "name": "Harico Estates, a Joint Venture by Sentosa Developers",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://haricoestates.in/harico_logo.png"
@@ -599,8 +599,8 @@ export const initSEO = (project?: Project, prog?: any, article?: Article) => {
         injectSchema(generateFaqSchema(), 'faq-schema');
         
         updateOGTags(
-            "Harico Estates by Sentosa Developers | Harico Divaam & Harico Edge",
-            "Harico Estates & Sentosa Developers (39-Year Legacy). Ultra-luxury 2 & 3 BHK homes across Punawale, Kiwale, Ravet, Tathawade, and Hinjewadi corridor.",
+            "Harico Estates | A Joint Venture by Sentosa Developers | Harico Diwaam & Harico Edge",
+            "Harico Estates, a Joint Venture by Sentosa Developers: Ultra-luxury 2 & 3 BHK flats at Harico Diwaam (Kiwale, Dec 2030, Starts ₹70L*, 3 BHK from ₹89.90L*) & Harico Edge (Punawale, June 2030). Call +91 7744009295.",
             "https://haricoestates.in/harico_logo.png",
             "https://haricoestates.in/"
         );

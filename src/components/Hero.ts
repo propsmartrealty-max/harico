@@ -12,14 +12,14 @@ export function createHero(): HTMLElement {
     <div class="container hero-container-refined flex flex-col justify-center items-center text-center">
       
       <!-- Luxury Pre-heading Capsule -->
-      <div class="hero-pre-badge fade-in-up">
+      <div class="hero-pre-badge liquid-glass-pill fade-in-up">
         <span class="badge-sparkle">✦</span>
         <span>A 39-Year Legacy of Luxury by Sentosa Developers</span>
         <span class="badge-sparkle">✦</span>
       </div>
 
       <!-- Mega Launch Alert Capsule -->
-      <a href="/project/harico-divaam" class="hero-launch-banner-pill fade-in-up">
+      <a href="/project/harico-divaam" class="hero-launch-banner-pill liquid-glass-pill fade-in-up">
         <span class="launch-live-dot"></span>
         <span class="launch-text-bold">🚨 MEGA NEW LAUNCH:</span>
         <span class="launch-text-sub">Harico Diwaam Kiwale (Tallest 24-Storey Towers | Dec 2030)</span>
@@ -39,31 +39,31 @@ export function createHero(): HTMLElement {
 
       <!-- Key Micro-Feature Chips -->
       <div class="hero-feature-chips fade-in-up delay-2">
-        <div class="feature-chip">
+        <div class="feature-chip liquid-glass-pill">
           <i class="fa-solid fa-shield-halved text-gold"></i>
           <span>100% MahaRERA Verified</span>
         </div>
-        <div class="feature-chip">
+        <div class="feature-chip liquid-glass-pill">
           <i class="fa-solid fa-compass-drafting text-gold"></i>
           <span>Zero Space Wastage Plans</span>
         </div>
-        <div class="feature-chip">
+        <div class="feature-chip liquid-glass-pill">
           <i class="fa-solid fa-road text-gold"></i>
           <span>2 Mins to Expressway</span>
         </div>
-        <div class="feature-chip">
+        <div class="feature-chip liquid-glass-pill">
           <i class="fa-solid fa-leaf text-gold"></i>
           <span>70% Open Green Zones</span>
         </div>
       </div>
 
       <!-- Refined Concierge Property Finder Widget -->
-      <div class="hero-finder-card fade-in-up delay-2">
+      <div class="hero-finder-card liquid-glass-card liquid-glass-dark fade-in-up delay-2">
         <div class="finder-inner-grid">
           
           <div class="finder-input-box">
             <label class="finder-lbl"><i class="fa-solid fa-location-dot text-gold mr-1"></i> Location</label>
-            <select id="finder-location" class="finder-select-clean">
+            <select id="finder-location" class="finder-select-clean liquid-glass-input">
               <option value="all">All Micro-Markets (Punawale & Kiwale)</option>
               <option value="punawale">Punawale, Pune (Harico Edge & Pride)</option>
               <option value="kiwale">Kiwale, Pune (Harico Diwaam 24-Storey)</option>
@@ -72,7 +72,7 @@ export function createHero(): HTMLElement {
 
           <div class="finder-input-box">
             <label class="finder-lbl"><i class="fa-solid fa-bed text-gold mr-1"></i> Configuration</label>
-            <select id="finder-config" class="finder-select-clean">
+            <select id="finder-config" class="finder-select-clean liquid-glass-input">
               <option value="all">2 & 3 BHK Ultra-Premium</option>
               <option value="2bhk">2 BHK Smart & Grande (724 - 848 sq.ft)</option>
               <option value="3bhk">3 BHK Luxury & Royale (920 - 1180 sq.ft)</option>
@@ -81,7 +81,7 @@ export function createHero(): HTMLElement {
 
           <div class="finder-input-box">
             <label class="finder-lbl"><i class="fa-solid fa-wallet text-gold mr-1"></i> Budget Range</label>
-            <select id="finder-budget" class="finder-select-clean">
+            <select id="finder-budget" class="finder-select-clean liquid-glass-input">
               <option value="all">All Budgets (₹70L - ₹1.20Cr)</option>
               <option value="under75">₹70.00 Lacs - ₹75 Lacs</option>
               <option value="75to100">₹75 Lacs - ₹1.00 Crore</option>
@@ -90,9 +90,11 @@ export function createHero(): HTMLElement {
           </div>
 
           <div class="finder-submit-box">
-            <button id="btn-hero-search" class="btn btn-primary btn-finder-action">
+            <button id="btn-hero-search" class="liquid-glass-btn liquid-glass-btn-primary btn-finder-action">
               <span>Find Residences</span>
               <i class="fa-solid fa-arrow-right ml-2"></i>
+            </button>
+          </div>
             </button>
           </div>
 
@@ -333,16 +335,21 @@ export function createHero(): HTMLElement {
 
     /* Concierge Property Finder Card */
     .hero-finder-card {
-      background: rgba(255, 255, 255, 0.98);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 16px;
-      padding: 18px 24px;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      background: rgba(10, 25, 47, 0.84);
+      backdrop-filter: var(--liquid-glass-blur-heavy);
+      -webkit-backdrop-filter: var(--liquid-glass-blur-heavy);
+      border-radius: 24px;
+      padding: 22px 28px;
+      box-shadow: 
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.3),
+        0 25px 60px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(212, 175, 55, 0.15);
       border: 1px solid rgba(212, 175, 55, 0.45);
       width: 100%;
-      max-width: 980px;
+      max-width: 1000px;
       margin: 0 auto;
+      position: relative;
     }
     
     .finder-inner-grid {
@@ -356,57 +363,55 @@ export function createHero(): HTMLElement {
       text-align: left;
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: 6px;
     }
     
     .finder-lbl {
       font-size: 0.72rem;
       font-weight: 700;
-      color: var(--color-navy);
+      color: #E2E8F0;
       text-transform: uppercase;
       letter-spacing: 0.6px;
+      font-family: var(--font-heading);
     }
     
     .finder-select-clean {
-      background: #F8FAFC;
-      border: 1px solid #CBD5E1;
-      padding: 11px 14px;
-      border-radius: 8px;
-      color: var(--color-navy);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 12px 14px;
+      border-radius: 12px;
+      color: #FFFFFF;
       font-size: 0.88rem;
       font-weight: 600;
       outline: none;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
+      font-family: var(--font-body);
+    }
+
+    .finder-select-clean option {
+      background: #0A192F;
+      color: #FFFFFF;
     }
     
     .finder-select-clean:focus {
+      background: rgba(255, 255, 255, 0.16);
       border-color: var(--color-gold);
-      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
     }
     
     .btn-finder-action {
-      padding: 13px 24px;
+      padding: 13px 26px;
       white-space: nowrap;
       height: 100%;
-      border-radius: 8px;
-      font-size: 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.88rem;
       font-weight: 700;
-      background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-      color: var(--color-navy);
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-      transition: all 0.25s ease;
+      font-family: var(--font-heading);
+      letter-spacing: 0.5px;
       cursor: pointer;
-    }
-
-    .btn-finder-action:hover {
-      background: linear-gradient(135deg, #E5C158 0%, #C9970C 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
     }
 
     /* CTA Group */

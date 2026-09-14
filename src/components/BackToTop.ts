@@ -51,20 +51,23 @@ export function createBackToTop(): HTMLElement {
       position: fixed;
       bottom: 25px;
       right: 25px;
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: rgba(10, 25, 47, 0.9);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: none;
+      background: rgba(10, 25, 47, 0.82);
+      backdrop-filter: var(--liquid-glass-blur);
+      -webkit-backdrop-filter: var(--liquid-glass-blur);
+      border: 1px solid rgba(212, 175, 55, 0.45);
       cursor: pointer;
       z-index: 1040;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      box-shadow: 
+        inset 0 1.5px 1px rgba(255, 255, 255, 0.35),
+        0 10px 28px rgba(0, 0, 0, 0.45),
+        0 0 15px rgba(212, 175, 55, 0.2);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
       opacity: 1;
       transform: translateY(0);
     }

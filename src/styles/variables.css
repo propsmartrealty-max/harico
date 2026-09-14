@@ -123,6 +123,33 @@
   --shadow-card-3d: 0 30px 60px -12px rgba(10, 25, 47, 0.2), 0 18px 36px -18px rgba(0, 0, 0, 0.15);
   --shadow-gold-glow: 0 8px 32px rgba(212, 175, 55, 0.35);
 
+  /* =========================================
+     Modern Liquid Glass System Tokens
+     ========================================= */
+  --liquid-glass-bg: rgba(255, 255, 255, 0.72);
+  --liquid-glass-bg-subtle: rgba(255, 255, 255, 0.45);
+  --liquid-glass-bg-dark: rgba(10, 25, 47, 0.78);
+  --liquid-glass-bg-darker: rgba(10, 25, 47, 0.88);
+  --liquid-glass-blur: blur(24px) saturate(190%);
+  --liquid-glass-blur-heavy: blur(32px) saturate(200%);
+  --liquid-glass-blur-sm: blur(12px) saturate(160%);
+  
+  /* Specular Rim Light & Borders */
+  --liquid-glass-border: 1px solid rgba(255, 255, 255, 0.28);
+  --liquid-glass-border-dark: 1px solid rgba(255, 255, 255, 0.12);
+  --liquid-glass-border-gold: 1px solid rgba(212, 175, 55, 0.38);
+  --liquid-glass-border-gold-intense: 1px solid rgba(212, 175, 55, 0.65);
+  
+  /* Inner Specular Refraction Highlights */
+  --liquid-glass-specular: inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.55), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.08);
+  --liquid-glass-specular-dark: inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.25);
+  --liquid-glass-specular-gold: inset 0 1.5px 1.5px 0 rgba(255, 245, 208, 0.7), inset 0 -1px 1px 0 rgba(170, 128, 16, 0.2);
+  
+  /* Liquid Floating Shadows */
+  --liquid-glass-shadow: 0 20px 50px -10px rgba(10, 25, 47, 0.18), 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+  --liquid-glass-shadow-dark: 0 25px 60px -12px rgba(0, 0, 0, 0.55), 0 12px 28px -6px rgba(10, 25, 47, 0.4);
+  --liquid-glass-glow-gold: 0 8px 32px 0 rgba(212, 175, 55, 0.32);
+
   /* Z-Indices */
   --z-header: 1000;
   --z-modal: 2000;

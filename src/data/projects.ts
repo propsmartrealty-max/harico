@@ -160,8 +160,8 @@ export const projectsData: Record<string, Project> = {
             { type: '3 BHK Royale', carpet: '1148 sq.ft', price: '₹ 1.18 Cr*', bedrooms: 3 }
         ],
         seo: {
-            title: 'Harico Edge Punawale | Sentosa Developers | 2 & 3 BHK Luxury Residences',
-            description: 'Harico Edge in Punawale by Sentosa Developers. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. Possession June 2030. MahaRERA P52100031773. Call +91 7744009295.',
+            title: 'Harico Edge Punawale by Harico Estates | A Joint Venture by Sentosa Developers',
+            description: 'Harico Edge in Punawale by Harico Estates, a Joint Venture by Sentosa Developers. Ultra-premium 2 & 3 BHK flats starting ₹74 Lacs* near Bhumkar Chowk, 2 mins to Expressway & 12 mins to Hinjewadi. Possession June 2030. MahaRERA P52100031773. Call +91 7744009295.',
             keywords: generateKeywords('edge')
         }
     },
@@ -181,7 +181,7 @@ export const projectsData: Record<string, Project> = {
         unitsTotal: '500+ Luxury Residences',
         image: '/assets/harico-divaam-hero.jpg',
         tagline: '🚨 Flagship Mega Launch | Tallest 24-Storey Landmark Opposite Sentosa Water Park | Starts ₹70L* (3 BHK from ₹89.90L*) | Possession Dec 2030',
-        description: 'Harico Diwaam by Sentosa Developers is the premier flagship mega new launch of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park with possession scheduled for December 2030, Harico Diwaam offers luxury 2 BHK residences from ₹70 Lacs* and spacious 3 BHK residences from ₹89.90 Lacs* onwards with over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones (MahaRERA: PR1260002502389).',
+        description: 'Harico Diwaam by Harico Estates, a Joint Venture by Sentosa Developers, is the premier flagship mega new launch of Kiwale-Ravet, standing tall as the highest 24-storey residential landmark in the micro-market. Spanning an expansive 5-acre master development directly opposite Sentosa Water Park with possession scheduled for December 2030, Harico Diwaam offers luxury 2 BHK residences from ₹70 Lacs* and spacious 3 BHK residences from ₹89.90 Lacs* onwards with over 100+ resort-grade lifestyle amenities organized into dedicated wellness, recreational, and lifestyle zones (MahaRERA: PR1260002502389).',
         highlights: [
             '🔥 Major New Launch: Tallest 24-Storey High-Rise Towers in Kiwale-Ravet',
             'Target Possession: December 2030 with MahaRERA PR1260002502389 Backing',
@@ -315,8 +315,8 @@ export const projectsData: Record<string, Project> = {
             { title: '3 BHK Grand', image: '/assets/harico-divaam-3bhk-grand-v3.png', carpet: '1108 sq.ft' }
         ],
         seo: {
-            title: 'Harico Diwaam Kiwale | 2 & 3 BHK Sky Towers by Sentosa Developers',
-            description: 'Harico Diwaam in Kiwale Ravet by Sentosa Developers: 24-storey luxury sky towers opposite Sentosa Water Park starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs* onwards). Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
+            title: 'Harico Diwaam Kiwale by Harico Estates | A Joint Venture by Sentosa Developers',
+            description: 'Harico Diwaam in Kiwale Ravet by Harico Estates, a Joint Venture by Sentosa Developers: 24-storey luxury sky towers opposite Sentosa Water Park starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs* onwards). Possession Dec 2030. 100+ Amenities, 5 Iconic Sky Towers. MahaRERA PR1260002502389. Call +91 7744009295.',
             keywords: generateKeywords('harico-diwaam')
         }
     },
@@ -399,8 +399,8 @@ export const projectsData: Record<string, Project> = {
         reraNumber: 'P52100018471',
         reraQRCodeUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://maharerait.mahaonline.gov.in/?rera=P52100018471',
         seo: {
-            title: 'Harico Pride Punawale | Sentosa Developers | 2 & 3 BHK Ready & Near-Possession Flats',
-            description: 'Harico Pride in Punawale by Sentosa Developers near Bhiku Vallabh Kale School. Largest carpet layouts, rooftop pool & 2 mins to Expressway. MahaRERA P52100018471. Call +91 7744009295.',
+            title: 'Harico Pride Punawale by Harico Estates | A Joint Venture by Sentosa Developers',
+            description: 'Harico Pride in Punawale by Harico Estates, a Joint Venture by Sentosa Developers near Bhiku Vallabh Kale School. Largest carpet layouts, rooftop pool & 2 mins to Expressway. MahaRERA P52100018471. Call +91 7744009295.',
             keywords: generateKeywords('pride')
         }
     }

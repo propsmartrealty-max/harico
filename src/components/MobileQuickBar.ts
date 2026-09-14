@@ -41,16 +41,19 @@ export function createMobileQuickBar(): HTMLElement {
 
     .quick-bar-container {
       pointer-events: auto;
-      background: rgba(10, 25, 47, 0.95);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
+      background: rgba(10, 25, 47, 0.82);
+      backdrop-filter: var(--liquid-glass-blur-heavy);
+      -webkit-backdrop-filter: var(--liquid-glass-blur-heavy);
       border: 1px solid rgba(212, 175, 55, 0.45);
       border-radius: 9999px;
       padding: 6px 8px;
       display: grid;
       grid-template-columns: 1fr 1.2fr 1fr;
       gap: 6px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      box-shadow: 
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -1px 1px 0 rgba(0, 0, 0, 0.2),
+        0 12px 35px rgba(0, 0, 0, 0.5);
     }
 
     .quick-bar-btn {
@@ -67,26 +70,35 @@ export function createMobileQuickBar(): HTMLElement {
       text-decoration: none;
       border: none;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       font-family: var(--font-heading);
       white-space: nowrap;
     }
 
     .quick-bar-btn.btn-call {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       color: #FFFFFF;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
     }
 
     .quick-bar-btn.btn-wa {
       background: #25D366;
       color: #FFFFFF;
-      box-shadow: 0 2px 10px rgba(37, 211, 102, 0.4);
+      box-shadow: 
+        inset 0 1px 1px rgba(255, 255, 255, 0.4),
+        0 4px 14px rgba(37, 211, 102, 0.4);
     }
 
     .quick-bar-btn.btn-tour {
-      background: linear-gradient(135deg, #D4AF37 0%, #AA8010 100%);
-      color: #FFFFFF;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(186, 142, 17, 0.95) 100%);
+      color: #0A192F;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 
+        inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.7),
+        0 4px 15px rgba(212, 175, 55, 0.4);
     }
 
     @media (max-width: 768px) {

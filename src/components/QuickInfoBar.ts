@@ -36,11 +36,14 @@ export function createQuickInfoBar(project: any): HTMLElement {
   const style = document.createElement('style');
   style.textContent = `
     .quick-info-bar {
-      background-color: var(--color-navy);
+      background: rgba(10, 25, 47, 0.88);
+      backdrop-filter: var(--liquid-glass-blur);
+      -webkit-backdrop-filter: var(--liquid-glass-blur);
       color: var(--color-white);
       height: 80px;
       width: 100%;
-      border-bottom: 2px solid var(--color-gold);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2), 0 10px 25px rgba(0, 0, 0, 0.15);
     }
     
     .info-item {

@@ -232,15 +232,16 @@ export function createEnquireModal(): HTMLElement {
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(10, 25, 47, 0.78);
-      backdrop-filter: blur(8px);
+      background: rgba(10, 25, 47, 0.72);
+      backdrop-filter: var(--liquid-glass-blur-heavy);
+      -webkit-backdrop-filter: var(--liquid-glass-blur-heavy);
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
       opacity: 1;
       visibility: visible;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
       padding: 15px;
     }
 
@@ -251,14 +252,19 @@ export function createEnquireModal(): HTMLElement {
     }
 
     .modal-content-advanced {
-      background: #FFFFFF;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: var(--liquid-glass-blur);
+      -webkit-backdrop-filter: var(--liquid-glass-blur);
       width: 100%;
       max-width: 560px;
-      border-radius: 16px;
+      border-radius: 24px;
       position: relative;
-      box-shadow: 0 25px 60px rgba(10, 25, 47, 0.3);
-      padding: 30px 32px;
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 
+        inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.9),
+        0 30px 70px rgba(10, 25, 47, 0.4),
+        0 0 35px rgba(212, 175, 55, 0.2);
+      padding: 32px 34px;
+      border: 1px solid rgba(212, 175, 55, 0.4);
       max-height: 92vh;
       overflow-y: auto;
       transform: translateY(0) scale(1);

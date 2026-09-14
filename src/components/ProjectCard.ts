@@ -18,7 +18,7 @@ export interface Project {
 
 export function createProjectCard(project: Project): HTMLElement {
   const card = document.createElement('article');
-  card.className = 'project-card-3d card-3d-tilt';
+  card.className = 'project-card-3d card-3d-tilt liquid-glass-card';
 
   const identifier = project.slug || project.id;
 
@@ -41,19 +41,19 @@ export function createProjectCard(project: Project): HTMLElement {
       <!-- Top Floating Badges -->
       <div class="card-top-badges flex justify-between items-center w-full">
         <div class="flex items-center gap-xs">
-          <div class="status-badge-capsule ${project.status.toLowerCase()}">
+          <div class="status-badge-capsule liquid-glass-pill ${project.status.toLowerCase()}">
             <span class="status-radar-dot ${project.status === 'Ongoing' ? 'radar-pulse-ongoing' : ''}"></span>
             <span class="status-text">${project.status}</span>
           </div>
           ${project.slug === 'harico-divaam' ? `
-            <div class="launch-flagship-pill">
+            <div class="launch-flagship-pill liquid-glass-pill liquid-glass-pill-gold">
               <i class="fa-solid fa-crown text-gold mr-1"></i> Mega Launch
             </div>
           ` : ''}
         </div>
 
         ${project.possession ? `
-          <div class="possession-capsule">
+          <div class="possession-capsule liquid-glass-pill liquid-glass-pill-light">
             <i class="fa-solid fa-clock-rotate-left mr-1 text-gold"></i>
             <span>${project.possession}</span>
           </div>

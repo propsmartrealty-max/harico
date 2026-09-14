@@ -42,6 +42,7 @@ export class AnimationEngine {
       this.initMagneticButtons();
       this.initCursorGlow();
       this.initScrollParallax();
+      this.initLiquidGlass();
     }
   }
 
@@ -249,6 +250,39 @@ export class AnimationEngine {
         heroBg.style.transform = `translate3d(0, ${(scrollY * 0.3).toFixed(1)}px, 0)`;
       }
     }, { passive: true });
+  }
+
+  /**
+   * 7. Interactive Mouse-Driven Liquid Glass Specular Physics
+   * Dynamically tracks mouse position to create responsive specular light reflection
+   */
+  public initLiquidGlass() {
+    const liquidCards = document.querySelectorAll<HTMLElement>(
+      '.liquid-glass-card, .project-card-3d, .hero-finder-card, .milestone-card-refined, .pill-navbar, .quick-bar-container, .modal-content-advanced, .lightbox-dialog, .spec-tech-card, .amenity-luxury-card'
+    );
+
+    liquidCards.forEach((card) => {
+      let rect: DOMRect;
+
+      const onMouseEnter = () => {
+        rect = card.getBoundingClientRect();
+      };
+
+      const onMouseMove = (e: MouseEvent) => {
+        if (!rect) rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const xPct = ((x / rect.width) * 100).toFixed(1);
+        const yPct = ((y / rect.height) * 100).toFixed(1);
+        card.style.setProperty('--mouse-x', `${xPct}%`);
+        card.style.setProperty('--mouse-y', `${yPct}%`);
+      };
+
+      card.removeEventListener('mouseenter', onMouseEnter);
+      card.removeEventListener('mousemove', onMouseMove);
+      card.addEventListener('mouseenter', onMouseEnter);
+      card.addEventListener('mousemove', onMouseMove);
+    });
   }
 }
 
