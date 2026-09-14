@@ -50,25 +50,25 @@
   Cache-Tag: harico-images
   Access-Control-Allow-Origin: *
 
-# HTML Pages & Programmatic Landing Hubs (Sub-Millisecond Edge Cache with Background Revalidation)
+# HTML Pages & Programmatic Landing Hubs (Fresh Edge Cache with Instant Revalidation)
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800
-  Cloudflare-CDN-Cache-Control: max-age=86400, stale-while-revalidate=604800
-  CDN-Cache-Control: max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=300, stale-while-revalidate=60
+  CDN-Cache-Control: max-age=300
   Cache-Tag: harico-html
   Content-Type: text/html; charset=UTF-8
 
 /
-  Cache-Control: public, max-age=0, must-revalidate, s-maxage=86400, stale-while-revalidate=604800
-  Cloudflare-CDN-Cache-Control: max-age=86400, stale-while-revalidate=604800
-  CDN-Cache-Control: max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=300, stale-while-revalidate=60
+  CDN-Cache-Control: max-age=300
   Cache-Tag: harico-html
   Content-Type: text/html; charset=UTF-8
 
 # XML Sitemaps & Search Engine Directives
 /sitemap.xml
-  Cache-Control: public, max-age=3600, s-maxage=86400, must-revalidate
-  Cloudflare-CDN-Cache-Control: max-age=86400
+  Cache-Control: public, max-age=600, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=600
   Content-Type: application/xml; charset=UTF-8
   X-Robots-Tag: noindex
 

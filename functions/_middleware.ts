@@ -109,6 +109,55 @@ const routeSEOMap: Record<string, RouteSEO> = {
     keywords: 'Flats opposite Sentosa Water Park, Flats opposite Sentosa Water Park Kiwale, Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Sentosa Diwaam, Sentosa Water Park Kiwale Flats, Kiwale Ravet High Rise, 2 BHK opposite Sentosa, 3 BHK opposite Sentosa Water Park, Harico Kiwale, Sentosa Developers Kiwale, सेंटोसा वॉटर पार्क जवळील फ्लॅट्स किवाळे',
     ogImage: 'https://haricoestates.in/assets/harico-divaam-hero.jpg',
     canonical: 'https://haricoestates.in/flats-opposite-sentosa-water-park-kiwale'
+  },
+  '/articles': {
+    title: 'Harico Estates Knowledge Hub | Homebuyer Guides, MahaRERA & Market Analysis',
+    description: 'Official Harico Estates Knowledge Hub: Comprehensive guides on Harico Diwaam, Harico Kiwale, Harico Punawale, 2 & 3 BHK floor plans, MahaRERA compliance, and transit reports.',
+    keywords: 'Harico Estates articles, Harico Diwaam guide, Harico Punawale guide, Harico Kiwale investment, Pune real estate guides, MahaRERA knowledge hub',
+    ogImage: 'https://haricoestates.in/assets/harico-divaam-hero.jpg',
+    canonical: 'https://haricoestates.in/articles'
+  },
+  '/articles/harico-estates-overview': {
+    title: 'Harico Estates Pune: Developer Profile, Sentosa Legacy & Master Portfolio Guide',
+    description: 'Complete guide to Harico Estates Pune by Sentosa Developers. Explore ongoing projects (Harico Diwaam, Harico Edge, Harico Pride), 39-year legacy, and 100% MahaRERA transparency.',
+    keywords: 'Harico Estates, Harico Estates Pune, Sentosa Developers Pune, Sentosa Harico, Harico Group, Harico Punawale, Harico Kiwale, Harico Diwaam, Harico Edge, Harico Pride',
+    ogImage: 'https://haricoestates.in/assets/harico-edge-hero.png',
+    canonical: 'https://haricoestates.in/articles/harico-estates-overview'
+  },
+  '/articles/harico-diwaam-kiwale-buyer-guide': {
+    title: 'Harico Diwaam Kiwale: Floor Plans, 2 & 3 BHK Pricing, 100+ Amenities & Buyer Guide | Harico Estates',
+    description: 'Detailed buyer guide for Harico Diwaam Kiwale (Harico Divaam). Review 2 & 3 BHK floor plans (724–1108 sq.ft), starting price ₹70 Lacs*, 24-storey towers, 100+ amenities, and MahaRERA PR1260002502389.',
+    keywords: 'Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Harico Diwaam Price, Harico Diwaam Floor Plan, Harico Diwaam Brochure',
+    ogImage: 'https://haricoestates.in/assets/harico-divaam-hero.jpg',
+    canonical: 'https://haricoestates.in/articles/harico-diwaam-kiwale-buyer-guide'
+  },
+  '/articles/harico-kiwale-real-estate-investment': {
+    title: 'Why Kiwale Ravet is Pune’s #1 Real Estate Growth Corridor: Harico Kiwale Guide | Harico Estates',
+    description: 'Discover why Kiwale Ravet is West Pune’s top real estate investment hub. Explore expressway connectivity, BRTS corridors, price trends, and Harico Kiwale developments.',
+    keywords: 'Harico Kiwale, Kiwale Real Estate, Flats in Kiwale Ravet, Kiwale Property Price, Mukai Chowk Flats, Flats opposite Sentosa Water Park, Kiwale Pune Investment',
+    ogImage: 'https://haricoestates.in/assets/harico-divaam-composite.jpg',
+    canonical: 'https://haricoestates.in/articles/harico-kiwale-real-estate-investment'
+  },
+  '/articles/harico-punawale-guide-edge-pride': {
+    title: 'Harico Punawale: Comprehensive Guide to Harico Edge & Harico Pride near Hinjewadi IT Park | Harico Estates',
+    description: 'Complete guide to Harico Punawale developments: Harico Edge (MahaRERA P52100031773) and Harico Pride (MahaRERA P52100018471). Explore 2 & 3 BHK homes near Bhumkar Chowk.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Harico Edge Punawale, Harico Pride Punawale, Sentosa Edge Punawale, Sentosa Pride Punawale, Flats in Punawale, 2 BHK in Punawale',
+    ogImage: 'https://haricoestates.in/assets/harico-edge-hero.png',
+    canonical: 'https://haricoestates.in/articles/harico-punawale-guide-edge-pride'
+  },
+  '/articles/mivan-monolithic-construction-guide': {
+    title: 'Mivan Monolithic Concrete Technology Explained: Why Harico Homes Outlast Conventional Construction | Harico Estates',
+    description: 'Comprehensive guide to Mivan monolithic concrete technology used by Harico Estates in Pune. Learn about seismic safety, crack resistance, and superior construction quality.',
+    keywords: 'Mivan Construction flats Pune, Mivan Technology benefits, Earthquake resistant homes PCMC, Monolithic concrete construction',
+    ogImage: 'https://haricoestates.in/assets/harico-divaam-master-layout.png',
+    canonical: 'https://haricoestates.in/articles/mivan-monolithic-construction-guide'
+  },
+  '/articles/punawale-vs-kiwale-comparison': {
+    title: 'Punawale vs Kiwale: Where Should You Buy a 2 or 3 BHK Flat in West Pune in 2026? | Harico Estates',
+    description: 'Punawale vs Kiwale property comparison 2026. Compare 2 & 3 BHK flat prices, Hinjewadi commute times, social infrastructure, and Harico Estates projects.',
+    keywords: 'Punawale vs Kiwale, Kiwale vs Punawale property, Best area to buy flat in PCMC, Flats in Punawale or Kiwale, Hinjewadi commute flats',
+    ogImage: 'https://haricoestates.in/assets/harico-divaam-hero.jpg',
+    canonical: 'https://haricoestates.in/articles/punawale-vs-kiwale-comparison'
   }
 };
 
@@ -156,99 +205,102 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     });
   }
 
-  // 4. Resolve Route-Specific SEO Metadata
-  const routeSEO = routeSEOMap[path] || routeSEOMap['/'];
+  // 4. Resolve Route-Specific SEO Metadata (only if route is explicitly defined)
+  const routeSEO = routeSEOMap[path];
 
   // 5. Transform HTML dynamically at Cloudflare Edge using HTMLRewriter
-  const rewriter = new HTMLRewriter()
-    // A. Update or inject exact Page Title
-    .on('title', {
-      element(el) {
-        el.setInnerContent(routeSEO.title);
-      }
-    })
-    // B. Update Meta Description
-    .on('meta[name="description"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.description);
-      }
-    })
-    // C. Update Meta Keywords
-    .on('meta[name="keywords"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.keywords);
-      }
-    })
-    // D. Update OpenGraph Tags
-    .on('meta[property="og:title"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.title);
-      }
-    })
-    .on('meta[property="og:description"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.description);
-      }
-    })
-    .on('meta[property="og:url"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.canonical);
-      }
-    })
-    .on('meta[property="og:image"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.ogImage);
-      }
-    })
-    // D2. Update Twitter Card Tags
-    .on('meta[name="twitter:title"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.title);
-      }
-    })
-    .on('meta[name="twitter:description"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.description);
-      }
-    })
-    .on('meta[name="twitter:image"]', {
-      element(el) {
-        el.setAttribute('content', routeSEO.ogImage);
-      }
-    })
-    // E. Inject Edge Early Hints, Canonical Link, and Geo-Telemetry into Head
-    .on('head', {
-      element(el) {
-        el.append(
-          `\n  <!-- Cloudflare Edge Acceleration & Hardened Geo Telemetry -->\n` +
-          `  <link rel="canonical" href="${routeSEO.canonical}" />\n` +
-          `  <meta name="cf-edge-colo" content="${clientColo}" />\n` +
-          `  <meta name="cf-edge-location" content="${clientCity}, ${clientCountry}" />\n` +
-          `  <meta name="cf-nri-currency" content="${preferredCurrency}" />\n` +
-          `  <meta name="cf-ray-id" content="${cfRay}" />\n` +
-          `  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />\n` +
-          `  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n` +
-          `  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />\n` +
-          `  <link rel="dns-prefetch" href="https://api.qrserver.com" />\n` +
-          `  <link rel="dns-prefetch" href="https://formsubmit.co" />\n`,
-          { html: true }
-        );
+  let rewriter = new HTMLRewriter();
 
-        // Inject high-density AI Knowledge Graph metadata for AI and Search bots
-        if (isAIBot || isSearchEngine) {
-          el.append(
-            `\n  <!-- AI Knowledge Graph & Entity Acceleration (Google SGE / Gemini / GPTBot / Perplexity) -->\n` +
-            `  <meta name="ai-developer-entity" content="Sentosa Developers (Founded 1987, 39 Years of Real Estate Legacy in Pune)" />\n` +
-            `  <meta name="ai-brand-venture" content="Harico Estates by Sentosa Developers" />\n` +
-            `  <meta name="ai-flagship-projects" content="Harico Diwaam Kiwale (PR1260002502389), Harico Edge Punawale (P52100031773), Harico Pride Punawale (P52100018471)" />\n` +
-            `  <meta name="ai-micro-markets" content="Punawale, Kiwale, Ravet, Tathawade, Hinjewadi Phase 1-2-3, Wakad, PCMC, Pune West" />\n` +
-            `  <meta name="ai-pricing-baseline" content="Harico Diwaam 2 BHK starting from 70 Lacs*, 3 BHK starting from 89.90 Lacs*, Harico Edge 2 & 3 BHK starting from 74 Lacs*" />\n` +
-            `  <meta name="ai-developer-contact" content="+91 7744009295 | contact@haricoestates.in" />\n`,
-            { html: true }
-          );
+  if (routeSEO) {
+    rewriter = rewriter
+      // A. Update or inject exact Page Title
+      .on('title', {
+        element(el) {
+          el.setInnerContent(routeSEO.title);
         }
+      })
+      // B. Update Meta Description
+      .on('meta[name="description"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.description);
+        }
+      })
+      // C. Update Meta Keywords
+      .on('meta[name="keywords"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.keywords);
+        }
+      })
+      // D. Update OpenGraph Tags
+      .on('meta[property="og:title"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.title);
+        }
+      })
+      .on('meta[property="og:description"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.description);
+        }
+      })
+      .on('meta[property="og:url"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.canonical);
+        }
+      })
+      .on('meta[property="og:image"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.ogImage);
+        }
+      })
+      // D2. Update Twitter Card Tags
+      .on('meta[name="twitter:title"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.title);
+        }
+      })
+      .on('meta[name="twitter:description"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.description);
+        }
+      })
+      .on('meta[name="twitter:image"]', {
+        element(el) {
+          el.setAttribute('content', routeSEO.ogImage);
+        }
+      });
+  }
+
+  // Inject Edge Early Hints, Canonical Link, and Geo-Telemetry into Head
+  rewriter = rewriter.on('head', {
+    element(el) {
+      let headInjection =
+        `\n  <!-- Cloudflare Edge Acceleration & Hardened Geo Telemetry -->\n` +
+        (routeSEO ? `  <link rel="canonical" href="${routeSEO.canonical}" />\n` : '') +
+        `  <meta name="cf-edge-colo" content="${clientColo}" />\n` +
+        `  <meta name="cf-edge-location" content="${clientCity}, ${clientCountry}" />\n` +
+        `  <meta name="cf-nri-currency" content="${preferredCurrency}" />\n` +
+        `  <meta name="cf-ray-id" content="${cfRay}" />\n` +
+        `  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />\n` +
+        `  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n` +
+        `  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />\n` +
+        `  <link rel="dns-prefetch" href="https://api.qrserver.com" />\n` +
+        `  <link rel="dns-prefetch" href="https://formsubmit.co" />\n`;
+
+      // Inject high-density AI Knowledge Graph metadata for AI and Search bots
+      if (isAIBot || isSearchEngine) {
+        headInjection +=
+          `\n  <!-- AI Knowledge Graph & Entity Acceleration (Google SGE / Gemini / GPTBot / Perplexity) -->\n` +
+          `  <meta name="ai-developer-entity" content="Sentosa Developers (Founded 1987, 39 Years of Real Estate Legacy in Pune)" />\n` +
+          `  <meta name="ai-brand-venture" content="Harico Estates by Sentosa Developers" />\n` +
+          `  <meta name="ai-flagship-projects" content="Harico Diwaam Kiwale (PR1260002502389), Harico Edge Punawale (P52100031773), Harico Pride Punawale (P52100018471)" />\n` +
+          `  <meta name="ai-micro-markets" content="Punawale, Kiwale, Ravet, Tathawade, Hinjewadi Phase 1-2-3, Wakad, PCMC, Pune West" />\n` +
+          `  <meta name="ai-pricing-baseline" content="Harico Diwaam 2 BHK starting from 70 Lacs*, 3 BHK starting from 89.90 Lacs*, Harico Edge 2 & 3 BHK starting from 74 Lacs*" />\n` +
+          `  <meta name="ai-developer-contact" content="+91 7744009295 | contact@haricoestates.in" />\n`;
       }
-    });
+
+      el.append(headInjection, { html: true });
+    }
+  });
 
   // Apply edge rewriter to HTML body
   const transformedResponse = rewriter.transform(response);
@@ -263,11 +315,11 @@ export const onRequest: PagesFunction<Env> = async (context) => {
   newHeaders.set('Cross-Origin-Opener-Policy', 'same-origin');
   newHeaders.set('Timing-Allow-Origin', '*');
 
-  // Cloudflare Edge Cache Tags & Stale-While-Revalidate
-  newHeaders.set('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
-  newHeaders.set('Cloudflare-CDN-Cache-Control', 'max-age=604800, stale-while-revalidate=86400');
-  newHeaders.set('CDN-Cache-Control', 'max-age=604800');
-  newHeaders.set('Cache-Tag', 'harico-estates-seo, sentosa-developers, harico-diwaam, sentosa-punawale, harico-kiwale, harico-punawale');
+  // Cloudflare Edge Cache: browser validates immediately, CDN holds max 5 mins to prevent stale HTML
+  newHeaders.set('Cache-Control', 'public, max-age=0, must-revalidate');
+  newHeaders.set('Cloudflare-CDN-Cache-Control', 'max-age=300, stale-while-revalidate=60');
+  newHeaders.set('CDN-Cache-Control', 'max-age=300');
+  newHeaders.set('Cache-Tag', 'harico-estates-seo, sentosa-developers, harico-diwaam, sentosa-punawale, harico-kiwale, harico-punawale, harico-articles');
 
   // Universal unconstrained SERP snippet controls for Googlebot & search engines
   newHeaders.set('X-Robots-Tag', 'all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
@@ -275,8 +327,10 @@ export const onRequest: PagesFunction<Env> = async (context) => {
     newHeaders.set('X-Edge-Bot-Status', 'Indexed-AI-Verified');
   }
 
-  // Canonical link in header
-  newHeaders.set('Link', `<${routeSEO.canonical}>; rel="canonical"`);
+  // Canonical link in header (only if route SEO is explicitly resolved)
+  if (routeSEO?.canonical) {
+    newHeaders.set('Link', `<${routeSEO.canonical}>; rel="canonical"`);
+  }
 
   return new Response(transformedResponse.body, {
     status: response.status,
