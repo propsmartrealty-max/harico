@@ -49,6 +49,7 @@ export function createHeader(): HTMLElement {
           <li><a href="/specifications" class="pill-nav-link nav-link-internal" data-target="specifications">Specs</a></li>
           <li><a href="/location-hub" class="pill-nav-link nav-link-internal" data-target="location-hub">Location</a></li>
           <li><a href="/amenities" class="pill-nav-link nav-link-internal" data-target="amenities">Amenities</a></li>
+          <li><a href="/articles" class="pill-nav-link nav-link-internal" data-target="articles">Articles</a></li>
           <li><a href="/emi-calculator" class="pill-nav-link nav-link-internal" data-target="emi-calculator">EMI Calc</a></li>
           <li><a href="/faq" class="pill-nav-link nav-link-internal" data-target="faq">FAQs</a></li>
           <li><a href="/contact" class="pill-nav-link nav-link-internal" data-target="contact">Contact</a></li>
@@ -86,6 +87,7 @@ export function createHeader(): HTMLElement {
         <li><a href="/specifications" class="mobile-drawer-link" data-target="specifications">Construction Specs</a></li>
         <li><a href="/location-hub" class="mobile-drawer-link" data-target="location-hub">Location Matrix</a></li>
         <li><a href="/amenities" class="mobile-drawer-link" data-target="amenities">Lifestyle Amenities</a></li>
+        <li><a href="/articles" class="mobile-drawer-link" data-target="articles">Articles & Guides</a></li>
         <li><a href="/emi-calculator" class="mobile-drawer-link" data-target="emi-calculator">EMI Calculator</a></li>
         <li><a href="/faq" class="mobile-drawer-link" data-target="faq">MahaRERA FAQs</a></li>
         <li><a href="/contact" class="mobile-drawer-link" data-target="contact">Contact & Site Visit</a></li>

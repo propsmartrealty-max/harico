@@ -319,6 +319,18 @@ const clusterFooterHtml = `
               <li><a href="/developer/sentosa-pride-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Pride Punawale</a></li>
             </ul>
           </div>
+
+          <div>
+            <strong style="color:#0A192F; display:block; margin-bottom:6px;">Homebuyer Knowledge Hub</strong>
+            <ul style="list-style:none; padding:0; margin:0;">
+              <li><a href="/articles" style="color:#2563EB; text-decoration:none;">All Guides & Articles</a></li>
+              <li><a href="/articles/harico-estates-overview" style="color:#2563EB; text-decoration:none;">Harico Estates Complete Guide</a></li>
+              <li><a href="/articles/harico-diwaam-kiwale-buyer-guide" style="color:#2563EB; text-decoration:none;">Harico Diwaam Buyer Guide</a></li>
+              <li><a href="/articles/harico-kiwale-real-estate-investment" style="color:#2563EB; text-decoration:none;">Kiwale Investment Analysis</a></li>
+              <li><a href="/articles/harico-punawale-guide-edge-pride" style="color:#2563EB; text-decoration:none;">Harico Punawale Guide</a></li>
+              <li><a href="/articles/punawale-vs-kiwale-comparison" style="color:#2563EB; text-decoration:none;">Punawale vs Kiwale Analysis</a></li>
+            </ul>
+          </div>
         </div>
       </section>
 `;
@@ -857,6 +869,361 @@ const orgSchema = {
   ]
 };
 
+// 3. Generate High-Authority Pillar Articles & Knowledge Hub
+const articles = [
+  {
+    slug: 'harico-estates-overview',
+    title: 'Harico Estates Pune: Developer Profile, Sentosa Legacy & Master Portfolio Guide',
+    subtitle: 'Everything homebuyers and investors need to know about Harico Estates, Sentosa Developers’ 39-year track record, and landmark projects in Punawale and Kiwale.',
+    metaDescription: 'Complete guide to Harico Estates Pune by Sentosa Developers. Explore ongoing projects (Harico Diwaam, Harico Edge, Harico Pride), 39-year legacy, and 100% MahaRERA transparency.',
+    keywords: 'Harico Estates, Harico Estates Pune, Sentosa Developers Pune, Sentosa Harico, Harico Group, Harico Punawale, Harico Kiwale, Harico Diwaam, Harico Edge, Harico Pride, Real Estate Developer West Pune, हरिको इस्टेट्स पुणे',
+    category: 'Developer Profile',
+    readTime: '7 min read',
+    publishDate: '2026-03-01',
+    author: 'Harico Estates Research Desk',
+    image: '/assets/harico-edge-hero.png',
+    summary: 'Harico Estates represents the modern residential development arm of Sentosa Developers, a trusted real estate and hospitality group with 39+ years of engineering excellence in Pune.',
+    keyTakeaways: [
+      'Backed by Sentosa Developers with a 39-year legacy (founded in 1987) and 20+ delivered landmarks across Pune.',
+      '100% MahaRERA registered developments: Harico Diwaam (PR1260002502389), Harico Edge (P52100031773), and Harico Pride (P52100018471).',
+      'Pioneering Mivan monolithic concrete engineering for crack-resistant, seismic-safe high-rise homes.',
+      'Prime strategic locations: Punawale (near Bhumkar Chowk) and Kiwale (opposite Sentosa Water Park) within 2 minutes of the Mumbai-Pune Expressway.'
+    ],
+    faqs: [
+      { q: 'Who is the promoter behind Harico Estates?', a: 'Harico Estates is developed in venture with Sentosa Developers, a prestigious real estate and hospitality group with a 39-year legacy (since 1987) across Pune and PCMC.' },
+      { q: 'Where are Harico Estates projects located?', a: 'Harico Estates has active developments in Punawale (Harico Edge & Harico Pride near Bhumkar Chowk) and Kiwale (Harico Diwaam directly opposite Sentosa Water Park).' },
+      { q: 'What is the customer care and sales helpline for Harico Estates?', a: 'You can reach the direct Harico Estates sales desk at +91 7744009295 or email contact@haricoestates.in.' }
+    ]
+  },
+  {
+    slug: 'harico-diwaam-kiwale-buyer-guide',
+    title: 'Harico Diwaam Kiwale: Floor Plans, 2 & 3 BHK Pricing, 100+ Amenities & Buyer Guide',
+    subtitle: 'A detailed breakdown of Harico Diwaam (Harico Divaam Kiwale), Pune’s iconic 24-storey sky towers opposite Sentosa Water Park. Starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*).',
+    metaDescription: 'Detailed buyer guide for Harico Diwaam Kiwale (Harico Divaam). Review 2 & 3 BHK floor plans (724–1108 sq.ft), starting price ₹70 Lacs*, 24-storey towers, 100+ amenities, and MahaRERA PR1260002502389.',
+    keywords: 'Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Harico Divaam Kiwale, Sentosa Diwaam, Sentosa Divaam, Harico Diwaam Price, Harico Diwaam Floor Plan, Harico Diwaam Brochure, Flats opposite Sentosa Water Park, 2 BHK in Kiwale, 3 BHK in Kiwale, Tallest Towers Kiwale, हरिको दिवाम किवाळे, हॅरिको दिवाम',
+    category: 'Project Deep Dive',
+    readTime: '9 min read',
+    publishDate: '2026-03-05',
+    author: 'Harico Estates Architectural Team',
+    image: '/assets/harico-divaam-hero.jpg',
+    summary: 'Harico Diwaam (also known as Harico Divaam Kiwale) is the tallest residential high-rise landmark in the Kiwale-Ravet corridor. Rising 24 storeys across 5 acres with 5 sky towers and 100+ resort amenities.',
+    keyTakeaways: [
+      'Kiwale’s tallest residential sky towers: 5 iconic towers standing 24 storeys tall across 5.0 acres.',
+      'Attractive entry pricing: 2 BHK Smart starting at ₹70.00 Lacs* onwards; 3 BHK Smart starting at ₹89.90 Lacs* onwards.',
+      'Diverse carpet areas: 2 BHK (724 to 848 sq.ft) and 3 BHK (920 to 1,108 sq.ft) with dual private balconies.',
+      'Over 100 resort lifestyle amenities including a 24th-floor Sky Observation Deck, infinity pool, 40-seater mini theatre, and 12 luxury guest suites.',
+      'Approved under MahaRERA No. PR1260002502389 with target possession in December 2030.'
+    ],
+    faqs: [
+      { q: 'What is the difference between Harico Diwaam and Harico Divaam?', a: 'Both refer to the exact same landmark residential development in Kiwale opposite Sentosa Water Park. Harico Divaam is the MahaRERA registered name (PR1260002502389), while Harico Diwaam is the widely searched brand spelling.' },
+      { q: 'What is the starting price for Harico Diwaam Kiwale?', a: '2 BHK apartments start from ₹70.00 Lacs* onwards (724 sq.ft) and 3 BHK apartments start from ₹89.90 Lacs* onwards (920 sq.ft).' },
+      { q: 'How can I download the official Harico Diwaam brochure and floor plans?', a: 'You can download the brochure and cost sheets directly on our portal or contact the sales desk via WhatsApp or phone at +91 7744009295.' }
+    ]
+  },
+  {
+    slug: 'harico-kiwale-real-estate-investment',
+    title: 'Why Kiwale Ravet is Pune’s #1 Real Estate Growth Corridor: Harico Kiwale Guide',
+    subtitle: 'Infrastructure boom, Mumbai-Pune Expressway connectivity, Akurdi Station access, and why Harico Kiwale properties are delivering 15%+ capital growth.',
+    metaDescription: 'Discover why Kiwale Ravet is West Pune’s top real estate investment hub. Explore expressway connectivity, BRTS corridors, price trends, and Harico Kiwale developments.',
+    keywords: 'Harico Kiwale, Kiwale Real Estate, Flats in Kiwale Ravet, Kiwale Property Price, Mukai Chowk Flats, Flats opposite Sentosa Water Park, Kiwale Pune Investment, Harico Estates Kiwale, किवाळे रियल इस्टेट पुणे',
+    category: 'Market Intelligence',
+    readTime: '6 min read',
+    publishDate: '2026-03-08',
+    author: 'Harico Estates Market Intelligence Desk',
+    image: '/assets/harico-divaam-composite.jpg',
+    summary: 'Kiwale has emerged from a quiet PCMC suburb into West Pune’s most strategic transit-oriented residential hub. Backed by Mukai Chowk BRTS, Mumbai-Pune Expressway flyovers, and premier educational institutes.',
+    keyTakeaways: [
+      'Unmatched highway connectivity: Direct entry to the Mumbai-Pune Expressway and Katraj-Dehu Road bypass.',
+      'Rapid multimodal transit: 2 minutes to Mukai Chowk BRTS terminal and 5 minutes to Akurdi Railway Station.',
+      'High educational hub density: Proximity to Symbiosis Skills University, D.Y. Patil Akurdi, and JSPM.',
+      'Substantial price appreciation: 15%–18% capital growth over the past 36 months, with 2 BHK prices starting from ₹70.00 Lacs*.'
+    ],
+    faqs: [
+      { q: 'Is Kiwale a good area to buy a home for Hinjewadi IT professionals?', a: 'Yes. Kiwale is just 12–15 minutes from Hinjewadi Phase 1 via the Expressway bypass, avoiding internal Wakad traffic while offering larger carpet areas and better air quality.' },
+      { q: 'What is the average price of 2 BHK flats in Kiwale?', a: '2 BHK apartments in Kiwale range between ₹68 Lacs to ₹82 Lacs depending on carpet area and amenities. Harico Diwaam offers premium 2 BHK homes starting from ₹70.00 Lacs* onwards.' },
+      { q: 'What is the nearest railway station to Kiwale?', a: 'Akurdi Railway Station is the nearest local rail hub, located approximately 5 minutes (4.2 km) from Kiwale.' }
+    ]
+  },
+  {
+    slug: 'harico-punawale-guide-edge-pride',
+    title: 'Harico Punawale: Comprehensive Guide to Harico Edge & Harico Pride near Hinjewadi IT Park',
+    subtitle: 'Everything you need to know about Harico Punawale homes. Explore Harico Edge (June 2030) and Harico Pride (June 2027) starting from ₹74 Lacs* near Bhumkar Chowk.',
+    metaDescription: 'Complete guide to Harico Punawale developments: Harico Edge (MahaRERA P52100031773) and Harico Pride (MahaRERA P52100018471). Explore 2 & 3 BHK homes near Bhumkar Chowk.',
+    keywords: 'Harico Punawale, Sentosa Punawale, Harico Edge Punawale, Harico Pride Punawale, Sentosa Edge Punawale, Sentosa Pride Punawale, Flats in Punawale, 2 BHK in Punawale, 3 BHK in Punawale, Flats near Bhumkar Chowk, हरिको पुनावळे, सेंटोसा पुनावळे',
+    category: 'Micro-Market Guide',
+    readTime: '8 min read',
+    publishDate: '2026-03-10',
+    author: 'Harico Estates Punawale Planning Desk',
+    image: '/assets/harico-edge-hero.png',
+    summary: 'Punawale has established itself as West Pune’s most vibrant residential growth belt for tech professionals. Discover how Harico Edge and Harico Pride deliver uncompromised Mivan construction.',
+    keyTakeaways: [
+      'Unmatched proximity: 2 minutes to Mumbai-Pune Expressway & Bhumkar Chowk, 12 minutes to Hinjewadi Phase 1.',
+      'Two distinct possession timelines: Harico Pride (June 2027 near-possession) and Harico Edge (June 2030 flagship launch).',
+      'Dual balconies as standard: Every 2 & 3 BHK configuration features two private outdoor balconies with scenic views.',
+      '100% MahaRERA transparency: Harico Edge (P52100031773) and Harico Pride (P52100018471).'
+    ],
+    faqs: [
+      { q: 'What is the starting price for 2 BHK flats in Harico Punawale?', a: '2 BHK apartments at Harico Edge Punawale start from ₹74.00 Lacs* with 741 sq.ft carpet area and dual private balconies.' },
+      { q: 'What are the MahaRERA numbers for Harico projects in Punawale?', a: 'Harico Edge is registered under MahaRERA No. P52100031773 (Possession June 2030) and Harico Pride is registered under MahaRERA No. P52100018471 (Possession June 2027).' },
+      { q: 'How far is Harico Punawale from Hinjewadi IT Park?', a: 'Harico Punawale is located approximately 12–14 minutes from Hinjewadi Rajiv Gandhi Infotech Park Phase 1 via Bhumkar Chowk.' }
+    ]
+  },
+  {
+    slug: 'mivan-monolithic-construction-guide',
+    title: 'Mivan Monolithic Concrete Technology Explained: Why Harico Homes Outlast Conventional Construction',
+    subtitle: 'Learn how aluminium formwork engineering creates jointless, earthquake-resistant (Zone III), seepage-free homes with higher usable carpet efficiency.',
+    metaDescription: 'Comprehensive guide to Mivan monolithic concrete technology used by Harico Estates in Pune. Learn about seismic safety, crack resistance, and superior construction quality.',
+    keywords: 'Mivan Construction flats Pune, Mivan Technology benefits, Earthquake resistant homes PCMC, Monolithic concrete construction, Harico Estates specifications, Mivan vs Brickwork Pune',
+    category: 'Engineering & Quality',
+    readTime: '5 min read',
+    publishDate: '2026-03-12',
+    author: 'Harico Estates Chief Civil Engineer',
+    image: '/assets/harico-divaam-master-layout.png',
+    summary: 'While traditional buildings rely on red clay bricks and RCC frame joints prone to water seepage, Harico Estates deploys 100% Mivan monolithic aluminium formwork.',
+    keyTakeaways: [
+      'Monolithic casting: Walls and slabs are cast simultaneously in a single pour of high-grade concrete.',
+      'Superior seismic safety: Earthquake-resistant RCC shear wall construction compliant with IS Zone III standards.',
+      'Zero plaster cracks and dampness: High-density concrete eliminates water capillary action and seepage.',
+      'Higher carpet efficiency: Thinner, stronger shear walls provide 4%–6% more usable carpet area than bulky 9-inch brick walls.'
+    ],
+    faqs: [
+      { q: 'Is Mivan construction better than brickwork for high-rise buildings?', a: 'Yes. Mivan construction offers superior seismic safety, eliminates structural joints where water leaks occur, provides smooth wall finishes, and increases usable carpet area by 4% to 6%.' },
+      { q: 'Do all Harico Estates projects use Mivan construction?', a: 'Yes, all flagship Harico Estates high-rises, including Harico Diwaam (24 storeys) and Harico Edge (22 storeys), are engineered using Mivan aluminium formwork technology.' }
+    ]
+  },
+  {
+    slug: 'punawale-vs-kiwale-comparison',
+    title: 'Punawale vs Kiwale: Where Should You Buy a 2 or 3 BHK Flat in West Pune in 2026?',
+    subtitle: 'Side-by-side micro-market analysis of pricing, connectivity, infrastructure, lifestyle, and appreciation potential to help you choose the ideal home.',
+    metaDescription: 'Punawale vs Kiwale property comparison 2026. Compare 2 & 3 BHK flat prices, Hinjewadi commute times, social infrastructure, and Harico Estates projects.',
+    keywords: 'Punawale vs Kiwale, Kiwale vs Punawale property, Best area to buy flat in PCMC, Flats in Punawale or Kiwale, Hinjewadi commute flats, Harico Edge vs Harico Diwaam, प्रॉपर्टी तुलना पुनावळे विरुद्ध किवाळे',
+    category: 'Homebuyer Guide',
+    readTime: '7 min read',
+    publishDate: '2026-03-14',
+    author: 'Harico Estates Advisory Team',
+    image: '/assets/harico-divaam-hero.jpg',
+    summary: 'Both Punawale and Kiwale represent the fastest-growing real estate corridors in PCMC. While Punawale is closer to Wakad’s urban entertainment and Hinjewadi, Kiwale offers unmatched highway access.',
+    keyTakeaways: [
+      'Punawale is ideal for: IT professionals desiring immediate proximity to Bhumkar Chowk, Wakad nightlife, and 12-minute commute to Hinjewadi Phase 1.',
+      'Kiwale is ideal for: Frequent Mumbai/Expressway commuters, families seeking 24-storey high-rises, 5-acre resorts, and proximity to Akurdi Station.',
+      'Entry pricing: Kiwale starts slightly lower at ₹70.00 Lacs* (Harico Diwaam), while Punawale starts at ₹74.00 Lacs* (Harico Edge).',
+      'Both corridors offer 14%–17% CAGR appreciation and pre-approved loans from major national banks.'
+    ],
+    faqs: [
+      { q: 'Is Punawale more expensive than Kiwale?', a: 'Punawale prices average ₹6,800–₹7,600/sq.ft due to its direct border with Wakad. Kiwale averages ₹6,200–₹7,000/sq.ft, offering a slightly more accessible entry point starting at ₹70.00 Lacs*.' },
+      { q: 'Which area has better expressway connectivity: Punawale or Kiwale?', a: 'Both offer 2-minute access to the Mumbai-Pune Expressway. Kiwale has direct expressway frontage opposite Sentosa Water Park, while Punawale connects via the Punawale underpass near Bhumkar Chowk.' }
+    ]
+  }
+];
+
+// Generate /articles Hub Page
+const articlesHubDir = path.join(distDir, 'articles');
+fs.mkdirSync(articlesHubDir, { recursive: true });
+
+let articlesHubHtml = template;
+const articlesHubSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Harico Estates Knowledge Hub & Real Estate Guides",
+  "description": "Comprehensive market intelligence, MahaRERA compliance guides, floor plan comparisons, and micro-market transit reports across Punawale and Kiwale.",
+  "url": "https://haricoestates.in/articles"
+};
+const articlesHubBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://haricoestates.in/" },
+    { "@type": "ListItem", "position": 2, "name": "Articles & Guides", "item": "https://haricoestates.in/articles" }
+  ]
+};
+
+const articlesHubSchemaTags = `
+  <link rel="canonical" href="https://haricoestates.in/articles" />
+  <script type="application/ld+json">${JSON.stringify(articlesHubSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(articlesHubBreadcrumbs)}</script>
+`;
+
+articlesHubHtml = articlesHubHtml.replace(/<link rel="canonical"[\s\S]*?>/is, '');
+if (articlesHubHtml.includes('<head>')) {
+  articlesHubHtml = articlesHubHtml.replace('<head>', '<head>\n' + articlesHubSchemaTags);
+}
+articlesHubHtml = articlesHubHtml.replace(/<title>(.*?)<\/title>/is, '<title>Harico Estates Knowledge Hub | Homebuyer Guides, MahaRERA & Market Analysis</title>');
+articlesHubHtml = articlesHubHtml.replace(/<meta name="description"[\s\S]*?>/is, '<meta name="description" content="Official Harico Estates Knowledge Hub: Comprehensive guides on Harico Diwaam, Harico Kiwale, Harico Punawale, 2 & 3 BHK floor plans, MahaRERA compliance, and transit reports.">');
+
+const articlesHubBody = `
+<div id="app">
+  <main class="prerendered-content" style="max-width:1200px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
+    <header style="text-align:center; margin-bottom:40px;">
+      <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px; letter-spacing:1px;">Homebuyer Intelligence & Insights</span>
+      <h1 style="font-size:36px; color:#0A192F; margin:12px 0;">Harico Estates Knowledge Hub & Real Estate Guides</h1>
+      <p style="font-size:18px; color:#475569; max-width:800px; margin:0 auto; line-height:1.6;">Comprehensive market intelligence, MahaRERA compliance guides, floor plan comparisons, and micro-market transit reports across Punawale and Kiwale.</p>
+    </header>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px; margin-bottom:50px;">
+      ${articles.map(a => `
+        <article style="background:#FFF; border:1px solid #E2E8F0; border-radius:12px; overflow:hidden; box-shadow:0 4px 12px rgba(0,0,0,0.05); display:flex; flex-direction:column;">
+          <img src="${a.image}" alt="${a.title}" style="width:100%; height:200px; object-fit:cover;" />
+          <div style="padding:20px; flex:1; display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <span style="background:#0A192F; color:#FFF; font-size:11px; padding:4px 10px; border-radius:12px; font-weight:bold; text-transform:uppercase;">${a.category}</span>
+              <h2 style="font-size:18px; color:#0A192F; margin:12px 0 8px;"><a href="/articles/${a.slug}" style="color:#0A192F; text-decoration:none;">${a.title}</a></h2>
+              <p style="color:#64748B; font-size:14px; line-height:1.5;">${a.summary}</p>
+            </div>
+            <div style="margin-top:15px; padding-top:12px; border-top:1px solid #F1F5F9; display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:12px; color:#64748B;">⏱ ${a.readTime}</span>
+              <a href="/articles/${a.slug}" style="color:#D4AF37; font-weight:bold; font-size:13px; text-decoration:none;">Read Full Guide &rarr;</a>
+            </div>
+          </div>
+        </article>
+      `).join('\n')}
+    </div>
+
+    ${clusterFooterHtml}
+
+    <footer style="margin-top:40px; padding-top:20px; border-top:1px solid #CBD5E1; color:#64748B; font-size:13px; text-align:center;">
+      <p><strong>Developer:</strong> Sentosa Developers & Harico Estates (39-Year Legacy since 1987). <strong>Contact Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
+    </footer>
+  </main>
+</div>
+`;
+
+articlesHubHtml = articlesHubHtml.replace('<div id="app"></div>', articlesHubBody);
+fs.writeFileSync(path.join(articlesHubDir, 'index.html'), articlesHubHtml, 'utf-8');
+console.log('[Prerender] Generated rich static route: /articles/index.html');
+
+// Generate Individual Static Article Pages
+articles.forEach(article => {
+  const articleDir = path.join(distDir, 'articles', article.slug);
+  fs.mkdirSync(articleDir, { recursive: true });
+
+  let articleHtml = template;
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.metaDescription,
+    "image": `https://haricoestates.in${article.image}`,
+    "datePublished": `${article.publishDate}T09:00:00+05:30`,
+    "dateModified": "2026-03-14T12:00:00+05:30",
+    "author": {
+      "@type": "Organization",
+      "name": "Harico Estates Research & Editorial Team",
+      "url": "https://haricoestates.in"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Harico Estates by Sentosa Developers",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://haricoestates.in/harico_logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://haricoestates.in/articles/${article.slug}`
+    }
+  };
+
+  const articleBreadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://haricoestates.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Articles & Guides", "item": "https://haricoestates.in/articles" },
+      { "@type": "ListItem", "position": 3, "name": article.title, "item": `https://haricoestates.in/articles/${article.slug}` }
+    ]
+  };
+
+  const articleFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": article.faqs.map(f => ({
+      "@type": "Question",
+      "name": f.q,
+      "acceptedAnswer": { "@type": "Answer", "text": f.a }
+    }))
+  };
+
+  const articleSchemaTags = `
+  <link rel="canonical" href="https://haricoestates.in/articles/${article.slug}" />
+  <script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(articleBreadcrumbs)}</script>
+  <script type="application/ld+json">${JSON.stringify(articleFaqSchema)}</script>
+  `;
+
+  articleHtml = articleHtml.replace(/<link rel="canonical"[\s\S]*?>/is, '');
+  if (articleHtml.includes('<head>')) {
+    articleHtml = articleHtml.replace('<head>', '<head>\n' + articleSchemaTags);
+  }
+  articleHtml = articleHtml.replace(/<title>(.*?)<\/title>/is, `<title>${article.title} | Harico Estates</title>`);
+  articleHtml = articleHtml.replace(/<meta name="description"[\s\S]*?>/is, `<meta name="description" content="${article.metaDescription}">`);
+  articleHtml = articleHtml.replace(/<meta name="keywords"[\s\S]*?>/is, `<meta name="keywords" content="${article.keywords}">`);
+
+  const articleSemanticBody = `
+  <div id="app">
+    <main class="prerendered-content" style="max-width:900px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
+      <nav aria-label="Breadcrumb" style="font-size:13px; color:#64748B; margin-bottom:15px;">
+        <ol style="list-style:none; padding:0; margin:0; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+          <li><a href="/" style="color:#D4AF37; text-decoration:none;">Home</a> &gt;</li>
+          <li><a href="/articles" style="color:#D4AF37; text-decoration:none;">Articles & Guides</a> &gt;</li>
+          <li aria-current="page" style="color:#0A192F; font-weight:600;">${article.title}</li>
+        </ol>
+      </nav>
+
+      <header style="margin-bottom:30px;">
+        <div style="margin-bottom:10px;">
+          <span style="background:#D4AF37; color:#0A192F; font-weight:bold; font-size:12px; padding:4px 12px; border-radius:15px; text-transform:uppercase;">${article.category}</span>
+          <span style="font-size:13px; color:#64748B; margin-left:10px;">⏱ ${article.readTime} • 📅 ${article.publishDate} • ✍️ ${article.author}</span>
+        </div>
+        <h1 style="font-size:32px; color:#0A192F; margin:10px 0 15px; line-height:1.25;">${article.title}</h1>
+        <p style="font-size:18px; color:#475569; line-height:1.6;">${article.subtitle}</p>
+      </header>
+
+      <div style="margin-bottom:35px; border-radius:12px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+        <img src="${article.image}" alt="${article.title}" width="900" height="480" loading="eager" style="width:100%; height:auto; display:block; object-fit:cover; max-height:420px;" />
+      </div>
+
+      <div style="background:#F8FAFC; border-left:4px solid #D4AF37; padding:20px 25px; border-radius:8px; margin-bottom:35px;">
+        <h3 style="margin-top:0; font-size:16px; color:#0A192F; text-transform:uppercase; letter-spacing:1px;">⚡ Key Executive Takeaways</h3>
+        <ul style="margin:0; padding-left:20px; line-height:1.8; color:#334155; font-size:15px;">
+          ${article.keyTakeaways.map(t => `<li>${t}</li>`).join('\n')}
+        </ul>
+      </div>
+
+      <section style="margin-bottom:40px; line-height:1.8; color:#334155; font-size:16px;">
+        ${article.summary}
+      </section>
+
+      <section style="margin-bottom:40px;">
+        <h2 style="font-size:24px; color:#0A192F; margin-bottom:15px;">Frequently Asked Questions (FAQs)</h2>
+        ${article.faqs.map(f => `
+          <div style="margin-bottom:15px; background:#F8FAFC; padding:18px; border-radius:8px; border-left:4px solid #D4AF37;">
+            <h3 style="font-size:16px; color:#0A192F; margin:0 0 8px;">${f.q}</h3>
+            <p style="margin:0; color:#475569; line-height:1.6;">${f.a}</p>
+          </div>
+        `).join('\n')}
+      </section>
+
+      <div style="background:#0A192F; color:#FFF; padding:25px; border-radius:12px; text-align:center; margin-bottom:40px;">
+        <h3 style="color:#FFF; margin-top:0; font-size:20px;">Have Questions Regarding Harico Estates Projects?</h3>
+        <p style="color:#CBD5E1; font-size:14px; margin-bottom:15px;">Connect directly with developer sales consultants for floor plans, pricing sheets, and VIP site visit bookings.</p>
+        <a href="tel:+917744009295" style="background:#D4AF37; color:#0A192F; padding:10px 22px; border-radius:25px; font-weight:bold; text-decoration:none; display:inline-block;">📞 Call +91 7744009295</a>
+      </div>
+
+      ${clusterFooterHtml}
+
+      <footer style="margin-top:40px; padding-top:20px; border-top:1px solid #CBD5E1; color:#64748B; font-size:13px; text-align:center;">
+        <p><strong>Developer:</strong> Sentosa Developers & Harico Estates (39-Year Legacy since 1987). <strong>Contact Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
+      </footer>
+    </main>
+  </div>
+  `;
+
+  articleHtml = articleHtml.replace('<div id="app"></div>', articleSemanticBody);
+  fs.writeFileSync(path.join(articleDir, 'index.html'), articleHtml, 'utf-8');
+  console.log('[Prerender] Generated rich static article: /articles/' + article.slug + '/index.html');
+});
+
 let rootHtml = template;
 rootHtml = rootHtml.replace(/<link rel="canonical"[\s\S]*?>/is, '');
 const rootSchemaTag = `
@@ -928,7 +1295,9 @@ console.log('[Prerender] Generated rich root index.html with full semantic conte
 const allUrls = [
   'https://haricoestates.in/',
   ...projects.map(p => `https://haricoestates.in/project/${p.slug}`),
-  ...programmaticPages.map(p => `https://haricoestates.in/${p.path}`)
+  ...programmaticPages.map(p => `https://haricoestates.in/${p.path}`),
+  'https://haricoestates.in/articles',
+  ...articles.map(a => `https://haricoestates.in/articles/${a.slug}`)
 ];
 
 const today = new Date().toISOString().split('T')[0];

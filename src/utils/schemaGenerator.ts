@@ -1,4 +1,5 @@
 import type { Project } from '../data/projects';
+import type { Article } from '../data/articles';
 import { allSentosaAndHaricoProjects, microMarketLocations } from '../data/seo_strategy';
 
 export const injectSchema = (schemaObject: any, id: string = 'dynamic-schema') => {
@@ -451,8 +452,57 @@ export const generateWebSiteSchema = () => {
     };
 };
 
-export const generateBreadcrumbSchema = (project?: Project, prog?: any) => {
-    const items = [
+export const generateArticleSchema = (article: Article) => {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": `https://haricoestates.in/articles/${article.slug}#article`,
+        "headline": article.title,
+        "description": article.metaDescription,
+        "image": article.image.startsWith('http') ? article.image : `https://haricoestates.in${article.image}`,
+        "datePublished": `${article.publishDate}T09:00:00+05:30`,
+        "dateModified": "2026-03-14T12:00:00+05:30",
+        "author": {
+            "@type": "Organization",
+            "name": "Harico Estates Research & Editorial Team",
+            "url": "https://haricoestates.in"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Harico Estates by Sentosa Developers",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://haricoestates.in/harico_logo.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": `https://haricoestates.in/articles/${article.slug}`
+        },
+        "articleSection": article.category,
+        "keywords": article.keywords
+    };
+};
+
+export const generateArticleFaqSchema = (article: Article) => {
+    if (!article.faqs || article.faqs.length === 0) return null;
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": `https://haricoestates.in/articles/${article.slug}#faq`,
+        "mainEntity": article.faqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.a
+            }
+        }))
+    };
+};
+
+export const generateBreadcrumbSchema = (project?: Project, prog?: any, article?: Article) => {
+    const items: any[] = [
         {
             "@type": "ListItem",
             "position": 1,
@@ -481,6 +531,19 @@ export const generateBreadcrumbSchema = (project?: Project, prog?: any) => {
             "name": prog.h1 || prog.title,
             "item": `https://haricoestates.in/${prog.path}`
         });
+    } else if (article) {
+        items.push({
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Articles & Guides",
+            "item": "https://haricoestates.in/articles"
+        });
+        items.push({
+            "@type": "ListItem",
+            "position": 3,
+            "name": article.title,
+            "item": `https://haricoestates.in/articles/${article.slug}`
+        });
     }
 
     return {
@@ -490,10 +553,10 @@ export const generateBreadcrumbSchema = (project?: Project, prog?: any) => {
     };
 };
 
-export const initSEO = (project?: Project, prog?: any) => {
+export const initSEO = (project?: Project, prog?: any, article?: Article) => {
     injectSchema(generateOrganizationSchema(), 'org-schema');
     injectSchema(generateWebSiteSchema(), 'website-schema');
-    injectSchema(generateBreadcrumbSchema(project, prog), 'breadcrumb-schema');
+    injectSchema(generateBreadcrumbSchema(project, prog, article), 'breadcrumb-schema');
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');
@@ -527,6 +590,29 @@ export const initSEO = (project?: Project, prog?: any) => {
             "https://haricoestates.in/assets/harico-divaam-hero.jpg",
             `https://haricoestates.in/${prog.path}`
         );
+    } else if (article) {
+        const prodSchemaEl = document.getElementById('project-schema');
+        if (prodSchemaEl) prodSchemaEl.remove();
+        const prodFaqEl = document.getElementById('project-faq-schema');
+        if (prodFaqEl) prodFaqEl.remove();
+
+        injectSchema(generateArticleSchema(article), 'article-schema');
+        const articleFaq = generateArticleFaqSchema(article);
+        if (articleFaq) {
+            injectSchema(articleFaq, 'article-faq-schema');
+        }
+
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (metaKeywords && article.keywords) {
+            metaKeywords.setAttribute('content', article.keywords);
+        }
+
+        updateOGTags(
+            `${article.title} | Harico Estates Knowledge Hub`,
+            article.metaDescription,
+            article.image.startsWith('http') ? article.image : `https://haricoestates.in${article.image}`,
+            `https://haricoestates.in/articles/${article.slug}`
+        );
     } else {
         const prodSchemaEl = document.getElementById('project-schema');
         if (prodSchemaEl) prodSchemaEl.remove();
@@ -536,7 +622,7 @@ export const initSEO = (project?: Project, prog?: any) => {
         injectSchema(generateFaqSchema(), 'faq-schema');
         
         updateOGTags(
-            "Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa",
+            "Harico Estates by Sentosa Developers | Harico Divaam & Harico Edge",
             "Harico Estates & Sentosa Developers (39-Year Legacy). Ultra-luxury 2 & 3 BHK homes across Punawale, Kiwale, Ravet, Tathawade, and Hinjewadi corridor.",
             "https://haricoestates.in/harico_logo.png",
             "https://haricoestates.in/"

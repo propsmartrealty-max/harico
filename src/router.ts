@@ -56,10 +56,17 @@ class Router {
         let matchedRoute = this.routes.find(r => r.path === normalizedPath);
         let slug: string | undefined = undefined;
 
-        // 2. If no exact match, check for /project/:slug wildcard match
+        // 2. If no exact match, check for /project/:slug or /articles/:slug wildcard match
         if (!matchedRoute && pathSegments.length >= 1 && pathSegments[0] === 'project') {
             matchedRoute = this.routes.find(r => r.path === '/project');
             slug = pathSegments[1];
+        } else if (!matchedRoute && pathSegments.length >= 1 && pathSegments[0] === 'articles') {
+            if (pathSegments.length === 1) {
+                matchedRoute = this.routes.find(r => r.path === '/articles');
+            } else {
+                matchedRoute = this.routes.find(r => r.path === '/articles/detail');
+                slug = pathSegments[1];
+            }
         }
 
         // 3. If still no match, check if first segment is registered as a direct route

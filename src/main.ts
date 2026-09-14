@@ -22,6 +22,9 @@ import { createProjectDetails } from './components/ProjectDetails';
 import { createPrivacyPolicy, createTermsOfUse } from './components/LegalPages';
 import { createNotFound } from './components/NotFound';
 import { createProgrammaticHub } from './components/ProgrammaticHub';
+import { createArticlesHub } from './components/ArticlesHub';
+import { createArticleDetail } from './components/ArticleDetail';
+import { articlesData } from './data/articles';
 import { programmaticRoutes } from './data/programmatic_routes';
 import { router } from './router';
 import { projectsData } from './data/projects';
@@ -168,6 +171,32 @@ router.add('/terms', () => {
     mainAppContainer.appendChild(createTermsOfUse());
     window.scrollTo(0, 0);
     setTimeout(() => animationEngine.init(), 50);
+});
+
+// Articles & Knowledge Hub Master Routes
+router.add('/articles', () => {
+    mainAppContainer.innerHTML = '';
+    document.title = 'Harico Estates Knowledge Hub | Homebuyer Guides, MahaRERA & Market Analysis';
+    initSEO();
+    mainAppContainer.appendChild(createArticlesHub());
+    mainAppContainer.appendChild(createContactSection());
+    window.scrollTo(0, 0);
+    setTimeout(() => animationEngine.init(), 50);
+});
+
+router.add('/articles/detail', (_params, slug) => {
+    mainAppContainer.innerHTML = '';
+    const article = articlesData.find(a => a.slug === slug);
+    if (article) {
+        document.title = `${article.title} | Harico Estates Knowledge Hub`;
+        initSEO(undefined, undefined, article);
+        mainAppContainer.appendChild(createArticleDetail(article));
+        mainAppContainer.appendChild(createContactSection());
+        window.scrollTo(0, 0);
+        setTimeout(() => animationEngine.init(), 50);
+    } else {
+        mainAppContainer.appendChild(createNotFound());
+    }
 });
 
 // 3. Programmatic SEO Dynamic Routes

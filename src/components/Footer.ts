@@ -39,6 +39,7 @@ export function createFooter(): HTMLElement {
         <div class="footer-col">
           <h4 class="footer-heading">Buyer Tools</h4>
           <ul class="footer-links">
+            <li><a href="/articles">Articles & Knowledge Hub</a></li>
             <li><a href="/emi-calculator">EMI Calculator</a></li>
             <li><a href="/amenities">Curated Amenities</a></li>
             <li><a href="/faq">FAQ Knowledge Base</a></li>
@@ -49,11 +50,13 @@ export function createFooter(): HTMLElement {
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-heading">Projects</h4>
+          <h4 class="footer-heading">Flagship Projects</h4>
           <ul class="footer-links">
+            <li><a href="/project/harico-divaam">HARICO DIWAAM (Kiwale)</a></li>
             <li><a href="/project/harico-edge">HARICO EDGE (Punawale)</a></li>
-            <li><a href="/project/harico-divaam">HARICO DIVAAM (Kiwale)</a></li>
             <li><a href="/project/harico-pride">HARICO PRIDE (Punawale)</a></li>
+            <li><a href="/articles/harico-diwaam-kiwale-buyer-guide">Diwaam Buyer Guide</a></li>
+            <li><a href="/articles/punawale-vs-kiwale-comparison">Punawale vs Kiwale</a></li>
           </ul>
         </div>
 

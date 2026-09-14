@@ -7,32 +7,76 @@ export function createFaqSection(): HTMLElement {
 
   const faqs = [
     {
-      question: 'Are all Harico Estates projects registered under MahaRERA?',
-      answer: 'Yes, 100% of Harico Estates and Sentosa Group projects are fully registered with MahaRERA. Our verified registration IDs are: <b>Harico Edge: P52100031773</b>, <b>Harico Divaam: PR1260002502389</b>, and <b>Harico Pride: P52100018471</b>. All project approvals, sanctioned plans, and title certificates can be validated directly on the official MahaRERA website (maharera.mahaonline.gov.in).'
+      question: 'What is Harico Estates and what is its development heritage in Pune?',
+      answer: '<b>Harico Estates</b> is the premier residential development entity of <b>Sentosa Developers</b>, a trusted real estate and hospitality conglomerate with a <b>39-year legacy (founded in 1987)</b> across Pune, PCMC, and Maharashtra. Backed by 20+ delivered landmark developments and the iconic Sentosa Water Park & Resorts, Harico Estates is known for 100% legal title compliance, earthquake-resistant Mivan monolithic engineering, and strategic highway-adjacent developments.'
     },
     {
-      question: 'What unit configurations and carpet areas are available in Punawale & Kiwale?',
-      answer: 'Harico Estates offers premium 2 & 3 BHK residences ranging from 724 sq.ft up to 1,180 sq.ft of carpet area. Every home is designed with zero-space wastage, dual cross-ventilated private balconies, and dedicated walk-in wardrobe provisions in 3 BHK master suites.'
+      question: 'What is the starting price for 2 BHK and 3 BHK flats at Harico Diwaam Kiwale?',
+      answer: 'At <b>Harico Diwaam (Harico Divaam Kiwale)</b>, luxury 2 BHK apartments start from <b>₹70.00 Lacs* Onwards</b> (724 sq.ft usable carpet area) and 3 BHK apartments start from <b>₹89.90 Lacs* Onwards</b> (920 sq.ft usable carpet area). Larger 2 BHK Comfort (760 sq.ft), 2 BHK Grand (848 sq.ft), 3 BHK Comfort (983 sq.ft), and 3 BHK Grand (1,108 sq.ft) variants are also available with flexible construction-linked payment schedules.'
     },
     {
-      question: 'Which nationalized and private banks have approved Harico projects for Home Loans?',
-      answer: 'Our developments are pre-approved by all leading financial institutions including State Bank of India (SBI), HDFC Bank, ICICI Bank, Axis Bank, Bank of Baroda, Kotak Mahindra Bank, and Punjab National Bank. Our in-house home loan desk assists buyers with fast-track loan sanctions and competitive interest rates starting from 8.35%* p.a.'
+      question: 'What is the difference between Harico Diwaam and Harico Divaam?',
+      answer: '<b>Harico Diwaam</b> and <b>Harico Divaam</b> refer to the exact same landmark residential development situated directly opposite Sentosa Water Park in Kiwale-Ravet. "Harico Divaam" is the official spelling filed under MahaRERA registration number <b>PR1260002502389</b>, while "Harico Diwaam" is the widely used phonetic brand spelling searched by homebuyers.'
     },
     {
-      question: 'How close is Harico Estates to Hinjewadi IT Park and the Mumbai-Pune Expressway?',
-      answer: 'Harico Edge and Harico Pride are located just 2 minutes from the Mumbai-Pune Expressway and 12–15 minutes from Hinjewadi Rajiv Gandhi IT Park (Phase 1). Harico Divaam in Kiwale sits directly opposite Sentosa Water Park with instantaneous access to the expressway flyover and Mukai Chowk.'
+      question: 'How many towers, floors, and acres make up Harico Diwaam Kiwale?',
+      answer: 'Harico Diwaam is the tallest residential development in the Kiwale-Ravet micro-market, featuring <b>5 iconic sky towers rising 24 storeys tall</b> set within an expansive <b>5.0-acre master-planned land parcel</b>.'
     },
     {
-      question: 'What is the construction technology used across Harico projects?',
-      answer: 'We deploy advanced Mivan aluminium formwork monolithic concrete technology and earthquake-resistant RCC shear wall structures compliant with IS Zone III standards. This ensures crack-free walls, superior acoustic privacy, extended structural lifespan, and on-time delivery.'
+      question: 'What is the MahaRERA registration number and possession date for Harico Diwaam?',
+      answer: 'Harico Diwaam (Harico Divaam) is approved and registered under MahaRERA registration number <b>PR1260002502389</b> with target completion and possession scheduled for <b>December 2030</b>.'
     },
     {
-      question: 'What is the booking procedure and payment schedule for a flat?',
-      answer: 'You can book your preferred unit with a nominal token amount. The construction-linked payment plan (CLP) is spread systematically across excavation, plinth, slab casting, brickwork, finishing, and final handover, fully compliant with MahaRERA milestone guidelines.'
+      question: 'What 100+ resort lifestyle amenities are provided at Harico Diwaam Kiwale?',
+      answer: 'Harico Diwaam features over 100+ curated amenities across 6 lifestyle zones, including a <b>24th-floor Rooftop Sky Observation Deck</b>, infinity edge swimming pool, sky gymnasium, 40-seater Dolby Atmos private mini-theatre, podcasting and YouTube creator studio, 12 fully furnished guest suites for visiting family, business co-working lounges, tennis and badminton courts, children’s splash pool, and 3-tier security.'
     },
     {
-      question: 'What are the expected rental yields and capital appreciation in Punawale?',
-      answer: 'Punawale and Kiwale have demonstrated consistent 15%–18% capital appreciation over the last 3 years due to high IT professional demand from Hinjewadi and Wakad. Expected monthly rental yields range between ₹24,000 to ₹36,000 for 2 and 3 BHK homes.'
+      question: 'Where is Harico Diwaam located and how far is it from Hinjewadi & Expressway?',
+      answer: 'Harico Diwaam is positioned <b>directly opposite Sentosa Water Park</b> on the Mumbai-Pune Expressway corridor in Kiwale-Ravet (PIN: 412101). It is situated just <b>2 minutes from Mukai Chowk BRTS</b>, <b>2 minutes from the Mumbai-Pune Expressway</b>, <b>5 minutes from Akurdi Railway Station</b>, and <b>12–15 minutes from Hinjewadi Rajiv Gandhi Infotech Park Phase 1</b>.'
+    },
+    {
+      question: 'What residential projects are developed under Harico Kiwale?',
+      answer: 'Under the <b>Harico Kiwale</b> development umbrella, the flagship project is <b>Harico Diwaam (Harico Divaam Kiwale)</b>, featuring 24-storey high-rise luxury towers across 5 acres opposite Sentosa Water Park. Harico Kiwale represents the pinnacle of high-rise engineering in the Kiwale-Ravet growth belt.'
+    },
+    {
+      question: 'What is Harico Edge Punawale and what is its starting price and possession date?',
+      answer: '<b>Harico Edge</b> is a luxury 22-storey residential development in Punawale (PIN: 411033) spanning 2.5 acres near Bhumkar Chowk. 2 BHK residences start from <b>₹74.00 Lacs* Onwards</b> (741 sq.ft carpet) and 3 BHK residences start from <b>₹89.00 Lacs* Onwards</b> (942 sq.ft carpet up to 1,148 sq.ft). Target possession is scheduled for <b>June 2030</b> under MahaRERA registration number <b>P52100031773</b>.'
+    },
+    {
+      question: 'What residential projects are developed under Harico Punawale?',
+      answer: 'The <b>Harico Punawale</b> corridor comprises two flagship developments by Sentosa Developers: <b>Harico Edge</b> (MahaRERA P52100031773, June 2030 possession) and <b>Harico Pride</b> (MahaRERA P52100018471, near-possession June 2027), along with delivered Sentosa landmarks such as Sentosa Ekam and Sentosa Pride Phases 1, 2 & 3.'
+    },
+    {
+      question: 'What is Harico Pride Punawale and when is its possession?',
+      answer: '<b>Harico Pride</b> is an expansive residential enclave located near Bhiku Vallabh Kale School in Punawale. It offers the largest usable carpet area 2 & 3 BHK residences in Punawale (765 to 1,180 sq.ft) with starting prices from <b>₹78.00 Lacs*</b>. Target possession is <b>June 2027</b> under MahaRERA registration number <b>P52100018471</b>.'
+    },
+    {
+      question: 'What is Mivan monolithic concrete construction and why does Harico Estates use it?',
+      answer: 'Harico Estates standardizes <b>Mivan monolithic aluminium formwork concrete casting</b> across all projects. Unlike conventional brick construction that is prone to hairline cracks and moisture seepage, Mivan casts walls and slabs simultaneously in high-grade concrete, delivering superior earthquake resistance (IS Zone III compliant), jointless water-tight walls, smooth factory-quality wall finishes, and 4%–6% more usable carpet area.'
+    },
+    {
+      question: 'Which nationalized and private banks have approved Harico projects for home loans?',
+      answer: 'All Harico Estates developments are pre-approved by leading financial institutions including <b>State Bank of India (SBI)</b>, <b>HDFC Bank</b>, <b>ICICI Bank</b>, <b>Axis Bank</b>, <b>Bank of Baroda</b>, and <b>Kotak Mahindra Bank</b>. Competitive interest rates starting from 8.35%* p.a. and fast-track sanctions are facilitated by our in-house finance desk.'
+    },
+    {
+      question: 'What are the usable carpet areas available across Harico Estates projects?',
+      answer: 'Harico Estates offers 2 BHK configurations from <b>724 sq.ft to 848 sq.ft</b> and 3 BHK configurations from <b>920 sq.ft to 1,180 sq.ft</b>. Every layout features zero space wastage, dual private balconies, separate dry utility balconies, and dedicated master bedroom wardrobe niches.'
+    },
+    {
+      question: 'What are the expected rental yields and capital appreciation in Punawale and Kiwale?',
+      answer: 'Punawale and Kiwale have demonstrated consistent <b>15%–18% capital appreciation</b> over the past 3 years due to high IT professional influx from Hinjewadi and Wakad. Gross rental yields range between <b>4.2% to 4.8%</b>, with 2 BHK monthly rentals averaging ₹22,000 to ₹28,000 and 3 BHK rentals reaching ₹32,000 to ₹40,000.'
+    },
+    {
+      question: 'What is the booking token amount and procedure for a flat in Harico Estates?',
+      answer: 'You can reserve your preferred unit with a nominal booking token amount. The construction-linked payment plan is structured according to clear MahaRERA milestones across plinth casting, individual slab completions, internal plastering, and final handover.'
+    },
+    {
+      question: 'Are all Harico Estates projects free from legal encumbrances and clear title approved?',
+      answer: 'Yes, 100% of Harico Estates developments have clear, marketable, and unencumbered legal titles vetted by top corporate legal counsels, with sanctioned building layouts and commencement certificates (CC) approved by PCMC and MahaRERA.'
+    },
+    {
+      question: 'How do I schedule a priority VIP site visit and visit the sample flat?',
+      answer: 'You can schedule a priority VIP site visit by calling our direct sales desk at <b>+91 7744009295</b> or messaging on WhatsApp. Our site sales galleries are open all 7 days from 9:30 AM to 7:30 PM with fully furnished show apartments available for viewing.'
     }
   ];
 
