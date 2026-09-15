@@ -56,7 +56,7 @@ app.appendChild(mobileQuickBar);
 // 1. Home Master Route
 router.add('/', () => {
     mainAppContainer.innerHTML = '';
-    document.title = 'Harico Estates | Luxury 2 & 3 BHK Flats in Punawale & Kiwale by Sentosa';
+    document.title = 'Harico Estates | Official Website | Harico Diwaam & Harico Edge Pune';
     
     initSEO();
     const metaKeywords = document.querySelector('meta[name="keywords"]');

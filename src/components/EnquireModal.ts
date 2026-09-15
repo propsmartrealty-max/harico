@@ -522,8 +522,16 @@ export function createEnquireModal(): HTMLElement {
     }
 
     @media (max-width: 580px) {
+      .modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+      }
       .modal-content-advanced {
         padding: 24px 18px;
+        border-radius: 24px 24px 0 0;
+        max-height: 90dvh;
+        width: 100%;
+        max-width: 100%;
       }
       .form-row-grid-2 {
         grid-template-columns: 1fr;
@@ -531,6 +539,18 @@ export function createEnquireModal(): HTMLElement {
       }
       .chip-selector-grid {
         grid-template-columns: 1fr;
+      }
+      .modal-adv-title {
+        font-size: 1.15rem;
+      }
+      .perks-strip-grid {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .perk-item {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
       }
     }
   `;

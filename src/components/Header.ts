@@ -74,6 +74,9 @@ export function createHeader(): HTMLElement {
       </div>
     </div>
 
+    <!-- Drawer Backdrop -->
+    <div class="drawer-backdrop"></div>
+
     <!-- Mobile Drawer Overlay -->
     <div class="pill-mobile-drawer">
       <div class="mobile-drawer-header flex justify-between items-center pb-md border-bottom">
@@ -87,14 +90,17 @@ export function createHeader(): HTMLElement {
         <li><a href="/specifications" class="mobile-drawer-link" data-target="specifications">Construction Specs</a></li>
         <li><a href="/location-hub" class="mobile-drawer-link" data-target="location-hub">Location Matrix</a></li>
         <li><a href="/amenities" class="mobile-drawer-link" data-target="amenities">Lifestyle Amenities</a></li>
-        <li><a href="/articles" class="mobile-drawer-link" data-target="articles">Articles & Guides</a></li>
+        <li><a href="/articles" class="mobile-drawer-link" data-target="articles">Articles &amp; Guides</a></li>
         <li><a href="/emi-calculator" class="mobile-drawer-link" data-target="emi-calculator">EMI Calculator</a></li>
         <li><a href="/faq" class="mobile-drawer-link" data-target="faq">MahaRERA FAQs</a></li>
-        <li><a href="/contact" class="mobile-drawer-link" data-target="contact">Contact & Site Visit</a></li>
+        <li><a href="/contact" class="mobile-drawer-link" data-target="contact">Contact &amp; Site Visit</a></li>
       </ul>
       <div class="mt-lg">
-        <a href="tel:+917744009295" class="btn btn-primary w-full text-center block">
+        <a href="tel:+917744009295" class="btn btn-primary" style="width:100%; display:flex; justify-content:center;">
           <i class="fa-solid fa-phone mr-2"></i> Call +91 7744009295
+        </a>
+        <a href="https://wa.me/917744009295?text=Hi, I have an enquiry regarding Harico Estates." target="_blank" class="btn" style="width:100%; display:flex; justify-content:center; margin-top:10px; background:#25D366; color:#fff; text-decoration:none;">
+          <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Us
         </a>
       </div>
     </div>
@@ -350,6 +356,20 @@ export function createHeader(): HTMLElement {
       transform: translateX(4px);
     }
 
+    /* Drawer Backdrop */
+    .drawer-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1090;
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-backdrop.show {
+      display: block;
+    }
+
     @media (max-width: 1180px) {
       .pill-nav-menu {
         display: none;
@@ -371,6 +391,20 @@ export function createHeader(): HTMLElement {
         justify-content: center;
       }
     }
+
+    @media (max-width: 480px) {
+      .header-pill-wrapper {
+        padding: 0 10px;
+        top: 10px;
+      }
+      .pill-navbar {
+        padding: 5px 10px;
+        border-radius: 16px;
+      }
+      .pill-logo-img {
+        height: 28px !important;
+      }
+    }
   `;
   header.appendChild(style);
 
@@ -379,22 +413,26 @@ export function createHeader(): HTMLElement {
     const toggleBtn = header.querySelector('.pill-mobile-toggle');
     const closeBtn = header.querySelector('.drawer-close-btn');
     const drawer = header.querySelector('.pill-mobile-drawer');
+    const backdrop = header.querySelector('.drawer-backdrop');
 
-    toggleBtn?.addEventListener('click', () => {
+    const openDrawer = () => {
       drawer?.classList.add('open');
+      backdrop?.classList.add('show');
       document.body.classList.add('menu-open');
-    });
+    };
 
-    closeBtn?.addEventListener('click', () => {
+    const closeDrawer = () => {
       drawer?.classList.remove('open');
+      backdrop?.classList.remove('show');
       document.body.classList.remove('menu-open');
-    });
+    };
+
+    toggleBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    backdrop?.addEventListener('click', closeDrawer);
 
     header.querySelectorAll('.mobile-drawer-link').forEach(link => {
-      link.addEventListener('click', () => {
-        drawer?.classList.remove('open');
-        document.body.classList.remove('menu-open');
-      });
+      link.addEventListener('click', closeDrawer);
     });
   }, 0);
 

@@ -7,18 +7,16 @@
 /project/harico-edge-punawale                    /project/harico-edge      301!
 /project/harico-pride-punawale                   /project/harico-pride     301!
 
-# 2. Section Deep Link Aliases (Clean URL Standard)
-/project-comparison                              /project-comparison/index.html   200
-/specifications                                  /specifications/index.html       200
-/location-hub                                    /location-hub/index.html         200
-/emi-calculator                                  /emi-calculator/index.html       200
-/faq                                             /faq/index.html                  200
-/amenities                                       /amenities/index.html            200
-/projects                                        /projects/index.html             200
-/contact                                         /contact/index.html              200
-/privacy                                         /privacy/index.html              200
-/terms                                           /terms/index.html                200
-
-# 3. Global Single Page Application (SPA) 200 Rewrite Fallback
-# Matches all remaining non-file routes and routes to root index.html
-/*                                               /index.html                      200
+# 2. Micro-Intent & Search Shortcut 301 Redirects to Canonical Routes
+/punawale/2-bhk                                  /flats/2-bhk-flats-in-punawale        301!
+/punawale/3-bhk                                  /flats/3-bhk-flats-in-punawale        301!
+/kiwale/2-bhk                                    /flats/2-bhk-flats-in-kiwale          301!
+/kiwale/3-bhk                                    /flats/3-bhk-flats-in-kiwale          301!
+/price/under-75-lakh                             /flats/2-bhk-flats-in-kiwale          301!
+/price/under-1-crore                             /flats/3-bhk-flats-in-punawale        301!
+/developer/sentosa-punawale                      /developer/sentosa-developers-pune    301!
+/developer/sentosa-kiwale                        /developer/sentosa-developers-pune    301!
+/developer/sentosa-ekam-punawale                 /developer/sentosa-developers-pune    301!
+/developer/sentosa-edge-punawale                 /project/harico-edge                  301!
+/developer/sentosa-pride-punawale                /project/harico-pride                 301!
+/project/harico-diwaam                           /project/harico-divaam                301!

@@ -10,6 +10,8 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 body {
@@ -19,6 +21,16 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+body.menu-open {
+    overflow: hidden !important;
+    touch-action: none;
 }
 
 h1,
@@ -511,4 +523,34 @@ img {
     background: linear-gradient(90deg, rgba(212, 175, 55, 0.2), rgba(255, 255, 255, 0.6), rgba(212, 175, 55, 0.2));
     background-size: 200% 200%;
     animation: liquidSheen 4s ease infinite;
+}
+
+/* Mobile Responsiveness Enhancements */
+@media (max-width: 768px) {
+    input, select, textarea {
+        font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+    }
+
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .btn {
+        touch-action: manipulation;
+        min-height: 44px; /* Apple minimum touch target recommendation */
+    }
+
+    h1 {
+        font-size: clamp(1.8rem, 7vw, 2.6rem);
+    }
+
+    h2 {
+        font-size: clamp(1.5rem, 6vw, 2.1rem);
+    }
+
+    h3 {
+        font-size: clamp(1.2rem, 5vw, 1.6rem);
+    }
 }

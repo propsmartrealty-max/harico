@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && node scripts/prerender.js",
+    "validate": "node scripts/validate.js",
     "indexnow": "node scripts/indexnow.js",
+    "index:dispatch": "node scripts/index_dispatch.js",
+    "index:google": "node scripts/google_indexing.js",
     "preview": "vite preview",
-    "deploy": "npm run build && wrangler pages deploy dist --project-name=harico",
-    "deploy:prod": "npm run build && wrangler pages deploy dist --project-name=harico --branch=main"
+    "ship": "npm run build && npm run validate && npm run index:dispatch",
+    "deploy": "npm run build && npm run validate && wrangler pages deploy dist --project-name=harico",
+    "deploy:prod": "npm run build && npm run validate && node scripts/index_dispatch.js && wrangler pages deploy dist --project-name=harico --branch=main"
   },
   "devDependencies": {
     "typescript": "~5.9.3",

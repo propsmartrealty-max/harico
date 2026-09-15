@@ -135,6 +135,29 @@ export function createConfigurationTable(project: any): HTMLElement {
         display: flex;
         align-items: center;
     }
+
+    @media (max-width: 768px) {
+      .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: var(--radius-lg);
+      }
+      .config-table {
+        min-width: 480px;
+      }
+      .config-table th, .config-table td {
+        padding: 14px 16px;
+        font-size: 0.88rem;
+      }
+      .unit-type {
+        font-size: 0.92rem;
+      }
+      .btn-price-request {
+        font-size: 0.78rem;
+        padding: 6px 12px;
+        white-space: nowrap;
+      }
+    }
   `;
   container.appendChild(style);
 

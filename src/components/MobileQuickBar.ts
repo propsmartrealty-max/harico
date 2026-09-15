@@ -104,9 +104,10 @@ export function createMobileQuickBar(): HTMLElement {
     @media (max-width: 768px) {
       .mobile-quick-action-bar {
         display: block;
+        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
       }
       body {
-        padding-bottom: 75px; /* Prevent floating bar from overlapping footer */
+        padding-bottom: calc(75px + env(safe-area-inset-bottom, 0px));
       }
     }
   `;

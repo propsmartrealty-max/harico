@@ -55,7 +55,10 @@ export function createFooter(): HTMLElement {
             <li><a href="/project/harico-divaam">HARICO DIWAAM (Kiwale)</a></li>
             <li><a href="/project/harico-edge">HARICO EDGE (Punawale)</a></li>
             <li><a href="/project/harico-pride">HARICO PRIDE (Punawale)</a></li>
-            <li><a href="/articles/harico-diwaam-kiwale-buyer-guide">Diwaam Buyer Guide</a></li>
+            <li><a href="/articles/harico-diwaam-kiwale-buyer-guide">Diwaam Buyer Guide 2026</a></li>
+            <li><a href="/articles/harico-diwaam-amenities-deep-dive">Diwaam Amenities Guide</a></li>
+            <li><a href="/articles/harico-diwaam-investment-analysis-2026">Diwaam Investment ROI</a></li>
+            <li><a href="/articles/harico-diwaam-vs-other-kiwale-projects">Diwaam vs Kiwale Projects</a></li>
             <li><a href="/articles/punawale-vs-kiwale-comparison">Punawale vs Kiwale</a></li>
           </ul>
         </div>
@@ -133,18 +136,28 @@ export function createFooter(): HTMLElement {
         </p>
 
         <p class="seo-text mt-xs">
+            <strong>📋 Harico Diwaam Kiwale — In-Depth Guides:</strong>
+            <a href="/articles/harico-diwaam-kiwale-buyer-guide" class="seo-link">Harico Diwaam Complete Buyer Guide 2026</a> |
+            <a href="/articles/harico-diwaam-amenities-deep-dive" class="seo-link">Harico Diwaam 100+ Amenities Deep Dive</a> |
+            <a href="/articles/harico-diwaam-investment-analysis-2026" class="seo-link">Harico Diwaam Investment & ROI Analysis 2026</a> |
+            <a href="/articles/harico-diwaam-vs-other-kiwale-projects" class="seo-link">Harico Diwaam vs Other Kiwale Projects</a> |
+            Harico Diwaam 2 BHK 724 sqft ₹70 Lacs* | Harico Diwaam 3 BHK 920 sqft ₹89.90 Lacs* | Harico Diwaam Mivan Construction | Harico Diwaam Sky Deck 24th Floor | Harico Diwaam Dolby Atmos Theatre | Harico Diwaam MahaRERA PR1260002502389 | Harico Diwaam Possession December 2030 | Harico Diwaam Kiwale Rental Yield 4.5% | Harico Diwaam SBI HDFC ICICI Loan | Harico Diwaam Creator Studio Podcast | हरिको दिवाम किवाळे | हॅरिको दिवाम | Sentosa Divaam Kiwale | Harico Divaam Kiwale.
+        </p>
+
+        <p class="seo-text mt-xs">
             <strong>🔥 Tathawade Real Estate Market:</strong> <a href="/location/tathawade" class="seo-link">Tathawade Real Estate</a> | 2 BHK Flats Tathawade | 3 BHK Flats Tathawade | Sentosa Serene Tathawade | Sentosa Developers Tathawade | Flats near JSPM Tathawade | Flats near Indira College | Tathawade Hinjewadi IT Corridor | Flats for sale Tathawade | Property Investment Tathawade.
         </p>
 
         <p class="seo-text mt-xs">
-            <strong>🔥 Sentosa Developers Legacy & Commercial Hubs:</strong> <a href="/developer/sentosa-developers-pune" class="seo-link">Sentosa Developers 39-Year Legacy</a> | Sentosa Elite Wakad (Commercial Spaces) | Sentosa Palm Wakad | Sentosa Elysium Wakad | Sentosa Pearl Wakad | Sentosa Era Moshi Pradhikaran | Sentosa Residency Hadapsar | Gulraj Residency Kondhwa | Satyam Complex | Shivdham Complex | Samarpam Complex | Royal Palms.
+            <strong>🔥 Sentosa Developers Legacy &amp; Commercial Hubs:</strong> <a href="/developer/sentosa-developers-pune" class="seo-link">Sentosa Developers 39-Year Legacy</a> | Sentosa Elite Wakad (Commercial Spaces) | Sentosa Palm Wakad | Sentosa Elysium Wakad | Sentosa Pearl Wakad | Sentosa Era Moshi Pradhikaran | Sentosa Residency Hadapsar | Gulraj Residency Kondhwa | Satyam Complex | Shivdham Complex | Samarpam Complex | Royal Palms.
         </p>
 
         <p class="seo-text mt-xs">
-            <span lang="mr">पुनावळे मधील नवीन २ आणि ३ बीएचके फ्लॅट्स | किवाळे सेंटोसा प्रोजेक्ट्स | तथावडे फ्लॅट विक्रीसाठी | हिंजवडी जवळ घरे | पिंपरी चिंचवड रिअल इस्टेट | हरिको इस्टेट्स पुणे</span>
+            <span lang="mr">पुनावळे मधील नवीन २ आणि ३ बीएचके फ्लॅट्स | किवाळे सेंटोसा प्रोजेक्ट्स | तथावडे फ्लॅट विक्रीसाठी | हिंजवडी जवळ घरे | पिंपरी चिंचवड रिअल इस्टेट | हरिको इस्टेट्स पुणे | हरिको दिवाम किवाळे गुंतवणूक | किवाळे मधील सर्वात उंच टॉवर</span>
         </p>
       </div>
     </div>
+
   `;
 
   const style = document.createElement('style');

@@ -28,7 +28,7 @@ export function createHero(): HTMLElement {
 
       <!-- Refined Hero Headline -->
       <h1 class="hero-title-refined fade-in-up delay-1">
-        Harico Diwaam & Harico Edge <br />
+        Harico Estates <br />
         <span class="text-gold-gradient">Luxury 2 & 3 BHK Flats in Punawale & Kiwale</span>
       </h1>
       
@@ -154,13 +154,20 @@ export function createHero(): HTMLElement {
       background-image: url('/assets/hero_new.png'); 
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;
+      background-attachment: scroll; /* iOS Safari: fixed causes blank on mobile */
       display: flex;
       align-items: center;
       justify-content: center;
       color: #FFFFFF;
       padding: 130px 0 90px;
       overflow: hidden;
+    }
+
+    /* Desktop: enable parallax only if supported + not on touch */
+    @media (hover: hover) and (pointer: fine) {
+      .hero-section-refined {
+        background-attachment: fixed;
+      }
     }
 
     .hero-bg-overlay {
@@ -573,6 +580,57 @@ export function createHero(): HTMLElement {
       }
       .hero-section-refined {
         padding: 110px 0 70px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-section-refined {
+        padding: 100px 16px 80px;
+        min-height: 100svh; /* Safe viewport height for mobile browsers */
+      }
+
+      .hero-container-refined {
+        padding: 0;
+        text-align: center;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+      }
+
+      .hero-trust-metrics-bar {
+        justify-content: center;
+        gap: 12px;
+        padding: 12px;
+      }
+
+      .metric-capsule {
+        min-width: 80px;
+      }
+
+      .metric-val {
+        font-size: 1.4rem !important;
+      }
+
+      .metric-txt {
+        font-size: 0.68rem !important;
+      }
+
+      .hero-pre-badge {
+        font-size: 0.7rem;
+      }
+
+      .hero-scroll-cue {
+        display: none;
       }
     }
   `;

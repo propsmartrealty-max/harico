@@ -70,7 +70,16 @@
   Cache-Control: public, max-age=600, must-revalidate
   Cloudflare-CDN-Cache-Control: max-age=600
   Content-Type: application/xml; charset=UTF-8
-  X-Robots-Tag: noindex
+
+/feed.xml
+  Cache-Control: public, max-age=600, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=600
+  Content-Type: application/rss+xml; charset=UTF-8
+
+/rss.xml
+  Cache-Control: public, max-age=600, must-revalidate
+  Cloudflare-CDN-Cache-Control: max-age=600
+  Content-Type: application/rss+xml; charset=UTF-8
 
 /robots.txt
   Cache-Control: public, max-age=3600, s-maxage=86400, must-revalidate

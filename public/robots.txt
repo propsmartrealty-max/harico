@@ -39,4 +39,5 @@ Allow: /
 
 # Directives & Discovery Endpoints
 Sitemap: https://haricoestates.in/sitemap.xml
+Sitemap: https://haricoestates.in/feed.xml
 # AI Knowledge Graph: https://haricoestates.in/llms.txt

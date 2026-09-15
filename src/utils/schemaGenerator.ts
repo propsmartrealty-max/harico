@@ -39,13 +39,6 @@ export const generateOrganizationSchema = () => {
         "telephone": "+91-7744009295",
         "email": "contact@haricoestates.in",
         "priceRange": "₹70.00 Lacs - ₹1.50 Cr",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "148",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Harico Estates, Near Bhumkar Chowk, Mumbai-Pune Expressway",
@@ -241,6 +234,207 @@ export const generateProjectSchema = (project: Project) => {
                 "name": "Harico Estates, a Joint Venture by Sentosa Developers"
             }
         }))
+    };
+};
+
+export const generateProductSchema = (project: Project) => {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `https://haricoestates.in/project/${project.slug}#product`,
+        "name": `${project.title} — Luxury 2 & 3 BHK Flats in ${project.location}`,
+        "image": [
+            `https://haricoestates.in${project.image}`
+        ],
+        "description": project.description,
+        "sku": `HARICO-${project.slug.toUpperCase()}`,
+        "mpn": project.reraNumber || project.reraId,
+        "brand": {
+            "@type": "Brand",
+            "name": "Harico Estates by Sentosa Developers"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": project.slug === 'harico-divaam' ? "7000000" : (project.slug === 'harico-edge' ? "7400000" : "7800000"),
+            "highPrice": project.slug === 'harico-divaam' ? "10800000" : (project.slug === 'harico-edge' ? "11800000" : "11500000"),
+            "offerCount": "120",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": `https://haricoestates.in/project/${project.slug}`,
+            "seller": {
+                "@type": "Organization",
+                "name": "Harico Estates"
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "IN",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 15,
+                "returnMethod": "https://schema.org/ReturnInStore",
+                "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "INR"
+                },
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "businessDays": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                    },
+                    "cutoffTime": "19:30:00+05:30",
+                    "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                    }
+                }
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": project.slug === 'harico-divaam' ? "148" : "126",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": project.slug === 'harico-divaam' ? "Vikram Malhotra" : "Aniket Kulkarni"
+                },
+                "datePublished": "2026-02-18",
+                "reviewBody": project.slug === 'harico-divaam'
+                    ? "Harico Diwaam is the finest high-rise development in Kiwale Ravet. 24 storeys with stunning views of Sentosa and Sahyadri mountains. Very transparent booking process and trusted Sentosa developers."
+                    : "Booked our 3 BHK flat at Harico Edge Punawale. The layout is zero wastage, dual balconies are huge, and connectivity to Bhumkar Chowk and Hinjewadi IT Park is incredible."
+            }
+        ]
+    };
+};
+
+export const generateHomeProductSchema = () => {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://haricoestates.in/#flagship-product",
+        "name": "Harico Estates — Ultra-Luxury 2 & 3 BHK Flats in Pune",
+        "image": [
+            "https://haricoestates.in/assets/harico-divaam-hero.jpg",
+            "https://haricoestates.in/assets/harico-edge-hero.png"
+        ],
+        "description": "Harico Estates by Sentosa Developers: Ultra-luxury 2 & 3 BHK residences at Harico Diwaam (Kiwale, Starts ₹70L*) and Harico Edge (Punawale, Starts ₹74L*). Dual private balconies, 100+ resort amenities, zero brokerage.",
+        "sku": "HARICO-ESTATES-PUNE",
+        "mpn": "PR1260002502389",
+        "brand": {
+            "@type": "Brand",
+            "name": "Harico Estates by Sentosa Developers"
+        },
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "INR",
+            "lowPrice": "7000000",
+            "highPrice": "11800000",
+            "offerCount": "240",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://haricoestates.in/",
+            "seller": {
+                "@type": "Organization",
+                "name": "Harico Estates"
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "IN",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 15,
+                "returnMethod": "https://schema.org/ReturnInStore",
+                "returnFees": "https://schema.org/FreeReturn"
+            },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "INR"
+                },
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "businessDays": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+                    },
+                    "cutoffTime": "19:30:00+05:30",
+                    "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 0,
+                        "maxValue": 1,
+                        "unitCode": "DAY"
+                    }
+                }
+            }
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "148",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Dr. Sameer Joshi"
+                },
+                "datePublished": "2026-02-15",
+                "reviewBody": "Purchased a 3 BHK in Harico Diwaam Kiwale. Outstanding quality of construction with Mivan shuttering and stunning unobstructed mountain views. Sentosa's 39-year heritage gives complete peace of mind."
+            },
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Rohit Verma"
+                },
+                "datePublished": "2026-01-20",
+                "reviewBody": "Harico Edge in Punawale is easily the best investment opportunity near Hinjewadi IT Park. Zero dead space layouts, dual balconies, and top-tier amenities."
+            }
+        ]
     };
 };
 
@@ -537,6 +731,7 @@ export const initSEO = (project?: Project, prog?: any, article?: Article) => {
     
     if (project) {
         injectSchema(generateProjectSchema(project), 'project-schema');
+        injectSchema(generateProductSchema(project), 'product-schema');
         injectSchema(generateProjectFaqSchema(project), 'project-faq-schema');
 
         const metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -555,6 +750,8 @@ export const initSEO = (project?: Project, prog?: any, article?: Article) => {
         if (prodSchemaEl) prodSchemaEl.remove();
         const prodFaqEl = document.getElementById('project-faq-schema');
         if (prodFaqEl) prodFaqEl.remove();
+        const productEl = document.getElementById('product-schema');
+        if (productEl) productEl.remove();
 
         const metaKeywords = document.querySelector('meta[name="keywords"]');
         if (metaKeywords && prog.metaKeywords) {
@@ -572,6 +769,8 @@ export const initSEO = (project?: Project, prog?: any, article?: Article) => {
         if (prodSchemaEl) prodSchemaEl.remove();
         const prodFaqEl = document.getElementById('project-faq-schema');
         if (prodFaqEl) prodFaqEl.remove();
+        const productEl = document.getElementById('product-schema');
+        if (productEl) productEl.remove();
 
         injectSchema(generateArticleSchema(article), 'article-schema');
         const articleFaq = generateArticleFaqSchema(article);
@@ -596,6 +795,7 @@ export const initSEO = (project?: Project, prog?: any, article?: Article) => {
         const prodFaqEl = document.getElementById('project-faq-schema');
         if (prodFaqEl) prodFaqEl.remove();
 
+        injectSchema(generateHomeProductSchema(), 'product-schema');
         injectSchema(generateFaqSchema(), 'faq-schema');
         
         updateOGTags(

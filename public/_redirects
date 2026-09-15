@@ -7,9 +7,16 @@
 /project/harico-edge-punawale                    /project/harico-edge      301!
 /project/harico-pride-punawale                   /project/harico-pride     301!
 
-# 2. Canonical Trailing-Slash Normalization for Clean Directory Resolution
-/project/harico-divaam                           /project/harico-divaam/index.html   200
-/project/harico-edge                             /project/harico-edge/index.html     200
-/project/harico-pride                            /project/harico-pride/index.html    200
-
-# 3. Global SPA Fallback (Supported via 404.html and edge rewrite)
+# 2. Micro-Intent & Search Shortcut 301 Redirects to Canonical Routes
+/punawale/2-bhk                                  /flats/2-bhk-flats-in-punawale        301!
+/punawale/3-bhk                                  /flats/3-bhk-flats-in-punawale        301!
+/kiwale/2-bhk                                    /flats/2-bhk-flats-in-kiwale          301!
+/kiwale/3-bhk                                    /flats/3-bhk-flats-in-kiwale          301!
+/price/under-75-lakh                             /flats/2-bhk-flats-in-kiwale          301!
+/price/under-1-crore                             /flats/3-bhk-flats-in-punawale        301!
+/developer/sentosa-punawale                      /developer/sentosa-developers-pune    301!
+/developer/sentosa-kiwale                        /developer/sentosa-developers-pune    301!
+/developer/sentosa-ekam-punawale                 /developer/sentosa-developers-pune    301!
+/developer/sentosa-edge-punawale                 /project/harico-edge                  301!
+/developer/sentosa-pride-punawale                /project/harico-pride                 301!
+/project/harico-diwaam                           /project/harico-divaam                301!

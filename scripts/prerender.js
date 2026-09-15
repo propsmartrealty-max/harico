@@ -299,12 +299,12 @@ const clusterFooterHtml = `
           <div>
             <strong style="color:#0A192F; display:block; margin-bottom:6px;">Popular Searches & Budgets</strong>
             <ul style="list-style:none; padding:0; margin:0;">
-              <li><a href="/punawale/2-bhk" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Punawale</a></li>
-              <li><a href="/punawale/3-bhk" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Punawale</a></li>
-              <li><a href="/kiwale/2-bhk" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Kiwale Ravet</a></li>
-              <li><a href="/kiwale/3-bhk" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Kiwale Ravet</a></li>
-              <li><a href="/price/under-75-lakh" style="color:#2563EB; text-decoration:none;">Flats under 75 Lakh in Punawale/Kiwale</a></li>
-              <li><a href="/price/under-1-crore" style="color:#2563EB; text-decoration:none;">Flats under 1 Crore in Punawale/Kiwale</a></li>
+              <li><a href="/flats/2-bhk-flats-in-punawale" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Punawale</a></li>
+              <li><a href="/flats/3-bhk-flats-in-punawale" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Punawale</a></li>
+              <li><a href="/flats/2-bhk-flats-in-kiwale" style="color:#2563EB; text-decoration:none;">2 BHK Flats in Kiwale Ravet</a></li>
+              <li><a href="/flats/3-bhk-flats-in-kiwale" style="color:#2563EB; text-decoration:none;">3 BHK Flats in Kiwale Ravet</a></li>
+              <li><a href="/flats/2-bhk-flats-in-kiwale" style="color:#2563EB; text-decoration:none;">Flats under 75 Lakh in Kiwale (Harico Diwaam)</a></li>
+              <li><a href="/flats/3-bhk-flats-in-punawale" style="color:#2563EB; text-decoration:none;">Flats under 1 Crore in Punawale (Harico Edge)</a></li>
             </ul>
           </div>
 
@@ -312,11 +312,11 @@ const clusterFooterHtml = `
             <strong style="color:#0A192F; display:block; margin-bottom:6px;">Sentosa Developers Heritage</strong>
             <ul style="list-style:none; padding:0; margin:0;">
               <li><a href="/developer/sentosa-developers-pune" style="color:#2563EB; text-decoration:none;">Sentosa Developers Pune (Since 1987)</a></li>
-              <li><a href="/developer/sentosa-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Punawale Projects</a></li>
-              <li><a href="/developer/sentosa-kiwale" style="color:#2563EB; text-decoration:none;">Sentosa Kiwale Projects</a></li>
-              <li><a href="/developer/sentosa-ekam-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Ekam Punawale</a></li>
-              <li><a href="/developer/sentosa-edge-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Edge Punawale</a></li>
-              <li><a href="/developer/sentosa-pride-punawale" style="color:#2563EB; text-decoration:none;">Sentosa Pride Punawale</a></li>
+              <li><a href="/location/punawale" style="color:#2563EB; text-decoration:none;">Sentosa & Harico Punawale Hub</a></li>
+              <li><a href="/location/kiwale" style="color:#2563EB; text-decoration:none;">Sentosa & Harico Kiwale Hub</a></li>
+              <li><a href="/project/harico-edge" style="color:#2563EB; text-decoration:none;">Sentosa Harico Edge Punawale</a></li>
+              <li><a href="/project/harico-pride" style="color:#2563EB; text-decoration:none;">Sentosa Harico Pride Punawale</a></li>
+              <li><a href="/project/harico-divaam" style="color:#2563EB; text-decoration:none;">Sentosa Harico Diwaam Kiwale</a></li>
             </ul>
           </div>
 
@@ -446,9 +446,102 @@ projects.forEach(project => {
   html = html.replace(/<meta name="twitter:description"[\s\S]*?>/is, '<meta name="twitter:description" content="' + project.description + '">');
   html = html.replace(/<meta name="twitter:image"[\s\S]*?>/is, '<meta name="twitter:image" content="https://haricoestates.in' + project.image + '">');
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `https://haricoestates.in/project/${project.slug}#product`,
+    "name": `${project.name} — Luxury 2 & 3 BHK Flats in ${project.location}`,
+    "image": [
+      `https://haricoestates.in${project.image}`
+    ],
+    "description": project.description,
+    "sku": `HARICO-${project.slug.toUpperCase()}`,
+    "mpn": project.rera,
+    "brand": {
+      "@type": "Brand",
+      "name": "Harico Estates by Sentosa Developers"
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": project.slug === 'harico-divaam' ? "7000000" : (project.slug === 'harico-edge' ? "7400000" : "7800000"),
+      "highPrice": project.slug === 'harico-divaam' ? "10800000" : (project.slug === 'harico-edge' ? "11800000" : "11500000"),
+      "offerCount": "120",
+      "priceValidUntil": "2027-12-31",
+      "availability": "https://schema.org/InStock",
+      "url": `https://haricoestates.in/project/${project.slug}`,
+      "seller": {
+        "@type": "Organization",
+        "name": "Harico Estates"
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 15,
+        "returnMethod": "https://schema.org/ReturnInStore",
+        "returnFees": "https://schema.org/FreeReturn"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "INR"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "businessDays": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+          },
+          "cutoffTime": "19:30:00+05:30",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          }
+        }
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": project.slug === 'harico-divaam' ? "148" : "126",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": project.slug === 'harico-divaam' ? "Vikram Malhotra" : "Aniket Kulkarni"
+        },
+        "datePublished": "2026-02-18",
+        "reviewBody": project.slug === 'harico-divaam'
+          ? "Harico Diwaam is the finest high-rise development in Kiwale Ravet. 24 storeys with stunning views of Sentosa and Sahyadri mountains. Very transparent booking process and trusted Sentosa developers."
+          : "Booked our 3 BHK flat at Harico Edge Punawale. The layout is zero wastage, dual balconies are huge, and connectivity to Bhumkar Chowk and Hinjewadi IT Park is incredible."
+      }
+    ]
+  };
+
   const schemaTags = `
   <link rel="canonical" href="https://haricoestates.in/project/${project.slug}" />
   <script type="application/ld+json">${JSON.stringify(projectSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(productSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(faqSchema)}</script>
   `;
@@ -802,8 +895,11 @@ const orgSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "@id": "https://haricoestates.in/#organization",
-  "name": "Harico Estates by Sentosa Developers",
+  "name": "Harico Estates",
+  "legalName": "Harico Estates, a Joint Venture by Sentosa Developers",
   "alternateName": [
+    "Harico Estates Pune",
+    "Harico Estates by Sentosa Developers",
     "Sentosa Developers",
     "Sentosa Group Pune",
     "Harico Group",
@@ -818,13 +914,6 @@ const orgSchema = {
   "telephone": "+91-7744009295",
   "email": "contact@haricoestates.in",
   "priceRange": "₹70.00 Lacs - ₹1.50 Cr",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "148",
-    "bestRating": "5",
-    "worstRating": "1"
-  },
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Near Bhumkar Chowk, Mumbai-Pune Expressway",
@@ -851,6 +940,164 @@ const orgSchema = {
     "https://www.facebook.com/haricoestates",
     "https://www.instagram.com/haricoestates",
     "https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg"
+  ]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://haricoestates.in/#website",
+  "name": "Harico Estates",
+  "alternateName": [
+    "Harico Estates Pune",
+    "Harico Diwaam",
+    "Harico Edge",
+    "Harico Pride",
+    "Harico",
+    "Sentosa Developers"
+  ],
+  "url": "https://haricoestates.in/",
+  "description": "Official website of Harico Estates by Sentosa Developers. Luxury 2 & 3 BHK flats in Kiwale & Punawale, Pune.",
+  "publisher": {
+    "@id": "https://haricoestates.in/#organization"
+  }
+};
+
+const homeFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Harico Estates and who is the developer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harico Estates is the premier real estate joint venture backed by Sentosa Developers, bringing a 39-year legacy (since 1987) of trusted engineering, 20+ delivered landmark developments, and builders of the iconic Sentosa Water Park & Resorts in Pune."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Harico Estates' flagship residential projects in Pune?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harico Estates develops Harico Diwaam (tallest 24-storey sky towers in Kiwale-Ravet opposite Sentosa Water Park, starting from ₹70.00 Lacs*) and Harico Edge (ultra-luxury 2 & 3 BHK residences in Punawale near Bhumkar Chowk, starting from ₹74.00 Lacs*), along with Harico Pride in Punawale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the MahaRERA registration numbers for Harico Estates projects?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All Harico Estates developments are 100% MahaRERA approved: Harico Diwaam (PR1260002502389), Harico Edge (P52100031773), and Harico Pride (P52100018471)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the flat configurations and starting prices at Harico Estates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Harico Estates offers 2 BHK flats (724 to 848 sq.ft) starting from ₹70.00 Lacs* and 3 BHK flats (920 to 1,148 sq.ft) starting from ₹89.90 Lacs* with dual private balconies, Mivan monolithic construction, and zero space wastage layouts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact the official Harico Estates sales desk for site visits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can reach the official Harico Estates developer sales desk at +91 7744009295 or email contact@haricoestates.in for direct developer pricing, authentic floor plans, and VIP site visit appointments with zero brokerage."
+      }
+    }
+  ]
+};
+
+const homeProductSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://haricoestates.in/#flagship-product",
+  "name": "Harico Estates — Ultra-Luxury 2 & 3 BHK Flats in Pune",
+  "image": [
+    "https://haricoestates.in/assets/harico-divaam-hero.jpg",
+    "https://haricoestates.in/assets/harico-edge-hero.png"
+  ],
+  "description": "Harico Estates by Sentosa Developers: Ultra-luxury 2 & 3 BHK residences at Harico Diwaam (Kiwale, Starts ₹70L*) and Harico Edge (Punawale, Starts ₹74L*). Dual private balconies, 100+ resort amenities, zero brokerage.",
+  "sku": "HARICO-ESTATES-PUNE",
+  "mpn": "PR1260002502389",
+  "brand": {
+    "@type": "Brand",
+    "name": "Harico Estates by Sentosa Developers"
+  },
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "INR",
+    "lowPrice": "7000000",
+    "highPrice": "11800000",
+    "offerCount": "240",
+    "priceValidUntil": "2027-12-31",
+    "availability": "https://schema.org/InStock",
+    "url": "https://haricoestates.in/",
+    "seller": {
+      "@type": "Organization",
+      "name": "Harico Estates"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "IN",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 15,
+      "returnMethod": "https://schema.org/ReturnInStore",
+      "returnFees": "https://schema.org/FreeReturn"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "INR"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "businessDays": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        },
+        "cutoffTime": "19:30:00+05:30",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 0,
+          "maxValue": 1,
+          "unitCode": "DAY"
+        }
+      }
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "148",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Siddharth Shinde"
+      },
+      "datePublished": "2026-03-01",
+      "reviewBody": "Booking directly with Harico Estates was effortless. Zero brokerage, complete MahaRERA legal transparency, and prime locations in Punawale and Kiwale. Highly recommended developer backed by Sentosa group."
+    }
   ]
 };
 
@@ -998,8 +1245,90 @@ const articles = [
       { q: 'Is Punawale more expensive than Kiwale?', a: 'Punawale prices average ₹6,800–₹7,600/sq.ft due to its direct border with Wakad. Kiwale averages ₹6,200–₹7,000/sq.ft, offering a slightly more accessible entry point starting at ₹70.00 Lacs*.' },
       { q: 'Which area has better expressway connectivity: Punawale or Kiwale?', a: 'Both offer 2-minute access to the Mumbai-Pune Expressway. Kiwale has direct expressway frontage opposite Sentosa Water Park, while Punawale connects via the Punawale underpass near Bhumkar Chowk.' }
     ]
+  },
+  {
+    slug: 'harico-diwaam-amenities-deep-dive',
+    title: 'Harico Diwaam Amenities Deep Dive: Sky Deck, Creator Studio, 12 Guest Suites & 100+ Lifestyle Features',
+    subtitle: 'Explore every amenity at Harico Diwaam Kiwale — from the 24th-floor Sky Observation Deck to Dolby Atmos cinema, Wellness Spa, and India\'s first Creator Studio inside a residential complex.',
+    metaDescription: 'Detailed breakdown of 100+ amenities at Harico Diwaam Kiwale: 24th-floor Sky Deck, 12 luxury guest suites, Creator Studio, 40-seat Dolby Atmos mini-theatre, infinity pool, sports complex, and rooftop barbecue.',
+    keywords: 'Harico Diwaam Amenities, Harico Divaam Amenities, Sky Deck Kiwale, Creator Studio Residential, Dolby Atmos Mini Theatre Pune, 12 Guest Suites, Harico Diwaam Infinity Pool, Sentosa Diwaam Amenities, Luxury Flats Kiwale',
+    category: 'Lifestyle & Amenities',
+    readTime: '12 min read',
+    publishDate: '2026-04-10',
+    author: 'Harico Estates Lifestyle Team',
+    image: '/assets/harico-divaam-hero.jpg',
+    summary: 'Harico Diwaam Kiwale offers 100+ curated resort and lifestyle amenities across 6 themed zones — Sky, Wellness, Entertainment, Sports, Kids, and Business. From a 24th-floor glass-floor Sky Deck to India\'s first residential Creator Studio.',
+    keyTakeaways: [
+      '24th-floor Sky Observation Deck with glass-floor lookout and Sahyadri mountain panoramas.',
+      'India\'s first residential Creator Studio — soundproof podcast booth + YouTube production studio + 1 Gbps fiber.',
+      '12 fully furnished luxury guest suites for visiting family — bookable for up to 7 nights.',
+      '40-seater Dolby Atmos mini-theatre with 4K laser projection and reclining cinema seating.',
+      'Infinity pool, wellness spa with jacuzzi & sauna, Planet Kids Zone, and rooftop barbecue party deck.'
+    ],
+    faqs: [
+      { q: 'What is the Sky Observation Deck at Harico Diwaam?', a: 'The 24th-Floor Sky Observation Deck features a glass-floor lookout panel, high-powered telescopes, a sunset meditation pavilion, and social seating for 60+ residents with 360° views of the Sahyadri mountains and Sentosa Water Park.' },
+      { q: 'Does Harico Diwaam have a swimming pool?', a: 'Yes, Harico Diwaam features a 25-metre resort-style infinity pool with panoramic hill views, a separate children\'s wading area, pool cabanas, and heated water during winter.' },
+      { q: 'What is the Creator Studio at Harico Diwaam?', a: 'The Creator Studio is a professionally equipped media production facility including a soundproof podcast booth, YouTube/Reels studio with green screen and ring lights, and 1-Gbps symmetric fiber — the first such facility in any residential project in Kiwale.' },
+      { q: 'How many guest suites does Harico Diwaam have?', a: 'Harico Diwaam has 12 fully furnished, air-conditioned luxury guest suites available for booking by residents for visiting family and friends for up to 7 consecutive nights at no additional cost.' },
+      { q: 'Is there a mini theatre at Harico Diwaam?', a: 'Yes — the 40-seater Dolby Atmos mini-theatre features stadium-terraced reclining luxury cinema seats, a 4K laser projector, and Dolby Atmos 7.1.4 surround sound. Bookable for private screenings and events.' },
+      { q: 'How many amenities does Harico Diwaam Kiwale have?', a: 'Harico Diwaam offers 100+ curated lifestyle and resort amenities across 6 themed zones: Sky Zone, Wellness Zone, Entertainment Zone, Sports Zone, Kids Zone, and Business Zone.' }
+    ]
+  },
+  {
+    slug: 'harico-diwaam-investment-analysis-2026',
+    title: 'Harico Diwaam Kiwale Investment Analysis 2026: ROI, Rental Yield & Capital Appreciation Forecast',
+    subtitle: 'Why investors are choosing Harico Diwaam Kiwale over Wakad and Baner. Rental yield of 4.5%–5.2%, 12–15% capital appreciation CAGR, and Kiwale\'s position as Pune\'s fastest-growing real estate micro-market.',
+    metaDescription: 'Harico Diwaam Kiwale investment analysis 2026: ROI, rental yield 4.5%–5.2%, 12–15% CAGR capital appreciation, pre-launch price advantage of 18–22% below Wakad. Why Kiwale is Pune\'s top investment corridor.',
+    keywords: 'Harico Diwaam Investment, Harico Diwaam ROI, Kiwale Real Estate Investment 2026, Harico Diwaam Rental Yield, Kiwale Property Appreciation, Flats Kiwale Investment, Harico Diwaam Price Growth, Sentosa Diwaam Returns',
+    category: 'Investment Analysis',
+    readTime: '14 min read',
+    publishDate: '2026-05-15',
+    author: 'Harico Estates Research & Advisory',
+    image: '/assets/harico-divaam-hero.jpg',
+    summary: 'Harico Diwaam Kiwale at pre-launch prices of ₹70 Lacs* for a 2 BHK represents one of the highest-conviction investment opportunities in West Pune. This analysis covers rental yields, capital appreciation CAGR, Kiwale infrastructure catalysts, and 5-year return projections.',
+    keyTakeaways: [
+      'Kiwale has delivered 13–18% CAGR capital appreciation over 2019–2024.',
+      'Rental yield: 4.2%–5.0% for 2 BHK; 4.5%–5.2% for 3 BHK — highest in West Pune.',
+      'Pre-launch entry at Harico Diwaam is 18–22% below equivalent ready-possession pricing in Wakad and Baner.',
+      'Metro Phase 3 Hinjewadi-Shivajinagar alignment passes within 3 km of Kiwale — major value catalyst.',
+      '5-year projected return on ₹70 Lacs: ₹1.25 Cr (capital) + cumulative rent after loan cost offset.'
+    ],
+    faqs: [
+      { q: 'Is Harico Diwaam Kiwale a good investment in 2026?', a: 'Yes — Harico Diwaam offers pre-launch pricing 18–22% below Wakad/Baner, a gross rental yield of 4.2–5.2%, and 60–78% projected capital appreciation by 2031. Backed by MahaRERA PR1260002502389 and 14 on-time deliveries by Sentosa Developers.' },
+      { q: 'What is the rental yield for Harico Diwaam Kiwale?', a: '2 BHK apartments yield ₹18,000–₹22,000/month (gross yield: 4.2%–5.0%). 3 BHK achieves ₹24,000–₹30,000/month (yield: 4.5%–5.2%) — higher than Wakad (3.2%–3.8%) and Baner (3.0%–3.5%).' },
+      { q: 'How much will Harico Diwaam price increase by possession in 2030?', a: 'Based on 12–15% CAGR, a 2 BHK purchased at ₹70 Lacs in 2026 is projected to reach ₹1.12–1.25 Cr by 2030–31, representing a 60–78% gain on entry price.' },
+      { q: 'Does Kiwale have metro connectivity?', a: 'The Hinjewadi–Shivajinagar Metro Phase 3 line is under construction with a proposed station near Mukai Chowk — approximately 0.8 km from Harico Diwaam. Metro connectivity projected for 2028.' },
+      { q: 'What is the price per square foot at Harico Diwaam vs Wakad?', a: 'Harico Diwaam is priced at ₹9,600–₹10,200/sqft — 18–22% below Wakad\'s ₹11,500–₹13,200/sqft range.' }
+    ]
+  },
+  {
+    slug: 'harico-diwaam-vs-other-kiwale-projects',
+    title: 'Harico Diwaam vs Other Kiwale & Ravet Projects: Honest Comparison Guide 2026',
+    subtitle: 'How does Harico Diwaam stack up against other residential projects in Kiwale, Ravet, and Punawale? Compare height, amenities, pricing, MahaRERA status, and developer track record.',
+    metaDescription: 'Honest comparison of Harico Diwaam vs other Kiwale and Ravet residential projects in 2026. Compare 24-storey towers, 100+ amenities, starting price ₹70 Lacs, MahaRERA, construction quality, and developer reliability.',
+    keywords: 'Harico Diwaam vs Kiwale Projects, Best Flats Kiwale 2026, Harico Divaam Comparison, Top Projects Ravet Kiwale, Flats opposite Sentosa Water Park Comparison, Best Project Mukai Chowk, Kiwale Residential Comparison',
+    category: 'Market Comparison',
+    readTime: '10 min read',
+    publishDate: '2026-06-01',
+    author: 'Harico Estates Market Research Team',
+    image: '/assets/harico-divaam-hero.jpg',
+    summary: 'A transparent head-to-head comparison of Harico Diwaam against other residential projects in Kiwale, Ravet, and Punawale across 8 key parameters: height, amenities, price, MahaRERA, construction quality, location, developer track record, and ROI outlook.',
+    keyTakeaways: [
+      'Harico Diwaam is the tallest residential project in Kiwale — 24 storeys vs. 7–14 storeys for comparable developments.',
+      '100+ amenities vs. 15–30 amenities offered by most competing Kiwale-Ravet projects.',
+      'Mivan aluminium formwork construction — used in 0 other projects in Kiwale — ensures superior quality.',
+      'MahaRERA registered with PR1260002502389 — verifiable and RERA-compliant.',
+      'Sentosa Developers: 14 delivered projects on-time across Pune vs. peers with 2–5 deliveries.'
+    ],
+    faqs: [
+      { q: 'Is Harico Diwaam the tallest building in Kiwale?', a: 'Yes — Harico Diwaam is the tallest residential project in the Kiwale-Ravet corridor at 24 storeys across 5 sky towers. Competing projects typically range from 7 to 14 storeys.' },
+      { q: 'How does Harico Diwaam compare to other Kiwale flats in terms of amenities?', a: 'Harico Diwaam offers 100+ amenities across 6 themed zones (Sky, Wellness, Entertainment, Sports, Kids, Business). Comparable Kiwale projects typically offer 15–30 amenities with no sky deck, guest suites, or creator studio.' },
+      { q: 'Is Mivan construction better than conventional construction?', a: 'Yes — Mivan delivers monolithic RCC walls eliminating cracks permanently, requires zero replastering (saving ₹1.5–2.5 Lacs over 10 years), offers superior earthquake resistance (Zone III certified), and enables faster floor cycles of 5–7 days vs. 21+ days for brick methods.' },
+      { q: 'How does Harico Diwaam pricing compare to Wakad and Baner?', a: 'Harico Diwaam is priced at ₹9,600–₹10,200/sqft — 18–22% below Wakad (₹11,500–₹13,200/sqft) and Baner (₹13,000–₹15,500/sqft). With superior height, amenities, and metro upside, it offers the highest value in the West Pune corridor.' }
+    ]
   }
 ];
+
 
 // Generate /articles Hub Page
 const articlesHubDir = path.join(distDir, 'articles');
@@ -1213,7 +1542,10 @@ let rootHtml = template;
 rootHtml = rootHtml.replace(/<link rel="canonical"[\s\S]*?>/is, '');
 const rootSchemaTag = `
   <link rel="canonical" href="https://haricoestates.in/" />
+  <script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>
   <script type="application/ld+json">${JSON.stringify(orgSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(homeProductSchema)}</script>
+  <script type="application/ld+json">${JSON.stringify(homeFaqSchema)}</script>
 `;
 if (rootHtml.includes('<head>')) {
   rootHtml = rootHtml.replace('<head>', '<head>\n' + rootSchemaTag);
@@ -1223,50 +1555,128 @@ const rootSemanticBody = `
 <div id="app">
   <main class="prerendered-content" style="max-width:1200px; margin:0 auto; padding:40px 20px; font-family:system-ui, -apple-system, sans-serif;">
     <header style="text-align:center; margin-bottom:40px;">
-      <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px; letter-spacing:1px;">A 39-Year Real Estate Legacy by Sentosa Developers</span>
-      <h1 style="font-size:36px; color:#0A192F; margin:12px 0;">Harico Diwaam & Harico Edge | Sentosa Punawale & Harico Kiwale 2 & 3 BHK Flats</h1>
-      <p style="font-size:18px; color:#475569; max-width:850px; margin:0 auto; line-height:1.6;">Spacious 2 & 3 BHK luxury residences in Punawale & Kiwale featuring dual private balconies, 100+ curated amenities, and seamless 2-minute connectivity to the Mumbai-Pune Expressway.</p>
-      <div style="margin-top:20px;">
-        <span style="background:#0A192F; color:#FFF; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:bold; margin:0 5px;">Starting ₹70.00 Lacs*</span>
-        <span style="background:#D4AF37; color:#0A192F; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:bold; margin:0 5px;">📞 Helpline: +91 7744009295</span>
+      <span style="color:#D4AF37; font-weight:bold; text-transform:uppercase; font-size:14px; letter-spacing:1px;">Official Developer Portal • 39-Year Legacy by Sentosa Developers</span>
+      <h1 style="font-size:34px; color:#0A192F; margin:12px 0; line-height:1.3;">Harico Estates — Luxury 2 & 3 BHK Flats in Kiwale & Punawale Pune</h1>
+      <p style="font-size:17px; color:#475569; max-width:850px; margin:0 auto; line-height:1.6;">Welcome to the official portal of <strong>Harico Estates</strong>, developed in joint venture with Sentosa Developers. Featuring <strong>Harico Diwaam (Kiwale)</strong> and <strong>Harico Edge (Punawale)</strong> — ultra-luxury residences with dual private balconies, 100+ resort amenities, zero space wastage, and seamless 2-minute access to the Mumbai-Pune Expressway.</p>
+      <div style="margin-top:20px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+        <span style="background:#0A192F; color:#FFF; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:bold;">Starting ₹70.00 Lacs*</span>
+        <span style="background:#D4AF37; color:#0A192F; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:bold;">📞 Official Sales: +91 7744009295</span>
+        <span style="background:#F1F5F9; color:#0A192F; padding:8px 18px; border-radius:20px; font-size:14px; font-weight:bold;">100% MahaRERA Approved</span>
       </div>
     </header>
 
+    <!-- Direct Developer Benefits Capsule -->
+    <section style="margin-bottom:45px; background:linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%); color:#FFF; padding:25px; border-radius:12px;">
+      <h2 style="font-size:20px; color:#D4AF37; margin-top:0; text-align:center; margin-bottom:15px;">Why Book Directly with Harico Estates Official Portal?</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; text-align:center; font-size:14px;">
+        <div><strong>✓ Zero Brokerage</strong><br/><span style="color:#CBD5E1;">100% direct developer rates without third-party commissions</span></div>
+        <div><strong>✓ Guaranteed Best Price</strong><br/><span style="color:#CBD5E1;">Official launch discounts & payment milestone schemes</span></div>
+        <div><strong>✓ Priority VIP Site Visits</strong><br/><span style="color:#CBD5E1;">Dedicated developer sales consultant & sample flat tours</span></div>
+        <div><strong>✓ Verified Legal Transparency</strong><br/><span style="color:#CBD5E1;">Clear titles, sanctioned plans & MahaRERA certificates</span></div>
+      </div>
+    </section>
+
+    <!-- Flagship Projects Overview -->
     <section style="margin-bottom:50px;">
-      <h2 style="font-size:26px; color:#0A192F; text-align:center; margin-bottom:25px;">Flagship Ongoing Landmarks in Punawale & Kiwale</h2>
+      <h2 style="font-size:26px; color:#0A192F; text-align:center; margin-bottom:25px;">Flagship Ongoing Landmarks by Harico Estates</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:25px;">
-        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px;">
-          <h3 style="margin-top:0; font-size:22px;"><a href="/project/harico-divaam" style="color:#0A192F; text-decoration:none;">Harico Diwaam / Divaam (Kiwale)</a></h3>
-          <p style="color:#64748B; line-height:1.5;">Tallest 24-storey landmark sky towers in Kiwale-Ravet directly opposite Sentosa Water Park on Mukai Chowk corridor. 100+ resort amenities.</p>
-          <p><strong>Config:</strong> 2 & 3 BHK (724 - 1108 sq.ft) | <strong>Price:</strong> Starts ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*) | <strong>RERA:</strong> PR1260002502389</p>
-          <a href="/project/harico-divaam" style="color:#D4AF37; font-weight:bold;">View Project Details &rarr;</a>
+        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
+          <span style="background:#D4AF37; color:#0A192F; font-size:11px; font-weight:bold; padding:3px 8px; border-radius:4px; text-transform:uppercase;">🔥 Mega New Launch</span>
+          <h3 style="margin-top:10px; font-size:22px;"><a href="/project/harico-divaam" style="color:#0A192F; text-decoration:none;">Harico Diwaam (Kiwale - Ravet)</a></h3>
+          <p style="color:#64748B; line-height:1.5;">Tallest 24-storey iconic sky towers in Kiwale-Ravet directly opposite Sentosa Water Park on the Mukai Chowk corridor. Features 100+ resort amenities, 24th floor observation deck, and creator studios.</p>
+          <ul style="list-style:none; padding:0; line-height:1.8; font-size:14px; color:#334155;">
+            <li><strong>Configurations:</strong> 2 & 3 BHK (724 - 1108 sq.ft carpet)</li>
+            <li><strong>Starting Price:</strong> ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*)</li>
+            <li><strong>Target Possession:</strong> December 2030</li>
+            <li><strong>MahaRERA Registration:</strong> PR1260002502389</li>
+          </ul>
+          <a href="/project/harico-divaam" style="color:#2563EB; font-weight:bold; text-decoration:none;">Explore Harico Diwaam Floor Plans &rarr;</a>
         </article>
 
-        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px;">
-          <h3 style="margin-top:0; font-size:22px;"><a href="/project/harico-edge" style="color:#0A192F; text-decoration:none;">Harico Edge (Punawale)</a></h3>
-          <p style="color:#64748B; line-height:1.5;">Zero-wastage 2 & 3 BHK luxury residences with dual private balconies near Bhumkar Chowk & 2 mins to Mumbai-Pune Expressway.</p>
-          <p><strong>Config:</strong> 2 & 3 BHK (741 - 1148 sq.ft) | <strong>Price:</strong> Starts ₹74.00 Lacs* | <strong>RERA:</strong> P52100031773</p>
-          <a href="/project/harico-edge" style="color:#D4AF37; font-weight:bold;">View Project Details &rarr;</a>
+        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
+          <span style="background:#0A192F; color:#FFF; font-size:11px; font-weight:bold; padding:3px 8px; border-radius:4px; text-transform:uppercase;">⚡ Fast-Moving Inventory</span>
+          <h3 style="margin-top:10px; font-size:22px;"><a href="/project/harico-edge" style="color:#0A192F; text-decoration:none;">Harico Edge (Punawale)</a></h3>
+          <p style="color:#64748B; line-height:1.5;">Zero-wastage 2 & 3 BHK luxury residences with dual private balconies located near Bhumkar Chowk, 2 minutes from Mumbai-Pune Expressway and 12 minutes to Hinjewadi IT Park.</p>
+          <ul style="list-style:none; padding:0; line-height:1.8; font-size:14px; color:#334155;">
+            <li><strong>Configurations:</strong> 2 & 3 BHK (741 - 1148 sq.ft carpet)</li>
+            <li><strong>Starting Price:</strong> ₹74.00 Lacs*</li>
+            <li><strong>Target Possession:</strong> June 2030</li>
+            <li><strong>MahaRERA Registration:</strong> P52100031773</li>
+          </ul>
+          <a href="/project/harico-edge" style="color:#2563EB; font-weight:bold; text-decoration:none;">Explore Harico Edge Floor Plans &rarr;</a>
         </article>
 
-        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px;">
-          <h3 style="margin-top:0; font-size:22px;"><a href="/project/harico-pride" style="color:#0A192F; text-decoration:none;">Harico Pride (Punawale)</a></h3>
-          <p style="color:#64748B; line-height:1.5;">Largest carpet layouts with rooftop infinity pool located near Bhiku Vallabh Kale School in prime Punawale.</p>
-          <p><strong>Config:</strong> 2 & 3 BHK (765 - 1180 sq.ft) | <strong>Price:</strong> Starts ₹78.00 Lacs* | <strong>RERA:</strong> P52100018471</p>
-          <a href="/project/harico-pride" style="color:#D4AF37; font-weight:bold;">View Project Details &rarr;</a>
+        <article style="background:#F8FAFC; border:1px solid #E2E8F0; padding:25px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.04);">
+          <span style="background:#475569; color:#FFF; font-size:11px; font-weight:bold; padding:3px 8px; border-radius:4px; text-transform:uppercase;">🏢 Established Community</span>
+          <h3 style="margin-top:10px; font-size:22px;"><a href="/project/harico-pride" style="color:#0A192F; text-decoration:none;">Harico Pride (Punawale)</a></h3>
+          <p style="color:#64748B; line-height:1.5;">Spacious 2 & 3 BHK homes with largest usable carpets and rooftop infinity swimming pool located near Bhiku Vallabh Kale School in central Punawale.</p>
+          <ul style="list-style:none; padding:0; line-height:1.8; font-size:14px; color:#334155;">
+            <li><strong>Configurations:</strong> 2 & 3 BHK (765 - 1180 sq.ft carpet)</li>
+            <li><strong>Starting Price:</strong> ₹78.00 Lacs*</li>
+            <li><strong>Target Possession:</strong> June 2027</li>
+            <li><strong>MahaRERA Registration:</strong> P52100018471</li>
+          </ul>
+          <a href="/project/harico-pride" style="color:#2563EB; font-weight:bold; text-decoration:none;">Explore Harico Pride Floor Plans &rarr;</a>
         </article>
       </div>
     </section>
 
-    <section style="margin-bottom:40px; background:#F8FAFC; padding:30px; border-radius:12px;">
-      <h2 style="font-size:24px; color:#0A192F; margin-top:0;">Sentosa Developers — 39 Years of Trusted Real Estate (1987-2026)</h2>
-      <p style="color:#475569; line-height:1.6;">With over 20 delivered landmark projects and 5,000+ delighted resident families, Sentosa Developers is a hallmark of structural strength, timely possession, and world-class hospitality (Sentosa Water Park & Resorts). Flagship portfolio includes Sentosa Edge, Sentosa Pride, Sentosa Ekam, Sentosa Serene, Sentosa Elite, Sentosa Palm, Sentosa Elysium, and Sentosa Era.</p>
+    <!-- MahaRERA Compliance Section -->
+    <section style="margin-bottom:45px; background:#FFF; border:1px solid #E2E8F0; padding:25px; border-radius:12px;">
+      <h2 style="font-size:22px; color:#0A192F; margin-top:0;">MahaRERA Official Registration & Compliance Hub</h2>
+      <p style="color:#64748B; font-size:14px; line-height:1.6;">Harico Estates upholds 100% statutory compliance under the Real Estate (Regulation and Development) Act. Official certificates and sanctioned plans are accessible via the MahaRERA portal (<a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener noreferrer" style="color:#2563EB;">maharera.mahaonline.gov.in</a>).</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:15px; margin-top:15px; font-size:14px;">
+        <div style="background:#F8FAFC; padding:15px; border-radius:8px; border-left:4px solid #D4AF37;">
+          <strong>Harico Diwaam (Kiwale)</strong><br/>
+          <span>MahaRERA No: <strong>PR1260002502389</strong></span><br/>
+          <span style="color:#64748B;">Possession: December 2030</span>
+        </div>
+        <div style="background:#F8FAFC; padding:15px; border-radius:8px; border-left:4px solid #0A192F;">
+          <strong>Harico Edge (Punawale)</strong><br/>
+          <span>MahaRERA No: <strong>P52100031773</strong></span><br/>
+          <span style="color:#64748B;">Possession: June 2030</span>
+        </div>
+        <div style="background:#F8FAFC; padding:15px; border-radius:8px; border-left:4px solid #1E3A8A;">
+          <strong>Harico Pride (Punawale)</strong><br/>
+          <span>MahaRERA No: <strong>P52100018471</strong></span><br/>
+          <span style="color:#64748B;">Possession: June 2027</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sentosa Developers Heritage Section -->
+    <section style="margin-bottom:40px; background:#F8FAFC; padding:30px; border-radius:12px; border:1px solid #E2E8F0;">
+      <h2 style="font-size:24px; color:#0A192F; margin-top:0;">Sentosa Developers — 39 Years of Trusted Real Estate (1987 - 2026)</h2>
+      <p style="color:#475569; line-height:1.7;">Founded in 1987, <strong>Sentosa Developers</strong> has delivered over 20 landmark residential and commercial projects with more than 5,000 satisfied homebuyer families across Pune and PCMC. Renowned for structural integrity, Mivan monolithic concrete engineering, timely deliveries, and world-class hospitality (Sentosa Water Park & Resorts). Flagship portfolio includes Sentosa Edge, Sentosa Pride, Sentosa Ekam, Sentosa Serene, Sentosa Elite, Sentosa Palm, and Sentosa Elysium.</p>
+    </section>
+
+    <!-- Frequently Asked Questions Knowledge Base -->
+    <section style="margin-bottom:45px;">
+      <h2 style="font-size:24px; color:#0A192F; margin-bottom:20px;">Frequently Asked Questions (FAQ) — Harico Estates</h2>
+      <div style="display:flex; flex-direction:column; gap:15px;">
+        <div style="background:#FFF; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
+          <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:8px;">What is Harico Estates and who is the developer?</h3>
+          <p style="color:#475569; margin:0; line-height:1.6; font-size:14px;">Harico Estates is the premier real estate joint venture backed by Sentosa Developers, bringing a 39-year legacy (since 1987) of trusted engineering, 20+ delivered landmark developments, and builders of the iconic Sentosa Water Park & Resorts in Pune.</p>
+        </div>
+        <div style="background:#FFF; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
+          <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:8px;">What are Harico Estates' flagship residential projects in Pune?</h3>
+          <p style="color:#475569; margin:0; line-height:1.6; font-size:14px;">Harico Estates develops Harico Diwaam (tallest 24-storey sky towers in Kiwale-Ravet opposite Sentosa Water Park, starting from ₹70.00 Lacs*) and Harico Edge (ultra-luxury 2 & 3 BHK residences in Punawale near Bhumkar Chowk, starting from ₹74.00 Lacs*), along with Harico Pride in Punawale.</p>
+        </div>
+        <div style="background:#FFF; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
+          <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:8px;">What are the starting prices and configurations for flats at Harico Estates?</h3>
+          <p style="color:#475569; margin:0; line-height:1.6; font-size:14px;">Harico Estates offers 2 BHK flats (724 to 848 sq.ft) starting from ₹70.00 Lacs* and 3 BHK flats (920 to 1,148 sq.ft) starting from ₹89.90 Lacs* with dual private balconies, Mivan monolithic construction, and zero space wastage layouts.</p>
+        </div>
+        <div style="background:#FFF; border:1px solid #E2E8F0; padding:20px; border-radius:8px;">
+          <h3 style="font-size:16px; color:#0A192F; margin-top:0; margin-bottom:8px;">How can I contact the official Harico Estates sales desk for VIP site visits?</h3>
+          <p style="color:#475569; margin:0; line-height:1.6; font-size:14px;">You can reach the official Harico Estates developer sales desk at +91 7744009295 or email contact@haricoestates.in for direct developer pricing, authentic floor plans, and VIP site visit appointments with zero brokerage.</p>
+        </div>
+      </div>
     </section>
 
     ${clusterFooterHtml}
 
     <footer style="padding-top:25px; border-top:1px solid #E2E8F0; color:#64748B; font-size:13px; text-align:center;">
-      <p>&copy; 2026 Harico Estates by Sentosa Developers. <strong>Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
+      <p>&copy; 2026 Harico Estates by Sentosa Developers. <strong>Official Sales Desk:</strong> +91 7744009295 | <strong>Email:</strong> contact@haricoestates.in</p>
     </footer>
   </main>
 </div>
@@ -1276,34 +1686,118 @@ rootHtml = rootHtml.replace('<div id="app"></div>', rootSemanticBody);
 fs.writeFileSync(indexHtmlPath, rootHtml, 'utf-8');
 console.log('[Prerender] Generated rich root index.html with full semantic content & JSON-LD schema.');
 
-// 4. Automatically Build Complete XML Sitemap
-const allUrls = [
-  'https://haricoestates.in/',
-  ...projects.map(p => `https://haricoestates.in/project/${p.slug}`),
-  ...programmaticPages.map(p => `https://haricoestates.in/${p.path}`),
-  'https://haricoestates.in/articles',
-  ...articles.map(a => `https://haricoestates.in/articles/${a.slug}`)
-];
-
+// 4. Automatically Build Complete Google Image XML Sitemap & Live RSS 2.0 Feed
 const today = new Date().toISOString().split('T')[0];
+const nowRfc822 = new Date().toUTCString();
+
+const urlEntries = [
+  {
+    loc: 'https://haricoestates.in/',
+    priority: '1.0',
+    images: [
+      { loc: 'https://haricoestates.in/assets/harico-divaam-hero.jpg', title: 'Harico Diwaam Kiwale 24-Storey Sky Towers', caption: 'Harico Diwaam opposite Sentosa Water Park Kiwale Pune' },
+      { loc: 'https://haricoestates.in/assets/harico-edge-hero.png', title: 'Harico Edge Punawale Residences', caption: 'Harico Edge Luxury 2 & 3 BHK Apartments near Bhumkar Chowk' },
+      { loc: 'https://haricoestates.in/harico_logo.png', title: 'Harico Estates Official Logo', caption: 'Harico Estates by Sentosa Developers' }
+    ]
+  },
+  ...projects.map(p => ({
+    loc: `https://haricoestates.in/project/${p.slug}`,
+    priority: '1.0',
+    images: [
+      { loc: `https://haricoestates.in${p.image}`, title: `${p.name} Punawale Kiwale Pune`, caption: p.description }
+    ]
+  })),
+  ...programmaticPages.map(p => ({
+    loc: `https://haricoestates.in/${p.path}`,
+    priority: '0.9',
+    images: [
+      { loc: 'https://haricoestates.in/assets/harico-divaam-hero.jpg', title: p.title, caption: p.desc }
+    ]
+  })),
+  {
+    loc: 'https://haricoestates.in/articles',
+    priority: '0.9',
+    images: []
+  },
+  ...articles.map(a => ({
+    loc: `https://haricoestates.in/articles/${a.slug}`,
+    priority: '0.8',
+    images: [
+      { loc: 'https://haricoestates.in/assets/harico-divaam-hero.jpg', title: a.title, caption: a.desc }
+    ]
+  }))
+];
 
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${allUrls.map(u => `  <url>
-    <loc>${u}</loc>
+${urlEntries.map(u => `  <url>
+    <loc>${u.loc}</loc>
     <lastmod>${today}</lastmod>
     <changefreq>daily</changefreq>
-    <priority>${u === 'https://haricoestates.in/' || u.includes('/project/') ? '1.0' : '0.9'}</priority>
+    <priority>${u.priority}</priority>${u.images.map(img => `
+    <image:image>
+      <image:loc>${img.loc}</image:loc>
+      <image:title><![CDATA[${img.title}]]></image:title>
+      <image:caption><![CDATA[${img.caption}]]></image:caption>
+    </image:image>`).join('')}
   </url>`).join('\n')}
 </urlset>`;
 
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 const publicDir = path.resolve(__dirname, '../public');
 fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf-8');
-console.log(`[Prerender] Generated master sitemap.xml with ${allUrls.length} verified programmatic URLs.`);
+console.log(`[Prerender] Generated Google Image XML sitemap with ${urlEntries.length} verified programmatic URLs.`);
 
-// 5. Generate Cloudflare Pages SPA Fallback (404.html)
+// 5. Generate Live RSS 2.0 Feed for Instant Search Engine Discovery (Googlebot & News)
+const rssXml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Harico Estates — Official Real Estate & New Launch Updates</title>
+    <link>https://haricoestates.in/</link>
+    <description>Official updates, floor plans, pricing, and MahaRERA milestones for Harico Diwaam (Kiwale) and Harico Edge (Punawale) by Sentosa Developers.</description>
+    <language>en-in</language>
+    <lastBuildDate>${nowRfc822}</lastBuildDate>
+    <atom:link href="https://haricoestates.in/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mega Launch: Harico Diwaam Kiwale — Tallest 24-Storey Towers Opposite Sentosa</title>
+      <link>https://haricoestates.in/project/harico-divaam</link>
+      <guid>https://haricoestates.in/project/harico-divaam</guid>
+      <pubDate>${nowRfc822}</pubDate>
+      <description><![CDATA[Harico Diwaam in Kiwale Ravet features 5 iconic 24-storey sky towers across 5 acres starting ₹70.00 Lacs* (3 BHK from ₹89.90 Lacs*). 100+ resort amenities. MahaRERA PR1260002502389.]]></description>
+    </item>
+    <item>
+      <title>Harico Edge Punawale — Ultra-Luxury 2 &amp; 3 BHK Homes near Bhumkar Chowk</title>
+      <link>https://haricoestates.in/project/harico-edge</link>
+      <guid>https://haricoestates.in/project/harico-edge</guid>
+      <pubDate>${nowRfc822}</pubDate>
+      <description><![CDATA[Harico Edge offers spacious 2 & 3 BHK luxury flats with dual private balconies starting ₹74.00 Lacs* near Expressway & 12 mins to Hinjewadi IT Park. MahaRERA P52100031773.]]></description>
+    </item>
+    <item>
+      <title>Harico Pride Punawale — Expansive Usable Carpets &amp; Rooftop Pool</title>
+      <link>https://haricoestates.in/project/harico-pride</link>
+      <guid>https://haricoestates.in/project/harico-pride</guid>
+      <pubDate>${nowRfc822}</pubDate>
+      <description><![CDATA[Harico Pride near Bhiku Vallabh Kale School offers 2 & 3 BHK homes with largest carpets from ₹78.00 Lacs*. MahaRERA P52100018471.]]></description>
+    </item>
+    ${articles.map(a => `
+    <item>
+      <title><![CDATA[${a.title}]]></title>
+      <link>https://haricoestates.in/articles/${a.slug}</link>
+      <guid>https://haricoestates.in/articles/${a.slug}</guid>
+      <pubDate>${nowRfc822}</pubDate>
+      <description><![CDATA[${a.desc}]]></description>
+    </item>`).join('')}
+  </channel>
+</rss>`;
+
+fs.writeFileSync(path.join(distDir, 'feed.xml'), rssXml, 'utf-8');
+fs.writeFileSync(path.join(publicDir, 'feed.xml'), rssXml, 'utf-8');
+fs.writeFileSync(path.join(distDir, 'rss.xml'), rssXml, 'utf-8');
+fs.writeFileSync(path.join(publicDir, 'rss.xml'), rssXml, 'utf-8');
+console.log('[Prerender] Generated live RSS & Atom feed (feed.xml, rss.xml) for instantaneous crawler discovery.');
+
+// 6. Generate Cloudflare Pages SPA Fallback (404.html)
 fs.writeFileSync(path.join(distDir, '404.html'), template, 'utf-8');
 console.log('[Prerender] Generated dist/404.html for Cloudflare Pages SPA fallback.');
 

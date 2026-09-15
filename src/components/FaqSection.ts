@@ -77,8 +77,57 @@ export function createFaqSection(): HTMLElement {
     {
       question: 'How do I schedule a priority VIP site visit and visit the sample flat?',
       answer: 'You can schedule a priority VIP site visit by calling our direct sales desk at <b>+91 7744009295</b> or messaging on WhatsApp. Our site sales galleries are open all 7 days from 9:30 AM to 7:30 PM with fully furnished show apartments available for viewing.'
+    },
+    {
+      question: 'What is the Sky Observation Deck at Harico Diwaam Kiwale?',
+      answer: 'The <b>24th-Floor Sky Observation Deck</b> at Harico Diwaam is a panoramic open-air terrace featuring a <b>12-metre glass-floor lookout panel</b>, high-powered astronomical telescopes, a sunset meditation pavilion with yoga mats, and a social terrace with seating for 60+ residents. It offers unobstructed 360° views of the Sahyadri mountain range, the Sentosa Water Park, and the Mumbai-Pune Expressway corridor — one of the very few residential sky decks in all of Pune.'
+    },
+    {
+      question: 'What makes the Harico Diwaam Creator Studio unique in residential real estate?',
+      answer: 'The <b>Creator Studio</b> at Harico Diwaam is India\'s first professionally equipped media production facility inside a residential complex. It includes a soundproof podcast recording booth with condenser microphones and acoustic panels, a YouTube & Reels production studio with a green screen wall, ring-light kit, 4K teleprompter, and 4 Mac editing workstations — all backed by <b>1-Gbps dedicated symmetric fiber</b> for zero-lag live streaming.'
+    },
+    {
+      question: 'How many luxury guest suites are available at Harico Diwaam and how can residents book them?',
+      answer: 'Harico Diwaam offers <b>12 fully furnished, air-conditioned luxury guest suites</b> exclusively for visiting family and friends of residents. Each suite can be booked for up to <b>7 consecutive nights at no additional cost</b> to the resident via the society\'s resident mobile app. This eliminates hotel expenses for outstation guests visiting Pune.'
+    },
+    {
+      question: 'Is Harico Diwaam Kiwale a good real estate investment in 2026?',
+      answer: 'Yes — Harico Diwaam is among the <b>highest-conviction real estate investments in West Pune in 2026</b>. Key reasons: (1) Pre-launch pricing 18–22% below comparable Wakad and Baner addresses. (2) Gross rental yield of 4.2%–5.2% — best in the West Pune micro-market. (3) 12–15% CAGR capital appreciation projected through 2030, supported by Metro Phase 3 (Hinjewadi–Shivajinagar) and Hinjewadi IT Park Phase 3 expansion. (4) MahaRERA registered under PR1260002502389. (5) Sentosa Developers: 14 on-time project deliveries across Pune since 2013.'
+    },
+    {
+      question: 'What is the Mivan construction advantage at Harico Diwaam compared to conventional projects?',
+      answer: '<b>Mivan Aluminium Formwork</b> technology at Harico Diwaam casts walls, slabs, columns, and beams in one monolithic RCC pour — eliminating the internal brick-bat filling used in conventional construction. Benefits for homebuyers: (1) <b>Zero hairline cracks</b> guaranteed — no replastering ever needed (saving ₹1.5–2.5 Lacs over 10 years). (2) <b>Earthquake-resistant</b> to Zone III seismic standards. (3) <b>5–7 day construction cycle per floor</b> vs. 21+ days for brick — ensuring on-time possession. (4) <b>35% less concrete wastage</b> contributing to IGBC green pre-certification. (5) Near-mirror-smooth wall finish ready for direct painting.'
+    },
+    {
+      question: 'What is the expected capital appreciation for Harico Diwaam Kiwale from 2026 to 2030?',
+      answer: 'Based on Kiwale-Ravet historical appreciation of 13–18% CAGR (2019–2024), a 2 BHK apartment purchased at <b>₹70 Lacs* in 2026</b> is projected to reach: <b>₹89.78 Lacs</b> by 2028 (+28%), <b>₹1.12 Cr</b> by 2030 at possession (+60%), and <b>₹1.25 Cr</b> by 2031 post-OC (+78%). Key catalysts: Metro Phase 3 station near Mukai Chowk (proposed 2028), Hinjewadi IT Phase 3 (45,000+ employees by 2031), and Mumbai-Pune Expressway 8-lane widening (approved by NHAI).'
+    },
+    {
+      question: 'Which banks offer home loans for Harico Diwaam and what are the EMIs?',
+      answer: 'Harico Diwaam has <b>pre-approved home loan tie-ups</b> with SBI (8.50% p.a.), HDFC Bank (8.65% p.a.), ICICI Bank (8.75% p.a.), and Axis Bank (8.70% p.a.). For a <b>₹70 Lacs loan over 20 years</b>, EMIs range from <b>₹60,800–₹62,200/month</b> depending on the lender. Loans are sanctioned within 3–5 working days for pre-approved applicants. The loan typically covers up to 90% of the agreement value.'
+    },
+    {
+      question: 'What is the rental income potential from a Harico Diwaam flat after possession?',
+      answer: '2 BHK apartments at Harico Diwaam are expected to command <b>₹18,000–₹22,000/month in rent</b> at possession (Dec 2030), generating a gross rental yield of <b>4.2%–5.0%</b>. 3 BHK apartments are expected to achieve <b>₹24,000–₹30,000/month</b> (yield: 4.5%–5.2%). This is higher than Wakad (3.2%–3.8%) and Baner (3.0%–3.5%), making Kiwale the <b>highest-yielding premium micro-market in West Pune</b>.'
+    },
+    {
+      question: 'What is the total possession timeline and construction milestone plan for Harico Diwaam?',
+      answer: 'Harico Diwaam follows a structured <b>Construction-Linked Payment (CLP)</b> plan tied to verified Mivan milestones: Foundation completed (2025 Q2) → 6th floor (2026 Q2, triggers 15% CLP) → 12th floor (2027 Q1) → 18th floor (2028 Q2) → 24th floor (2029 Q1) → Amenity handover including Sky Deck, Theatre, and Pool (June 2030) → <b>OC and possession: December 2030</b>. MahaRERA registration PR1260002502389 legally mandates adherence to this timeline.'
+    },
+    {
+      question: 'How does Harico Diwaam compare to other residential projects in Kiwale and Ravet?',
+      answer: 'Harico Diwaam is in a category of its own in Kiwale-Ravet: (1) <b>Tallest towers</b> — 24 storeys vs. 7–14 storeys for all competing Kiwale projects. (2) <b>Most amenities</b> — 100+ across 6 themed zones vs. 15–30 in comparable projects. (3) <b>Only Mivan-constructed</b> project in the Kiwale micro-market. (4) <b>Only project with a Sky Deck, 12 Guest Suites, and Creator Studio</b> in this price range anywhere in West Pune. (5) <b>Developer pedigree</b>: 14 on-time deliveries by Sentosa Developers vs. peers with 2–5 projects.'
+    },
+    {
+      question: 'What is the connectivity from Harico Diwaam Kiwale to key city landmarks?',
+      answer: 'Harico Diwaam\'s location opposite Sentosa Water Park at Mukai Chowk, Kiwale, provides: <b>Mukai Chowk BRTS</b> (2 min), <b>Mumbai-Pune Expressway on-ramp</b> (3 min), <b>Akurdi Railway Station</b> (8 min), <b>Hinjewadi IT Park Phase 1</b> (12 min), <b>Wakad commercial hub</b> (15 min), <b>PCMC Hospital</b> (10 min), and <b>Pune International Airport</b> (35 min via Expressway). The proposed Metro Phase 3 station near Mukai Chowk will further reduce commute times from 2028 onwards.'
+    },
+    {
+      question: 'Can NRI buyers invest in Harico Diwaam Kiwale and how does the process work?',
+      answer: 'Yes, <b>NRI buyers</b> can invest in Harico Diwaam without any restrictions under FEMA guidelines. The process involves: (1) Digital document submission (Passport, PAN, OCI/PIO card). (2) Agreement for Sale execution via courier/notarization or Power of Attorney. (3) NRE/NRO account-based payment or foreign inward remittance. (4) Home loan available via SBI NRI Home Loans and HDFC NRI Loan Scheme. (5) Our NRI desk at <b>+91 7744009295</b> provides dedicated support from booking to possession handover.'
     }
   ];
+
 
   // Inject FAQPage Schema
   const faqSchema = {

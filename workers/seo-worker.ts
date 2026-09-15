@@ -20,8 +20,8 @@ interface RouteSEO {
 // Master Route-Specific SEO Lookup for Real-Time Edge HTMLRewriter
 const routeSEOMap: Record<string, RouteSEO> = {
   '/': {
-    title: 'Harico Estates by Sentosa Developers | Harico Diwaam & Harico Edge',
-    description: 'Harico Estates by Sentosa Developers: Ultra-luxury 2 & 3 BHK flats at Harico Diwaam (Kiwale, Dec 2030, Starts ₹70L*, 3 BHK from ₹89.90L*) & Harico Edge (Punawale, June 2030). Call +91 7744009295.',
+    title: 'Harico Estates | Official Website | Harico Diwaam & Harico Edge Pune',
+    description: 'Official website of Harico Estates by Sentosa Developers. Luxury 2 & 3 BHK flats at Harico Diwaam (Kiwale, from ₹70L*) & Harico Edge (Punawale, from ₹74L*). Direct developer pricing & VIP visits: +91 7744009295.',
     keywords: 'Harico Estates, Harico Estates Pune, Sentosa Developers, Sentosa Developers Pune, Harico Diwaam, Harico Divaam, Harico Diwaam Kiwale, Harico Divaam Kiwale, Sentosa Harico Diwaam, Sentosa Harico Divaam, Harico Edge, Harico Edge Punawale, Sentosa Edge Punawale, Harico Pride, Harico Kiwale, Harico Punawale, Harico new launch, 2 BHK Flats in Punawale, 3 BHK Flats in Punawale, 2 BHK Flats in Kiwale, 3 BHK Flats in Kiwale Ravet',
     ogImage: 'https://haricoestates.in/harico_logo.png',
     canonical: 'https://haricoestates.in/'

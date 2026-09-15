@@ -481,12 +481,19 @@ export function createProjectDetails(project: any): HTMLElement {
       background-size: cover;
       background-position: center;
       position: relative;
-      background-attachment: fixed;
+      background-attachment: scroll; /* iOS Safari fix */
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: -90px;
       padding-top: 90px;
+    }
+
+    /* Desktop: re-enable parallax for non-touch devices */
+    @media (hover: hover) and (pointer: fine) {
+      .pd-hero {
+        background-attachment: fixed;
+      }
     }
 
     .pd-hero-overlay {
@@ -627,7 +634,50 @@ export function createProjectDetails(project: any): HTMLElement {
       }
       .pd-hero {
         height: auto;
-        padding: 120px 0 60px;
+        padding: 100px 0 50px;
+        background-attachment: scroll !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pd-hero {
+        padding: 90px 16px 50px;
+        background-attachment: scroll !important;
+      }
+
+      .pd-title {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+      }
+
+      .pd-subtitle {
+        font-size: 0.95rem;
+        padding: 0 8px;
+      }
+
+      .pd-hero-pills {
+        gap: 6px;
+      }
+
+      .pd-pill {
+        font-size: 0.72rem;
+        padding: 5px 10px;
+      }
+
+      /* Hero CTA buttons: stack on mobile */
+      .pd-hero-content .mt-lg.flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .pd-hero-content .mt-lg.flex .btn {
+        width: 100%;
+        justify-content: center;
+      }
+
+      /* About section: 2-col → single col */
+      .about-section .grid {
+        grid-template-columns: 1fr !important;
+        gap: var(--spacing-lg) !important;
       }
     }
   `;
