@@ -61,9 +61,12 @@ export async function dispatchLead(payload: LeadPayload): Promise<{ success: boo
     }).catch(() => {});
   } catch (e) {}
 
-  // 3. Dispatch Google Ads / Analytics conversion event
+  // 3. Dispatch Google Ads Submit Lead Form Conversion
   try {
     if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'conversion', {
+        'send_to': 'AW-17430583486/2oseCKuOodYcEL6xxvdA'
+      });
       (window as any).gtag('event', 'generate_lead', {
         send_to: 'AW-17430583486',
         event_category: 'RealEstateLead',
@@ -71,7 +74,9 @@ export async function dispatchLead(payload: LeadPayload): Promise<{ success: boo
         value: 1
       });
     }
-  } catch (e) {}
+  } catch (e) {
+    console.warn('[LeadDispatcher] Google Ads conversion dispatch error:', e);
+  }
 
   return { success: true };
 }
