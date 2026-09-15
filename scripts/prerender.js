@@ -384,7 +384,7 @@ projects.forEach(project => {
       "latitude": project.slug === 'harico-divaam' ? "18.6738" : "18.6366",
       "longitude": project.slug === 'harico-divaam' ? "73.7225" : "73.7483"
     },
-    "hasMap": project.slug === 'harico-divaam' ? "https://www.google.com/maps?q=harico+divaam" : "https://www.google.com/maps?q=harico+estates",
+    "hasMap": "https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg",
     "identifier": project.rera,
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Rooftop Sky Observation Deck", "value": true },
@@ -833,10 +833,11 @@ const orgSchema = {
     "postalCode": "411033",
     "addressCountry": "IN"
   },
+  "hasMap": "https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg",
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "18.6366",
-    "longitude": "73.7483"
+    "latitude": "18.6548239",
+    "longitude": "73.7256178"
   },
   "openingHoursSpecification": [
     {
@@ -849,8 +850,7 @@ const orgSchema = {
   "sameAs": [
     "https://www.facebook.com/haricoestates",
     "https://www.instagram.com/haricoestates",
-    "https://www.google.com/maps?q=harico+estates",
-    "https://www.google.com/maps?q=harico+divaam"
+    "https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg"
   ]
 };
 

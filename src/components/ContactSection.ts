@@ -101,7 +101,7 @@ export function createContactSection(): HTMLElement {
             <div class="office-loc-item pb-sm mb-sm border-bottom">
               <p class="font-bold text-navy text-sm m-0">Harico Edge & Pride Site Gallery</p>
               <p class="text-xs text-muted m-0">Near Bhumkar Chowk, 2 mins from Mumbai-Pune Expressway, Punawale, Pune 411033</p>
-              <a href="https://www.google.com/maps?q=harico+estates" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
+              <a href="https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg" target="_blank" class="text-xs text-gold font-bold mt-xs inline-block">
                 <i class="fa-solid fa-diamond-turn-right mr-1"></i> Get Driving Directions &rarr;
               </a>
             </div>

@@ -65,7 +65,7 @@ export function createFooter(): HTMLElement {
           <ul class="footer-contact">
             <li>
                 <span class="icon">📍</span>
-                <a href="https://www.google.com/maps?q=harico+estates" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;" class="hover-gold" title="Open Harico Estates on Google Maps">
+                <a href="https://www.google.com/maps/place/Harico+Estates/@18.6548239,73.7256178,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bb9618b8c49d:0x78a3bb7fcdbe5a56!8m2!3d18.6548239!4d73.7256178!16s%2Fg%2F11ynbs8sgg" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;" class="hover-gold" title="Open Harico Estates on Google Maps">
                   <span>Punawale & Kiwale, Pune, Maharashtra 411033</span>
                 </a>
             </li>
