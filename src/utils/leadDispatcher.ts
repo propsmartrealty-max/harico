@@ -61,5 +61,17 @@ export async function dispatchLead(payload: LeadPayload): Promise<{ success: boo
     }).catch(() => {});
   } catch (e) {}
 
+  // 3. Dispatch Google Ads / Analytics conversion event
+  try {
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('event', 'generate_lead', {
+        send_to: 'AW-17430583486',
+        event_category: 'RealEstateLead',
+        event_label: payload.project || 'Harico Estates',
+        value: 1
+      });
+    }
+  } catch (e) {}
+
   return { success: true };
 }
