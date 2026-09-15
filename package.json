@@ -7,10 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build && node scripts/prerender.js",
     "indexnow": "node scripts/indexnow.js",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=harico",
+    "deploy:prod": "npm run build && wrangler pages deploy dist --project-name=harico --branch=main"
   },
   "devDependencies": {
     "typescript": "~5.9.3",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "wrangler": "^4.130.0"
   }
 }

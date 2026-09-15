@@ -1303,4 +1303,20 @@ const publicDir = path.resolve(__dirname, '../public');
 fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 console.log(`[Prerender] Generated master sitemap.xml with ${allUrls.length} verified programmatic URLs.`);
 
-console.log('[Prerender] Complete. Ultra-Advanced Full-Body Semantic Prerendering Ready.');
+// 5. Generate Cloudflare Pages SPA Fallback (404.html)
+fs.writeFileSync(path.join(distDir, '404.html'), template, 'utf-8');
+console.log('[Prerender] Generated dist/404.html for Cloudflare Pages SPA fallback.');
+
+// 6. Ensure Cloudflare Pages special configuration files are in dist/
+const cfFiles = ['_headers', '_routes.json', '_redirects'];
+cfFiles.forEach(file => {
+  const src = path.join(publicDir, file);
+  const dest = path.join(distDir, file);
+  if (fs.existsSync(src)) {
+    fs.copyFileSync(src, dest);
+    console.log(`[Prerender] Synced Cloudflare Pages config: ${file} -> dist/${file}`);
+  }
+});
+
+console.log('[Prerender] Complete. Dedicated Cloudflare Pages Full-Body Semantic Prerendering Ready.');
+

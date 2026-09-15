@@ -4,7 +4,7 @@
 
 # Global Edge Security & Tiered Edge Cache Defaults
 /*
-  # Enterprise Grade Security Headers (A+ SSL Labs / Mozilla Observatory Rating)
+  # Enterprise Grade Security Headers
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
@@ -16,14 +16,14 @@
   # Content Security Policy (Optimized for Fonts, Google Maps, Lead Dispatch, QR APIs, & Cloudflare Insights)
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: https: https://api.qrserver.com https://images.unsplash.com https://maharerait.mahaonline.gov.in; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self' https: https://cloudflareinsights.com https://api.qrserver.com https://formsubmit.co; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me tel: mailto: https://formsubmit.co;
   
-  # Google & Global Search Engine Permissions
+  # Google & Global Search Engine Directives
   X-Robots-Tag: all, index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1
   
   # Edge Tiered Cache & Purge Tags
   Cache-Tag: harico-edge-global, harico-web
   Vary: Accept-Encoding, Accept
 
-# Static Hashed Vite Chunks (Immutable 1-Year Edge Cache on All 330+ Global Cloudflare PoPs)
+# Static Hashed Vite Chunks (Immutable 1-Year Edge Cache on Cloudflare Global PoPs)
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
   Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=604800
@@ -31,7 +31,7 @@
   Cache-Tag: harico-assets, harico-scripts
   Access-Control-Allow-Origin: *
 
-# High-Resolution Architectural Renders, Layouts & Floorplans
+# High-Resolution Architectural Renders & Images
 /assets/*.png
   Cache-Control: public, max-age=2592000, s-maxage=31536000, stale-while-revalidate=86400
   Cloudflare-CDN-Cache-Control: max-age=31536000, stale-while-revalidate=86400
